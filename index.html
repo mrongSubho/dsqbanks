@@ -34,23 +34,27 @@
       color: #334155;
       font-size: 0.95rem;
       font-weight: 700;
-      padding: 0.65rem 1rem;
-      border-radius: 0.75rem;
+      padding: 0.65rem 1.2rem;
+      border-radius: 999px;
       cursor: pointer;
-      transition: background .2s, border-color .2s, color .2s;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(2, 6, 23, 0.06);
     }
 
     .section-controls button:hover,
     .mcq-controls button:hover {
       background: #f1f5f9;
       border-color: #94a3b8;
+      box-shadow: 0 4px 12px rgba(2, 6, 23, 0.1);
+      transform: translateY(-1px);
     }
 
     .section-controls button.active,
     .mcq-controls button.active {
-      background: #2563eb;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
       color: #ffffff;
       border-color: #2563eb;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
     }
 
     .toc h2 {
@@ -107,33 +111,43 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      margin: 2rem 0 1rem;
-      padding-bottom: 0.5rem;
+      margin: 2.2rem 0 1.4rem;
+      padding-bottom: 0.75rem;
       border-bottom: 2px solid #e2e8f0;
     }
 
     .section-header h3 {
       margin: 0;
-      font-size: 1.15rem;
-      color: #334155;
+      font-size: 1.2rem;
+      color: #1e293b;
+      font-weight: 700;
     }
 
     .section-badge {
-      background: #e2e8f0;
-      color: #475569;
+      background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+      color: #0369a1;
       font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.2rem 0.65rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
       border-radius: 999px;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.05em;
+      box-shadow: 0 2px 4px rgba(3, 105, 161, 0.1);
     }
 
     .question {
-      border-radius: 8px;
-      padding: 1rem 1.25rem;
-      margin: 0.75rem 0;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 0.9rem 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
       background: #ffffff;
+      border: 1px solid #f1f5f9;
+      transition: all 0.2s ease;
+    }
+
+    .question:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+      border-color: #e2e8f0;
     }
 
     .q-num {
@@ -204,6 +218,61 @@
       background: #f1f5f9;
     }
 
+    /* MCQ switch styles */
+    .mcq-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+    }
+
+    .switch input {
+      display: none;
+    }
+
+    .slider {
+      width: 44px;
+      height: 26px;
+      background: #e6eef8;
+      border-radius: 999px;
+      position: relative;
+      box-shadow: inset 0 1px 2px rgba(2, 6, 23, 0.04);
+      transition: background .18s;
+    }
+
+    .slider::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      transition: transform .18s;
+      box-shadow: 0 2px 6px rgba(2, 6, 23, 0.14);
+    }
+
+    .switch input:checked+.slider {
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    }
+
+    .switch input:checked+.slider::after {
+      transform: translateX(18px);
+    }
+
+    .switch-label {
+      font-weight: 700;
+      color: #334155;
+      font-size: 0.92rem;
+    }
+
     .section-controls,
     .mcq-controls {
       display: flex;
@@ -220,23 +289,38 @@
       color: #334155;
       font-size: 0.95rem;
       font-weight: 700;
-      padding: 0.65rem 1rem;
-      border-radius: 0.75rem;
+      padding: 0.65rem 1.2rem;
+      border-radius: 999px;
       cursor: pointer;
-      transition: background .2s, border-color .2s, color .2s;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(2, 6, 23, 0.06);
     }
 
     .section-controls button:hover,
     .mcq-controls button:hover {
       background: #f1f5f9;
       border-color: #94a3b8;
+      box-shadow: 0 4px 12px rgba(2, 6, 23, 0.1);
+      transform: translateY(-1px);
     }
 
     .section-controls button.active,
     .mcq-controls button.active {
-      background: #2563eb;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
       color: #ffffff;
       border-color: #2563eb;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    .section-label {
+      font-size: 0.85rem;
+      color: #64748b;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: block;
+      margin-bottom: 0.5rem;
+      width: 100%;
     }
 
     .hide-mcq-answers .opt.correct {
@@ -293,13 +377,19 @@
     </ol>
   </div>
   <div class="section-controls">
+    <div style="width:100%">
+      <div class="section-label">📚 Choose Section</div>
+    </div>
     <button id="show-mcqs" type="button" class="active">MCQs</button>
     <button id="show-short" type="button">Short Questions</button>
     <button id="show-practical" type="button">Practical</button>
   </div>
-  <div class="mcq-controls">
-    <button id="reveal-mcq" type="button" class="active">Reveal MCQ answers</button>
-    <button id="hide-mcq" type="button">Hide MCQ answers</button>
+  <div class="mcq-controls" id="mcq-controls" style="margin-bottom:1rem;">
+    <label class="switch">
+      <input type="checkbox" id="mcq-toggle" checked>
+      <span class="slider"></span>
+    </label>
+    <span class="switch-label">Show answers</span>
   </div>
   <div class="unit-header" id="11167-work-with-business-domain-and-data">
     <div class="unit-code">UNIT 11167</div>
@@ -11227,8 +11317,8 @@
       const showMcqButton = document.getElementById('show-mcqs');
       const showShortButton = document.getElementById('show-short');
       const showPracticalButton = document.getElementById('show-practical');
-      const revealButton = document.getElementById('reveal-mcq');
-      const hideButton = document.getElementById('hide-mcq');
+      const mcqToggle = document.getElementById('mcq-toggle');
+      const mcqControls = document.getElementById('mcq-controls');
 
       const sections = {
         mcq: [],
@@ -11257,8 +11347,7 @@
 
       const setMode = isRevealed => {
         body.classList.toggle('hide-mcq-answers', !isRevealed);
-        revealButton.classList.toggle('active', isRevealed);
-        hideButton.classList.toggle('active', !isRevealed);
+        if (mcqToggle) mcqToggle.checked = isRevealed;
       };
 
       const setSection = selectedType => {
@@ -11267,6 +11356,8 @@
             el.style.display = type === selectedType ? '' : 'none';
           });
         });
+        // show/hide mcq controls based on view
+        if (mcqControls) mcqControls.style.display = selectedType === 'mcq' ? '' : 'none';
         [showMcqButton, showShortButton, showPracticalButton].forEach(btn => {
           btn?.classList.toggle('active', btn === {
             mcq: showMcqButton,
@@ -11276,11 +11367,15 @@
         });
       };
 
-      revealButton?.addEventListener('click', () => setMode(true));
-      hideButton?.addEventListener('click', () => setMode(false));
+      if (mcqToggle) {
+        mcqToggle.addEventListener('change', () => setMode(mcqToggle.checked));
+      }
       showMcqButton?.addEventListener('click', () => setSection('mcq'));
       showShortButton?.addEventListener('click', () => setSection('short'));
       showPracticalButton?.addEventListener('click', () => setSection('practical'));
+
+      // default to mcq view
+      setSection('mcq');
       setSection('mcq');
     });
   </script>
