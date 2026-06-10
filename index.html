@@ -415,6 +415,9 @@
       border-radius: 6px;
       background: linear-gradient(90deg, #f8fafc, #f1f5f9);
       margin-top: 0.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .colab-output summary::before {
@@ -444,6 +447,7 @@
       align-items: center;
       gap: 0.5rem;
       margin-left: 0.6rem;
+      margin-left: auto;
     }
 
     .output-switch input[type="checkbox"] {
@@ -11878,6 +11882,8 @@
 
       // add a small switch into each output summary to toggle that output individually
       const colabOutputs = Array.from(document.querySelectorAll('details.colab-output'));
+      // open all outputs by default so they're visible when a solution is opened
+      colabOutputs.forEach(d => d.open = true);
       colabOutputs.forEach(detail => {
         const summ = detail.querySelector('summary');
         if (!summ) return;
@@ -11885,7 +11891,9 @@
         wrapper.className = 'output-switch';
         const cb = document.createElement('input');
         cb.type = 'checkbox';
-        cb.checked = !!detail.open;
+        cb.checked = true;
+        // prevent clicking the checkbox from toggling the parent <summary>
+        cb.addEventListener('click', e => e.stopPropagation());
         cb.addEventListener('change', () => {
           detail.open = cb.checked;
         });
