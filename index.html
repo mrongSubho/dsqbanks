@@ -11884,6 +11884,8 @@
       const colabOutputs = Array.from(document.querySelectorAll('details.colab-output'));
       // open all outputs by default so they're visible when a solution is opened
       colabOutputs.forEach(d => d.open = true);
+      // open all solution blocks by default so outputs are visible
+      document.querySelectorAll('details.solution').forEach(s => s.open = true);
       colabOutputs.forEach(detail => {
         const summ = detail.querySelector('summary');
         if (!summ) return;
