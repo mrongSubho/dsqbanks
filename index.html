@@ -283,6 +283,10 @@
           style="color:#94a3b8;font-size:0.85em;">(75 MCQ · 75 Short)</span></li>
     </ol>
   </div>
+  <div class="mcq-controls">
+    <button id="reveal-mcq" type="button" class="active">Reveal MCQ answers</button>
+    <button id="hide-mcq" type="button">Hide MCQ answers</button>
+  </div>
   <div class="unit-header" id="11167-work-with-business-domain-and-data">
     <div class="unit-code">UNIT 11167</div>
     <h2>Work with Business Domain and Data</h2>
@@ -290,10 +294,6 @@
   </div>
   <div class="section-header">
     <h3>Multiple Choice</h3><span class="section-badge">MCQ</span>
-  </div>
-  <div class="mcq-controls">
-    <button id="reveal-mcq" type="button" class="active">Reveal MCQ answers</button>
-    <button id="hide-mcq" type="button">Hide MCQ answers</button>
   </div>
 
   <div class="question" style="border-left:4px solid #059669;background:#ecfdf5;">
@@ -11212,6 +11212,10 @@
       const body = document.body;
       const revealButton = document.getElementById('reveal-mcq');
       const hideButton = document.getElementById('hide-mcq');
+
+      document.querySelectorAll('details.answer-reveal').forEach(detail => {
+        detail.open = true;
+      });
 
       const setMode = isRevealed => {
         body.classList.toggle('hide-mcq-answers', !isRevealed);
