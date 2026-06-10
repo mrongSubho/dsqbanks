@@ -303,6 +303,60 @@
       margin: 2.5rem 0;
     }
 
+    details.practical-question {
+      background: #ffffff;
+      border: 1px solid #eef2ff;
+      border-radius: 10px;
+      padding: 0;
+      margin: 1.1rem 0;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+      overflow: hidden;
+    }
+
+    details.practical-question>summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1rem 1.25rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #0f1724, #111827);
+      color: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    details.practical-question[open]>summary {
+      border-bottom: 1px solid #e6eef8;
+    }
+
+    .practical-body {
+      padding: 1rem 1.25rem 1.25rem 1.25rem;
+      color: #0f1724;
+    }
+
+    .task-list {
+      margin: 0.4rem 0 0.9rem 0;
+      padding-left: 1rem;
+    }
+
+    details.solution {
+      margin-top: 0.75rem;
+    }
+
+    details.solution summary {
+      cursor: pointer;
+      list-style: none;
+      background: #111827;
+      color: #f8fafc;
+      padding: 0.6rem 0.8rem;
+      border-radius: 8px;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+
     .practical-question {
       background: #ffffff;
       border: 1px solid #eef2ff;
@@ -365,6 +419,47 @@
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;
       font-size: 0.9rem;
       color: #0f1724;
+    }
+
+    /* per-output switch inside the output summary */
+    .output-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-left: 0.6rem;
+    }
+
+    .output-switch input[type="checkbox"] {
+      appearance: none;
+      width: 38px;
+      height: 22px;
+      background: #e6eef8;
+      border-radius: 999px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: inset 0 1px 2px rgba(2, 6, 23, 0.04);
+      transition: background .15s;
+    }
+
+    .output-switch input[type="checkbox"]::after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: 16px;
+      height: 16px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(2, 6, 23, 0.12);
+      transition: transform .15s;
+    }
+
+    .output-switch input[type="checkbox"]:checked {
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    }
+
+    .output-switch input[type="checkbox"]:checked::after {
+      transform: translateX(16px);
     }
   </style>
 </head>
@@ -11329,235 +11424,274 @@
       <button id="hide-all-outputs" type="button" class="section-control" style="display:none">Hide all outputs</button>
     </div>
 
-    <div class="practical-question">
-      <h3>Question 1 — Statistics with Titanic Data</h3>
-      <p class="problem-statement">Perform the full statistical analysis on the Titanic dataset.</p>
+    <details class="practical-question">
+      <summary>Question 1 — Statistics with Titanic Data</summary>
+      <div class="practical-body">
+        <p class="problem-statement">Perform the full statistical analysis on the Titanic dataset.</p>
 
-      <div class="practical-task">
-        <h4>Task 1 — Data Loading and Preparation</h4>
-        <pre class="colab-code"><code>import pandas as pd
+        <div class="practical-task">
+          <h4>Task 1 — Data Loading and Preparation</h4>
+          <details class="solution">
+            <summary>Solution of Task 1</summary>
+            <pre class="colab-code"><code>import pandas as pd
 
-data = pd.read_csv('/content/titanic.csv')
-df = pd.DataFrame({
-    'survived': data['Survived'],
-    'sex': data['Sex'],
-    'age': data['Age'],
-    'fare': data['Fare'],
-    'pclass': data['Pclass']
-})
-df = df.dropna()
-print('Shape:', df.shape)
-df.head()</code></pre>
-        <details class="colab-output">
-          <summary></summary>
-          <pre class="output-content">[Dataframe output hidden by default]</pre>
-        </details>
-      </div>
+  data = pd.read_csv('/content/titanic.csv')
+  df = pd.DataFrame({
+      'survived': data['Survived'],
+      'sex': data['Sex'],
+      'age': data['Age'],
+      'fare': data['Fare'],
+      'pclass': data['Pclass']
+  })
+  df = df.dropna()
+  print('Shape:', df.shape)
+  df.head()</code></pre>
+            <details class="colab-output">
+              <summary></summary>
+              <pre class="output-content">[Dataframe output hidden by default]</pre>
+            </details>
+          </details>
+        </div>
 
-      <div class="practical-task">
-        <h4>Task 2 — Central Tendency</h4>
-        <pre class="colab-code"><code>age_mean = df['age'].mean()
-age_median = df['age'].median()
-age_mode = df['age'].mode()
+        <div class="practical-task">
+          <h4>Task 2 — Central Tendency</h4>
+          <details class="solution">
+            <summary>Solution of Task 2</summary>
+            <pre class="colab-code"><code>age_mean = df['age'].mean()
+  age_median = df['age'].median()
+  age_mode = df['age'].mode()
 
-print('Age mean:', age_mean)
-print('Age median:', age_median)
-print('Age mode:', age_mode)
+  print('Age mean:', age_mean)
+  print('Age median:', age_median)
+  print('Age mode:', age_mode)
 
-fare_mean = df['fare'].mean()
-fare_median = df['fare'].median()
-fare_mode = df['fare'].mode()
+  fare_mean = df['fare'].mean()
+  fare_median = df['fare'].median()
+  fare_mode = df['fare'].mode()
 
-print('Fare mean:', fare_mean)
-print('Fare median:', fare_median)
-print('Fare mode:', fare_mode)</code></pre>
-        <details class="colab-output">
-          <summary></summary>
-          <pre class="output-content">[Numeric output hidden by default]</pre>
-        </details>
-      </div>
+  print('Fare mean:', fare_mean)
+  print('Fare median:', fare_median)
+  print('Fare mode:', fare_mode)</code></pre>
+            <details class="colab-output">
+              <summary></summary>
+              <pre class="output-content">[Numeric output hidden by default]</pre>
+            </details>
+          </details>
+        </div>
 
-      <div class="practical-task">
-        <h4>Task 3 — Measures of Dispersion</h4>
-        <pre class="colab-code"><code>age_var = df['age'].var()
-age_std = df['age'].std()
-age_range = df['age'].max() - df['age'].min()
+        <div class="practical-task">
+          <h4>Task 3 — Measures of Dispersion</h4>
+          <details class="solution">
+            <summary>Solution of Task 3</summary>
+            <pre class="colab-code"><code>age_var = df['age'].var()
+  age_std = df['age'].std()
+  age_range = df['age'].max() - df['age'].min()
 
-fare_var = df['fare'].var()
-fare_std = df['fare'].std()
-fare_range = df['fare'].max() - df['fare'].min()
+  fare_var = df['fare'].var()
+  fare_std = df['fare'].std()
+  fare_range = df['fare'].max() - df['fare'].min()
 
-print('Age variance:', age_var)
-print('Age standard deviation:', age_std)
-print('Age range:', age_range)
+  print('Age variance:', age_var)
+  print('Age standard deviation:', age_std)
+  print('Age range:', age_range)
 
-print('Fare variance:', fare_var)
-print('Fare standard deviation:', fare_std)
-print('Fare range:', fare_range)</code></pre>
-        <details class="colab-output">
-          <summary></summary>
-          <pre class="output-content">[Dispersion outputs hidden by default]</pre>
-        </details>
-      </div>
+  print('Fare variance:', fare_var)
+  print('Fare standard deviation:', fare_std)
+  print('Fare range:', fare_range)</code></pre>
+            <details class="colab-output">
+              <summary></summary>
+              <pre class="output-content">[Dispersion outputs hidden by default]</pre>
+            </details>
+          </details>
+        </div>
 
-      <div class="practical-task">
-        <h4>Task 4 — Correlation Analysis</h4>
-        <pre class="colab-code"><code>corr = df[['survived', 'age', 'fare', 'pclass']].corr()
-print(corr)
+        <div class="practical-task">
+          <h4>Task 4 — Correlation Analysis</h4>
+          <details class="solution">
+            <summary>Solution of Task 4</summary>
+            <pre class="colab-code"><code>corr = df[['survived', 'age', 'fare', 'pclass']].corr()
+  print(corr)
 
-pairs = corr.unstack().drop_duplicates()
-pairs = pairs[pairs.index.get_level_values(0) != pairs.index.get_level_values(1)]
-top = pairs.abs().sort_values(ascending=False).head(4)
-print('\nTop correlations:')
-print(top)</code></pre>
-        <details class="colab-output">
-          <summary></summary>
-          <pre class="output-content">[Correlation outputs hidden by default]</pre>
-        </details>
-      </div>
-    </div>
+  pairs = corr.unstack().drop_duplicates()
+  pairs = pairs[pairs.index.get_level_values(0) != pairs.index.get_level_values(1)]
+  top = pairs.abs().sort_values(ascending=False).head(4)
+  print('\nTop correlations:')
+  print(top)</code></pre>
+            <details class="colab-output">
+              <summary></summary>
+              <pre class="output-content">[Correlation outputs hidden by default]</pre>
+            </details>
+          </details>
+        </div>
+    </details>
 
-    <div class="practical-question">
-      <h3>Question 2 — Data Visualization</h3>
-      <p class="problem-statement">Create visual reports for Titanic survival and age distribution.</p>
+    <details class="practical-question">
+      <summary>Question 2 — Data Visualization</summary>
+      <div class="practical-body">
+        <p class="problem-statement">Create visual reports for Titanic survival and age distribution.</p>
 
-      <div class="practical-task">
-        <h4>Task 1 — Data Loading and Preparation</h4>
-        <pre class="colab-code"><code>import pandas as pd
-data = pd.read_csv('/content/titanic.csv')
-df = data[['Survived', 'Pclass', 'Sex', 'Age', 'Fare']].dropna()
-print('Shape:', df.shape)
-df.head()</code></pre>
-        <details class="colab-output">
-          <summary></summary>
-          <pre class="output-content">[Dataframe output hidden by default]</pre>
-        </details>
-      </div>
+        <div class="practical-task">
+          <h4>Task 1 — Data Loading and Preparation</h4>
+          <details class="solution">
+            <summary>Solution of Task 1</summary>
+            <pre class="colab-code"><code>import pandas as pd
+  data = pd.read_csv('/content/titanic.csv')
+  df = data[['Survived', 'Pclass', 'Sex', 'Age', 'Fare']].dropna()
+  print('Shape:', df.shape)
+  df.head()</code></pre>
+            <details class="colab-output">
+              <summary></summary>
+              <pre class="output-content">[Dataframe output hidden by default]</pre>
+            </details>
+          </details>
+        </div>
 
-      <div class="practical-task">
-        <h4>Task 2 — Survival Report</h4>
-        <pre class="colab-code"><code>import matplotlib.pyplot as plt
-surv_by_class = df.groupby('Pclass')['Survived'].sum()
-surv_by_class.plot(kind='bar', title='Survival by Class')
-plt.show()
+        <div class="practical-task">
+          <h4>Task 2 — Survival Report</h4>
+          <details class="solution">
+            <summary>Solution of Task 2</summary>
+            <pre class="colab-code"><code>import matplotlib.pyplot as plt
+  surv_by_class = df.groupby('Pclass')['Survived'].sum()
+  surv_by_class.plot(kind='bar', title='Survival by Class')
+  plt.show()
 
-surv_by_sex = df.groupby('Sex')['Survived'].sum()
-surv_by_sex.plot(kind='bar', title='Survival by Sex')
-plt.show()</code></pre>
-        <details class="colab-output">
-          <summary></summary>
-          <pre class="output-content">[Plot outputs hidden by default]</pre>
-        </details>
-      </div>
+  surv_by_sex = df.groupby('Sex')['Survived'].sum()
+  surv_by_sex.plot(kind='bar', title='Survival by Sex')
+  plt.show()</code></pre>
+            <details class="colab-output">
+              <summary></summary>
+              <pre class="output-content">[Plot outputs hidden by default]</pre>
+            </details>
+          </details>
+        </div>
 
-      <div class="practical-task">
-        <h4>Task 3 — Distribution of Age</h4>
-        <pre class="colab-code"><code>import seaborn as sns
-import matplotlib.pyplot as plt
-sns.histplot(df['Age'], kde=True)
-plt.title('Age distribution with KDE')
-plt.show()
+        <div class="practical-task">
+          <h4>Task 3 — Distribution of Age</h4>
+          <details class="solution">
+            <summary>Solution of Task 3</summary>
+            <pre class="colab-code"><code>import seaborn as sns
+  import matplotlib.pyplot as plt
+  sns.histplot(df['Age'], kde=True)
+  plt.title('Age distribution with KDE')
+  plt.show()
 
-sns.boxplot(x=df['Age'])
-plt.title('Age boxplot')
-plt.show()</code></pre>
-        <details class="colab-output">
-          <summary></summary>
-          <pre class="output-content">[Plot outputs hidden by default]</pre>
-        </details>
-      </div>
+  sns.boxplot(x=df['Age'])
+  plt.title('Age boxplot')
+  plt.show()</code></pre>
+            <details class="colab-output">
+              <summary></summary>
+              <pre class="output-content">[Plot outputs hidden by default]</pre>
+            </details>
+          </details>
+        </div>
 
-      <div class="practical-task">
-        <h4>Task 4 — Correlation Heatmap</h4>
-        <pre class="colab-code"><code>import seaborn as sns
-import matplotlib.pyplot as plt
-corr = df.select_dtypes(include=['number']).corr()
-sns.heatmap(corr, annot=True, fmt='.2f')
-plt.title('Correlation Heatmap')
-plt.show()
+        <div class="practical-task">
+          <h4>Task 4 — Correlation Heatmap</h4>
+          <details class="solution">
+            <summary>Solution of Task 4</summary>
+            <pre class="colab-code"><code>import seaborn as sns
+  import matplotlib.pyplot as plt
+  corr = df.select_dtypes(include=['number']).corr()
+  sns.heatmap(corr, annot=True, fmt='.2f')
+  plt.title('Correlation Heatmap')
+  plt.show()
 
-print('Strongest correlations:')
-print(corr.unstack().sort_values())</code></pre>
-        <details class="colab-output">
-          <summary></summary>
-          <pre class="output-content">[Heatmap output hidden by default]</pre>
-        </details>
-      </div>
-    </div>
+  print('Strongest correlations:')
+  print(corr.unstack().sort_values())</code></pre>
+            <details class="colab-output">
+              <summary></summary>
+              <pre class="output-content">[Heatmap output hidden by default]</pre>
+            </details>
+          </details>
+        </div>
+    </details>
 
-    <div class="practical-question">
-      <h3>Question 3 — Machine Learning</h3>
-      <p class="problem-statement">Prepare, train, evaluate, and save a machine learning model.</p>
+    <details class="practical-question">
+      <summary>Question 3 — Machine Learning</summary>
+      <div class="practical-body">
+        <p class="problem-statement">Prepare, train, evaluate, and save a machine learning model.</p>
 
-      <div class="practical-task">
-        <h4>Task 1 — Data Loading and Pre-processing</h4>
-        <pre class="colab-code"><code>import pandas as pd
-from sklearn.preprocessing import LabelEncoder, StandardScaler
+        <div class="practical-task">
+          <h4>Task 1 — Data Loading and Pre-processing</h4>
+          <details class="solution">
+            <summary>Solution of Task 1</summary>
+            <pre class="colab-code"><code>import pandas as pd
+  from sklearn.preprocessing import LabelEncoder, StandardScaler
 
-df = pd.read_csv('/content/student_performance.csv')
-df = df.dropna()
-le = LabelEncoder()
-df['Gender'] = le.fit_transform(df['Gender'])
-df['ParentEducation'] = le.fit_transform(df['ParentEducation'])
-df['InternetAccess'] = le.fit_transform(df['InternetAccess'])
-df['Result'] = (df['FinalScore'] >= 50).astype(int)
-scaler = StandardScaler()
-num_cols = ['StudyHoursPerWeek', 'AttendanceRate', 'FinalScore']
-df[num_cols] = scaler.fit_transform(df[num_cols])
-df.head()</code></pre>
-        <details class="colab-output">
-          <summary></summary>
-          <pre class="output-content">[Preprocessing output hidden by default]</pre>
-        </details>
-      </div>
+  df = pd.read_csv('/content/student_performance.csv')
+  df = df.dropna()
+  le = LabelEncoder()
+  df['Gender'] = le.fit_transform(df['Gender'])
+  df['ParentEducation'] = le.fit_transform(df['ParentEducation'])
+  df['InternetAccess'] = le.fit_transform(df['InternetAccess'])
+  df['Result'] = (df['FinalScore'] >= 50).astype(int)
+  scaler = StandardScaler()
+  num_cols = ['StudyHoursPerWeek', 'AttendanceRate', 'FinalScore']
+  df[num_cols] = scaler.fit_transform(df[num_cols])
+  df.head()</code></pre>
+            <details class="colab-output">
+              <summary></summary>
+              <pre class="output-content">[Preprocessing output hidden by default]</pre>
+            </details>
+          </details>
+        </div>
 
-      <div class="practical-task">
-        <h4>Task 2 — Model Training</h4>
-        <pre class="colab-code"><code>from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
+        <div class="practical-task">
+          <h4>Task 2 — Model Training</h4>
+          <details class="solution">
+            <summary>Solution of Task 2</summary>
+            <pre class="colab-code"><code>from sklearn.model_selection import train_test_split
+  from sklearn.linear_model import LogisticRegression
 
-features = ['Gender', 'ParentEducation', 'StudyHoursPerWeek', 'AttendanceRate', 'InternetAccess']
-X = df[features]
-y = df['Result']
-X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, random_state=42)
-model = LogisticRegression(max_iter=1000)
-model.fit(X_train, y_train)</code></pre>
-        <details class="colab-output">
-          <summary></summary>
-          <pre class="output-content">[Model training output hidden by default]</pre>
-        </details>
-      </div>
+  features = ['Gender', 'ParentEducation', 'StudyHoursPerWeek', 'AttendanceRate', 'InternetAccess']
+  X = df[features]
+  y = df['Result']
+  X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, random_state=42)
+  model = LogisticRegression(max_iter=1000)
+  model.fit(X_train, y_train)</code></pre>
+            <details class="colab-output">
+              <summary></summary>
+              <pre class="output-content">[Model training output hidden by default]</pre>
+            </details>
+          </details>
+        </div>
 
-      <div class="practical-task">
-        <h4>Task 3 — Model Evaluation</h4>
-        <pre class="colab-code"><code>from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix
+        <div class="practical-task">
+          <h4>Task 3 — Model Evaluation</h4>
+          <details class="solution">
+            <summary>Solution of Task 3</summary>
+            <pre class="colab-code"><code>from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix
 
-y_pred = model.predict(X_test)
-print('Accuracy:', accuracy_score(y_test, y_pred))
-print('Precision:', precision_score(y_test, y_pred))
-print('Recall:', recall_score(y_test, y_pred))
-print('Confusion Matrix:\n', confusion_matrix(y_test, y_pred))</code></pre>
-        <details class="colab-output">
-          <summary></summary>
-          <pre class="output-content">[Evaluation output hidden by default]</pre>
-        </details>
-      </div>
+  y_pred = model.predict(X_test)
+  print('Accuracy:', accuracy_score(y_test, y_pred))
+  print('Precision:', precision_score(y_test, y_pred))
+  print('Recall:', recall_score(y_test, y_pred))
+  print('Confusion Matrix:\n', confusion_matrix(y_test, y_pred))</code></pre>
+            <details class="colab-output">
+              <summary></summary>
+              <pre class="output-content">[Evaluation output hidden by default]</pre>
+            </details>
+          </details>
+        </div>
 
-      <div class="practical-task">
-        <h4>Task 4 — Save the Model</h4>
-        <pre class="colab-code"><code>import pickle
-with open('model.pkl', 'wb') as f:
-    pickle.dump(model, f)
+        <div class="practical-task">
+          <h4>Task 4 — Save the Model</h4>
+          <details class="solution">
+            <summary>Solution of Task 4</summary>
+            <pre class="colab-code"><code>import pickle
+  with open('model.pkl', 'wb') as f:
+      pickle.dump(model, f)
 
-with open('model.pkl', 'rb') as f:
-    loaded = pickle.load(f)
-print('Sample prediction:', loaded.predict(X_test.iloc[[0]]))</code></pre>
-        <details class="colab-output">
-          <summary></summary>
-          <pre class="output-content">[Save/load verification hidden by default]</pre>
-        </details>
-      </div>
-    </div>
+  with open('model.pkl', 'rb') as f:
+      loaded = pickle.load(f)
+  print('Sample prediction:', loaded.predict(X_test.iloc[[0]]))</code></pre>
+            <details class="colab-output">
+              <summary></summary>
+              <pre class="output-content">[Save/load verification hidden by default]</pre>
+            </details>
+          </details>
+        </div>
+    </details>
   </div>
 
   <hr class="unit-divider" />
@@ -11585,6 +11719,7 @@ print('Sample prediction:', loaded.predict(X_test.iloc[[0]]))</code></pre>
       const mcqControls = document.getElementById('mcq-controls');
       const showAllOutputs = document.getElementById('show-all-outputs');
       const hideAllOutputs = document.getElementById('hide-all-outputs');
+      const practicalSection = document.querySelector('.practical-section');
 
       const sections = {
         mcq: [],
@@ -11617,13 +11752,28 @@ print('Sample prediction:', loaded.predict(X_test.iloc[[0]]))</code></pre>
       };
 
       const setSection = selectedType => {
-        Object.entries(sections).forEach(([type, elements]) => {
-          elements.forEach(el => {
-            el.style.display = type === selectedType ? '' : 'none';
+        // Practical view: hide all unit content and show only practical section
+        if (selectedType === 'practical') {
+          document.querySelectorAll('.unit-header, .question').forEach(el => el.style.display = 'none');
+          document.querySelectorAll('.section-header').forEach(h => {
+            const title = h.querySelector('h3')?.textContent?.trim().toLowerCase();
+            h.style.display = title === 'practical' ? '' : 'none';
           });
-        });
-        // show/hide mcq controls based on view
-        if (mcqControls) mcqControls.style.display = selectedType === 'mcq' ? '' : 'none';
+          if (practicalSection) practicalSection.style.display = '';
+          if (mcqControls) mcqControls.style.display = 'none';
+        } else {
+          // default behavior for MCQ/Short: show unit headers and hide practical section
+          document.querySelectorAll('.unit-header, .question, .section-header').forEach(el => el.style.display = '');
+          if (practicalSection) practicalSection.style.display = 'none';
+          // show the requested section elements (mcq/short) using the precomputed sections map
+          Object.entries(sections).forEach(([type, elements]) => {
+            elements.forEach(el => {
+              el.style.display = type === selectedType ? '' : 'none';
+            });
+          });
+          if (mcqControls) mcqControls.style.display = selectedType === 'mcq' ? '' : 'none';
+        }
+
         [showMcqButton, showShortButton, showPracticalButton].forEach(btn => {
           btn?.classList.toggle('active', btn === {
             mcq: showMcqButton,
@@ -11639,6 +11789,36 @@ print('Sample prediction:', loaded.predict(X_test.iloc[[0]]))</code></pre>
       showMcqButton?.addEventListener('click', () => setSection('mcq'));
       showShortButton?.addEventListener('click', () => setSection('short'));
       showPracticalButton?.addEventListener('click', () => setSection('practical'));
+
+      // add a small switch into each output summary to toggle that output individually
+      const colabOutputs = Array.from(document.querySelectorAll('details.colab-output'));
+      function updateShowHideButtons() {
+        const anyOpen = colabOutputs.some(d => d.open);
+        if (showAllOutputs) showAllOutputs.style.display = anyOpen ? 'none' : '';
+        if (hideAllOutputs) hideAllOutputs.style.display = anyOpen ? '' : 'none';
+      }
+
+      colabOutputs.forEach(detail => {
+        const summ = detail.querySelector('summary');
+        if (!summ) return;
+        const wrapper = document.createElement('span');
+        wrapper.className = 'output-switch';
+        const cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cb.checked = !!detail.open;
+        cb.addEventListener('change', () => {
+          detail.open = cb.checked;
+          updateShowHideButtons();
+        });
+        // keep summary toggle behavior unchanged when clicking the summary
+        detail.addEventListener('toggle', () => { cb.checked = !!detail.open; updateShowHideButtons(); });
+        wrapper.appendChild(cb);
+        const textSpan = document.createElement('span');
+        textSpan.textContent = '';
+        wrapper.appendChild(textSpan);
+        summ.appendChild(wrapper);
+      });
+
 
       const toggleOutputs = isOpen => {
         document.querySelectorAll('details.colab-output').forEach(detail => {
