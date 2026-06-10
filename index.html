@@ -18,34 +18,39 @@
       background: #f8fafc;
     }
 
-    .subtitle {
-      color: #64748b;
-      font-size: 1.05rem;
-      margin-top: -0.5rem;
-    }
-
-    .difficulty-key {
+    .section-controls,
+    .mcq-controls {
       display: flex;
+      flex-wrap: wrap;
       gap: 0.75rem;
-      justify-content: center;
-      margin: 1.5rem 0 2rem;
+      align-items: center;
+      margin: 1.2rem 0 1.5rem;
     }
 
-    .key-swatch {
-      width: 2rem;
-      height: 2rem;
-      border-radius: 6px;
-      display: inline-block;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-    }
-
-    .toc {
+    .section-controls button,
+    .mcq-controls button {
+      border: 1px solid #cbd5e1;
       background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 1.5rem 2rem;
-      margin: 2rem 0 3rem;
-      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+      color: #334155;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 0.65rem 1rem;
+      border-radius: 0.75rem;
+      cursor: pointer;
+      transition: background .2s, border-color .2s, color .2s;
+    }
+
+    .section-controls button:hover,
+    .mcq-controls button:hover {
+      background: #f1f5f9;
+      border-color: #94a3b8;
+    }
+
+    .section-controls button.active,
+    .mcq-controls button.active {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
     }
 
     .toc h2 {
@@ -199,6 +204,7 @@
       background: #f1f5f9;
     }
 
+    .section-controls,
     .mcq-controls {
       display: flex;
       flex-wrap: wrap;
@@ -207,6 +213,7 @@
       margin: 1.2rem 0 1.5rem;
     }
 
+    .section-controls button,
     .mcq-controls button {
       border: 1px solid #cbd5e1;
       background: #ffffff;
@@ -219,11 +226,13 @@
       transition: background .2s, border-color .2s, color .2s;
     }
 
+    .section-controls button:hover,
     .mcq-controls button:hover {
       background: #f1f5f9;
       border-color: #94a3b8;
     }
 
+    .section-controls button.active,
     .mcq-controls button.active {
       background: #2563eb;
       color: #ffffff;
@@ -282,6 +291,11 @@
       <li><a href="#11172-work-with-big-data">11172 — Work with Big Data</a> <span
           style="color:#94a3b8;font-size:0.85em;">(75 MCQ · 75 Short)</span></li>
     </ol>
+  </div>
+  <div class="section-controls">
+    <button id="show-mcqs" type="button" class="active">MCQs</button>
+    <button id="show-short" type="button">Short Questions</button>
+    <button id="show-practical" type="button">Practical</button>
   </div>
   <div class="mcq-controls">
     <button id="reveal-mcq" type="button" class="active">Reveal MCQ answers</button>
@@ -11210,8 +11224,32 @@
       });
 
       const body = document.body;
+      const showMcqButton = document.getElementById('show-mcqs');
+      const showShortButton = document.getElementById('show-short');
+      const showPracticalButton = document.getElementById('show-practical');
       const revealButton = document.getElementById('reveal-mcq');
       const hideButton = document.getElementById('hide-mcq');
+
+      const sections = {
+        mcq: [],
+        short: [],
+        practical: [],
+      };
+
+      document.querySelectorAll('div.section-header').forEach(header => {
+        const title = header.querySelector('h3')?.textContent?.trim().toLowerCase();
+        let type = null;
+        if (title === 'multiple choice') type = 'mcq';
+        else if (title === 'short questions') type = 'short';
+        else if (title === 'practical') type = 'practical';
+        if (!type) return;
+        let current = header;
+        while (current && !current.matches('div.unit-header')) {
+          sections[type].push(current);
+          current = current.nextElementSibling;
+          if (!current || current.matches('div.section-header')) break;
+        }
+      });
 
       document.querySelectorAll('details.answer-reveal').forEach(detail => {
         detail.open = true;
@@ -11223,8 +11261,27 @@
         hideButton.classList.toggle('active', !isRevealed);
       };
 
+      const setSection = selectedType => {
+        Object.entries(sections).forEach(([type, elements]) => {
+          elements.forEach(el => {
+            el.style.display = type === selectedType ? '' : 'none';
+          });
+        });
+        [showMcqButton, showShortButton, showPracticalButton].forEach(btn => {
+          btn?.classList.toggle('active', btn === {
+            mcq: showMcqButton,
+            short: showShortButton,
+            practical: showPracticalButton,
+          }[selectedType]);
+        });
+      };
+
       revealButton?.addEventListener('click', () => setMode(true));
       hideButton?.addEventListener('click', () => setMode(false));
+      showMcqButton?.addEventListener('click', () => setSection('mcq'));
+      showShortButton?.addEventListener('click', () => setSection('short'));
+      showPracticalButton?.addEventListener('click', () => setSection('practical'));
+      setSection('mcq');
     });
   </script>
 </body>
