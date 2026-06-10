@@ -316,15 +316,16 @@
     details.practical-question>summary {
       list-style: none;
       cursor: pointer;
-      padding: 1rem 1.25rem;
-      font-size: 1.05rem;
+      padding: 0.9rem 1.25rem;
+      font-size: 1.2rem;
       font-weight: 700;
-      background: linear-gradient(90deg, #0f1724, #111827);
-      color: #f8fafc;
+      background: linear-gradient(90deg, #0b4f7a, #1b6a9a);
+      color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
+      border-radius: 6px 6px 0 0;
     }
 
     details.practical-question[open]>summary {
@@ -334,6 +335,22 @@
     .practical-body {
       padding: 1rem 1.25rem 1.25rem 1.25rem;
       color: #0f1724;
+    }
+
+    .task-desc {
+      margin: 0.45rem 0 0.9rem 0.25rem;
+      color: #0f1724;
+      font-size: 0.98rem;
+      line-height: 1.45;
+    }
+
+    .task-desc ul {
+      margin: 0;
+      padding-left: 1.05rem;
+    }
+
+    .task-desc li {
+      margin: 0.35rem 0;
     }
 
     .task-list {
@@ -11430,6 +11447,12 @@
 
         <div class="practical-task">
           <h4>Task 1 — Data Loading and Preparation</h4>
+          <div class="task-desc">
+            <ul>
+              <li>Load titanic.csv and create a DataFrame with: survived, sex, age, fare, pclass.</li>
+              <li>Drop all rows with missing values. Display shape and first 5 rows.</li>
+            </ul>
+          </div>
           <details class="solution">
             <summary>Solution of Task 1</summary>
             <pre class="colab-code"><code>import pandas as pd
@@ -11454,6 +11477,12 @@
 
         <div class="practical-task">
           <h4>Task 2 — Central Tendency</h4>
+          <div class="task-desc">
+            <ul>
+              <li>Calculate mean, median, and mode for 'age'. Print results clearly.</li>
+              <li>Calculate mean, median, and mode for 'fare'. Print results clearly.</li>
+            </ul>
+          </div>
           <details class="solution">
             <summary>Solution of Task 2</summary>
             <pre class="colab-code"><code>age_mean = df['age'].mean()
@@ -11480,6 +11509,12 @@
 
         <div class="practical-task">
           <h4>Task 3 — Measures of Dispersion</h4>
+          <div class="task-desc">
+            <ul>
+              <li>Calculate variance, standard deviation, and range for 'age' and 'fare'.</li>
+              <li>Print all six values clearly labelled.</li>
+            </ul>
+          </div>
           <details class="solution">
             <summary>Solution of Task 3</summary>
             <pre class="colab-code"><code>age_var = df['age'].var()
@@ -11506,6 +11541,12 @@
 
         <div class="practical-task">
           <h4>Task 4 — Correlation Analysis</h4>
+          <div class="task-desc">
+            <ul>
+              <li>Compute and print the correlation matrix for: survived, age, fare, pclass.</li>
+              <li>Identify and state the two strongest correlations found.</li>
+            </ul>
+          </div>
           <details class="solution">
             <summary>Solution of Task 4</summary>
             <pre class="colab-code"><code>corr = df[['survived', 'age', 'fare', 'pclass']].corr()
@@ -11531,6 +11572,12 @@
 
         <div class="practical-task">
           <h4>Task 1 — Data Loading and Preparation</h4>
+          <div class="task-desc">
+            <ul>
+              <li>Load titanic.csv and create a small clean DataFrame for visualization.</li>
+              <li>Drop missing values and show shape.</li>
+            </ul>
+          </div>
           <details class="solution">
             <summary>Solution of Task 1</summary>
             <pre class="colab-code"><code>import pandas as pd
@@ -11547,6 +11594,12 @@
 
         <div class="practical-task">
           <h4>Task 2 — Survival Report</h4>
+          <div class="task-desc">
+            <ul>
+              <li>Create bar charts showing survival counts by passenger class and by sex.</li>
+              <li>Ensure charts have clear titles and legends.</li>
+            </ul>
+          </div>
           <details class="solution">
             <summary>Solution of Task 2</summary>
             <pre class="colab-code"><code>import matplotlib.pyplot as plt
@@ -11566,6 +11619,12 @@
 
         <div class="practical-task">
           <h4>Task 3 — Distribution of Age</h4>
+          <div class="task-desc">
+            <ul>
+              <li>Draw a histogram with KDE for age distribution.</li>
+              <li>Show a boxplot for age to highlight outliers.</li>
+            </ul>
+          </div>
           <details class="solution">
             <summary>Solution of Task 3</summary>
             <pre class="colab-code"><code>import seaborn as sns
@@ -11586,6 +11645,12 @@
 
         <div class="practical-task">
           <h4>Task 4 — Correlation Heatmap</h4>
+          <div class="task-desc">
+            <ul>
+              <li>Compute numeric correlations and plot a heatmap with annotations.</li>
+              <li>Print the strongest correlations for interpretation.</li>
+            </ul>
+          </div>
           <details class="solution">
             <summary>Solution of Task 4</summary>
             <pre class="colab-code"><code>import seaborn as sns
@@ -11612,6 +11677,12 @@
 
         <div class="practical-task">
           <h4>Task 1 — Data Loading and Pre-processing</h4>
+          <div class="task-desc">
+            <ul>
+              <li>Load the student performance dataset and clean missing values.</li>
+              <li>Encode categorical variables and scale numeric features.</li>
+            </ul>
+          </div>
           <details class="solution">
             <summary>Solution of Task 1</summary>
             <pre class="colab-code"><code>import pandas as pd
@@ -11637,6 +11708,12 @@
 
         <div class="practical-task">
           <h4>Task 2 — Model Training</h4>
+          <div class="task-desc">
+            <ul>
+              <li>Split the cleaned dataset into training and test sets.</li>
+              <li>Train a Logistic Regression model and keep it simple and reproducible.</li>
+            </ul>
+          </div>
           <details class="solution">
             <summary>Solution of Task 2</summary>
             <pre class="colab-code"><code>from sklearn.model_selection import train_test_split
@@ -11657,6 +11734,12 @@
 
         <div class="practical-task">
           <h4>Task 3 — Model Evaluation</h4>
+          <div class="task-desc">
+            <ul>
+              <li>Evaluate the model on the test set: accuracy, precision, recall, confusion matrix.</li>
+              <li>Report the results clearly and comment on strengths/weaknesses.</li>
+            </ul>
+          </div>
           <details class="solution">
             <summary>Solution of Task 3</summary>
             <pre class="colab-code"><code>from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix
@@ -11675,6 +11758,12 @@
 
         <div class="practical-task">
           <h4>Task 4 — Save the Model</h4>
+          <div class="task-desc">
+            <ul>
+              <li>Serialize the trained model to disk using `pickle`.</li>
+              <li>Reload the model and verify a sample prediction to confirm save/load.</li>
+            </ul>
+          </div>
           <details class="solution">
             <summary>Solution of Task 4</summary>
             <pre class="colab-code"><code>import pickle
