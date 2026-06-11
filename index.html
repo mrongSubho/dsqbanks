@@ -222,6 +222,15 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(248, 250, 252, 0.95);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 1rem 0;
+      border-bottom: 1px solid #e2e8f0;
+      margin: 0 0 1.5rem 0 !important;
     }
 
     .switch {
@@ -284,7 +293,8 @@
     }
 
     .hide-mcq-answers .opt.correct {
-      display: none !important;
+      background: #f8fafc !important;
+      border-left: none !important;
     }
 
     .hide-mcq-answers .opt.correct .checkmark {
@@ -605,6 +615,68 @@
 
     .output-switch input[type="checkbox"]:checked::after {
       transform: translateX(16px);
+    }
+
+    /* Return to top button styling */
+    .back-to-top-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: #334155;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(2, 6, 23, 0.06);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .back-to-top-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      opacity: 0;
+      z-index: 1;
+      transition: opacity 0.25s ease;
+    }
+
+    .back-to-top-btn:hover {
+      color: #ffffff;
+      border-color: #2563eb;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .back-to-top-btn:hover::before {
+      opacity: 1;
+    }
+
+    .back-to-top-btn > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .back-to-top-btn .arrow-icon {
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .back-to-top-btn:hover .arrow-icon {
+      transform: translateY(-3px);
+    }
+    
+    .back-to-top-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
     }
   </style>
 </head>
@@ -11997,6 +12069,16 @@ Sample prediction: [1]</pre>
 
   <hr class="unit-divider" />
 
+  <div class="back-to-top-container" style="margin: 3rem 0 2rem; text-align: center;">
+    <button id="back-to-top-btn" class="back-to-top-btn">
+      <svg class="arrow-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+      <span>Return to Top</span>
+    </button>
+  </div>
+
   <div align="center"><sub>Compiled from Data Science L4, Programming & Visualization, and Statistical Methods question
       banks.</sub></div>
   <script>
@@ -12143,6 +12225,17 @@ Sample prediction: [1]</pre>
 
       // open all practical questions by default so the full question list is visible
       document.querySelectorAll('details.practical-question').forEach(d => d.open = true);
+
+      // Return to Top button event listener
+      const backToTopBtn = document.getElementById('back-to-top-btn');
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
 
       // default to mcq view
       setSection('mcq');
