@@ -391,20 +391,127 @@
     }
 
     .colab-code {
+      position: relative;
       background: #0f1724;
       color: #e6eef8;
-      padding: 0.85rem;
-      border-radius: 8px;
+      padding: 1.4rem 1rem 1rem;
+      border-radius: 12px;
       overflow-x: auto;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;
       font-size: 0.92rem;
-      line-height: 1.45;
+      line-height: 1.5;
       margin: 0.5rem 0 0.75rem 0;
+      border: 1px solid #1f2937;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 1px 3px rgba(15, 23, 42, 0.12);
+    }
+
+    .colab-code::before {
+      content: "Code";
+      position: absolute;
+      top: 0.75rem;
+      left: 1rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #94a3b8;
+      background: rgba(15, 23, 36, 0.8);
+      padding: 0.16rem 0.5rem;
+      border-radius: 999px;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      border: none;
+      background: rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      padding: 0.4rem 0.7rem;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.78rem;
+      transition: background .15s, color .15s, transform .15s;
+    }
+
+    .copy-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #fff;
+    }
+
+    .copy-btn:active {
+      transform: translateY(1px);
     }
 
     .colab-code code {
       white-space: pre;
       display: block;
+      margin-top: 1.2rem;
+    }
+
+    details.solution summary {
+      cursor: pointer;
+      list-style: none;
+      background: #111827;
+      color: #f8fafc;
+      padding: 0.6rem 0.8rem;
+      border-radius: 8px;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    details.solution summary::before {
+      content: "▸ Solution";
+      margin-right: 0.5rem;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    details.solution[open] summary::before {
+      content: "▾ Solution";
+    }
+
+    .solution-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-left: auto;
+    }
+
+    .solution-switch input[type="checkbox"] {
+      appearance: none;
+      width: 38px;
+      height: 22px;
+      background: #e6eef8;
+      border-radius: 999px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: inset 0 1px 2px rgba(2, 6, 23, 0.04);
+      transition: background .15s;
+    }
+
+    .solution-switch input[type="checkbox"]::after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: 16px;
+      height: 16px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(2, 6, 23, 0.12);
+      transition: transform .15s;
+    }
+
+    .solution-switch input[type="checkbox"]:checked {
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    }
+
+    .solution-switch input[type="checkbox"]:checked::after {
+      transform: translateX(16px);
     }
 
     .colab-output summary {
@@ -11952,31 +12059,57 @@ Sample prediction: [1]</pre>
 
       // add a small switch into each output summary to toggle that output individually
       const colabOutputs = Array.from(document.querySelectorAll('details.colab-output'));
+      const solutionDetails = Array.from(document.querySelectorAll('details.solution'));
       // open all outputs by default so they're visible when a solution is opened
       colabOutputs.forEach(d => d.open = true);
       // open all solution blocks by default so outputs are visible
-      document.querySelectorAll('details.solution').forEach(s => s.open = true);
-      colabOutputs.forEach(detail => {
-        const summ = detail.querySelector('summary');
-        if (!summ) return;
-        const wrapper = document.createElement('span');
-        wrapper.className = 'output-switch';
-        const cb = document.createElement('input');
-        cb.type = 'checkbox';
-        cb.checked = true;
-        // prevent clicking the checkbox from toggling the parent <summary>
-        cb.addEventListener('click', e => e.stopPropagation());
-        cb.addEventListener('change', () => {
-          detail.open = cb.checked;
+      solutionDetails.forEach(s => s.open = true);
+
+      const addToggleToDetails = (detailsList, className) => {
+        detailsList.forEach(detail => {
+          const summ = detail.querySelector('summary');
+          if (!summ) return;
+          const wrapper = document.createElement('span');
+          wrapper.className = className;
+          const cb = document.createElement('input');
+          cb.type = 'checkbox';
+          cb.checked = true;
+          cb.addEventListener('click', e => e.stopPropagation());
+          cb.addEventListener('change', () => {
+            detail.open = cb.checked;
+          });
+          detail.addEventListener('toggle', () => { cb.checked = !!detail.open; });
+          wrapper.appendChild(cb);
+          summ.appendChild(wrapper);
         });
-        // keep summary toggle behavior unchanged when clicking the summary
-        detail.addEventListener('toggle', () => { cb.checked = !!detail.open; });
-        wrapper.appendChild(cb);
-        const textSpan = document.createElement('span');
-        textSpan.textContent = '';
-        wrapper.appendChild(textSpan);
-        summ.appendChild(wrapper);
+      };
+
+      addToggleToDetails(colabOutputs, 'output-switch');
+      addToggleToDetails(solutionDetails, 'solution-switch');
+
+      const codeBlocks = Array.from(document.querySelectorAll('.colab-code'));
+      codeBlocks.forEach(block => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'copy-btn';
+        btn.textContent = 'Copy';
+        btn.addEventListener('click', e => {
+          e.stopPropagation();
+          const codeElement = block.querySelector('code');
+          if (!codeElement) return;
+          const text = codeElement.innerText.trim();
+          navigator.clipboard.writeText(text).then(() => {
+            const prev = btn.textContent;
+            btn.textContent = 'Copied';
+            setTimeout(() => { btn.textContent = prev; }, 1200);
+          }).catch(() => {
+            btn.textContent = 'Failed';
+            setTimeout(() => { btn.textContent = 'Copy'; }, 1200);
+          });
+        });
+        block.appendChild(btn);
       });
+
       // open all practical questions by default so the full question list is visible
       document.querySelectorAll('details.practical-question').forEach(d => d.open = true);
 
