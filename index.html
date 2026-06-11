@@ -638,6 +638,13 @@
       <li><a href="#11172-work-with-big-data">11172 — Work with Big Data</a> <span
           style="color:#94a3b8;font-size:0.85em;">(75 MCQ · 75 Short)</span></li>
     </ol>
+    <div class="difficulty-legend">
+      <strong>Difficulty levels:</strong>
+      <span><span class="key-swatch" style="background:#059669"></span> Must know</span>
+      <span><span class="key-swatch" style="background:#2563eb"></span> Standard</span>
+      <span><span class="key-swatch" style="background:#d97706"></span> Should know</span>
+      <span><span class="key-swatch" style="background:#7c3aed"></span> Could know</span>
+    </div>
   </div>
   <div class="section-controls">
     <div style="width:100%">
@@ -12099,8 +12106,8 @@ Sample prediction: [1]</pre>
           wrapper.className = className;
           const cb = document.createElement('input');
           cb.type = 'checkbox';
-          cb.checked = className !== 'output-switch';
-          detail.open = className !== 'output-switch';
+          cb.checked = true;
+          detail.open = true;
           cb.addEventListener('click', e => e.stopPropagation());
           cb.addEventListener('change', () => {
             detail.open = cb.checked;
