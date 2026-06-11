@@ -464,14 +464,31 @@
     }
 
     details.solution summary::before {
-      content: "▸ Solution";
+      content: "▸";
       margin-right: 0.5rem;
       color: #cbd5e1;
       font-size: 0.95rem;
     }
 
     details.solution[open] summary::before {
-      content: "▾ Solution";
+      content: "▾";
+    }
+
+    .output-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.8rem;
+    }
+
+    .output-image {
+      width: 100%;
+      max-height: 230px;
+      object-fit: contain;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      background: #f8fafc;
+      box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.05);
     }
 
     .solution-switch {
@@ -596,7 +613,7 @@
 
   <div align="center">
     <h1>NSDA Data Science Level 4 Question Bank</h1>
-    <p class="subtitle">994 questions · 6 units · MCQs & Short Answers</p>
+    <p class="subtitle">994 questions · 6 units · MCQs · Short Qs · Practicals</p>
     <div class="difficulty-key">
       <span class="key-swatch" style="background:#059669;" title=""></span>
       <span class="key-swatch" style="background:#2563eb;" title=""></span>
@@ -11579,7 +11596,7 @@
   df = df.dropna()
   print('Shape:', df.shape)
   df.head()</code></pre>
-            <details class="colab-output" open>
+            <details class="colab-output">
               <summary></summary>
               <pre class="output-content">Shape: (714, 5)
  survived    sex  age    fare  pclass
@@ -11617,7 +11634,7 @@
   print('Fare mean:', fare_mean)
   print('Fare median:', fare_median)
   print('Fare mode:', fare_mode)</code></pre>
-            <details class="colab-output" open>
+            <details class="colab-output">
               <summary></summary>
               <pre class="output-content">Age mean: 29.69911764705882
 Age median: 28.0
@@ -11654,7 +11671,7 @@ Fare mode: [13.0]</pre>
   print('Fare variance:', fare_var)
   print('Fare standard deviation:', fare_std)
   print('Fare range:', fare_range)</code></pre>
-            <details class="colab-output" open>
+            <details class="colab-output">
               <summary></summary>
               <pre class="output-content">Age variance: 211.01912474630805
 Age standard deviation: 14.526497332334042
@@ -11684,7 +11701,7 @@ Fare range: 512.3292</pre>
   top = pairs.abs().sort_values(ascending=False).head(4)
   print('\nTop correlations:')
   print(top)</code></pre>
-            <details class="colab-output" open>
+            <details class="colab-output">
               <summary></summary>
               <pre class="output-content">Correlation matrix:
           survived       age      fare    pclass
@@ -11723,7 +11740,7 @@ fare - survived: 0.268189</pre>
   df = data[['Survived', 'Pclass', 'Sex', 'Age', 'Fare']].dropna()
   print('Shape:', df.shape)
   df.head()</code></pre>
-            <details class="colab-output" open>
+            <details class="colab-output">
               <summary></summary>
               <pre class="output-content">Shape: (714, 5)
  Survived  Pclass    Sex  Age    Fare
@@ -11754,7 +11771,7 @@ fare - survived: 0.268189</pre>
   surv_by_sex = df.groupby('Sex')['Survived'].sum()
   surv_by_sex.plot(kind='bar', title='Survival by Sex')
   plt.show()</code></pre>
-            <details class="colab-output" open>
+            <details class="colab-output">
               <summary></summary>
               <pre class="output-content">Survival by class counts:
 Pclass
@@ -11765,9 +11782,11 @@ Pclass
 Survival by sex counts:
 Sex
 female    197
-male       93
-
-(Bar charts for these counts would display the survival distribution by class and by sex.)</pre>
+male       93</pre>
+              <div class="output-images">
+                <img src="images/titanic_survival_by_class.png" alt="Survivors by class" class="output-image">
+                <img src="images/titanic_survival_by_sex.png" alt="Survivors by sex" class="output-image">
+              </div>
             </details>
           </details>
         </div>
@@ -11791,11 +11810,14 @@ male       93
   sns.boxplot(x=df['Age'])
   plt.title('Age boxplot')
   plt.show()</code></pre>
-            <details class="colab-output" open>
+            <details class="colab-output">
               <summary></summary>
               <pre class="output-content">Age distribution histogram and KDE rendered.
-Age boxplot rendered to highlight spread and outliers.
-(These plots summarize the age distribution and show any age outliers.)</pre>
+Age boxplot rendered to highlight spread and outliers.</pre>
+              <div class="output-images">
+                <img src="images/titanic_age_distribution.png" alt="Age distribution with KDE" class="output-image">
+                <img src="images/titanic_age_boxplot.png" alt="Age boxplot" class="output-image">
+              </div>
             </details>
           </details>
         </div>
@@ -11819,7 +11841,7 @@ Age boxplot rendered to highlight spread and outliers.
 
   print('Strongest correlations:')
   print(corr.unstack().sort_values())</code></pre>
-            <details class="colab-output" open>
+            <details class="colab-output">
               <summary></summary>
               <pre class="output-content">Correlation matrix:
           Survived    Pclass       Age      Fare
@@ -11830,9 +11852,11 @@ Fare      0.268189 -0.554182  0.096067  1.000000
 
 Strongest correlations:
 Pclass - Fare: -0.554182
-Pclass - Age: -0.369226
-
-(A heatmap would display these relationships visually with annotations.)</pre>
+Pclass - Age: -0.369226</pre>
+              <div class="output-images">
+                <img src="images/titanic_correlation_heatmap.png" alt="Titanic correlation heatmap"
+                  class="output-image">
+              </div>
             </details>
           </details>
         </div>
@@ -11867,7 +11891,7 @@ Pclass - Age: -0.369226
   num_cols = ['StudyHoursPerWeek', 'AttendanceRate', 'FinalScore']
   df[num_cols] = scaler.fit_transform(df[num_cols])
   df.head()</code></pre>
-            <details class="colab-output" open>
+            <details class="colab-output">
               <summary></summary>
               <pre
                 class="output-content">Shape: (339, 10)
@@ -11900,7 +11924,7 @@ Pclass - Age: -0.369226
   X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, random_state=42)
   model = LogisticRegression(max_iter=1000)
   model.fit(X_train, y_train)</code></pre>
-            <details class="colab-output" open>
+            <details class="colab-output">
               <summary></summary>
               <pre class="output-content">Model training completed successfully.</pre>
             </details>
@@ -11924,7 +11948,7 @@ Pclass - Age: -0.369226
   print('Precision:', precision_score(y_test, y_pred))
   print('Recall:', recall_score(y_test, y_pred))
   print('Confusion Matrix:\n', confusion_matrix(y_test, y_pred))</code></pre>
-            <details class="colab-output" open>
+            <details class="colab-output">
               <summary></summary>
               <pre class="output-content">Accuracy: 0.8088235294117647
 Precision: 0.8
@@ -11932,6 +11956,10 @@ Recall: 0.7741935483870968
 Confusion Matrix:
 [[31  6]
  [ 7 24]]</pre>
+              <div class="output-images">
+                <img src="images/student_confusion_matrix.png" alt="Student performance confusion matrix"
+                  class="output-image">
+              </div>
             </details>
           </details>
         </div>
@@ -11953,7 +11981,7 @@ Confusion Matrix:
   with open('model.pkl', 'rb') as f:
       loaded = pickle.load(f)
   print('Sample prediction:', loaded.predict(X_test.iloc[[0]]))</code></pre>
-            <details class="colab-output" open>
+            <details class="colab-output">
               <summary></summary>
               <pre class="output-content">Model saved to model.pkl and reloaded successfully.
 Sample prediction: [1]</pre>
@@ -12060,8 +12088,6 @@ Sample prediction: [1]</pre>
       // add a small switch into each output summary to toggle that output individually
       const colabOutputs = Array.from(document.querySelectorAll('details.colab-output'));
       const solutionDetails = Array.from(document.querySelectorAll('details.solution'));
-      // open all outputs by default so they're visible when a solution is opened
-      colabOutputs.forEach(d => d.open = true);
       // open all solution blocks by default so outputs are visible
       solutionDetails.forEach(s => s.open = true);
 
@@ -12073,7 +12099,8 @@ Sample prediction: [1]</pre>
           wrapper.className = className;
           const cb = document.createElement('input');
           cb.type = 'checkbox';
-          cb.checked = true;
+          cb.checked = className !== 'output-switch';
+          detail.open = className !== 'output-switch';
           cb.addEventListener('click', e => e.stopPropagation());
           cb.addEventListener('change', () => {
             detail.open = cb.checked;
