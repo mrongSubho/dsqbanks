@@ -7,6 +7,9 @@
   <meta name="description"
     content="Comprehensive compilation of MCQs and Short Questions across all Data Science Level 4 units">
   <title>NSDA Data Science Level 4 Question Bank</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f172a'/%3E%3Cpath d='M30 70 V45 H42 V70 Z M48 70 V30 H60 V70 Z M66 70 V55 H78 V70 Z' fill='%233b82f6' opacity='0.8'/%3E%3Ccircle cx='36' cy='45' r='6' fill='%2306b6d4'/%3E%3Ccircle cx='54' cy='30' r='6' fill='%2306b6d4'/%3E%3Ccircle cx='72' cy='55' r='6' fill='%2306b6d4'/%3E%3Cpath d='M36 45 L54 30 L72 55' stroke='%2306b6d4' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="alternate icon" type="image/svg+xml" href="images/favicon.svg">
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
@@ -617,23 +620,27 @@
       transform: translateX(16px);
     }
 
-    /* Return to top button styling */
+    /* Floating Return to top button styling */
     .back-to-top-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 1010;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.6rem;
+      width: 48px;
+      height: 48px;
       border: 1px solid #cbd5e1;
       background: #ffffff;
       color: #334155;
-      font-size: 0.95rem;
-      font-weight: 700;
-      padding: 0.75rem 1.5rem;
-      border-radius: 999px;
+      border-radius: 50%;
       cursor: pointer;
-      box-shadow: 0 2px 8px rgba(2, 6, 23, 0.06);
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.1);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(20px);
       overflow: hidden;
     }
 
@@ -647,36 +654,42 @@
       background: linear-gradient(135deg, #2563eb, #1d4ed8);
       opacity: 0;
       z-index: 1;
-      transition: opacity 0.25s ease;
+      transition: opacity 0.3s ease;
+    }
+
+    .back-to-top-btn.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
     }
 
     .back-to-top-btn:hover {
       color: #ffffff;
       border-color: #2563eb;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
-      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+      transform: translateY(-4px);
     }
 
     .back-to-top-btn:hover::before {
       opacity: 1;
     }
 
-    .back-to-top-btn > * {
+    .back-to-top-btn>* {
       position: relative;
       z-index: 2;
     }
 
     .back-to-top-btn .arrow-icon {
-      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .back-to-top-btn:hover .arrow-icon {
       transform: translateY(-3px);
     }
-    
+
     .back-to-top-btn:active {
-      transform: translateY(0);
-      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
     }
   </style>
 </head>
@@ -11794,6 +11807,7 @@ fare - survived: 0.268189</pre>
             </details>
           </details>
         </div>
+      </div>
     </details>
 
     <details class="practical-question">
@@ -11936,6 +11950,7 @@ Pclass - Age: -0.369226</pre>
             </details>
           </details>
         </div>
+      </div>
     </details>
 
     <details class="practical-question">
@@ -12064,20 +12079,19 @@ Sample prediction: [1]</pre>
             </details>
           </details>
         </div>
+      </div>
     </details>
   </div>
 
   <hr class="unit-divider" />
 
-  <div class="back-to-top-container" style="margin: 3rem 0 2rem; text-align: center;">
-    <button id="back-to-top-btn" class="back-to-top-btn">
-      <svg class="arrow-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="12" y1="19" x2="12" y2="5"></line>
-        <polyline points="5 12 12 5 19 12"></polyline>
-      </svg>
-      <span>Return to Top</span>
-    </button>
-  </div>
+  <button id="back-to-top-btn" class="back-to-top-btn" aria-label="Return to Top">
+    <svg class="arrow-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5"
+      fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
 
   <div align="center"><sub>Compiled from Data Science L4, Programming & Visualization, and Statistical Methods question
       banks.</sub></div>
@@ -12091,6 +12105,33 @@ Sample prediction: [1]</pre>
           const normalized = html.replace(/\s*✓\s*$/, '');
           option.innerHTML = `${normalized} <span class="checkmark">✓</span>`;
           option.classList.add('correct');
+        }
+      });
+
+      // Clean up indentation issues in code blocks
+      document.querySelectorAll('.colab-code code').forEach(codeEl => {
+        const text = codeEl.textContent;
+        const lines = text.split('\n');
+        if (lines.length > 1) {
+          let minIndent = Infinity;
+          for (let i = 1; i < lines.length; i++) {
+            const line = lines[i];
+            if (line.trim().length === 0) continue;
+            const match = line.match(/^(\s*)/);
+            if (match) {
+              const indent = match[1].length;
+              if (indent < minIndent) {
+                minIndent = indent;
+              }
+            }
+          }
+          if (minIndent !== Infinity && minIndent > 0) {
+            const cleanedLines = [
+              lines[0],
+              ...lines.slice(1).map(line => line.substring(minIndent))
+            ];
+            codeEl.textContent = cleanedLines.join('\n');
+          }
         }
       });
 
@@ -12117,6 +12158,7 @@ Sample prediction: [1]</pre>
         if (!type) return;
         let current = header;
         while (current && !current.matches('div.unit-header')) {
+          if (current.classList.contains('back-to-top-btn')) break;
           sections[type].push(current);
           current = current.nextElementSibling;
           if (!current || current.matches('div.section-header')) break;
@@ -12226,9 +12268,17 @@ Sample prediction: [1]</pre>
       // open all practical questions by default so the full question list is visible
       document.querySelectorAll('details.practical-question').forEach(d => d.open = true);
 
-      // Return to Top button event listener
+      // Return to Top button scroll and click listener
       const backToTopBtn = document.getElementById('back-to-top-btn');
       if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+        });
+
         backToTopBtn.addEventListener('click', () => {
           window.scrollTo({
             top: 0,
