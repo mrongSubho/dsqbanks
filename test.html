@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Randomly generated practice test for NSDA Data Science Level 4.">
+  <title>NSDA Data Science Level 4 Practice Test</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f172a'/%3E%3Cpath d='M30 70 V45 H42 V70 Z M48 70 V30 H60 V70 Z M66 70 V55 H78 V70 Z' fill='%233b82f6' opacity='0.8'/%3E%3Ccircle cx='36' cy='45' r='6' fill='%2306b6d4'/%3E%3Ccircle cx='54' cy='30' r='6' fill='%2306b6d4'/%3E%3Ccircle cx='72' cy='55' r='6' fill='%2306b6d4'/%3E%3Cpath d='M36 45 L54 30 L72 55' stroke='%2306b6d4' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="css/test-style.css">
+</head>
+<body class="hide-answers">
+  <a href="#paper-document" class="skip-link" style="position:absolute;top:-100px;left:0;background:#2563eb;color:#fff;padding:0.5rem 1rem;z-index:9999;border-radius:0 0 4px 0;">Skip to test content</a>
+
+  <div class="loader-overlay" id="loader" role="status" aria-live="polite">
+    <div class="spinner" aria-hidden="true"></div>
+    <div class="loader-text">Loading Questions Database...</div>
+  </div>
+
+  <nav class="nav-bar" aria-label="Test controls">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo-link" aria-label="Back to question bank">
+        <svg width="22" height="22" viewBox="0 0 100 100" aria-hidden="true">
+          <rect width="100" height="100" rx="20" fill="#0f172a"/>
+          <path d="M30 70 V45 H42 V70 Z M48 70 V30 H60 V70 Z M66 70 V55 H78 V70 Z" fill="#3b82f6" opacity="0.8"/>
+          <circle cx="36" cy="45" r="6" fill="#06b6d4"/>
+          <circle cx="54" cy="30" r="6" fill="#06b6d4"/>
+          <circle cx="72" cy="55" r="6" fill="#06b6d4"/>
+          <path d="M36 45 L54 30 L72 55" stroke="#06b6d4" stroke-width="4" fill="none"/>
+        </svg>
+        <span>Data Science Level 4</span>
+      </a>
+      <div class="controls-group" role="group" aria-label="Test controls">
+        <label class="switch-container">
+          <span style="font-family: 'Outfit', sans-serif;">Show Answers</span>
+          <div class="switch">
+            <input type="checkbox" id="answers-toggle" aria-label="Toggle showing correct answers">
+            <span class="slider" aria-hidden="true"></span>
+          </div>
+        </label>
+        <button type="button" class="btn btn-primary" id="generate-btn" aria-label="Generate new random test">
+          <span aria-hidden="true">&#128260;</span> Generate Test
+        </button>
+        <button type="button" class="btn" id="print-paper-btn" aria-label="Print test paper">
+          <span aria-hidden="true">&#128221;</span> Print Test
+        </button>
+        <button type="button" class="btn btn-success" id="print-key-btn" aria-label="Print answer key">
+          <span aria-hidden="true">&#128273;</span> Print Key
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="paper-document" id="paper-document" role="main" aria-label="Practice test paper">
+    <div class="exam-header">
+      <div class="exam-title-practice">Practice Question</div>
+      <div class="exam-institution">National Skills Development Authority (NSDA)</div>
+      <div class="exam-subject">Data Science &ndash; Analytics and Big Data, Level &ndash; 4</div>
+      <hr class="header-divider">
+    </div>
+
+    <table class="exam-meta-table" aria-label="Candidate information">
+      <tr>
+        <td style="width: 60%;"><strong>Candidate Name:</strong></td>
+        <td style="width: 40%;"><strong>Roll/ID Number:</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Date:</strong></td>
+        <td>
+          <div style="display: flex; justify-content: space-between;">
+            <span><strong>Time Allowed:</strong> 3 Hours</span>
+            <span><strong>Max Marks:</strong> 100</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="exam-instructions" role="region" aria-label="Test instructions">
+      <h4>INSTRUCTIONS TO CANDIDATES:</h4>
+      <ol>
+        <li>Write your Candidate Name, Roll/ID Number, and Date in the table above before starting the test.</li>
+        <li>This practice paper contains two sections:
+          <ul>
+            <li><strong>Section A: Multiple Choice Questions</strong> (80 Questions, Marks: 80)</li>
+            <li><strong>Section B: Short Answer Questions</strong> (20 Questions, Marks: 20)</li>
+          </ul>
+        </li>
+        <li>Answer all questions. For Section A, select or write the letter corresponding to the correct answer. For Section B, write brief, concise answers.</li>
+        <li>This test is randomly generated to ensure equal coverage across all units and difficulty tiers.</li>
+      </ol>
+    </div>
+
+    <div class="section-title" role="heading" aria-level="2">
+      <span>Section A: Multiple Choice Questions</span>
+      <span class="section-marks">80 Marks (Questions 1 &ndash; 80)</span>
+    </div>
+    <div id="mcq-container" aria-live="polite" aria-label="Multiple choice questions"></div>
+
+    <div class="section-title" role="heading" aria-level="2">
+      <span>Section B: Short Answer Questions</span>
+      <span class="section-marks">20 Marks (Questions 1 &ndash; 20)</span>
+    </div>
+    <div id="short-container" aria-live="polite" aria-label="Short answer questions"></div>
+  </div>
+
+  <button type="button" class="back-to-top-btn" id="back-to-top" aria-label="Back to top of page">
+    <span style="font-size: 1.25rem;" aria-hidden="true">&#9650;</span>
+  </button>
+
+  <div class="toast" id="toast-notify" role="alert" aria-live="assertive">
+    <span style="font-size: 1.1rem;" aria-hidden="true">&#9889;</span>
+    <span id="toast-text">New Question Paper Generated!</span>
+  </div>
+
+  <script src="questions-data.js"></script>
+  <script>
+    const db = {
+      mcqsByUnit: { '11167': [], '11168': [], '11169': [], '11170': [], '11171': [], '11172': [] },
+      shortsByUnit: { '11167': [], '11168': [], '11169': [], '11170': [], '11171': [], '11172': [] }
+    };
+
+    function shuffleArray(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast-notify');
+      const text = document.getElementById('toast-text');
+      text.textContent = msg;
+      toast.classList.add('visible');
+      setTimeout(() => {
+        toast.classList.remove('visible');
+      }, 2500);
+    }
+
+    function loadQuestionsDatabase() {
+      const data = typeof QUESTIONS_DATA !== 'undefined' ? QUESTIONS_DATA : null;
+
+      if (!data) {
+        document.querySelector('.loader-text').innerHTML =
+          '<span style="color: var(--danger)">Error: Could not load question data.</span>';
+        return;
+      }
+
+      data.units.forEach(unit => {
+        const code = unit.code;
+        if (unit.mcqs) {
+          unit.mcqs.forEach(q => {
+            db.mcqsByUnit[code].push({
+              html: q.html,
+              difficulty: q.difficulty,
+              unit: code
+            });
+          });
+        }
+        if (unit.shorts) {
+          unit.shorts.forEach(q => {
+            db.shortsByUnit[code].push({
+              html: q.html,
+              difficulty: q.difficulty,
+              unit: code
+            });
+          });
+        }
+      });
+
+      document.getElementById('loader').style.opacity = '0';
+      setTimeout(() => {
+        document.getElementById('loader').style.display = 'none';
+      }, 300);
+
+      generateQuestionPaper();
+    }
+
+    function selectQuestions(questionPool, targetCount) {
+      const groups = { 1: [], 2: [], 3: [], 4: [] };
+      questionPool.forEach(q => {
+        if (groups[q.difficulty]) {
+          groups[q.difficulty].push(q);
+        }
+      });
+
+      Object.keys(groups).forEach(d => shuffleArray(groups[d]));
+
+      const weights = { 1: 5, 2: 4, 3: 4, 4: 4 };
+      const totalWeight = 17;
+
+      let targets = {};
+      let calculatedSum = 0;
+
+      Object.keys(weights).forEach(d => {
+        targets[d] = Math.round(targetCount * (weights[d] / totalWeight));
+        calculatedSum += targets[d];
+      });
+
+      while (calculatedSum !== targetCount) {
+        if (calculatedSum < targetCount) {
+          const sortedDiffs = [1, 2, 3, 4];
+          for (let d of sortedDiffs) {
+            targets[d]++;
+            calculatedSum++;
+            if (calculatedSum === targetCount) break;
+          }
+        } else {
+          const reverseDiffs = [4, 3, 2, 1];
+          for (let d of reverseDiffs) {
+            if (targets[d] > 0) {
+              targets[d]--;
+              calculatedSum--;
+              if (calculatedSum === targetCount) break;
+            }
+          }
+        }
+      }
+
+      const selected = [];
+      const leftovers = [];
+
+      Object.keys(groups).forEach(d => {
+        const pool = groups[d];
+        const target = targets[d];
+        const chosen = pool.slice(0, target);
+        selected.push(...chosen);
+        leftovers.push(...pool.slice(target));
+      });
+
+      let currentCount = selected.length;
+      if (currentCount < targetCount) {
+        shuffleArray(leftovers);
+        const diff = targetCount - currentCount;
+        selected.push(...leftovers.slice(0, diff));
+      }
+
+      return shuffleArray(selected);
+    }
+
+    function generateQuestionPaper() {
+      const units = ['11167', '11168', '11169', '11170', '11171', '11172'];
+
+      const mcqTargets = shuffleArray([13, 13, 13, 13, 14, 14]);
+      const shortTargets = shuffleArray([3, 3, 3, 3, 4, 4]);
+
+      let finalMCQs = [];
+      let finalShorts = [];
+
+      units.forEach((unit, idx) => {
+        const uMCQs = db.mcqsByUnit[unit] || [];
+        const uShorts = db.shortsByUnit[unit] || [];
+
+        const mcqCount = mcqTargets[idx];
+        const shortCount = shortTargets[idx];
+
+        finalMCQs.push(...selectQuestions(uMCQs, mcqCount));
+        finalShorts.push(...selectQuestions(uShorts, shortCount));
+      });
+
+      shuffleArray(finalMCQs);
+      shuffleArray(finalShorts);
+
+      renderMCQs(finalMCQs);
+      renderShorts(finalShorts);
+
+      document.body.classList.add('hide-answers');
+      document.body.classList.remove('show-answers');
+      document.getElementById('answers-toggle').checked = false;
+
+      showToast('New Random Practice Test Generated!');
+    }
+
+    function renderMCQs(mcqs) {
+      const container = document.getElementById('mcq-container');
+      container.innerHTML = '';
+
+      mcqs.forEach((q, idx) => {
+        const qNum = idx + 1;
+        const qDiv = document.createElement('div');
+        qDiv.className = 'question compact-mcq';
+
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = q.html;
+
+        const optElements = Array.from(tempDiv.querySelectorAll('.options .opt, .opt'));
+        const correctMarker = '\u2713';
+
+        optElements.forEach(opt => {
+          opt.removeAttribute('style');
+
+          let html = opt.innerHTML.trim();
+          const hasCorrect = html.endsWith(correctMarker) || opt.querySelector('.checkmark');
+          if (hasCorrect) {
+            const normalized = html.replace(/\s*\u2713\s*$/, '').replace(/<span[^>]*class="checkmark"[^>]*>.*?<\/span>/gi, '').trim();
+            opt.innerHTML = normalized + ' <span class="checkmark" style="display: none;">\u2713</span>';
+            opt.classList.add('correct');
+          } else {
+            opt.innerHTML = html + ' <span class="checkmark" style="display: none;">\u2713</span>';
+          }
+        });
+
+        const qText = tempDiv.querySelector('.q-text')?.innerHTML || tempDiv.textContent;
+        const codeHtml = tempDiv.querySelector('.colab-code')?.outerHTML || '';
+
+        qDiv.innerHTML =
+          '<div class="q-header-row"><div class="q-number">' + qNum + '</div><div class="q-text compact">' + qText + '</div></div>' +
+          codeHtml +
+          '<div class="options two-col">' + buildTwoColumnOptions(tempDiv) + '</div>';
+
+        container.appendChild(qDiv);
+      });
+
+      initCodeBlockCopy();
+    }
+
+    function buildTwoColumnOptions(tempDiv) {
+      const opts = Array.from(tempDiv.querySelectorAll('.options .opt, .opt'));
+      const labels = ['A', 'B', 'C', 'D'];
+      const items = opts.map((opt, i) => {
+        const label = labels[i] || '';
+        const isCorrect = opt.classList.contains('correct');
+        let text = opt.innerHTML
+          .replace(/<span[^>]*class="checkmark"[^>]*>.*?<\/span>/gi, '')
+          .replace(/\s*\u2713\s*$/, '')
+          .replace(/<span[^>]*class="opt-letter"[^>]*>.*?<\/span>/gi, '')
+          .trim();
+        return { label, text, isCorrect };
+      });
+
+      const toOptHtml = (item) =>
+        '<div class="opt' + (item.isCorrect ? ' correct' : '') + '">' +
+        '<span class="opt-letter">' + item.label + '.</span> ' + item.text +
+        '<span class="checkmark" style="display: none;">\u2713</span></div>';
+
+      return toOptHtml(items[0] || {}) + toOptHtml(items[1] || {}) + toOptHtml(items[2] || {}) + toOptHtml(items[3] || {});
+    }
+
+    function renderShorts(shorts) {
+      const container = document.getElementById('short-container');
+      container.innerHTML = '';
+
+      const listDiv = document.createElement('div');
+      listDiv.className = 'short-list';
+
+      shorts.forEach((q, idx) => {
+        const qNum = idx + 1;
+
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = q.html;
+
+        const qText = tempDiv.querySelector('.q-text')?.innerHTML || tempDiv.textContent;
+        const codeHtml = tempDiv.querySelector('.colab-code')?.outerHTML || '';
+
+        const item = document.createElement('div');
+        item.className = 'short-item';
+        item.innerHTML =
+          '<span class="short-num">' + qNum + '.</span> ' +
+          '<span class="short-text">' + qText + '</span>' +
+          codeHtml;
+
+        listDiv.appendChild(item);
+      });
+
+      container.appendChild(listDiv);
+      initCodeBlockCopy();
+    }
+
+    function initCodeBlockCopy() {
+      document.querySelectorAll('.colab-code').forEach(block => {
+        if (block.querySelector('.copy-btn')) return;
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'copy-btn';
+        btn.textContent = 'Copy';
+        btn.setAttribute('aria-label', 'Copy code to clipboard');
+        btn.addEventListener('click', e => {
+          e.stopPropagation();
+          const codeElement = block.querySelector('code');
+          if (!codeElement) return;
+          const text = codeElement.innerText.trim();
+          navigator.clipboard.writeText(text).then(() => {
+            btn.textContent = 'Copied';
+            setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
+          }).catch(() => {
+            btn.textContent = 'Failed';
+            setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
+          });
+        });
+        block.appendChild(btn);
+      });
+    }
+
+    document.addEventListener('click', e => {
+      const opt = e.target.closest('.opt');
+      if (!opt) return;
+
+      if (document.body.classList.contains('show-answers')) return;
+
+      const questionDiv = opt.closest('.question');
+      if (questionDiv.classList.contains('answered')) return;
+
+      questionDiv.classList.add('answered');
+
+      if (opt.classList.contains('correct')) {
+        opt.classList.add('selected-correct');
+        const chk = opt.querySelector('.checkmark');
+        if (chk) chk.style.display = 'inline-block';
+      } else {
+        opt.classList.add('selected-incorrect');
+        const correctOpt = questionDiv.querySelector('.opt.correct');
+        if (correctOpt) {
+          correctOpt.classList.add('revealed-correct');
+          const chk = correctOpt.querySelector('.checkmark');
+          if (chk) chk.style.display = 'inline-block';
+        }
+      }
+
+      setTimeout(() => {
+        const allQuestions = Array.from(document.querySelectorAll('#mcq-container .question'));
+        const currentIndex = allQuestions.indexOf(questionDiv);
+        const nextQuestion = allQuestions[currentIndex + 1];
+        if (nextQuestion) {
+          nextQuestion.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 600);
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadQuestionsDatabase();
+
+      document.getElementById('generate-btn').addEventListener('click', () => {
+        generateQuestionPaper();
+      });
+
+      const toggle = document.getElementById('answers-toggle');
+      toggle.addEventListener('change', () => {
+        if (toggle.checked) {
+          document.body.classList.remove('hide-answers');
+          document.body.classList.add('show-answers');
+
+          document.querySelectorAll('#mcq-container .opt.correct .checkmark').forEach(chk => {
+            chk.style.display = 'inline-block';
+          });
+        } else {
+          document.body.classList.add('hide-answers');
+          document.body.classList.remove('show-answers');
+
+          document.querySelectorAll('#mcq-container .question.answered').forEach(q => {
+            q.classList.remove('answered');
+          });
+          document.querySelectorAll('#mcq-container .opt').forEach(opt => {
+            opt.className = 'opt' + (opt.classList.contains('correct') ? ' correct' : '');
+            const chk = opt.querySelector('.checkmark');
+            if (chk) chk.style.display = 'none';
+          });
+        }
+      });
+
+      document.getElementById('print-paper-btn').addEventListener('click', () => {
+        document.body.classList.remove('print-answers');
+        document.body.classList.add('print-questions');
+        window.print();
+      });
+
+      document.getElementById('print-key-btn').addEventListener('click', () => {
+        document.body.classList.remove('print-questions');
+        document.body.classList.add('print-answers');
+        window.print();
+      });
+
+      const backToTop = document.getElementById('back-to-top');
+      window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('visible', window.scrollY > 300);
+      });
+
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      document.querySelectorAll('.skip-link').forEach(link => {
+        link.addEventListener('focus', () => { link.style.top = '0'; });
+        link.addEventListener('blur', () => { link.style.top = '-100px'; });
+      });
+    });
+  </script>
+</body>
+</html>
