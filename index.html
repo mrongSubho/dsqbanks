@@ -57,12 +57,33 @@
     </div>
   </nav>
 
-  <div class="mcq-controls" id="mcq-controls" style="margin-bottom:1rem;" role="group" aria-label="MCQ answer visibility">
+  <div class="mcq-controls" id="mcq-controls" style="margin-bottom:1rem;" role="group" aria-label="Question controls">
     <label class="switch">
       <input type="checkbox" id="mcq-toggle" checked aria-label="Toggle MCQ answer visibility">
       <span class="slider" aria-hidden="true"></span>
     </label>
     <span class="switch-label">Show answers</span>
+
+    <label class="switch">
+      <input type="checkbox" id="tts-toggle" aria-label="Toggle text-to-speech on hover">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+    <span class="switch-label">TTS</span>
+
+    <div class="tts-settings">
+      <button class="tts-settings-btn" id="tts-settings-btn" aria-label="TTS settings" title="TTS settings">&#8942;</button>
+      <div class="tts-settings-dropdown" id="tts-settings-dropdown" hidden>
+        <label class="tts-setting-row">
+          <span>Speed</span>
+          <input type="range" id="tts-rate" min="0.5" max="2" step="0.1" value="1">
+          <span class="tts-rate-val" id="tts-rate-val">1</span>
+        </label>
+        <label class="tts-setting-row">
+          <span>Voice</span>
+          <select id="tts-voice"></select>
+        </label>
+      </div>
+    </div>
   </div>
 
   <main id="main-content" aria-live="polite" aria-label="Question bank content">
@@ -186,6 +207,133 @@
       initInteractiveFeatures();
     }
 
+    function initTTS() {
+      if (!('speechSynthesis' in window)) return;
+      let activeEl = null;
+      let isLooping = false;
+      let preferredVoice = null;
+      const ttsToggle = document.getElementById('tts-toggle');
+      const voiceSelect = document.getElementById('tts-voice');
+      const rateInput = document.getElementById('tts-rate');
+      const rateVal = document.getElementById('tts-rate-val');
+      const settingsBtn = document.getElementById('tts-settings-btn');
+      const settingsDropdown = document.getElementById('tts-settings-dropdown');
+
+      function isTtsEnabled() { return ttsToggle && ttsToggle.checked; }
+
+      function pickVoice() {
+        const voices = speechSynthesis.getVoices();
+        if (!voices.length) return null;
+        const en = voices.filter(v => v.lang && v.lang.startsWith('en'));
+        return en.find(v => v.name === 'Google US English')
+          || en.find(v => v.name.includes('Google') && v.lang.startsWith('en'))
+          || en.find(v => ['Samantha','Karen','Daniel','Moira','Tessa'].includes(v.name))
+          || en[0]
+          || voices[0];
+      }
+
+      function populateVoices() {
+        if (!voiceSelect) return;
+        const voices = speechSynthesis.getVoices();
+        const currentVal = voiceSelect.value;
+        voiceSelect.innerHTML = '';
+        voices.forEach(v => {
+          const opt = document.createElement('option');
+          opt.value = v.name;
+          opt.textContent = v.name + ' (' + v.lang + ')';
+          voiceSelect.appendChild(opt);
+        });
+        if (currentVal && [...voiceSelect.options].some(o => o.value === currentVal)) {
+          voiceSelect.value = currentVal;
+        } else if (preferredVoice) {
+          voiceSelect.value = preferredVoice.name;
+        }
+      }
+
+      speechSynthesis.addEventListener('voiceschanged', () => {
+        preferredVoice = pickVoice();
+        populateVoices();
+      });
+      preferredVoice = pickVoice();
+      populateVoices();
+
+      if (rateInput && rateVal) {
+        rateInput.addEventListener('input', () => { rateVal.textContent = rateInput.value; });
+      }
+
+      if (settingsBtn && settingsDropdown) {
+        settingsBtn.addEventListener('click', e => {
+          e.stopPropagation();
+          settingsDropdown.toggleAttribute('hidden');
+        });
+        document.addEventListener('click', e => {
+          if (!settingsDropdown.hidden && !settingsBtn.contains(e.target) && !settingsDropdown.contains(e.target)) {
+            settingsDropdown.hidden = true;
+          }
+        });
+      }
+
+      function speakText(text) {
+        return new Promise(resolve => {
+          const u = new SpeechSynthesisUtterance(text);
+          const selected = voiceSelect ? voiceSelect.value : '';
+          const voice = selected
+            ? speechSynthesis.getVoices().find(v => v.name === selected)
+            : preferredVoice;
+          if (voice) u.voice = voice;
+          if (rateInput) u.rate = parseFloat(rateInput.value);
+          let done = false;
+          const timer = setTimeout(() => { if (!done) { done = true; resolve(); } }, 12000);
+          u.onend = () => { if (!done) { done = true; clearTimeout(timer); resolve(); } };
+          u.onerror = () => { if (!done) { done = true; clearTimeout(timer); resolve(); } };
+          speechSynthesis.speak(u);
+        });
+      }
+
+      async function startSpeaking(el) {
+        stopSpeaking();
+        if (!isTtsEnabled()) return;
+        activeEl = el;
+        isLooping = true;
+        const qText = el.querySelector('.q-text')?.textContent?.trim();
+        let answerText = '';
+        const correctOpt = el.querySelector('.options .opt.correct');
+        if (correctOpt) {
+          answerText = correctOpt.textContent.replace('✓', '').replace(/^[A-Z]\.\s*/, '').replace(/\s+/g, ' ').trim();
+        } else {
+          const answerEl = el.querySelector('.answer-reveal .answer');
+          if (answerEl) answerText = answerEl.textContent.trim();
+        }
+        if (!qText && !answerText) return;
+        while (isLooping && activeEl === el && isTtsEnabled()) {
+          if (qText) await speakText(qText);
+          if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
+          if (answerText) await speakText(answerText);
+          await new Promise(r => setTimeout(r, 60));
+        }
+      }
+
+      function stopSpeaking() {
+        isLooping = false;
+        speechSynthesis.cancel();
+      }
+
+      document.querySelectorAll('.question').forEach(q => {
+        q.addEventListener('mouseenter', () => startSpeaking(q));
+        q.addEventListener('mouseleave', stopSpeaking);
+      });
+
+      document.addEventListener('click', e => {
+        if (!e.target.closest('.question')) stopSpeaking();
+      });
+
+      if (ttsToggle) {
+        ttsToggle.addEventListener('change', () => {
+          if (!ttsToggle.checked) stopSpeaking();
+        });
+      }
+    }
+
     function initInteractiveFeatures() {
       const body = document.body;
       const showMcqButton = document.getElementById('show-mcqs');
@@ -238,7 +386,7 @@
           Object.entries(sections).forEach(([type, elements]) => {
             elements.forEach(el => { el.style.display = type === selectedType ? '' : 'none'; });
           });
-          if (mcqControls) mcqControls.style.display = selectedType === 'mcq' ? '' : 'none';
+          if (mcqControls) mcqControls.style.display = selectedType !== 'practical' ? '' : 'none';
         }
 
         const btnMap = { mcq: showMcqButton, short: showShortButton, practical: showPracticalButton };
@@ -348,6 +496,7 @@
       });
 
       setSection('mcq');
+      initTTS();
     }
 
     document.addEventListener('DOMContentLoaded', loadQuestionBank);

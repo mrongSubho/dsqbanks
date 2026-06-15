@@ -283,6 +283,96 @@ body {
   font-size: 0.92rem;
 }
 
+.tts-settings {
+  position: relative;
+  margin-left: auto;
+}
+
+.tts-settings-btn {
+  background: none;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.35rem 0.5rem;
+  color: #64748b;
+  transition: all 0.15s;
+}
+
+.tts-settings-btn:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  color: #334155;
+}
+
+.tts-settings-btn:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.tts-settings-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.12);
+  padding: 0.75rem;
+  z-index: 1100;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.tts-settings-dropdown[hidden] {
+  display: none;
+}
+
+.tts-setting-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #334155;
+  cursor: pointer;
+}
+
+.tts-setting-row span:first-child {
+  min-width: 48px;
+  font-weight: 600;
+}
+
+.tts-setting-row input[type="range"] {
+  flex: 1;
+  accent-color: #3b82f6;
+}
+
+.tts-rate-val {
+  min-width: 32px;
+  text-align: center;
+  font-weight: 600;
+  color: #2563eb;
+  font-size: 0.85rem;
+}
+
+.tts-setting-row select {
+  flex: 1;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0.3rem 0.4rem;
+  font-size: 0.85rem;
+  color: #334155;
+  background: #fff;
+}
+
+.tts-setting-row select:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+}
+
 .section-label {
   font-size: 0.85rem;
   color: #64748b;
