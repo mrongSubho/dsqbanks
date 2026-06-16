@@ -73,15 +73,32 @@
     <div class="tts-settings">
       <button class="tts-settings-btn" id="tts-settings-btn" aria-label="TTS settings" title="TTS settings">&#8942;</button>
       <div class="tts-settings-dropdown" id="tts-settings-dropdown" hidden>
+        <div class="tts-dropdown-header">TTS Settings</div>
         <label class="tts-setting-row">
           <span>Speed</span>
           <input type="range" id="tts-rate" min="0.5" max="2" step="0.1" value="1">
           <span class="tts-rate-val" id="tts-rate-val">1</span>
         </label>
+        <div class="tts-setting-row">
+          <span>Repeat</span>
+          <select id="tts-repeat">
+            <option value="1">1x</option>
+            <option value="2" selected>2x</option>
+            <option value="3">3x</option>
+            <option value="5">5x</option>
+            <option value="10">10x</option>
+            <option value="0">&#8734;</option>
+          </select>
+          <label class="tts-scroll-inline">
+            <input type="checkbox" id="tts-scroll">
+            Scroll
+          </label>
+        </div>
         <label class="tts-setting-row">
           <span>Voice</span>
           <select id="tts-voice"></select>
         </label>
+        <button type="button" class="tts-dropdown-done" id="tts-dropdown-done">Done</button>
       </div>
     </div>
   </div>
@@ -211,11 +228,14 @@
       if (!('speechSynthesis' in window)) return;
       let activeEl = null;
       let isLooping = false;
+      let isAutoAdvancing = false;
       let preferredVoice = null;
       const ttsToggle = document.getElementById('tts-toggle');
       const voiceSelect = document.getElementById('tts-voice');
       const rateInput = document.getElementById('tts-rate');
       const rateVal = document.getElementById('tts-rate-val');
+      const repeatSelect = document.getElementById('tts-repeat');
+      const scrollCheck = document.getElementById('tts-scroll');
       const settingsBtn = document.getElementById('tts-settings-btn');
       const settingsDropdown = document.getElementById('tts-settings-dropdown');
 
@@ -271,6 +291,10 @@
             settingsDropdown.hidden = true;
           }
         });
+        const doneBtn = document.getElementById('tts-dropdown-done');
+        if (doneBtn) {
+          doneBtn.addEventListener('click', () => { settingsDropdown.hidden = true; });
+        }
       }
 
       function speakText(text) {
@@ -290,20 +314,42 @@
         });
       }
 
-      async function startSpeaking(el) {
-        stopSpeaking();
-        if (!isTtsEnabled()) return;
-        activeEl = el;
-        isLooping = true;
-        const qText = el.querySelector('.q-text')?.textContent?.trim();
-        let answerText = '';
+      function getQText(el) {
+        return el.querySelector('.q-text')?.textContent?.trim() || '';
+      }
+
+      function getAnswerText(el) {
         const correctOpt = el.querySelector('.options .opt.correct');
         if (correctOpt) {
-          answerText = correctOpt.textContent.replace('✓', '').replace(/^[A-Z]\.\s*/, '').replace(/\s+/g, ' ').trim();
-        } else {
-          const answerEl = el.querySelector('.answer-reveal .answer');
-          if (answerEl) answerText = answerEl.textContent.trim();
+          return correctOpt.textContent.replace('✓', '').replace(/^[A-Z]\.\s*/, '').replace(/\s+/g, ' ').trim();
         }
+        const answerEl = el.querySelector('.answer-reveal .answer');
+        return answerEl ? answerEl.textContent.trim() : '';
+      }
+
+      function nextQuestion(el) {
+        let next = el.nextElementSibling;
+        while (next) {
+          if (next.classList.contains('question') && next.style.display !== 'none') return next;
+          next = next.nextElementSibling;
+        }
+        return null;
+      }
+
+      async function playQuestion(el, repeats) {
+        const qText = getQText(el);
+        const answerText = getAnswerText(el);
+        if (!qText && !answerText) return;
+        for (let i = 0; i < repeats && isLooping && activeEl === el && isTtsEnabled(); i++) {
+          if (qText) await speakText(qText);
+          if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
+          if (answerText) await speakText(answerText);
+        }
+      }
+
+      async function playInfinite(el) {
+        const qText = getQText(el);
+        const answerText = getAnswerText(el);
         if (!qText && !answerText) return;
         while (isLooping && activeEl === el && isTtsEnabled()) {
           if (qText) await speakText(qText);
@@ -313,14 +359,74 @@
         }
       }
 
-      function stopSpeaking() {
+      async function startSpeaking(el) {
+        if (scrollCheck && scrollCheck.checked) return;
+        if (isAutoAdvancing) return;
+        await stopSpeaking();
+        if (!isTtsEnabled()) return;
+        el.classList.add('tts-playing');
+        activeEl = el;
+        isLooping = true;
+        await playInfinite(el);
+      }
+
+      function setBtnState(el, playing) {
+        const btn = el && el.querySelector('.q-start-btn');
+        if (!btn) return;
+        btn.textContent = playing ? '\u25A0' : '\u25B6';
+        btn.classList.toggle('playing', playing);
+      }
+
+      function resetAllBtns() {
+        document.querySelectorAll('.q-start-btn.playing').forEach(b => {
+          b.textContent = '\u25B6';
+          b.classList.remove('playing');
+        });
+      }
+
+      async function startAutoScroll(fromEl) {
+        await stopSpeaking();
+        if (!isTtsEnabled()) return;
+        if (!scrollCheck || !scrollCheck.checked) return;
+        if (!fromEl || fromEl.style.display === 'none') return;
+        isAutoAdvancing = true;
+        document.body.classList.add('tts-auto-scrolling');
+        const repeats = repeatSelect ? parseInt(repeatSelect.value) : 2;
+        let current = fromEl;
+        current.classList.add('tts-playing');
+        setBtnState(current, true);
+        activeEl = current;
+        isLooping = true;
+        while (isLooping && current && isTtsEnabled()) {
+          await playQuestion(current, repeats || 999);
+          if (!isLooping || !isTtsEnabled()) break;
+          const next = nextQuestion(current);
+          if (!next) break;
+          current.classList.remove('tts-playing');
+          setBtnState(current, false);
+          next.classList.add('tts-playing');
+          setBtnState(next, true);
+          next.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          activeEl = next;
+          current = next;
+          await new Promise(r => setTimeout(r, 400));
+        }
+        stopSpeaking();
+      }
+
+      async function stopSpeaking() {
         isLooping = false;
+        isAutoAdvancing = false;
+        document.body.classList.remove('tts-auto-scrolling');
         speechSynthesis.cancel();
+        await new Promise(r => setTimeout(r, 50));
+        document.querySelectorAll('.tts-playing').forEach(el => el.classList.remove('tts-playing'));
+        resetAllBtns();
       }
 
       document.querySelectorAll('.question').forEach(q => {
         q.addEventListener('mouseenter', () => startSpeaking(q));
-        q.addEventListener('mouseleave', stopSpeaking);
+        q.addEventListener('mouseleave', () => { if (!isAutoAdvancing) stopSpeaking(); });
       });
 
       document.addEventListener('click', e => {
@@ -328,10 +434,41 @@
       });
 
       if (ttsToggle) {
+        const settingsContainer = document.querySelector('.tts-settings');
+        if (settingsContainer) settingsContainer.style.display = ttsToggle.checked ? '' : 'none';
         ttsToggle.addEventListener('change', () => {
-          if (!ttsToggle.checked) stopSpeaking();
+          if (!ttsToggle.checked) {
+            stopSpeaking();
+            if (settingsContainer) settingsContainer.style.display = 'none';
+          } else {
+            if (settingsContainer) settingsContainer.style.display = '';
+          }
         });
       }
+
+      function addQuestionStartBtns() {
+        const show = scrollCheck && scrollCheck.checked && ttsToggle && ttsToggle.checked;
+        document.querySelectorAll('.question').forEach(q => {
+          let btn = q.querySelector('.q-start-btn');
+          if (!btn) {
+            btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'q-start-btn';
+            btn.textContent = '\u25B6';
+            btn.setAttribute('aria-label', 'Start auto-scroll from here');
+            btn.addEventListener('click', e => {
+              e.stopPropagation();
+              startAutoScroll(q);
+            });
+            q.appendChild(btn);
+          }
+          btn.style.display = show ? '' : 'none';
+        });
+      }
+
+      addQuestionStartBtns();
+      if (scrollCheck) scrollCheck.addEventListener('change', addQuestionStartBtns);
+      if (ttsToggle) ttsToggle.addEventListener('change', addQuestionStartBtns);
     }
 
     function initInteractiveFeatures() {
