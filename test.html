@@ -322,16 +322,20 @@
     function buildTwoColumnOptions(tempDiv) {
       const opts = Array.from(tempDiv.querySelectorAll('.options .opt, .opt'));
       const labels = ['A', 'B', 'C', 'D'];
-      const items = opts.map((opt, i) => {
-        const label = labels[i] || '';
+
+      const items = opts.map(opt => {
         const isCorrect = opt.classList.contains('correct');
         let text = opt.innerHTML
           .replace(/<span[^>]*class="checkmark"[^>]*>.*?<\/span>/gi, '')
           .replace(/\s*\u2713\s*$/, '')
           .replace(/<span[^>]*class="opt-letter"[^>]*>.*?<\/span>/gi, '')
           .trim();
-        return { label, text, isCorrect };
+        return { text, isCorrect };
       });
+
+      shuffleArray(items);
+
+      items.forEach((item, i) => { item.label = labels[i] || ''; });
 
       const toOptHtml = (item) =>
         '<div class="opt' + (item.isCorrect ? ' correct' : '') + '">' +
