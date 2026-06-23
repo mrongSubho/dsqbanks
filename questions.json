@@ -509,7 +509,7 @@
       "code": "11168",
       "id": "11168-apply-statistical-methods",
       "title": "Apply Statistical Methods",
-      "stats": "99 Multiple Choice · 96 Short Answer",
+      "stats": "99 Multiple Choice · 94 Short Answer",
       "mcqs": [
         {
           "num": 1,
@@ -1086,405 +1086,395 @@
         {
           "num": 16,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">16</div>\n    <div class=\"q-text\">What is hypothesis testing?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">A method for testing claims about\n        populations.</div>\n    </details>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">17</div>\n    <div class=\"q-text\">What is a p-value?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Probability of observed result under\n        null hypothesis.</div>\n    </details>\n  </div>"
         },
         {
           "num": 17,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">17</div>\n    <div class=\"q-text\">What is a p-value?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Probability of observed result under\n        null hypothesis.</div>\n    </details>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">18</div>\n    <div class=\"q-text\">How would you calculate the probability of getting a head when tossing a fair coin? Explain the\n      reasoning.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">There are 2 equally likely outcomes\n        (H, T), so probability = 1/2.</div>\n    </details>\n  </div>"
         },
         {
           "num": 18,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">18</div>\n    <div class=\"q-text\">How would you calculate the probability of getting a head when tossing a fair coin? Explain the\n      reasoning.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">There are 2 equally likely outcomes\n        (H, T), so probability = 1/2.</div>\n    </details>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">19</div>\n    <div class=\"q-text\">How can probability be used in weather forecasting?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">It estimates chances of events like\n        rain.</div>\n    </details>\n  </div>"
         },
         {
           "num": 19,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">19</div>\n    <div class=\"q-text\">How can probability be used in weather forecasting?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">It estimates chances of events like\n        rain.</div>\n    </details>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">20</div>\n    <div class=\"q-text\">How does normal distribution describe real-world phenomena? Give an example</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">It models natural variations like\n        male height.</div>\n    </details>\n  </div>"
         },
         {
           "num": 20,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">20</div>\n    <div class=\"q-text\">How does normal distribution describe real-world phenomena? Give an example</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">It models natural variations like\n        male height.</div>\n    </details>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">21</div>\n    <div class=\"q-text\">How would you interpret a z-score of −2 in a normal distribution?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">It means the value is 2 standard\n        deviations below the mean.</div>\n    </details>\n  </div>"
         },
         {
           "num": 21,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">21</div>\n    <div class=\"q-text\">How would you interpret a z-score of −2 in a normal distribution?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">It means the value is 2 standard\n        deviations below the mean.</div>\n    </details>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">22</div>\n    <div class=\"q-text\">How does nominal data differ from ordinal data?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Nominal has no order; ordinal has\n        order.</div>\n    </details>\n  </div>"
         },
         {
           "num": 22,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">22</div>\n    <div class=\"q-text\">How does nominal data differ from ordinal data?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Nominal has no order; ordinal has\n        order.</div>\n    </details>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">23</div>\n    <div class=\"q-text\">What is discrete data and where is it used?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Countable values like number of\n        students.</div>\n    </details>\n  </div>"
         },
         {
           "num": 23,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">23</div>\n    <div class=\"q-text\">What is discrete data and where is it used?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Countable values like number of\n        students.</div>\n    </details>\n  </div>"
-        },
-        {
-          "num": 24,
-          "difficulty": 1,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">24</div>\n    <div class=\"q-text\">What is an example of nominal data?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Gender.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 25,
+          "num": 24,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">25</div>\n    <div class=\"q-text\">What is the range of probability values?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">Probability values range from 0 to\n        1.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 26,
+          "num": 25,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">26</div>\n    <div class=\"q-text\">What are mutually exclusive events?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">Events that cannot occur at the same\n        time.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 27,
+          "num": 26,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">27</div>\n    <div class=\"q-text\">What is an independent event?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">An event whose occurrence does not\n        affect another event.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 28,
+          "num": 27,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">28</div>\n    <div class=\"q-text\">What is a sample space?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">The set of all possible outcomes.\n      </div>\n    </details>\n  </div>"
         },
         {
-          "num": 29,
+          "num": 28,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">29</div>\n    <div class=\"q-text\">What is a conditional event?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">An event dependent on another event.\n      </div>\n    </details>\n  </div>"
         },
         {
-          "num": 30,
+          "num": 29,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">30</div>\n    <div class=\"q-text\">What is a continuous distribution?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">A distribution with infinite\n        possible values.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 31,
+          "num": 30,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">31</div>\n    <div class=\"q-text\">What is quantitative data?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">Numeric measurable data.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 32,
+          "num": 31,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">32</div>\n    <div class=\"q-text\">Which scale has a true zero?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">Ratio scale.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 33,
+          "num": 32,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">33</div>\n    <div class=\"q-text\">How is mean calculated?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">Sum of values divided by number of\n        values.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 34,
-          "difficulty": 2,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">34</div>\n    <div class=\"q-text\">Which measure is least affected by outliers?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">Median.</div>\n    </details>\n  </div>"
-        },
-        {
-          "num": 35,
+          "num": 33,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">35</div>\n    <div class=\"q-text\">What is mesokurtic distribution?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">A normal-shaped distribution.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 36,
+          "num": 34,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">36</div>\n    <div class=\"q-text\">What is variance?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">Average squared deviation from the\n        mean.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 37,
+          "num": 35,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">37</div>\n    <div class=\"q-text\">What is the range of 5,10,15?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">10.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 38,
+          "num": 36,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">38</div>\n    <div class=\"q-text\">Can standard deviation be negative?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">No.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 39,
+          "num": 37,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">39</div>\n    <div class=\"q-text\">What does correlation coefficient +1 mean?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">Perfect positive correlation.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 40,
+          "num": 38,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">40</div>\n    <div class=\"q-text\">What is a null hypothesis?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">A statement of no effect or\n        difference.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 41,
+          "num": 39,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">41</div>\n    <div class=\"q-text\">What is a one-sample t-test?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">A test comparing one sample mean.\n      </div>\n    </details>\n  </div>"
         },
         {
-          "num": 42,
+          "num": 40,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">42</div>\n    <div class=\"q-text\">If P(A)=0.65, how would you find the probability that event A does not occur? Explain.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">Using complement rule: P(A&#x27;) =\n        1 − 0.65 = 0.35.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 43,
+          "num": 41,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">43</div>\n    <div class=\"q-text\">Explain why probability is essential in risk analysis.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">It helps quantify risk and make\n        informed decisions.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 44,
+          "num": 42,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">44</div>\n    <div class=\"q-text\">What are the key properties of a normal distribution?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">Symmetry, mean=median=mode.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 45,
+          "num": 43,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">45</div>\n    <div class=\"q-text\">Why is normal distribution widely used in statistics?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">Because many real-world data follow\n        it.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 46,
+          "num": 44,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">46</div>\n    <div class=\"q-text\">What is an example of ordinal data in real life?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">Customer satisfaction levels.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 47,
+          "num": 45,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">47</div>\n    <div class=\"q-text\">Why is categorical data useful in segmentation?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">It groups data into categories.\n      </div>\n    </details>\n  </div>"
         },
         {
-          "num": 48,
+          "num": 46,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">48</div>\n    <div class=\"q-text\">What is an example of ordinal data?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #2563eb;background:#bfdbfe;\">Rankings.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 49,
+          "num": 47,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">49</div>\n    <div class=\"q-text\">What does a probability of 0 mean?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">It means the event is impossible.\n      </div>\n    </details>\n  </div>"
         },
         {
-          "num": 50,
+          "num": 48,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">50</div>\n    <div class=\"q-text\">What is the addition rule for disjoint events?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">P(A or B) = P(A) + P(B).</div>\n    </details>\n  </div>"
         },
         {
-          "num": 51,
+          "num": 49,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">51</div>\n    <div class=\"q-text\">What is a dependent event?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">An event whose occurrence affects\n        another event.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 52,
+          "num": 50,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">52</div>\n    <div class=\"q-text\">What is an event in probability?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">A subset of the sample space.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 53,
+          "num": 51,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">53</div>\n    <div class=\"q-text\">What is the probability of drawing a red card from a deck?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">26/52 or 0.5.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 54,
+          "num": 52,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">54</div>\n    <div class=\"q-text\">What is the shape of the normal curve?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">Symmetric and bell-shaped.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 55,
+          "num": 53,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">55</div>\n    <div class=\"q-text\">What is nominal data?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">Data categorized without order.\n      </div>\n    </details>\n  </div>"
         },
         {
-          "num": 56,
+          "num": 54,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">56</div>\n    <div class=\"q-text\">Which scale allows ranking?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">Ordinal scale.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 57,
+          "num": 55,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">57</div>\n    <div class=\"q-text\">What is median?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">The middle value in ordered data.\n      </div>\n    </details>\n  </div>"
         },
         {
-          "num": 58,
+          "num": 56,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">58</div>\n    <div class=\"q-text\">What is kurtosis?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">A measure of peakedness.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 59,
+          "num": 57,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">59</div>\n    <div class=\"q-text\">Which average is suitable for categorical data?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">Mode.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 60,
+          "num": 58,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">60</div>\n    <div class=\"q-text\">What is standard deviation?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">Square root of variance.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 61,
+          "num": 59,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">61</div>\n    <div class=\"q-text\">What is the purpose of dispersion measures?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">To describe data variability.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 62,
+          "num": 60,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">62</div>\n    <div class=\"q-text\">What is correlation?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">A measure of relationship strength.\n      </div>\n    </details>\n  </div>"
         },
         {
-          "num": 63,
+          "num": 61,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">63</div>\n    <div class=\"q-text\">What does correlation coefficient −1 mean?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">Perfect negative correlation.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 64,
+          "num": 62,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">64</div>\n    <div class=\"q-text\">What is an alternative hypothesis?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">A statement opposing the null\n        hypothesis.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 65,
+          "num": 63,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">65</div>\n    <div class=\"q-text\">What is a two-sample t-test?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">A test comparing two means.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 66,
+          "num": 64,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">66</div>\n    <div class=\"q-text\">Why is the sum of probabilities of all outcomes in a sample space equal to 1?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">Because one of the outcomes must\n        occur, making total probability equal to certainty.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 67,
+          "num": 65,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">67</div>\n    <div class=\"q-text\">What is the difference between independent and dependent events?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">Independent events do not affect\n        each other; dependent events do.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 68,
+          "num": 66,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">68</div>\n    <div class=\"q-text\">If mean=50 and SD=10, what is z-score of 60?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">(60−50)/10 = 1</div>\n    </details>\n  </div>"
         },
         {
-          "num": 69,
+          "num": 67,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">69</div>\n    <div class=\"q-text\">How does kurtosis describe distribution shape?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">It shows peakedness or flatness.\n      </div>\n    </details>\n  </div>"
         },
         {
-          "num": 70,
+          "num": 68,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">70</div>\n    <div class=\"q-text\">How does quantitative data differ from qualitative data?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">Quantitative is numeric; qualitative\n        is categorical.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 71,
+          "num": 69,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">71</div>\n    <div class=\"q-text\">How can qualitative data be converted into quantitative form?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">Using encoding.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 72,
+          "num": 70,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">72</div>\n    <div class=\"q-text\">What is an example of discrete data?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #d97706;background:#fde68a;\">Number of cars.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 73,
+          "num": 71,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">73</div>\n    <div class=\"q-text\">What does a probability of 1 mean?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">It means the event is certain to\n        happen.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 74,
+          "num": 72,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">74</div>\n    <div class=\"q-text\">What is the general addition rule?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">P(A ∪ B) = P(A) + P(B) − P(A ∩ B).\n      </div>\n    </details>\n  </div>"
         },
         {
-          "num": 75,
+          "num": 73,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">75</div>\n    <div class=\"q-text\">What is the probability of getting heads in a fair coin toss?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">0.5.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 76,
+          "num": 74,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">76</div>\n    <div class=\"q-text\">What is the probability of getting an even number on a die?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">3/6 or 0.5.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 77,
+          "num": 75,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">77</div>\n    <div class=\"q-text\">What is an example of independent events?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Tossing a coin and rolling a die.\n      </div>\n    </details>\n  </div>"
         },
         {
-          "num": 78,
+          "num": 76,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">78</div>\n    <div class=\"q-text\">What is a z-score?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">The number of standard deviations\n        from the mean.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 79,
+          "num": 77,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">79</div>\n    <div class=\"q-text\">What is ordinal data?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Data categorized with order.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 80,
+          "num": 78,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">80</div>\n    <div class=\"q-text\">Can interval data have negative values?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Yes.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 81,
+          "num": 79,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">81</div>\n    <div class=\"q-text\">What is mode?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">The most frequent value.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 82,
+          "num": 80,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">82</div>\n    <div class=\"q-text\">What is leptokurtic distribution?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">A distribution with high peak.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 83,
+          "num": 81,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">83</div>\n    <div class=\"q-text\">What is the median of 3,5,7?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">5.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 84,
+          "num": 82,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">84</div>\n    <div class=\"q-text\">What is quartile?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Values dividing data into four\n        parts.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 85,
+          "num": 83,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">85</div>\n    <div class=\"q-text\">What is the first quartile?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">The 25th percentile.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 86,
+          "num": 84,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">86</div>\n    <div class=\"q-text\">What is zero correlation?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">No linear relationship exists.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 87,
+          "num": 85,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">87</div>\n    <div class=\"q-text\">What is sampling?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Selecting a subset from a\n        population.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 88,
+          "num": 86,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">88</div>\n    <div class=\"q-text\">What is significance level?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Probability of rejecting a true null\n        hypothesis.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 89,
+          "num": 87,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">89</div>\n    <div class=\"q-text\">Why must the probability of any event lie between 0 and 1? Explain with reasoning.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Because probability represents\n        likelihood. A value below 0 is impossible and above 1 exceeds certainty, which is logically invalid.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 90,
+          "num": 88,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">90</div>\n    <div class=\"q-text\">How would you calculate the probability of getting an even number when rolling a dice?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Even numbers: {2,4,6} → 3 outcomes\n        out of 6 → probability = 3/6 = ½</div>\n    </details>\n  </div>"
         },
         {
-          "num": 91,
+          "num": 89,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">91</div>\n    <div class=\"q-text\">What is joint probability?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Probability of two events occurring\n        together.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 92,
+          "num": 90,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">92</div>\n    <div class=\"q-text\">What is Bernoulli distribution and where is it used?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Single trial with two outcomes.\n      </div>\n    </details>\n  </div>"
         },
         {
-          "num": 93,
+          "num": 91,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">93</div>\n    <div class=\"q-text\">What does high kurtosis indicate?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Sharp peak and heavy tails.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 94,
+          "num": 92,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">94</div>\n    <div class=\"q-text\">Why is age considered continuous data but number of children discrete?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Age can take infinite values;\n        children are countable.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 95,
+          "num": 93,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">95</div>\n    <div class=\"q-text\">Why is numeric data easier to analyze statistically?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Because calculations are possible.\n      </div>\n    </details>\n  </div>"
         },
         {
-          "num": 96,
+          "num": 94,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">96</div>\n    <div class=\"q-text\">Why can&#x27;t mean be calculated for nominal data?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Because values are not numeric.\n      </div>\n    </details>\n  </div>"
         }
@@ -2504,7 +2494,7 @@
       "code": "11170",
       "id": "11170-prepare-and-visualize-data",
       "title": "Prepare and Visualize Data",
-      "stats": "100 Multiple Choice · 100 Short Answer",
+      "stats": "99 Multiple Choice · 100 Short Answer",
       "mcqs": [
         {
           "num": 1,
@@ -2599,410 +2589,405 @@
         {
           "num": 19,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">19</div>\n    <div class=\"q-text\">Which SQL clause is evaluated after the WHERE clause?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">A.</span>\n        GROUP BY ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> SELECT</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> ORDER BY</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> DISTINCT</div>\n    </div>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">20</div>\n    <div class=\"q-text\">Which SQL statement returns all columns from a table named Products?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> SELECT Products FROM ;</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> SELECT ALL FROM Products;</div>\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">C.</span>\n        SELECT FROM Products; ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> GET Products;</div>\n    </div>\n  </div>"
         },
         {
           "num": 20,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">20</div>\n    <div class=\"q-text\">Which SQL statement returns all columns from a table named Products?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> SELECT Products FROM ;</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> SELECT ALL FROM Products;</div>\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">C.</span>\n        SELECT FROM Products; ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> GET Products;</div>\n    </div>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">21</div>\n    <div class=\"q-text\">Which SQL keyword is used to rename a column in query output?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> RENAME</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> CHANGE</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> MODIFY</div>\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">D.</span> AS ✓\n      </div>\n    </div>\n  </div>"
         },
         {
           "num": 21,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">21</div>\n    <div class=\"q-text\">Which SQL keyword is used to rename a column in query output?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> RENAME</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> CHANGE</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> MODIFY</div>\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">D.</span> AS ✓\n      </div>\n    </div>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">22</div>\n    <div class=\"q-text\">Which SQL operator is used to search for values within a specified range?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> LIKE</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> IN</div>\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">C.</span>\n        BETWEEN ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> EXISTS</div>\n    </div>\n  </div>"
         },
         {
           "num": 22,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">22</div>\n    <div class=\"q-text\">Which SQL operator is used to search for values within a specified range?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> LIKE</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> IN</div>\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">C.</span>\n        BETWEEN ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> EXISTS</div>\n    </div>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">23</div>\n    <div class=\"q-text\">Which SQL clause is used to limit returned rows in ANSI SQL:2008 standard?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">A.</span>\n        FETCH FIRST ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> TOP</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> LIMIT</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> ROWNUM</div>\n    </div>\n  </div>"
         },
         {
           "num": 23,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">23</div>\n    <div class=\"q-text\">Which SQL clause is used to limit returned rows in ANSI SQL:2008 standard?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">A.</span>\n        FETCH FIRST ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> TOP</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> LIMIT</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> ROWNUM</div>\n    </div>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">24</div>\n    <div class=\"q-text\">Which technique is most suitable for replacing missing numerical values with the column average?\n    </div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Row deletion</div>\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">B.</span> Mean\n        imputation ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Encoding</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Mapping</div>\n    </div>\n  </div>"
         },
         {
           "num": 24,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">24</div>\n    <div class=\"q-text\">Which technique is most suitable for replacing missing numerical values with the column average?\n    </div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Row deletion</div>\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">B.</span> Mean\n        imputation ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Encoding</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Mapping</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 25,
-          "difficulty": 1,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">25</div>\n    <div class=\"q-text\">Which type of processing transforms data before loading it into the target system?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> ELT</div>\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">B.</span> ETL\n        ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Web crawling</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Visualization</div>\n    </div>\n  </div>"
         },
         {
-          "num": 26,
+          "num": 25,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">26</div>\n    <div class=\"q-text\">Which data acquisition technique loads raw data first and transforms it later inside the target\n      system?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> ETL batch processing</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> API polling</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span> ELT\n        batch processing ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Web scraping</div>\n    </div>\n  </div>"
         },
         {
-          "num": 27,
+          "num": 26,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">27</div>\n    <div class=\"q-text\">Which statistical measure is most affected by extreme outliers?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Median</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Mode</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span> Mean\n        ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Percentile</div>\n    </div>\n  </div>"
         },
         {
-          "num": 28,
+          "num": 27,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">28</div>\n    <div class=\"q-text\">Which of the following is commonly used to detect outliers visually?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">A.</span> Box\n        plot ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Pie chart</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Histogram</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Pareto chart</div>\n    </div>\n  </div>"
         },
         {
-          "num": 29,
+          "num": 28,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">29</div>\n    <div class=\"q-text\">In ANSI-standard SQL, which clause is used to filter grouped records?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> WHERE</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">B.</span>\n        HAVING ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> ORDER BY</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> DISTINCT</div>\n    </div>\n  </div>"
         },
         {
-          "num": 30,
+          "num": 29,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">30</div>\n    <div class=\"q-text\">What is the main purpose of feature selection?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Increase duplicate data</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">B.</span>\n        Remove irrelevant variables ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Create missing values</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Convert charts into tables</div>\n    </div>\n  </div>"
         },
         {
-          "num": 31,
+          "num": 30,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">31</div>\n    <div class=\"q-text\">Which SQL keyword removes duplicate rows from a query result?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> UNIQUE</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> FILTER</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span>\n        DISTINCT ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> GROUP</div>\n    </div>\n  </div>"
         },
         {
-          "num": 32,
+          "num": 31,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">32</div>\n    <div class=\"q-text\">Which of the following is an advantage of using APIs for data loading?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Manual data entry is required</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">B.</span>\n        Real-time structured data access ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Data cannot be automated</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Only local files can be accessed</div>\n    </div>\n  </div>"
         },
         {
-          "num": 33,
+          "num": 32,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">33</div>\n    <div class=\"q-text\">Which issue can arise when working with imbalanced datasets?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Reduced storage requirements</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Improved minority class prediction automatically\n      </div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span>\n        Biased model performance toward majority classes ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Elimination of outliers automatically</div>\n    </div>\n  </div>"
         },
         {
-          "num": 34,
+          "num": 33,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">34</div>\n    <div class=\"q-text\">Which statistical term represents the middle value of an ordered dataset?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Mode</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Variance</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span>\n        Median ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Correlation</div>\n    </div>\n  </div>"
         },
         {
-          "num": 35,
+          "num": 34,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">35</div>\n    <div class=\"q-text\">Which chart is most suitable for showing proportions of categories within a whole?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Scatter plot</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Histogram</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span> Pie\n        chart ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Box plot</div>\n    </div>\n  </div>"
         },
         {
-          "num": 36,
+          "num": 35,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">36</div>\n    <div class=\"q-text\">Which EDA step involves generating new variables from existing data?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">A.</span>\n        Variable creation ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Variable identification</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Outlier treatment</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Missing value treatment</div>\n    </div>\n  </div>"
         },
         {
-          "num": 37,
+          "num": 36,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">37</div>\n    <div class=\"q-text\">Which type of data source is commonly associated with Hadoop frameworks?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Small local files</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">B.</span>\n        Distributed large datasets ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Manual spreadsheets only</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Static metadata files</div>\n    </div>\n  </div>"
         },
         {
-          "num": 38,
+          "num": 37,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">38</div>\n    <div class=\"q-text\">Which transformation technique is commonly applied to categorical labels such as “Male” and\n      “Female”?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">A.</span>\n        Encoding ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Standardization</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Normalization</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Imputation</div>\n    </div>\n  </div>"
         },
         {
-          "num": 39,
+          "num": 38,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">39</div>\n    <div class=\"q-text\">Which statistical measure divides data into 100 equal parts?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Variance</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Correlation</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span>\n        Percentile ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Covariance</div>\n    </div>\n  </div>"
         },
         {
-          "num": 40,
+          "num": 39,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">40</div>\n    <div class=\"q-text\">Which data acquisition technique extracts information directly from web page content?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">A.</span> Web\n        scraping ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Normalization</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Standardization</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Mapping</div>\n    </div>\n  </div>"
         },
         {
-          "num": 41,
+          "num": 40,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">41</div>\n    <div class=\"q-text\">Which visualization method compares actual data quantiles with theoretical quantiles?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Scatter plot</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Histogram</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Box plot</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">D.</span> Q-Q\n        plot ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 42,
+          "num": 41,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">42</div>\n    <div class=\"q-text\">Which measure is least affected by extreme values?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Mean</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">B.</span>\n        Median ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Variance</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Standard deviation</div>\n    </div>\n  </div>"
         },
         {
-          "num": 43,
+          "num": 42,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">43</div>\n    <div class=\"q-text\">Which SQL function calculates the total sum of values in a numeric column?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> ADD()</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> COUNT()</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span>\n        SUM() ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> AVG()</div>\n    </div>\n  </div>"
         },
         {
-          "num": 44,
+          "num": 43,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">44</div>\n    <div class=\"q-text\">Which EDA activity helps identify whether variables need scaling or transformation?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Univariate analysis</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">B.</span> Data\n        visualization ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Variable transformation</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Missing value treatment</div>\n    </div>\n  </div>"
         },
         {
-          "num": 45,
+          "num": 44,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">45</div>\n    <div class=\"q-text\">Which statistical measure represents the square root of variance?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Covariance</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Median</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span>\n        Standard deviation ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Correlation</div>\n    </div>\n  </div>"
         },
         {
-          "num": 46,
+          "num": 45,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">46</div>\n    <div class=\"q-text\">Which transformation is useful when variables have different measurement units?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">A.</span>\n        Normalization ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Data crawling</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Imputation</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Metadata creation</div>\n    </div>\n  </div>"
         },
         {
-          "num": 47,
+          "num": 46,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">47</div>\n    <div class=\"q-text\">Which measure indicates how strongly variables are linearly related?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">A.</span>\n        Correlation ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Mode</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Median</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Percentile</div>\n    </div>\n  </div>"
         },
         {
-          "num": 48,
+          "num": 47,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">48</div>\n    <div class=\"q-text\">Which chart is best for comparing actual distribution against expected normal distribution\n      visually?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Pie chart</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">B.</span> Q-Q\n        plot ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Pareto chart</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Histogram</div>\n    </div>\n  </div>"
         },
         {
-          "num": 49,
+          "num": 48,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">49</div>\n    <div class=\"q-text\">Which EDA step is usually performed after variable identification?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Variable creation</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">B.</span>\n        Univariate analysis ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Outlier treatment</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Feature encoding</div>\n    </div>\n  </div>"
         },
         {
-          "num": 50,
+          "num": 49,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">50</div>\n    <div class=\"q-text\">Which statistical measure helps identify variability within a dataset?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">A.</span>\n        Variance ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Median</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Mode</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Correlation</div>\n    </div>\n  </div>"
         },
         {
-          "num": 51,
+          "num": 50,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">51</div>\n    <div class=\"q-text\">Which technique is primarily used to automatically collect data from websites by navigating\n      multiple linked pages?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Data normalization</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span> Web\n        crawler ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Imputation</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Encoding</div>\n    </div>\n  </div>"
         },
         {
-          "num": 52,
+          "num": 51,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">52</div>\n    <div class=\"q-text\">What is the primary purpose of handling missing values before analysis?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Increase storage size</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span>\n        Improve data quality ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Reduce visualization options</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Eliminate all variables</div>\n    </div>\n  </div>"
         },
         {
-          "num": 53,
+          "num": 52,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">53</div>\n    <div class=\"q-text\">Which EDA step focuses on analyzing one variable at a time?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Bi-variate analysis</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Variable transformation</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Variable creation</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">D.</span>\n        Univariate analysis ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 54,
+          "num": 53,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">54</div>\n    <div class=\"q-text\">Which visualization method is best for identifying relationships between two numerical\n      variables?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">A.</span>\n        Scatter plot ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Pie chart</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Histogram</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Pareto chart</div>\n    </div>\n  </div>"
         },
         {
-          "num": 55,
+          "num": 54,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">55</div>\n    <div class=\"q-text\">Which statistical measure indicates the linear relationship between two variables?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Standard deviation</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span>\n        Correlation ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Percentile</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Median</div>\n    </div>\n  </div>"
         },
         {
-          "num": 56,
+          "num": 55,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">56</div>\n    <div class=\"q-text\">Which transformation converts categorical text values into numerical representations?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Standardization</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span>\n        Encoding ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Normalization</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Imputation</div>\n    </div>\n  </div>"
         },
         {
-          "num": 57,
+          "num": 56,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">57</div>\n    <div class=\"q-text\">In data warehousing, facts usually represent:</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Descriptive attributes</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Data source names</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">C.</span>\n        Quantitative measurements ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Missing values</div>\n    </div>\n  </div>"
         },
         {
-          "num": 58,
+          "num": 57,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">58</div>\n    <div class=\"q-text\">Which data transformation technique adjusts data so that it has a mean of 0 and a standard\n      deviation of 1?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Mapping</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Encoding</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">C.</span>\n        Standardization ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Imputation</div>\n    </div>\n  </div>"
         },
         {
-          "num": 59,
+          "num": 58,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">59</div>\n    <div class=\"q-text\">Which of the following is best suited for storing semi-structured data exchanged over the\n      internet?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Flat files</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span> Web\n        services ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Pie charts</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Q-Q plots</div>\n    </div>\n  </div>"
         },
         {
-          "num": 60,
+          "num": 59,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">60</div>\n    <div class=\"q-text\">Which data issue occurs when one class significantly outnumbers another in a dataset?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Missing values</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span>\n        Imbalanced data ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Data normalization</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Feature mapping</div>\n    </div>\n  </div>"
         },
         {
-          "num": 61,
+          "num": 60,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">61</div>\n    <div class=\"q-text\">Which measure identifies the most frequently occurring value in a dataset?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Median</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Mean</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Variance</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">D.</span> Mode\n        ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 62,
+          "num": 61,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">62</div>\n    <div class=\"q-text\">Which SQL statement retrieves unique department names from an Employee table?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> SELECT department FROM Employee;</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> SELECT UNIQUE department FROM Employee;</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">C.</span>\n        SELECT DISTINCT department FROM Employee; ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> SELECT ONLY department FROM Employee;</div>\n    </div>\n  </div>"
         },
         {
-          "num": 63,
+          "num": 62,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">63</div>\n    <div class=\"q-text\">Which EDA process specifically focuses on identifying unusual observations?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Variable creation</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span>\n        Outlier treatment ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Missing value treatment</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Variable transformation</div>\n    </div>\n  </div>"
         },
         {
-          "num": 64,
+          "num": 63,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">64</div>\n    <div class=\"q-text\">Which of the following is a benefit of normalization?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> It removes all missing values</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span> It\n        scales variables to a comparable range ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> It automatically detects outliers</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> It converts text into categories</div>\n    </div>\n  </div>"
         },
         {
-          "num": 65,
+          "num": 64,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">65</div>\n    <div class=\"q-text\">Which type of schema is commonly used in data warehousing with a central fact table?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Network schema</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Relational schema</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">C.</span> Star\n        schema ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Hierarchical schema</div>\n    </div>\n  </div>"
         },
         {
-          "num": 66,
+          "num": 65,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">66</div>\n    <div class=\"q-text\">Which process converts raw data into a usable format for analysis?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">A.</span> Data\n        cleaning and transformation ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Variable deletion</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Data duplication</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Data crawling</div>\n    </div>\n  </div>"
         },
         {
-          "num": 67,
+          "num": 66,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">67</div>\n    <div class=\"q-text\">Which operation extracts only a specific portion of a dataset?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Merging</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Joining</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">C.</span>\n        Slicing ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Encoding</div>\n    </div>\n  </div>"
         },
         {
-          "num": 68,
+          "num": 67,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">68</div>\n    <div class=\"q-text\">Which issue can occur if outliers are ignored during analysis?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Reduced visualization options</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span>\n        Distorted statistical results ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Automatic normalization</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Increased metadata quality</div>\n    </div>\n  </div>"
         },
         {
-          "num": 69,
+          "num": 68,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">69</div>\n    <div class=\"q-text\">Which visualization method is ideal for displaying cumulative frequency patterns?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">A.</span>\n        Pareto chart ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Box plot</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Scatter plot</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Q-Q plot</div>\n    </div>\n  </div>"
         },
         {
-          "num": 70,
+          "num": 69,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">70</div>\n    <div class=\"q-text\">Which type of analysis studies more than two variables simultaneously?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Univariate analysis</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span>\n        Multivariate analysis ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Bi-variate analysis</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Frequency analysis</div>\n    </div>\n  </div>"
         },
         {
-          "num": 71,
+          "num": 70,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">71</div>\n    <div class=\"q-text\">Which visualization technique is best for detecting clusters in numerical data?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">A.</span>\n        Scatter plot ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Pie chart</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Pareto chart</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Histogram</div>\n    </div>\n  </div>"
         },
         {
-          "num": 72,
+          "num": 71,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">72</div>\n    <div class=\"q-text\">Which data source is simplest but lacks strong relational structure?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Database</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span> Flat\n        file ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Multidimensional cube</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Web API</div>\n    </div>\n  </div>"
         },
         {
-          "num": 73,
+          "num": 72,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">73</div>\n    <div class=\"q-text\">Which data preparation activity reduces inconsistencies and duplicate records?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">A.</span> Data\n        cleaning ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Web crawling</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Feature extraction</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Metadata generation</div>\n    </div>\n  </div>"
         },
         {
-          "num": 74,
+          "num": 73,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">74</div>\n    <div class=\"q-text\">Which chart type is commonly used to visualize frequency distributions and skewness?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">A.</span>\n        Histogram ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Scatter plot</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Pie chart</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Box plot</div>\n    </div>\n  </div>"
         },
         {
-          "num": 75,
+          "num": 74,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">75</div>\n    <div class=\"q-text\">Which visualization is best for showing quartiles and median together?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Pie chart</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Histogram</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Scatter plot</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">D.</span> Box\n        plot ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 76,
+          "num": 75,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">76</div>\n    <div class=\"q-text\">A dataset has customer ages ranging from 18 to 80. Which transformation scales the values\n      between 0 and 1?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Standardization</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Mapping</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Encoding</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">D.</span>\n        Normalization ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 77,
+          "num": 76,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">77</div>\n    <div class=\"q-text\">Which chart is most suitable for visualizing the distribution of continuous numerical data?\n    </div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Pie chart</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">B.</span>\n        Histogram ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Pareto chart</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Scatter plot</div>\n    </div>\n  </div>"
         },
         {
-          "num": 78,
+          "num": 77,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">78</div>\n    <div class=\"q-text\">Which measure indicates the spread of data around the mean?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Median</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">B.</span>\n        Variance ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Mode</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Correlation</div>\n    </div>\n  </div>"
         },
         {
-          "num": 79,
+          "num": 78,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">79</div>\n    <div class=\"q-text\">Which technique replaces missing values using estimated values instead of removing records?\n    </div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Normalization</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Encoding</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">C.</span>\n        Imputation ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Mapping</div>\n    </div>\n  </div>"
         },
         {
-          "num": 80,
+          "num": 79,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">80</div>\n    <div class=\"q-text\">Which operation selects only specific rows and columns from a dataset?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Standardization</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Joining</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">C.</span>\n        Slicing and sub-setting ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Encoding</div>\n    </div>\n  </div>"
         },
         {
-          "num": 81,
+          "num": 80,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">81</div>\n    <div class=\"q-text\">Which EDA activity is performed to understand relationships among multiple variables\n      simultaneously?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Univariate analysis</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Variable identification</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">C.</span>\n        Multivariate analysis ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Missing value treatment</div>\n    </div>\n  </div>"
         },
         {
-          "num": 82,
+          "num": 81,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">82</div>\n    <div class=\"q-text\">Which visualization is most appropriate for checking whether data follows a normal distribution?\n    </div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Pie chart</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">B.</span> Q-Q\n        plot ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Pareto chart</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Scatter plot</div>\n    </div>\n  </div>"
         },
         {
-          "num": 83,
+          "num": 82,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">83</div>\n    <div class=\"q-text\">Which type of analysis examines the relationship between exactly two variables?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Multivariate analysis</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Univariate analysis</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">C.</span>\n        Bi-variate analysis ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Predictive analysis</div>\n    </div>\n  </div>"
         },
         {
-          "num": 84,
+          "num": 83,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">84</div>\n    <div class=\"q-text\">Which operation combines records from two datasets based on common keys?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Encoding</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">B.</span>\n        Joining ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Imputation</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Standardization</div>\n    </div>\n  </div>"
         },
         {
-          "num": 85,
+          "num": 84,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">85</div>\n    <div class=\"q-text\">Which feature selection metric measures the reduction in entropy after splitting data?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Covariance</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">B.</span>\n        Information Gain ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Standard deviation</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Percentile</div>\n    </div>\n  </div>"
         },
         {
-          "num": 86,
+          "num": 85,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">86</div>\n    <div class=\"q-text\">Which method removes records containing missing values entirely?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Encoding</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Imputation</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">C.</span>\n        Dropping rows ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Normalization</div>\n    </div>\n  </div>"
         },
         {
-          "num": 87,
+          "num": 86,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">87</div>\n    <div class=\"q-text\">Which statistical concept measures how two variables change together?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">A.</span>\n        Covariance ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Median</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Percentile</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Mode</div>\n    </div>\n  </div>"
         },
         {
-          "num": 88,
+          "num": 87,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">88</div>\n    <div class=\"q-text\">Which SQL clause is used to arrange grouped data after aggregation?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> HAVING</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">B.</span>\n        ORDER BY ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> DISTINCT</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> WHERE</div>\n    </div>\n  </div>"
         },
         {
-          "num": 89,
+          "num": 88,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">89</div>\n    <div class=\"q-text\">Which visualization is most useful for identifying correlation trends?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">A.</span>\n        Scatter plot ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Pie chart</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Histogram</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Pareto chart</div>\n    </div>\n  </div>"
         },
         {
-          "num": 90,
+          "num": 89,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">90</div>\n    <div class=\"q-text\">Which statistical characteristic helps determine whether data follows a bell-shaped\n      distribution?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">A.</span>\n        Normality ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Covariance</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Percentile</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Mode</div>\n    </div>\n  </div>"
         },
         {
-          "num": 91,
+          "num": 90,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">91</div>\n    <div class=\"q-text\">Which feature selection method combines multiple approaches for better performance?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Wrapper method</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">B.</span>\n        Hybrid method ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Embedded method</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Filter method</div>\n    </div>\n  </div>"
         },
         {
-          "num": 92,
+          "num": 91,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">92</div>\n    <div class=\"q-text\">Which visualization method is best for comparing categories using rectangular bars?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Pie chart</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Histogram</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">C.</span> Bar\n        chart ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Scatter plot</div>\n    </div>\n  </div>"
         },
         {
-          "num": 93,
+          "num": 92,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">93</div>\n    <div class=\"q-text\">Which technique is used to transform text categories into binary columns?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Mapping</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Standardization</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">C.</span>\n        One-hot encoding ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Imputation</div>\n    </div>\n  </div>"
         },
         {
-          "num": 94,
+          "num": 93,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">94</div>\n    <div class=\"q-text\">Which feature selection metric is commonly used with categorical variables?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">A.</span> Chi\n        Square ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Variance</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Correlation</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Covariance</div>\n    </div>\n  </div>"
         },
         {
-          "num": 95,
+          "num": 94,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">95</div>\n    <div class=\"q-text\">Which data acquisition method is most suitable for periodically moving large volumes of\n      enterprise data?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> API calls</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">B.</span> ETL\n        batch processing ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Pie charts</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Scatter plotting</div>\n    </div>\n  </div>"
         },
         {
-          "num": 96,
+          "num": 95,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">96</div>\n    <div class=\"q-text\">Which process ensures a dataset is fully usable for analysis?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Data duplication</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">B.</span> Data\n        cleaning and transformation ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Metadata deletion</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Web crawling</div>\n    </div>\n  </div>"
         },
         {
-          "num": 97,
+          "num": 96,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">97</div>\n    <div class=\"q-text\">Which feature selection approach generally has the highest computational cost?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Filter method</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">B.</span>\n        Wrapper method ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Embedded method</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Information Gain</div>\n    </div>\n  </div>"
         },
         {
-          "num": 98,
+          "num": 97,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">98</div>\n    <div class=\"q-text\">Which SQL operator checks for pattern matching in text values?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> MATCH</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> FIND</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> SEARCH</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">D.</span> LIKE\n        ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 99,
+          "num": 98,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">99</div>\n    <div class=\"q-text\">Which SQL condition returns rows where a value is absent?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> IS EMPTY</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">C.</span> IS\n        NULL ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 100,
+          "num": 99,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">100</div>\n    <div class=\"q-text\">Which SQL keyword combines results from two SELECT statements while removing duplicates?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> JOIN</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> MERGE</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">C.</span>\n        UNION ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> CONCAT</div>\n    </div>\n  </div>"
         }
@@ -4274,7 +4259,7 @@
       "code": "11172",
       "id": "11172-work-with-big-data",
       "title": "Work with Big Data",
-      "stats": "75 Multiple Choice · 75 Short Answer",
+      "stats": "59 Multiple Choice · 74 Short Answer",
       "mcqs": [
         {
           "num": 1,
@@ -4349,307 +4334,227 @@
         {
           "num": 15,
           "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">15</div>\n    <div class=\"q-text\">What is &#x27;feature engineering&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">A.</span>\n        Creating or improving input variables to help the model learn ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Selecting the best algorithm for the given prediction\n        task type</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Evaluating model performance on the held-out test\n        dataset only</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Saving the trained model to a file for future\n        deployment use</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 16,
-          "difficulty": 1,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">16</div>\n    <div class=\"q-text\">What does &#x27;model.fit()&#x27; do?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> It evaluates the model on the test set and returns\n        accuracy</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> It saves the trained model as a serialised file on\n        disk</div>\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">C.</span> It\n        trains the model on the provided training data features ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> It generates predictions for all samples in the test\n        dataset</div>\n    </div>\n  </div>"
         },
         {
-          "num": 17,
-          "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">17</div>\n    <div class=\"q-text\">What is &#x27;Precision&#x27; in model evaluation?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">A.</span> How\n        many of the model&#x27;s positive predictions were actually correct ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> How many actual positives the model correctly\n        identified overall</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> The total percentage of all correct predictions the\n        model made</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> How quickly the model makes predictions on unseen\n        examples</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 18,
-          "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">18</div>\n    <div class=\"q-text\">What is &#x27;dropout&#x27; in neural network training?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Dropping features with low variance before the\n        training step</div>\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">B.</span>\n        Randomly turning off nodes during training to reduce overfitting ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Removing weak models from the ensemble after training\n        is done</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Stopping training early when validation accuracy\n        stops improving</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 19,
-          "difficulty": 1,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #059669;background:#ecfdf5;\">\n    <div class=\"q-num\">19</div>\n    <div class=\"q-text\">What is &#x27;transfer learning&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Moving raw data from one cloud storage bucket to\n        another one</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Converting a model from one programming language to\n        another one</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Training a model on multiple datasets at the exact\n        same time</div>\n      <div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">D.</span>\n        Using a model trained on one task as a starting point for another ✓</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 20,
+          "num": 16,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">20</div>\n    <div class=\"q-text\">Which of these is an example of a regression problem?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Classifying a photo as a cat or a dog picture</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Grouping customers into buying behaviour segments\n      </div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span>\n        Predicting the price of a house based on its size ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Deciding whether to approve or reject a loan</div>\n    </div>\n  </div>"
         },
         {
-          "num": 21,
+          "num": 17,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">21</div>\n    <div class=\"q-text\">Which of the following is an unsupervised learning algorithm?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Linear Regression predicts a continuous number value\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Logistic Regression classifies data into categories\n      </div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span>\n        K-Means groups data into clusters without labels ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Random Forest combines trees to vote on a result\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 22,
+          "num": 18,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">22</div>\n    <div class=\"q-text\">Which of these best describes &#x27;deep learning&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Learning that goes very deep into a dataset&#x27;s\n        history</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> A way of cleaning data at a very detailed fine level\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> An algorithm that trains for a very long time slowly\n      </div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">D.</span>\n        Machine learning using neural networks with many layers ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 23,
+          "num": 19,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">23</div>\n    <div class=\"q-text\">What is &#x27;Random Forest&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> A single tree with randomly chosen split conditions\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> A neural network with random layer connections</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> A clustering method using random starting cluster\n        centres</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">D.</span> Many\n        Decision Trees combined for better predictions ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 24,
-          "difficulty": 2,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">24</div>\n    <div class=\"q-text\">What is &#x27;feature engineering&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Choosing the best ML algorithm for a given task</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">B.</span>\n        Creating new useful input variables from existing data ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Evaluating the model&#x27;s accuracy on the test\n        dataset</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Saving the trained model to a file on the disk</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 25,
+          "num": 20,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">25</div>\n    <div class=\"q-text\">What is &#x27;Logistic Regression&#x27; used for?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Predicting a continuous number like price or weight\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Grouping unlabelled data into natural clusters</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span>\n        Classifying data into categories like Yes or No ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Reducing the number of input features in data</div>\n    </div>\n  </div>"
         },
         {
-          "num": 26,
-          "difficulty": 2,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">26</div>\n    <div class=\"q-text\">What is &#x27;XGBoost&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> A clustering algorithm that groups data into K parts\n      </div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">B.</span> A\n        boosting algorithm that fixes errors step by step ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> A dimensionality reduction method for image data\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> A deployment tool for hosting models on the web</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 27,
+          "num": 21,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">27</div>\n    <div class=\"q-text\">What does &#x27;data pre-processing&#x27; include?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Drawing charts and graphs of the model results</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Choosing the number of epochs for neural networks\n      </div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span>\n        Cleaning, encoding, and scaling the raw data ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Deploying the model to a live production server</div>\n    </div>\n  </div>"
         },
         {
-          "num": 28,
+          "num": 22,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">28</div>\n    <div class=\"q-text\">What does &#x27;Velocity&#x27; mean in big data?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> The total volume of data stored in the system</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> The different types of data in the dataset</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span> The\n        high speed at which new data is generated ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> The accuracy of data records in the database</div>\n    </div>\n  </div>"
         },
         {
-          "num": 29,
+          "num": 23,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">29</div>\n    <div class=\"q-text\">What is &#x27;Apache Spark&#x27; known for?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">A.</span>\n        Processing big data very fast using memory storage ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Sending and receiving email over large networks</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Storing files in a traditional relational database\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Creating interactive dashboards for business users\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 30,
+          "num": 24,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">30</div>\n    <div class=\"q-text\">What is &#x27;Amazon SageMaker&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> A cloud database for storing very large data files\n      </div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">B.</span> A\n        cloud service for building and deploying ML models ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> A tool for sending automated marketing email\n        campaigns</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> A framework for processing big data using Spark</div>\n    </div>\n  </div>"
         },
         {
-          "num": 31,
+          "num": 25,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">31</div>\n    <div class=\"q-text\">Why do companies use cloud platforms for big data?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Cloud platforms only work offline without any\n        internet</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Cloud platforms store data only on a single machine\n      </div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span> They\n        can scale up resources without buying new hardware ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> They need cloud platforms to write Python programs\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 32,
+          "num": 26,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">32</div>\n    <div class=\"q-text\">Why is Spark faster than Hadoop MapReduce?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Spark uses more powerful hardware than Hadoop does\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Spark requires fewer input records to learn from\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Spark is a newer cloud service with faster servers\n      </div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">D.</span>\n        Spark keeps data in memory instead of writing to disk ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 33,
-          "difficulty": 2,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">33</div>\n    <div class=\"q-text\">What is &#x27;overfitting&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> When a model is too simple and fails on all types of\n        data</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> When a model trains on too large a dataset too\n        quickly</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> When a model uses too many input feature columns at\n        once</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">D.</span> When\n        a model memorises training data but fails on new data ✓</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 34,
+          "num": 27,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">34</div>\n    <div class=\"q-text\">What is &#x27;normalization&#x27; used for?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Converting text category values into numeric codes\n        for models</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Removing all rows with missing data from the training\n        dataset</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Splitting data into equal training and testing set\n        portions</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">D.</span>\n        Scaling all feature values to the same small numeric range ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 35,
+          "num": 28,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">35</div>\n    <div class=\"q-text\">What is &#x27;cross-validation&#x27; used for?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Cleaning and encoding raw data before the training\n        step starts</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Choosing which features to keep from the full feature\n        set only</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">C.</span>\n        Getting a reliable estimate of model performance on new data ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Deploying the trained model to a live web server\n        endpoint</div>\n    </div>\n  </div>"
         },
         {
-          "num": 36,
-          "difficulty": 2,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">36</div>\n    <div class=\"q-text\">What is &#x27;Recall&#x27; in model evaluation?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> How many false alarms the model generated during all\n        evaluation</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">B.</span> How\n        many actual positives the model correctly identified found ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> The overall percentage of all correct predictions\n        made by model</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> How fast the model responds to new input prediction\n        requests</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 37,
+          "num": 29,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">37</div>\n    <div class=\"q-text\">What does &#x27;L2 regularization&#x27; do?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> It drops some features&#x27; weights to exactly zero\n        during training</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">B.</span> It\n        penalises large weights to keep the model from overfitting ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> It splits data into L2 portions for cross-validation\n        evaluation</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> It scales features to have L2 norm equal to one\n        before training</div>\n    </div>\n  </div>"
         },
         {
-          "num": 38,
+          "num": 30,
           "difficulty": 2,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #2563eb;background:#eff6ff;\">\n    <div class=\"q-num\">38</div>\n    <div class=\"q-text\">What is &#x27;F1 Score&#x27; used for?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Measuring prediction error in a regression model\n        output value</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Counting the total number of correct predictions made\n        overall</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Measuring model speed from input to prediction output\n        time</div>\n      <div class=\"opt\" style=\"background:#bfdbfe;border-left:3px solid #2563eb;\"><span class=\"opt-letter\">D.</span>\n        Combining Precision and Recall into a single balanced metric ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 39,
+          "num": 31,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">39</div>\n    <div class=\"q-text\">What does a machine learning model need before it can make predictions?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">A.</span>\n        Training data to learn patterns from examples ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> A fast internet connection to download new data</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> A large screen to display training progress clearly\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> A cloud server to store the model output results\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 40,
+          "num": 32,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">40</div>\n    <div class=\"q-text\">What does &#x27;training accuracy&#x27; mean?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> How fast the model finishes training on all data\n      </div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span> How\n        well the model predicts on the training data ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> How many features were selected for the model</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> How large the training dataset is in total rows</div>\n    </div>\n  </div>"
         },
         {
-          "num": 41,
-          "difficulty": 3,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">41</div>\n    <div class=\"q-text\">What is &#x27;Precision&#x27; in model evaluation?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> How many actual positives the model correctly found\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> The total percentage of all correct predictions made\n      </div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">C.</span> How\n        many positive predictions were actually correct ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> How fast the model finishes making predictions</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 42,
+          "num": 33,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">42</div>\n    <div class=\"q-text\">What type of task is &#x27;predicting whether a patient will get a disease — Yes or No&#x27;?\n    </div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">A.</span>\n        Classification because the output is a category label ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Regression because the output is a continuous value\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Clustering because patients are grouped by symptoms\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Dimensionality reduction because features are removed\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 43,
+          "num": 34,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">43</div>\n    <div class=\"q-text\">What does &#x27;normalization&#x27; do to data values?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">A.</span>\n        Scales all values to a standard range like 0 to 1 ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Converts text categories into numeric coded values\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Removes rows that have empty or missing cells</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Splits data into training and testing set portions\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 44,
+          "num": 35,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">44</div>\n    <div class=\"q-text\">Which of these is NOT an example of supervised learning?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">A.</span>\n        Grouping shoppers into segments by buying habits ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Predicting house prices from size and location data\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Classifying emails as spam or not spam messages</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Deciding if a bank loan should be approved or denied\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 45,
+          "num": 36,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">45</div>\n    <div class=\"q-text\">What does &#x27;model accuracy&#x27; measure?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">A.</span> The\n        percentage of correct predictions the model makes ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> How fast the model trains on all the data samples\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> How many input features the model was trained on\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> How much memory the model uses during prediction\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 46,
+          "num": 37,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">46</div>\n    <div class=\"q-text\">What is &#x27;big data&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">A.</span> Very\n        large data that normal tools cannot handle ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Any data saved in a spreadsheet or a database file\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Data that is always perfectly clean and organised\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Data stored on a single very powerful computer</div>\n    </div>\n  </div>"
         },
         {
-          "num": 47,
+          "num": 38,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">47</div>\n    <div class=\"q-text\">What does &#x27;Variety&#x27; mean in big data?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> The speed at which data is created and collected\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> The total number of records stored in databases</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">C.</span> The\n        many different types of data such as text and images ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> The accuracy and completeness of stored data</div>\n    </div>\n  </div>"
         },
         {
-          "num": 48,
+          "num": 39,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">48</div>\n    <div class=\"q-text\">What is &#x27;cloud computing&#x27; in simple terms?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Computing done inside the clouds using solar power\n      </div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span>\n        Using computer services over the internet on demand ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Using only local computers for all data processing\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Storing data on a USB drive or external hard disk\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 49,
+          "num": 40,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">49</div>\n    <div class=\"q-text\">What is &#x27;YARN&#x27; in the Hadoop ecosystem?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> A data storage layer that holds all the data blocks\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> A SQL query engine for processing structured data\n      </div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">C.</span> A\n        resource manager that schedules jobs in the cluster ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> A machine learning library for big data analysis\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 50,
+          "num": 41,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">50</div>\n    <div class=\"q-text\">What is &#x27;batch processing&#x27; in big data?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Processing each data record one at a time as it\n        arrives</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Processing data in real time as it streams in live\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Sending data to multiple cloud servers at once</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">D.</span>\n        Collecting data over time and processing it all at once ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 51,
+          "num": 42,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">51</div>\n    <div class=\"q-text\">Which of these tasks needs a &#x27;regression&#x27; algorithm?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Classifying emails as spam or not spam messages only\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Grouping shoppers into segments by their purchase\n        patterns</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Identifying if a photo contains a cat or a dog</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">D.</span>\n        Predicting tomorrow&#x27;s temperature in degrees Celsius ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 52,
+          "num": 43,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">52</div>\n    <div class=\"q-text\">What is &#x27;accuracy&#x27; in model evaluation?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> How fast the model makes predictions on all unseen\n        data points</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> How many features the model used during the full\n        training phase</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">C.</span> The\n        percentage of all predictions that the model got correct ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> The gap between the model&#x27;s training and test\n        error scores only</div>\n    </div>\n  </div>"
         },
         {
-          "num": 53,
+          "num": 44,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">53</div>\n    <div class=\"q-text\">Which Python library is mainly used for machine learning?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Matplotlib creates charts and graphs from all data\n        values</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span>\n        Scikit-learn provides ready-to-use machine learning models ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Pandas loads and manipulates data in DataFrame table\n        format</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Flask serves model predictions through a web API\n        endpoint</div>\n    </div>\n  </div>"
         },
         {
-          "num": 54,
-          "difficulty": 3,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">54</div>\n    <div class=\"q-text\">What is &#x27;Logistic Regression&#x27; used for?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">A.</span>\n        Classifying data into categories like Spam or Not Spam ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Predicting a continuous value like house price or\n        temperature</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Grouping customers into segments by their buying\n        behaviour</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Reducing the number of features in a high-dimensional\n        dataset</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 55,
+          "num": 45,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">55</div>\n    <div class=\"q-text\">What is &#x27;encoding&#x27; in data pre-processing?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">A.</span>\n        Converting text categories into numbers the model can use ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Removing rows with missing values from the full\n        training dataset</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Scaling all numeric values to a consistent and\n        smaller range</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Splitting data into training and test portions at\n        random</div>\n    </div>\n  </div>"
         },
         {
-          "num": 56,
+          "num": 46,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">56</div>\n    <div class=\"q-text\">What is an &#x27;artificial neural network (ANN)&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> A network of computers working together to store big\n        data files</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> A flowchart of if-then rules stored in a lookup table\n        structure</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">C.</span> A\n        model with layers of connected nodes inspired by the brain ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> A set of decision trees combined together to vote on\n        outputs</div>\n    </div>\n  </div>"
         },
         {
-          "num": 57,
+          "num": 47,
           "difficulty": 3,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #d97706;background:#fffbeb;\">\n    <div class=\"q-num\">57</div>\n    <div class=\"q-text\">What is &#x27;RMSE&#x27; used for?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Measuring the percentage of correct classification\n        predictions</div>\n      <div class=\"opt\" style=\"background:#fde68a;border-left:3px solid #d97706;\"><span class=\"opt-letter\">B.</span>\n        Measuring the average prediction error in a regression model ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Measuring the total squared error across the full\n        test dataset</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Measuring how well clusters are separated in K-Means\n        output</div>\n    </div>\n  </div>"
         },
         {
-          "num": 58,
+          "num": 48,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">58</div>\n    <div class=\"q-text\">Which algorithm groups customers into segments without any labels?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">A.</span>\n        K-Means clustering groups similar data together ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Logistic Regression classifies data into two classes\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Linear Regression predicts a number from features\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Random Forest combines many trees for predictions\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 59,
+          "num": 49,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">59</div>\n    <div class=\"q-text\">What does &#x27;test accuracy&#x27; mean?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> The speed of the model during the training phase\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> The total number of features used by the model</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> How many epochs the model was trained for</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">D.</span> How\n        well the model predicts on new unseen data ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 60,
-          "difficulty": 4,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">60</div>\n    <div class=\"q-text\">What is &#x27;Recall&#x27; in model evaluation?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> How many false alarms the model produced in total\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> The total percentage of all predictions that are\n        correct</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> How quickly the model responds to new input data\n      </div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">D.</span> How\n        many actual positives the model correctly found ✓</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 61,
+          "num": 50,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">61</div>\n    <div class=\"q-text\">What does &#x27;ensemble learning&#x27; mean?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">A.</span>\n        Combining many models to get a better result ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Training one very large model on the full dataset\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Removing weak features from the training data</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Testing the model on one fixed portion of data</div>\n    </div>\n  </div>"
         },
         {
-          "num": 62,
+          "num": 51,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">62</div>\n    <div class=\"q-text\">What is a &#x27;neural network&#x27; in simple terms?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> A network of computers connected over the internet\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> A table of training data used to teach the algorithm\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> A type of decision chart with branches and leaf nodes\n      </div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">D.</span> A\n        model inspired by the human brain with connected nodes ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 63,
+          "num": 52,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">63</div>\n    <div class=\"q-text\">What is &#x27;Reinforcement Learning&#x27; best described as?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">A.</span>\n        Learning by trial and error using rewards and penalties ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Training with labelled data that has correct answers\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Finding patterns in data that has no labels at all\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Using many models together to vote on a prediction\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 64,
+          "num": 53,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">64</div>\n    <div class=\"q-text\">What is the &#x27;test set&#x27; used for?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> To train the model and adjust all its parameters\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> To clean and prepare all raw data before training\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> To choose which algorithm is best for the problem\n      </div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">D.</span> To\n        check how well the model performs on new data ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 65,
+          "num": 54,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">65</div>\n    <div class=\"q-text\">Name the &#x27;3 Vs&#x27; of big data.</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Volume, Vision, and Variety of all stored data</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Value, Vision, and Velocity of processed results\n      </div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">C.</span>\n        Volume, Velocity, and Variety of all incoming data ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Volume, Value, and Verification of data quality</div>\n    </div>\n  </div>"
         },
         {
-          "num": 66,
+          "num": 55,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">66</div>\n    <div class=\"q-text\">What is &#x27;Apache Hadoop&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> A cloud email service used by large organisations\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> A programming language used for data analysis only\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> A database tool for structured relational data only\n      </div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">D.</span> A\n        framework for storing and processing big data ✓</div>\n    </div>\n  </div>"
         },
         {
-          "num": 67,
+          "num": 56,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">67</div>\n    <div class=\"q-text\">What is &#x27;Amazon Redshift&#x27; used for?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Training machine learning models on AWS cloud</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">B.</span>\n        Storing and querying large amounts of data on AWS ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Sending automated alerts and notifications by email\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Streaming live video content to end users online\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 68,
+          "num": 57,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">68</div>\n    <div class=\"q-text\">What is &#x27;Spark Streaming&#x27; used for?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">A.</span>\n        Processing live data as it arrives in real time ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Training machine learning models on large datasets\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Storing very large files across cluster machines\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Running SQL queries on historical static datasets\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 69,
+          "num": 58,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">69</div>\n    <div class=\"q-text\">What is &#x27;stream processing&#x27; in big data?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Storing all data in batches before any processing\n        begins</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">B.</span>\n        Processing data immediately as it arrives in real time ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Moving data between different cloud service providers\n      </div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Cleaning and sorting data in a traditional database\n      </div>\n    </div>\n  </div>"
         },
         {
-          "num": 70,
+          "num": 59,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">70</div>\n    <div class=\"q-text\">What type of learning trains using labelled examples?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Unsupervised learning uses data without any labels at\n        all</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Reinforcement learning uses rewards given by the\n        environment</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">C.</span>\n        Supervised learning uses data with correct answers provided ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Transfer learning reuses a model from a previous\n        different task</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 71,
-          "difficulty": 4,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">71</div>\n    <div class=\"q-text\">What is the purpose of a &#x27;test set&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> To train the model and adjust its internal parameter\n        values</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">B.</span> To\n        measure how well the model performs on data it never saw ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> To clean and prepare all raw data before any training\n        begins</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> To choose the best algorithm for the given prediction\n        task</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 72,
-          "difficulty": 4,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">72</div>\n    <div class=\"q-text\">What is &#x27;Random Forest&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> A single Decision Tree with randomly chosen split\n        conditions</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> A neural network with randomly initialised connection\n        weights</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">C.</span> Many\n        Decision Trees combined to give more accurate results ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> A clustering algorithm that uses random starting\n        centre points</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 73,
-          "difficulty": 4,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">73</div>\n    <div class=\"q-text\">What is a &#x27;Decision Tree&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> A model that groups similar data points into K\n        clusters only</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> A model that combines many weak learners to fix past\n        errors</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">C.</span> A\n        model that makes predictions using a series of yes/no questions ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> A model inspired by the human brain with many\n        connected layers</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 74,
-          "difficulty": 4,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">74</div>\n    <div class=\"q-text\">What is &#x27;gradient descent&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">A.</span>\n        Adjusting model parameters step by step to reduce prediction error ✓</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Removing gradients with low values from the neural\n        network layers</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Increasing model complexity to improve training data\n        accuracy</div>\n      <div class=\"opt\"><span class=\"opt-letter\">D.</span> Selecting the gradient of features that contribute\n        most to output</div>\n    </div>\n  </div>"
-        },
-        {
-          "num": 75,
-          "difficulty": 4,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">75</div>\n    <div class=\"q-text\">What is &#x27;data augmentation&#x27;?</div>\n    <div class=\"options\">\n      <div class=\"opt\"><span class=\"opt-letter\">A.</span> Adding more feature columns from an external data\n        source file</div>\n      <div class=\"opt\"><span class=\"opt-letter\">B.</span> Removing low-quality rows to improve the whole\n        training dataset</div>\n      <div class=\"opt\"><span class=\"opt-letter\">C.</span> Scaling feature values to a larger range for better\n        model learning</div>\n      <div class=\"opt\" style=\"background:#ddd6fe;border-left:3px solid #7c3aed;\"><span class=\"opt-letter\">D.</span>\n        Creating extra training samples by modifying existing ones only ✓</div>\n    </div>\n  </div>"
         }
       ],
       "shorts": [
@@ -4996,35 +4901,30 @@
         {
           "num": 69,
           "difficulty": 4,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">69</div>\n    <div class=\"q-text\">What is &#x27;feature engineering&#x27;? Give ONE example.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Feature engineering means creating\n        new or improved input features from existing data to help the model learn better.<br>Example: A dataset has a\n        &#x27;Date of Purchase&#x27; column. Feature engineering creates new features like &#x27;Day of Week&#x27;\n        (Monday=1, Sunday=7) and &#x27;Month&#x27; (1–12). These new features help the model learn shopping patterns by\n        day and season — more useful than a raw date.</div>\n    </details>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">70</div>\n    <div class=\"q-text\">Explain the &#x27;3 Vs&#x27; of big data. Give a real example of each.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">1. Volume — enormous amount of data.\n        Example: Ride-sharing apps like Uber process GPS coordinates from millions of active trips every second,\n        generating petabytes of location data daily.<br>2. Velocity — high speed of data generation. Example: A stock\n        exchange processes millions of trade orders per second, each requiring real-time fraud checks and price\n        updates.<br>3. Variety — many different data types and formats. Example: A hospital stores data as typed\n        clinical notes, numerical lab results, MRI scan images, ECG waveforms, and audio recordings — all in one system.\n      </div>\n    </details>\n  </div>"
         },
         {
           "num": 70,
           "difficulty": 4,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">70</div>\n    <div class=\"q-text\">Explain the &#x27;3 Vs&#x27; of big data. Give a real example of each.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">1. Volume — enormous amount of data.\n        Example: Ride-sharing apps like Uber process GPS coordinates from millions of active trips every second,\n        generating petabytes of location data daily.<br>2. Velocity — high speed of data generation. Example: A stock\n        exchange processes millions of trade orders per second, each requiring real-time fraud checks and price\n        updates.<br>3. Variety — many different data types and formats. Example: A hospital stores data as typed\n        clinical notes, numerical lab results, MRI scan images, ECG waveforms, and audio recordings — all in one system.\n      </div>\n    </details>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">71</div>\n    <div class=\"q-text\">What is &#x27;YARN&#x27;? Describe its TWO main responsibilities.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">YARN (Yet Another Resource\n        Negotiator) is the resource management layer of Hadoop.<br>Two responsibilities:<br>1. Resource Management —\n        YARN tracks the available CPU and memory on every machine in the cluster. When a processing job is submitted,\n        YARN decides how much CPU and memory to allocate to it and on which machines.<br>2. Job Scheduling — YARN\n        schedules tasks from multiple applications efficiently across the cluster, ensuring no single machine is\n        overloaded and that cluster resources are used as effectively as possible.</div>\n    </details>\n  </div>"
         },
         {
           "num": 71,
           "difficulty": 4,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">71</div>\n    <div class=\"q-text\">What is &#x27;YARN&#x27;? Describe its TWO main responsibilities.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">YARN (Yet Another Resource\n        Negotiator) is the resource management layer of Hadoop.<br>Two responsibilities:<br>1. Resource Management —\n        YARN tracks the available CPU and memory on every machine in the cluster. When a processing job is submitted,\n        YARN decides how much CPU and memory to allocate to it and on which machines.<br>2. Job Scheduling — YARN\n        schedules tasks from multiple applications efficiently across the cluster, ensuring no single machine is\n        overloaded and that cluster resources are used as effectively as possible.</div>\n    </details>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">72</div>\n    <div class=\"q-text\">What is &#x27;stream processing&#x27;? Give an example and explain why it is needed.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Stream processing means processing\n        each piece of data immediately as it arrives in real time or near-real time, without waiting to collect it in a\n        batch.<br>Example: A bank monitors every card transaction the moment it is made. Each transaction is instantly\n        checked against fraud patterns. If two transactions occur from different countries within 30 seconds, the card\n        is blocked immediately — preventing fraud before more damage is done.<br>Why needed: some decisions must be made\n        in seconds (fraud, medical alerts, traffic routing). Waiting until the next batch job (hours later) is too slow\n        for real-time action.</div>\n    </details>\n  </div>"
         },
         {
           "num": 72,
           "difficulty": 4,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">72</div>\n    <div class=\"q-text\">What is &#x27;stream processing&#x27;? Give an example and explain why it is needed.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Stream processing means processing\n        each piece of data immediately as it arrives in real time or near-real time, without waiting to collect it in a\n        batch.<br>Example: A bank monitors every card transaction the moment it is made. Each transaction is instantly\n        checked against fraud patterns. If two transactions occur from different countries within 30 seconds, the card\n        is blocked immediately — preventing fraud before more damage is done.<br>Why needed: some decisions must be made\n        in seconds (fraud, medical alerts, traffic routing). Waiting until the next batch job (hours later) is too slow\n        for real-time action.</div>\n    </details>\n  </div>"
+          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">73</div>\n    <div class=\"q-text\">What is &#x27;Amazon SageMaker&#x27;? Describe THREE features that make it useful.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Amazon SageMaker is AWS&#x27;s fully\n        managed cloud platform for building, training, and deploying machine learning models.<br>Three features:<br>1.\n        Managed training — automatically provisions the computing resources (CPU/GPU) needed for training. No server\n        setup required — the team just submits training code.<br>2. Built-in algorithms — includes ready-to-use ML\n        algorithms optimised for large datasets, saving development time.<br>3. One-click deployment — after training,\n        deploys the model as a real-time prediction API endpoint with minimal code. Automatically scales the endpoint up\n        or down based on demand.</div>\n    </details>\n  </div>"
         },
         {
           "num": 73,
           "difficulty": 4,
-          "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">73</div>\n    <div class=\"q-text\">What is &#x27;Amazon SageMaker&#x27;? Describe THREE features that make it useful.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Amazon SageMaker is AWS&#x27;s fully\n        managed cloud platform for building, training, and deploying machine learning models.<br>Three features:<br>1.\n        Managed training — automatically provisions the computing resources (CPU/GPU) needed for training. No server\n        setup required — the team just submits training code.<br>2. Built-in algorithms — includes ready-to-use ML\n        algorithms optimised for large datasets, saving development time.<br>3. One-click deployment — after training,\n        deploys the model as a real-time prediction API endpoint with minimal code. Automatically scales the endpoint up\n        or down based on demand.</div>\n    </details>\n  </div>"
-        },
-        {
-          "num": 74,
-          "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">74</div>\n    <div class=\"q-text\">What is &#x27;Spark SQL&#x27;? Who benefits most from using it and why?</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Spark SQL is the Apache Spark\n        component that allows users to run standard SQL queries (SELECT, WHERE, JOIN, GROUP BY) on very large datasets\n        stored in a Spark cluster.<br>Who benefits most: Data analysts and database professionals who already know SQL\n        benefit most. Instead of learning a new programming language like Scala or PySpark, they can immediately apply\n        their existing SQL knowledge to big data.<br>Why: Spark SQL removes the barrier to big data analytics for\n        non-programmers. The same SELECT statement that works on a 1,000-row table can now run on a 1-billion-row\n        distributed cluster — with Spark handling all the distribution automatically.</div>\n    </details>\n  </div>"
         },
         {
-          "num": 75,
+          "num": 74,
           "difficulty": 4,
           "html": "  <div class=\"question\" style=\"border-left:4px solid #7c3aed;background:#f5f3ff;\">\n    <div class=\"q-num\">75</div>\n    <div class=\"q-text\">What is &#x27;Azure Data Factory&#x27;? Give a real use case.</div>\n    <details class=\"answer-reveal\">\n      <summary></summary>\n      <div class=\"answer\" style=\"border-left:3px solid #7c3aed;background:#ddd6fe;\">Azure Data Factory (ADF) is\n        Microsoft Azure&#x27;s cloud-based ETL (Extract, Transform, Load) service for building, scheduling, and\n        monitoring data integration pipelines.<br>Real use case: A retail company has customer data in three separate\n        systems — sales records in SQL Server, loyalty points in Oracle, and website behaviour in log files. ADF builds\n        an automated pipeline that: (1) Extracts data from all three sources daily at midnight, (2) Transforms and\n        standardises the formats, fills missing values, and joins the datasets, (3) Loads the clean, unified customer\n        data into Azure Synapse Analytics for the business intelligence team to query and report on.</div>\n    </details>\n  </div>"
         }
