@@ -249,22 +249,35 @@
       const mcqTargets = shuffleArray([13, 13, 13, 13, 14, 14]);
       const shortTargets = shuffleArray([3, 3, 3, 3, 4, 4]);
 
-      let finalMCQs = [];
-      let finalShorts = [];
-
+      // Select questions per unit with proper difficulty distribution
+      const perUnitMcqs = {};
+      const perUnitShorts = {};
       units.forEach((unit, idx) => {
-        const uMCQs = db.mcqsByUnit[unit] || [];
-        const uShorts = db.shortsByUnit[unit] || [];
-
-        const mcqCount = mcqTargets[idx];
-        const shortCount = shortTargets[idx];
-
-        finalMCQs.push(...selectQuestions(uMCQs, mcqCount));
-        finalShorts.push(...selectQuestions(uShorts, shortCount));
+        perUnitMcqs[unit] = selectQuestions(db.mcqsByUnit[unit] || [], mcqTargets[idx]);
+        perUnitShorts[unit] = selectQuestions(db.shortsByUnit[unit] || [], shortTargets[idx]);
       });
 
-      shuffleArray(finalMCQs);
-      shuffleArray(finalShorts);
+      // Interleave: take 2-3 questions from each unit per round, randomizing unit order each round
+      function interleave(unitQuestions) {
+        const queues = units.map(u => [...(unitQuestions[u] || [])]);
+        const result = [];
+        while (true) {
+          const order = units.map((_, i) => i).filter(i => queues[i].length > 0);
+          if (order.length === 0) break;
+          shuffleArray(order);
+          for (const i of order) {
+            if (queues[i].length === 0) continue;
+            const batchSize = Math.min(2 + Math.floor(Math.random() * 2), queues[i].length);
+            for (let j = 0; j < batchSize; j++) {
+              result.push(queues[i].shift());
+            }
+          }
+        }
+        return result;
+      }
+
+      const finalMCQs = interleave(perUnitMcqs);
+      const finalShorts = interleave(perUnitShorts);
 
       renderMCQs(finalMCQs);
       renderShorts(finalShorts);
