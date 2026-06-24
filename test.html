@@ -43,9 +43,63 @@
             <span class="slider" aria-hidden="true"></span>
           </div>
         </label>
-        <button type="button" class="btn btn-primary" id="generate-btn" aria-label="Generate new random test">
-          <span aria-hidden="true">&#128260;</span> Generate Test
-        </button>
+        <div class="generate-wrapper">
+          <button type="button" class="btn btn-primary generate-btn" id="generate-btn" aria-label="Generate new random test">
+            <span aria-hidden="true">&#128260;</span> Generate Test
+            <span class="dots-divider" aria-hidden="true"></span>
+            <span class="dots-icon" id="dots-menu-btn" role="button" tabindex="0" aria-label="Question type options" aria-haspopup="true" aria-expanded="false">&#8942;</span>
+          </button>
+          <div class="dots-dropdown" id="dots-dropdown" role="menu">
+            <div class="dots-dropdown-title">Advance Options</div>
+
+            <div class="dots-dropdown-row dots-total-row">
+              <div class="dots-field">
+                <label for="input-total-time">Time (hrs)</label>
+                <input type="text" id="input-total-time" class="dots-input" value="3" readonly tabindex="-1">
+              </div>
+              <div class="dots-field">
+                <label for="input-total-marks">Marks</label>
+                <input type="text" id="input-total-marks" class="dots-input" value="100" readonly tabindex="-1">
+              </div>
+            </div>
+
+            <div class="dots-dropdown-divider"></div>
+            <div class="dots-sections-label">Sections <span class="dots-hint">drag to reorder</span></div>
+
+            <div class="dots-sections" id="dots-sections">
+              <div class="dots-section-row" draggable="true" data-type="mcq">
+                <span class="drag-handle" aria-hidden="true">&#9776;</span>
+                <span class="section-label">MCQ</span>
+                <div class="dots-section-fields">
+                  <div class="dots-field"><label>Count</label><input type="number" id="input-mcq" class="dots-input" min="0" value="80"></div>
+                  <div class="dots-field"><label>Marks</label><input type="number" id="input-mcq-marks" class="dots-input" min="0" value="80"></div>
+                  <div class="dots-field"><label>Min</label><input type="number" id="input-mcq-time" class="dots-input dots-input-sm" min="0" value="1"></div>
+                </div>
+              </div>
+              <div class="dots-section-row" draggable="true" data-type="short">
+                <span class="drag-handle" aria-hidden="true">&#9776;</span>
+                <span class="section-label">Shorts</span>
+                <div class="dots-section-fields">
+                  <div class="dots-field"><label>Count</label><input type="number" id="input-short" class="dots-input" min="0" value="20"></div>
+                  <div class="dots-field"><label>Marks</label><input type="number" id="input-short-marks" class="dots-input" min="0" value="20"></div>
+                  <div class="dots-field"><label>Min</label><input type="number" id="input-short-time" class="dots-input dots-input-sm" min="0" value="5"></div>
+                </div>
+              </div>
+              <div class="dots-section-row" draggable="true" data-type="practical">
+                <span class="drag-handle" aria-hidden="true">&#9776;</span>
+                <span class="section-label">Practical</span>
+                <div class="dots-section-fields">
+                  <div class="dots-field"><label>Count</label><input type="number" id="input-practical" class="dots-input" min="0" value="0"></div>
+                  <div class="dots-field"><label>Marks</label><input type="number" id="input-practical-marks" class="dots-input" min="0" value="0"></div>
+                  <div class="dots-field"><label>Min</label><input type="number" id="input-practical-time" class="dots-input dots-input-sm" min="0" value="0"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dots-dropdown-divider"></div>
+            <button type="button" class="dots-done-btn" id="dots-done-btn">Done</button>
+          </div>
+        </div>
         <button type="button" class="btn" id="print-paper-btn" aria-label="Print test paper">
           <span aria-hidden="true">&#128221;</span> Print Test
         </button>
@@ -73,39 +127,24 @@
         <td><strong>Date:</strong></td>
         <td>
           <div style="display: flex; justify-content: space-between;">
-            <span><strong>Time Allowed:</strong> 3 Hours</span>
-            <span><strong>Max Marks:</strong> 100</span>
+            <span><strong>Time Allowed:</strong> <span id="exam-time">3 Hours</span></span>
+            <span><strong>Max Marks:</strong> <span id="exam-marks">100</span></span>
           </div>
         </td>
       </tr>
     </table>
 
-    <div class="exam-instructions" role="region" aria-label="Test instructions">
+    <div class="exam-instructions" id="exam-instructions" role="region" aria-label="Test instructions">
       <h4>INSTRUCTIONS TO CANDIDATES:</h4>
       <ol>
         <li>Write your Candidate Name, Roll/ID Number, and Date in the table above before starting the test.</li>
-        <li>This practice paper contains two sections:
-          <ul>
-            <li><strong>Section A: Multiple Choice Questions</strong> (80 Questions, Marks: 80)</li>
-            <li><strong>Section B: Short Answer Questions</strong> (20 Questions, Marks: 20)</li>
-          </ul>
-        </li>
-        <li>Answer all questions. For Section A, select or write the letter corresponding to the correct answer. For Section B, write brief, concise answers.</li>
+        <li id="instr-sections-info">This practice paper contains sections as listed below.</li>
+        <li>Answer all questions. For Multiple Choice, select the correct letter. For Short Answer, write brief, concise answers.</li>
         <li>This test is randomly generated to ensure equal coverage across all units and difficulty tiers.</li>
       </ol>
     </div>
 
-    <div class="section-title" role="heading" aria-level="2">
-      <span>Section A: Multiple Choice Questions</span>
-      <span class="section-marks">80 Marks (Questions 1 &ndash; 80)</span>
-    </div>
-    <div id="mcq-container" aria-live="polite" aria-label="Multiple choice questions"></div>
-
-    <div class="section-title" role="heading" aria-level="2">
-      <span>Section B: Short Answer Questions</span>
-      <span class="section-marks">20 Marks (Questions 1 &ndash; 20)</span>
-    </div>
-    <div id="short-container" aria-live="polite" aria-label="Short answer questions"></div>
+    <div id="sections-container" aria-live="polite"></div>
   </div>
 
   <button type="button" class="back-to-top-btn" id="back-to-top" aria-label="Back to top of page">
@@ -121,8 +160,12 @@
   <script>
     const db = {
       mcqsByUnit: { '11167': [], '11168': [], '11169': [], '11170': [], '11171': [], '11172': [] },
-      shortsByUnit: { '11167': [], '11168': [], '11169': [], '11170': [], '11171': [], '11172': [] }
+      shortsByUnit: { '11167': [], '11168': [], '11169': [], '11170': [], '11171': [], '11172': [] },
+      practicals: []
     };
+
+    const SECTION_LABELS = ['A', 'B', 'C', 'D', 'E'];
+    const SECTION_NAMES = { mcq: 'Multiple Choice Questions', short: 'Short Answer Questions', practical: 'Practical Questions' };
 
     function shuffleArray(arr) {
       for (let i = arr.length - 1; i > 0; i--) {
@@ -137,14 +180,37 @@
       const text = document.getElementById('toast-text');
       text.textContent = msg;
       toast.classList.add('visible');
-      setTimeout(() => {
-        toast.classList.remove('visible');
-      }, 2500);
+      setTimeout(() => toast.classList.remove('visible'), 2500);
+    }
+
+    function getSectionOrder() {
+      return Array.from(document.querySelectorAll('#dots-sections .dots-section-row')).map(row => row.dataset.type);
+    }
+
+    function getSectionConfig() {
+      const config = {};
+      document.querySelectorAll('#dots-sections .dots-section-row').forEach(row => {
+        const type = row.dataset.type;
+        config[type] = {
+          count: parseInt(row.querySelector('[id$="-count"], .count-input')?.value) || 0,
+          marks: 0,
+          time: 0
+        };
+      });
+      config.mcq.count = parseInt(document.getElementById('input-mcq').value) || 0;
+      config.short.count = parseInt(document.getElementById('input-short').value) || 0;
+      config.practical.count = parseInt(document.getElementById('input-practical').value) || 0;
+      config.mcq.marks = parseInt(document.getElementById('input-mcq-marks').value) || 0;
+      config.short.marks = parseInt(document.getElementById('input-short-marks').value) || 0;
+      config.practical.marks = parseInt(document.getElementById('input-practical-marks').value) || 0;
+      config.mcq.time = parseInt(document.getElementById('input-mcq-time').value) || 0;
+      config.short.time = parseInt(document.getElementById('input-short-time').value) || 0;
+      config.practical.time = parseInt(document.getElementById('input-practical-time').value) || 0;
+      return config;
     }
 
     function loadQuestionsDatabase() {
       const data = typeof QUESTIONS_DATA !== 'undefined' ? QUESTIONS_DATA : null;
-
       if (!data) {
         document.querySelector('.loader-text').innerHTML =
           '<span style="color: var(--danger)">Error: Could not load question data.</span>';
@@ -153,245 +219,232 @@
 
       data.units.forEach(unit => {
         const code = unit.code;
-        if (unit.mcqs) {
-          unit.mcqs.forEach(q => {
-            db.mcqsByUnit[code].push({
-              html: q.html,
-              difficulty: q.difficulty,
-              unit: code
-            });
-          });
-        }
-        if (unit.shorts) {
-          unit.shorts.forEach(q => {
-            db.shortsByUnit[code].push({
-              html: q.html,
-              difficulty: q.difficulty,
-              unit: code
-            });
-          });
-        }
+        if (unit.mcqs) unit.mcqs.forEach(q => db.mcqsByUnit[code].push({ html: q.html, difficulty: q.difficulty, unit: code }));
+        if (unit.shorts) unit.shorts.forEach(q => db.shortsByUnit[code].push({ html: q.html, difficulty: q.difficulty, unit: code }));
       });
 
-      document.getElementById('loader').style.opacity = '0';
-      setTimeout(() => {
-        document.getElementById('loader').style.display = 'none';
-      }, 300);
+      if (typeof TEST_PRACTICALS !== 'undefined') TEST_PRACTICALS.forEach(html => db.practicals.push({ html }));
+      else if (data.practicals) data.practicals.forEach(html => db.practicals.push({ html }));
 
+      document.getElementById('loader').style.opacity = '0';
+      setTimeout(() => { document.getElementById('loader').style.display = 'none'; }, 300);
       generateQuestionPaper();
     }
 
     function selectQuestions(questionPool, targetCount) {
       const groups = { 1: [], 2: [], 3: [], 4: [] };
-      questionPool.forEach(q => {
-        if (groups[q.difficulty]) {
-          groups[q.difficulty].push(q);
-        }
-      });
-
+      questionPool.forEach(q => { if (groups[q.difficulty]) groups[q.difficulty].push(q); });
       Object.keys(groups).forEach(d => shuffleArray(groups[d]));
 
       const weights = { 1: 5, 2: 4, 3: 4, 4: 4 };
       const totalWeight = 17;
-
-      let targets = {};
-      let calculatedSum = 0;
-
-      Object.keys(weights).forEach(d => {
-        targets[d] = Math.round(targetCount * (weights[d] / totalWeight));
-        calculatedSum += targets[d];
-      });
+      let targets = {}, calculatedSum = 0;
+      Object.keys(weights).forEach(d => { targets[d] = Math.round(targetCount * (weights[d] / totalWeight)); calculatedSum += targets[d]; });
 
       while (calculatedSum !== targetCount) {
         if (calculatedSum < targetCount) {
-          const sortedDiffs = [1, 2, 3, 4];
-          for (let d of sortedDiffs) {
-            targets[d]++;
-            calculatedSum++;
-            if (calculatedSum === targetCount) break;
-          }
+          for (const d of [1, 2, 3, 4]) { targets[d]++; calculatedSum++; if (calculatedSum === targetCount) break; }
         } else {
-          const reverseDiffs = [4, 3, 2, 1];
-          for (let d of reverseDiffs) {
-            if (targets[d] > 0) {
-              targets[d]--;
-              calculatedSum--;
-              if (calculatedSum === targetCount) break;
-            }
-          }
+          for (const d of [4, 3, 2, 1]) { if (targets[d] > 0) { targets[d]--; calculatedSum--; if (calculatedSum === targetCount) break; } }
         }
       }
 
-      const selected = [];
-      const leftovers = [];
-
+      const selected = [], leftovers = [];
       Object.keys(groups).forEach(d => {
-        const pool = groups[d];
-        const target = targets[d];
-        const chosen = pool.slice(0, target);
-        selected.push(...chosen);
+        const pool = groups[d], target = targets[d];
+        selected.push(...pool.slice(0, target));
         leftovers.push(...pool.slice(target));
       });
 
-      let currentCount = selected.length;
-      if (currentCount < targetCount) {
+      if (selected.length < targetCount) {
         shuffleArray(leftovers);
-        const diff = targetCount - currentCount;
-        selected.push(...leftovers.slice(0, diff));
+        selected.push(...leftovers.slice(0, targetCount - selected.length));
       }
-
       return shuffleArray(selected);
     }
 
-    function generateQuestionPaper() {
-      const units = ['11167', '11168', '11169', '11170', '11171', '11172'];
-
-      const mcqTargets = shuffleArray([13, 13, 13, 13, 14, 14]);
-      const shortTargets = shuffleArray([3, 3, 3, 3, 4, 4]);
-
-      // Select questions per unit with proper difficulty distribution
-      const perUnitMcqs = {};
-      const perUnitShorts = {};
-      units.forEach((unit, idx) => {
-        perUnitMcqs[unit] = selectQuestions(db.mcqsByUnit[unit] || [], mcqTargets[idx]);
-        perUnitShorts[unit] = selectQuestions(db.shortsByUnit[unit] || [], shortTargets[idx]);
-      });
-
-      // Interleave: take 2-3 questions from each unit per round, randomizing unit order each round
-      function interleave(unitQuestions) {
-        const queues = units.map(u => [...(unitQuestions[u] || [])]);
-        const result = [];
-        while (true) {
-          const order = units.map((_, i) => i).filter(i => queues[i].length > 0);
-          if (order.length === 0) break;
-          shuffleArray(order);
-          for (const i of order) {
-            if (queues[i].length === 0) continue;
-            const batchSize = Math.min(2 + Math.floor(Math.random() * 2), queues[i].length);
-            for (let j = 0; j < batchSize; j++) {
-              result.push(queues[i].shift());
-            }
-          }
+    function interleave(unitQuestions, units) {
+      const queues = units.map(u => [...(unitQuestions[u] || [])]);
+      const result = [];
+      while (true) {
+        const order = units.map((_, i) => i).filter(i => queues[i].length > 0);
+        if (order.length === 0) break;
+        shuffleArray(order);
+        for (const i of order) {
+          if (queues[i].length === 0) continue;
+          const batchSize = Math.min(2 + Math.floor(Math.random() * 2), queues[i].length);
+          for (let j = 0; j < batchSize; j++) result.push(queues[i].shift());
         }
-        return result;
       }
-
-      const finalMCQs = interleave(perUnitMcqs);
-      const finalShorts = interleave(perUnitShorts);
-
-      renderMCQs(finalMCQs);
-      renderShorts(finalShorts);
-
-      document.body.classList.add('hide-answers');
-      document.body.classList.remove('show-answers');
-      document.getElementById('answers-toggle').checked = false;
-
-      showToast('New Random Practice Test Generated!');
-    }
-
-    function renderMCQs(mcqs) {
-      const container = document.getElementById('mcq-container');
-      container.innerHTML = '';
-
-      mcqs.forEach((q, idx) => {
-        const qNum = idx + 1;
-        const qDiv = document.createElement('div');
-        qDiv.className = 'question compact-mcq';
-
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = q.html;
-
-        const optElements = Array.from(tempDiv.querySelectorAll('.options .opt, .opt'));
-        const correctMarker = '\u2713';
-
-        optElements.forEach(opt => {
-          opt.removeAttribute('style');
-
-          let html = opt.innerHTML.trim();
-          const hasCorrect = html.endsWith(correctMarker) || opt.querySelector('.checkmark');
-          if (hasCorrect) {
-            const normalized = html.replace(/\s*\u2713\s*$/, '').replace(/<span[^>]*class="checkmark"[^>]*>.*?<\/span>/gi, '').trim();
-            opt.innerHTML = normalized + ' <span class="checkmark" style="display: none;">\u2713</span>';
-            opt.classList.add('correct');
-          } else {
-            opt.innerHTML = html + ' <span class="checkmark" style="display: none;">\u2713</span>';
-          }
-        });
-
-        const qText = tempDiv.querySelector('.q-text')?.innerHTML || tempDiv.textContent;
-        const codeHtml = tempDiv.querySelector('.colab-code')?.outerHTML || '';
-
-        qDiv.innerHTML =
-          '<div class="q-header-row"><div class="q-number">' + qNum + '</div><div class="q-text compact">' + qText + '</div></div>' +
-          codeHtml +
-          '<div class="options two-col">' + buildTwoColumnOptions(tempDiv) + '</div>';
-
-        container.appendChild(qDiv);
-      });
-
-      initCodeBlockCopy();
+      return result;
     }
 
     function buildTwoColumnOptions(tempDiv) {
       const opts = Array.from(tempDiv.querySelectorAll('.options .opt, .opt'));
       const labels = ['A', 'B', 'C', 'D'];
-
       const items = opts.map(opt => {
         const isCorrect = opt.classList.contains('correct');
         let text = opt.innerHTML
           .replace(/<span[^>]*class="checkmark"[^>]*>.*?<\/span>/gi, '')
           .replace(/\s*\u2713\s*$/, '')
-          .replace(/<span[^>]*class="opt-letter"[^>]*>.*?<\/span>/gi, '')
-          .trim();
+          .replace(/<span[^>]*class="opt-letter"[^>]*>.*?<\/span>/gi, '').trim();
         return { text, isCorrect };
       });
-
       shuffleArray(items);
-
       items.forEach((item, i) => { item.label = labels[i] || ''; });
-
       const toOptHtml = (item) =>
         '<div class="opt' + (item.isCorrect ? ' correct' : '') + '">' +
         '<span class="opt-letter">' + item.label + '.</span> ' + item.text +
         '<span class="checkmark" style="display: none;">\u2713</span></div>';
-
       return toOptHtml(items[0] || {}) + toOptHtml(items[1] || {}) + toOptHtml(items[2] || {}) + toOptHtml(items[3] || {});
     }
 
-    function renderShorts(shorts) {
-      const container = document.getElementById('short-container');
+    function generateQuestionPaper() {
+      const units = ['11167', '11168', '11169', '11170', '11171', '11172'];
+      const config = getSectionConfig();
+      const order = getSectionOrder();
+      const container = document.getElementById('sections-container');
       container.innerHTML = '';
 
-      const listDiv = document.createElement('div');
-      listDiv.className = 'short-list';
+      const totalQ = config.mcq.count + config.short.count + config.practical.count;
+      document.querySelector('#paper-document').style.display = totalQ === 0 ? 'none' : '';
 
-      shorts.forEach((q, idx) => {
-        const qNum = idx + 1;
+      const totalTimeVal = document.getElementById('input-total-time').value;
+      document.getElementById('exam-time').textContent = totalTimeVal;
+      document.getElementById('exam-marks').textContent = document.getElementById('input-total-marks').value;
 
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = q.html;
+      let sectionLines = '';
+      let sIdx = 0;
+      order.forEach(type => {
+        const cfg = config[type];
+        if (cfg.count === 0) return;
+        const lbl = SECTION_LABELS[sIdx] || String.fromCharCode(65 + sIdx);
+        sIdx++;
+        sectionLines += '<li><strong>Section ' + lbl + ': ' + SECTION_NAMES[type] + '</strong> (' + cfg.count + ' Questions, Marks: ' + (cfg.marks || cfg.count) + ')</li>';
+      });
+      document.getElementById('instr-sections-info').innerHTML = 'This practice paper contains ' + sIdx + ' section' + (sIdx !== 1 ? 's' : '') + ':<ul>' + sectionLines + '</ul>';
 
-        const qText = tempDiv.querySelector('.q-text')?.innerHTML || tempDiv.textContent;
-        const codeHtml = tempDiv.querySelector('.colab-code')?.outerHTML || '';
+      let sectionIdx = 0;
 
-        const item = document.createElement('div');
-        item.className = 'short-item';
-        item.innerHTML =
-          '<span class="short-num">' + qNum + '.</span> ' +
-          '<span class="short-text">' + qText + '</span>' +
-          codeHtml;
+      order.forEach(type => {
+        const cfg = config[type];
+        if (cfg.count === 0) return;
 
-        listDiv.appendChild(item);
+        const sectionLabel = SECTION_LABELS[sectionIdx] || String.fromCharCode(65 + sectionIdx);
+        sectionIdx++;
+
+        const sectionDiv = document.createElement('div');
+        sectionDiv.className = 'paper-section';
+
+        const titleDiv = document.createElement('div');
+        titleDiv.className = 'section-title';
+        titleDiv.setAttribute('role', 'heading');
+        titleDiv.setAttribute('aria-level', '2');
+
+        const marksText = cfg.marks > 0 ? cfg.marks + ' Marks' : cfg.count + ' Marks';
+        titleDiv.innerHTML =
+          '<span>Section ' + sectionLabel + ': ' + SECTION_NAMES[type] + '</span>' +
+          '<span class="section-marks">' + marksText + ' (Questions 1 &ndash; ' + cfg.count + ')</span>';
+        sectionDiv.appendChild(titleDiv);
+
+        let secQ = 1;
+
+        if (type === 'mcq') {
+          const perUnit = {};
+          const base = Math.floor(cfg.count / units.length), extra = cfg.count % units.length;
+          const targets = units.map((_, i) => base + (i < extra ? 1 : 0));
+          shuffleArray(targets);
+          units.forEach((unit, i) => { perUnit[unit] = selectQuestions(db.mcqsByUnit[unit] || [], targets[i]); });
+          const finalMcqs = interleave(perUnit, units);
+
+          const mcqContainer = document.createElement('div');
+          mcqContainer.setAttribute('aria-live', 'polite');
+          mcqContainer.setAttribute('aria-label', 'Multiple choice questions');
+
+          finalMcqs.forEach((q, idx) => {
+            const qDiv = document.createElement('div');
+            qDiv.className = 'question compact-mcq';
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = q.html;
+            const correctMarker = '\u2713';
+            Array.from(tempDiv.querySelectorAll('.options .opt, .opt')).forEach(opt => {
+              opt.removeAttribute('style');
+              let html = opt.innerHTML.trim();
+              if (html.endsWith(correctMarker) || opt.querySelector('.checkmark')) {
+                const normalized = html.replace(/\s*\u2713\s*$/, '').replace(/<span[^>]*class="checkmark"[^>]*>.*?<\/span>/gi, '').trim();
+                opt.innerHTML = normalized + ' <span class="checkmark" style="display: none;">\u2713</span>';
+                opt.classList.add('correct');
+              } else {
+                opt.innerHTML = html + ' <span class="checkmark" style="display: none;">\u2713</span>';
+              }
+            });
+            const qText = tempDiv.querySelector('.q-text')?.innerHTML || tempDiv.textContent;
+            const codeHtml = tempDiv.querySelector('.colab-code')?.outerHTML || '';
+            qDiv.innerHTML =
+              '<div class="q-header-row"><div class="q-number">' + secQ + '</div><div class="q-text compact">' + qText + '</div></div>' +
+              codeHtml +
+              '<div class="options two-col">' + buildTwoColumnOptions(tempDiv) + '</div>';
+            mcqContainer.appendChild(qDiv);
+            secQ++;
+          });
+          sectionDiv.appendChild(mcqContainer);
+
+        } else if (type === 'short') {
+          const perUnit = {};
+          const base = Math.floor(cfg.count / units.length), extra = cfg.count % units.length;
+          const targets = units.map((_, i) => base + (i < extra ? 1 : 0));
+          shuffleArray(targets);
+          units.forEach((unit, i) => { perUnit[unit] = selectQuestions(db.shortsByUnit[unit] || [], targets[i]); });
+          const finalShorts = interleave(perUnit, units);
+
+          const listDiv = document.createElement('div');
+          listDiv.className = 'short-list';
+          finalShorts.forEach((q) => {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = q.html;
+            const qText = tempDiv.querySelector('.q-text')?.innerHTML || tempDiv.textContent;
+            const codeHtml = tempDiv.querySelector('.colab-code')?.outerHTML || '';
+            const item = document.createElement('div');
+            item.className = 'short-item';
+            item.innerHTML =
+              '<span class="short-num">' + secQ + '.</span> ' +
+              '<span class="short-text">' + qText + '</span>' + codeHtml;
+            listDiv.appendChild(item);
+            secQ++;
+          });
+          sectionDiv.appendChild(listDiv);
+
+        } else if (type === 'practical') {
+          const finalPracticals = shuffleArray([...db.practicals]).slice(0, cfg.count);
+          const practicalContainer = document.createElement('div');
+          practicalContainer.setAttribute('aria-live', 'polite');
+          practicalContainer.className = 'practical-list';
+
+          finalPracticals.forEach((q, idx) => {
+            const wrapper = document.createElement('div');
+            wrapper.innerHTML = q.html;
+            const header = wrapper.querySelector('.practical-card-header');
+            if (header) header.textContent = 'Question ' + (idx + 1);
+            practicalContainer.appendChild(wrapper.firstElementChild);
+            secQ++;
+          });
+          sectionDiv.appendChild(practicalContainer);
+        }
+
+        container.appendChild(sectionDiv);
       });
 
-      container.appendChild(listDiv);
       initCodeBlockCopy();
+      document.body.classList.add('hide-answers');
+      document.body.classList.remove('show-answers');
+      document.getElementById('answers-toggle').checked = false;
+      document.querySelectorAll('#sections-container .opt.correct .checkmark').forEach(chk => { chk.style.display = 'none'; });
+      showToast('New Random Practice Test Generated!');
     }
 
     function initCodeBlockCopy() {
       document.querySelectorAll('.colab-code').forEach(block => {
         if (block.querySelector('.copy-btn')) return;
-
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'copy-btn';
@@ -401,8 +454,7 @@
           e.stopPropagation();
           const codeElement = block.querySelector('code');
           if (!codeElement) return;
-          const text = codeElement.innerText.trim();
-          navigator.clipboard.writeText(text).then(() => {
+          navigator.clipboard.writeText(codeElement.innerText.trim()).then(() => {
             btn.textContent = 'Copied';
             setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
           }).catch(() => {
@@ -414,15 +466,53 @@
       });
     }
 
+    function initDragAndDrop() {
+      const sectionsContainer = document.getElementById('dots-sections');
+      let draggedRow = null;
+
+      sectionsContainer.addEventListener('dragstart', (e) => {
+        draggedRow = e.target.closest('.dots-section-row');
+        if (!draggedRow) return;
+        draggedRow.classList.add('dragging');
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('text/plain', '');
+      });
+
+      sectionsContainer.addEventListener('dragend', (e) => {
+        if (draggedRow) draggedRow.classList.remove('dragging');
+        sectionsContainer.querySelectorAll('.dots-section-row').forEach(r => r.classList.remove('drag-over'));
+        draggedRow = null;
+      });
+
+      sectionsContainer.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        const targetRow = e.target.closest('.dots-section-row');
+        if (!targetRow || targetRow === draggedRow) return;
+        sectionsContainer.querySelectorAll('.dots-section-row').forEach(r => r.classList.remove('drag-over'));
+        targetRow.classList.add('drag-over');
+      });
+
+      sectionsContainer.addEventListener('drop', (e) => {
+        e.preventDefault();
+        const targetRow = e.target.closest('.dots-section-row');
+        if (!targetRow || !draggedRow || targetRow === draggedRow) return;
+        const allRows = Array.from(sectionsContainer.querySelectorAll('.dots-section-row'));
+        const dragIdx = allRows.indexOf(draggedRow);
+        const dropIdx = allRows.indexOf(targetRow);
+        if (dragIdx < dropIdx) {
+          sectionsContainer.insertBefore(draggedRow, targetRow.nextSibling);
+        } else {
+          sectionsContainer.insertBefore(draggedRow, targetRow);
+        }
+      });
+    }
+
     document.addEventListener('click', e => {
       const opt = e.target.closest('.opt');
-      if (!opt) return;
-
-      if (document.body.classList.contains('show-answers')) return;
-
+      if (!opt || document.body.classList.contains('show-answers')) return;
       const questionDiv = opt.closest('.question');
-      if (questionDiv.classList.contains('answered')) return;
-
+      if (!questionDiv || questionDiv.classList.contains('answered')) return;
       questionDiv.classList.add('answered');
 
       if (opt.classList.contains('correct')) {
@@ -440,19 +530,69 @@
       }
 
       setTimeout(() => {
-        const allQuestions = Array.from(document.querySelectorAll('#mcq-container .question'));
+        const allQuestions = Array.from(document.querySelectorAll('#sections-container .question'));
         const currentIndex = allQuestions.indexOf(questionDiv);
         const nextQuestion = allQuestions[currentIndex + 1];
-        if (nextQuestion) {
-          nextQuestion.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
+        if (nextQuestion) nextQuestion.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }, 600);
     });
 
     window.addEventListener('DOMContentLoaded', () => {
       loadQuestionsDatabase();
+      initDragAndDrop();
 
-      document.getElementById('generate-btn').addEventListener('click', () => {
+      const dotsIcon = document.getElementById('dots-menu-btn');
+      const dotsDropdown = document.getElementById('dots-dropdown');
+      const generateBtn = document.getElementById('generate-btn');
+
+      dotsIcon.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        const isOpen = dotsDropdown.classList.toggle('open');
+        dotsIcon.setAttribute('aria-expanded', isOpen);
+      });
+
+      dotsIcon.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.stopPropagation(); dotsIcon.click(); }
+      });
+
+      generateBtn.addEventListener('click', (e) => {
+        if (e.target === dotsIcon || dotsIcon.contains(e.target)) return;
+        generateQuestionPaper();
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!dotsDropdown.contains(e.target) && !dotsIcon.contains(e.target)) {
+          dotsDropdown.classList.remove('open');
+          dotsIcon.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      dotsDropdown.addEventListener('click', (e) => e.stopPropagation());
+
+      function updateTotals() {
+        const mcqMarks = parseInt(document.getElementById('input-mcq-marks').value) || 0;
+        const shortMarks = parseInt(document.getElementById('input-short-marks').value) || 0;
+        const practicalMarks = parseInt(document.getElementById('input-practical-marks').value) || 0;
+        document.getElementById('input-total-marks').value = mcqMarks + shortMarks + practicalMarks;
+
+        const mcqTime = parseInt(document.getElementById('input-mcq-time').value) || 0;
+        const shortTime = parseInt(document.getElementById('input-short-time').value) || 0;
+        const practicalTime = parseInt(document.getElementById('input-practical-time').value) || 0;
+        const totalMin = mcqTime + shortTime + practicalTime;
+        document.getElementById('input-total-time').value = totalMin >= 60 ? (totalMin / 60).toFixed(1).replace(/\.0$/, '') : totalMin + 'm';
+      }
+
+      dotsDropdown.querySelectorAll('.dots-section-fields .dots-input').forEach(input => {
+        input.addEventListener('input', updateTotals);
+      });
+
+      updateTotals();
+
+      document.getElementById('dots-done-btn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        dotsDropdown.classList.remove('open');
+        dotsIcon.setAttribute('aria-expanded', 'false');
         generateQuestionPaper();
       });
 
@@ -461,18 +601,12 @@
         if (toggle.checked) {
           document.body.classList.remove('hide-answers');
           document.body.classList.add('show-answers');
-
-          document.querySelectorAll('#mcq-container .opt.correct .checkmark').forEach(chk => {
-            chk.style.display = 'inline-block';
-          });
+          document.querySelectorAll('#sections-container .opt.correct .checkmark').forEach(chk => { chk.style.display = 'inline-block'; });
         } else {
           document.body.classList.add('hide-answers');
           document.body.classList.remove('show-answers');
-
-          document.querySelectorAll('#mcq-container .question.answered').forEach(q => {
-            q.classList.remove('answered');
-          });
-          document.querySelectorAll('#mcq-container .opt').forEach(opt => {
+          document.querySelectorAll('#sections-container .question.answered').forEach(q => { q.classList.remove('answered'); });
+          document.querySelectorAll('#sections-container .opt').forEach(opt => {
             opt.className = 'opt' + (opt.classList.contains('correct') ? ' correct' : '');
             const chk = opt.querySelector('.checkmark');
             if (chk) chk.style.display = 'none';
@@ -493,13 +627,8 @@
       });
 
       const backToTop = document.getElementById('back-to-top');
-      window.addEventListener('scroll', () => {
-        backToTop.classList.toggle('visible', window.scrollY > 300);
-      });
-
-      backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+      window.addEventListener('scroll', () => { backToTop.classList.toggle('visible', window.scrollY > 300); });
+      backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
       document.querySelectorAll('.skip-link').forEach(link => {
         link.addEventListener('focus', () => { link.style.top = '0'; });
