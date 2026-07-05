@@ -59,19 +59,25 @@
 
   <div class="mcq-controls" id="mcq-controls" style="margin-bottom:1rem;" role="group" aria-label="Question controls">
     <label class="switch">
-      <input type="checkbox" id="mcq-toggle" checked aria-label="Toggle MCQ answer visibility">
-      <span class="slider" aria-hidden="true"></span>
+      <input type="checkbox" id="mcq-toggle" checked aria-label="Toggle answer visibility">
+      <span class="switch-track">
+        <span class="switch-label">Show answers</span>
+        <span class="switch-knob"></span>
+      </span>
     </label>
-    <span class="switch-label">Show answers</span>
 
-    <label class="switch">
-      <input type="checkbox" id="tts-toggle" aria-label="Toggle text-to-speech on hover">
-      <span class="slider" aria-hidden="true"></span>
-    </label>
-    <span class="switch-label">TTS</span>
-
+    <div class="pill-group" id="tts-pill-group">
+      <label class="switch">
+        <input type="checkbox" id="tts-toggle" aria-label="Toggle text-to-speech on hover">
+        <span class="switch-track">
+          <span class="switch-label">Text to Speech</span>
+          <span class="switch-knob"></span>
+        </span>
+      </label>
+      <span class="pill-divider"></span>
+      <button class="pill-dots" id="tts-settings-btn" type="button" aria-label="TTS settings" title="TTS settings">&#8942;</button>
+    </div>
     <div class="tts-settings">
-      <button class="tts-settings-btn" id="tts-settings-btn" aria-label="TTS settings" title="TTS settings">&#8942;</button>
       <div class="tts-settings-dropdown" id="tts-settings-dropdown" hidden>
         <div class="tts-dropdown-header">TTS Settings</div>
         <label class="tts-setting-row">
@@ -79,7 +85,11 @@
           <input type="range" id="tts-rate" min="0.5" max="2" step="0.1" value="1">
           <span class="tts-rate-val" id="tts-rate-val">1</span>
         </label>
-        <div class="tts-setting-row">
+        <label class="tts-setting-row tts-auto-row">
+          <input type="checkbox" id="tts-scroll">
+          <span>Auto-scroll</span>
+        </label>
+        <div class="tts-setting-row" id="tts-repeat-row">
           <span>Repeat</span>
           <select id="tts-repeat">
             <option value="1">1x</option>
@@ -89,16 +99,31 @@
             <option value="10">10x</option>
             <option value="0">&#8734;</option>
           </select>
-          <label class="tts-scroll-inline">
-            <input type="checkbox" id="tts-scroll">
-            Scroll
-          </label>
         </div>
         <label class="tts-setting-row">
           <span>Voice</span>
           <select id="tts-voice"></select>
         </label>
         <button type="button" class="tts-dropdown-done" id="tts-dropdown-done">Done</button>
+      </div>
+    </div>
+
+    <div class="sort-controls">
+      <button class="sort-btn" id="sort-btn" type="button" title="Sort by">&#x2630;</button>
+      <div class="sort-dropdown" id="sort-dropdown" hidden>
+        <div class="sort-dropdown-header">Sort by</div>
+        <label class="sort-option" data-value="source">
+          <input type="radio" name="sort-opt" value="source" checked>
+          <span>Source</span>
+        </label>
+        <label class="sort-option" data-value="difficulty">
+          <input type="radio" name="sort-opt" value="difficulty">
+          <span>Difficulty</span>
+        </label>
+        <label class="sort-option" data-value="alpha">
+          <input type="radio" name="sort-opt" value="alpha">
+          <span>A–Z</span>
+        </label>
       </div>
     </div>
   </div>
@@ -132,57 +157,238 @@
       return temp.firstElementChild;
     }
 
-    function renderUnits(units) {
-      const container = document.getElementById('toc-list');
-      const bank = document.getElementById('question-bank');
-      bank.innerHTML = '';
+    let allQuestions = [];
+    let currentSort = 'source';
 
-      units.forEach((unit) => {
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.href = '#' + unit.id;
-        a.textContent = unit.code + ' \u2014 ' + unit.title;
-        li.appendChild(a);
-        const stats = document.createElement('span');
-        stats.style.cssText = 'color:#94a3b8;font-size:0.85em;';
-        stats.textContent = ' (' + (unit.mcqs ? unit.mcqs.length : 0) + ' MCQ \u00B7 ' + (unit.shorts ? unit.shorts.length : 0) + ' Short)';
-        li.appendChild(stats);
-        container.appendChild(li);
+    function getCurrentSort() {
+      const checked = document.querySelector('.sort-option input[name="sort-opt"]:checked');
+      return checked ? checked.value : 'source';
+    }
 
-        const header = document.createElement('div');
-        header.className = 'unit-header';
-        header.id = unit.id;
-        header.innerHTML = '<div class="unit-code">UNIT ' + unit.code + '</div><h2>' + escapeHtml(unit.title) + '</h2><div class="unit-stats">' + escapeHtml(unit.stats || '') + '</div>';
-        bank.appendChild(header);
-
-        if (unit.mcqs && unit.mcqs.length > 0) {
-          const sectionHeader = document.createElement('div');
-          sectionHeader.className = 'section-header';
-          sectionHeader.setAttribute('data-section-type', 'mcq');
-          sectionHeader.innerHTML = '<h3>Multiple Choice</h3><span class="section-badge">MCQ</span>';
-          bank.appendChild(sectionHeader);
-
+    function flattenQuestions(units) {
+      allQuestions = [];
+      let globalNum = 0;
+      units.forEach(unit => {
+        const code = unit.code;
+        const title = unit.title;
+        if (unit.mcqs) {
           unit.mcqs.forEach(q => {
-            bank.appendChild(parseQuestionHtml(q.html));
+            globalNum++;
+            allQuestions.push({
+              sortNum: globalNum,
+              unitCode: code,
+              unitTitle: title,
+              type: 'mcq',
+              difficulty: q.difficulty || 1,
+              source: q.source || '',
+              questionText: extractQuestionText(q.html),
+              html: q.html
+            });
           });
         }
+        if (unit.shorts) {
+          unit.shorts.forEach(q => {
+            globalNum++;
+            allQuestions.push({
+              sortNum: globalNum,
+              unitCode: code,
+              unitTitle: title,
+              type: 'short',
+              difficulty: q.difficulty || 1,
+              source: q.source || '',
+              questionText: extractQuestionText(q.html),
+              html: q.html
+            });
+          });
+        }
+      });
+    }
 
-        if (unit.shorts && unit.shorts.length > 0) {
+    function extractQuestionText(html) {
+      const temp = document.createElement('div');
+      temp.innerHTML = html;
+      const qText = temp.querySelector('.q-text');
+      return qText ? qText.textContent.trim() : '';
+    }
+
+    function renderUnits(units) {
+      flattenQuestions(units);
+      applySort();
+    }
+
+    function applySort() {
+      const bank = document.getElementById('question-bank');
+      const container = document.getElementById('toc-list');
+      bank.innerHTML = '';
+      container.innerHTML = '';
+
+      const sortVal = getCurrentSort();
+      currentSort = sortVal;
+
+      // Always group by unit → MCQ/Short
+      // Sort questions within their group based on sortVal
+      const grouped = {};
+      allQuestions.forEach(q => {
+        const key = q.unitCode + '|' + q.type;
+        if (!grouped[key]) {
+          grouped[key] = { unitCode: q.unitCode, unitTitle: q.unitTitle, type: q.type, questions: [] };
+        }
+        grouped[key].questions.push(q);
+      });
+
+      // Sort within each group
+      Object.values(grouped).forEach(g => {
+        if (sortVal === 'source') {
+          g.questions.sort((a, b) => a.sortNum - b.sortNum);
+        } else if (sortVal === 'difficulty') {
+          g.questions.sort((a, b) => a.difficulty - b.difficulty);
+        } else if (sortVal === 'alpha') {
+          g.questions.sort((a, b) => a.questionText.localeCompare(b.questionText));
+        }
+      });
+
+      // Build TOC by unit
+      const seenUnits = {};
+      Object.values(grouped).forEach(g => {
+        if (!seenUnits[g.unitCode]) {
+          seenUnits[g.unitCode] = true;
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = '#' + g.unitCode;
+          a.textContent = g.unitCode + ' \u2014 ' + g.unitTitle;
+          li.appendChild(a);
+          container.appendChild(li);
+        }
+      });
+
+      // Render grouped — unit → type → questions
+      const renderedUnits = {};
+      Object.values(grouped).forEach(g => {
+        if (!renderedUnits[g.unitCode]) {
+          renderedUnits[g.unitCode] = true;
+          const details = document.createElement('details');
+          details.className = 'unit-details';
+          details.id = g.unitCode;
+          details.open = true;
+
+          // Count MCQ/Short for this unit
+          const unitQs = allQuestions.filter(q => q.unitCode === g.unitCode);
+          const mcqCount = unitQs.filter(q => q.type === 'mcq').length;
+          const shortCount = unitQs.filter(q => q.type === 'short').length;
+
+          const summary = document.createElement('summary');
+          summary.className = 'unit-header';
+          summary.innerHTML =
+            '<div class="unit-code">UNIT ' + g.unitCode + '</div>' +
+            '<h2>' + escapeHtml(g.unitTitle) + '</h2>' +
+            '<div class="unit-stats">' + mcqCount + ' MCQ \u00B7 ' + shortCount + ' Short</div>' +
+            '<span class="collapse-icon">\u25BC</span>';
+          details.appendChild(summary);
+
+          const body = document.createElement('div');
+          body.className = 'unit-body';
+          details.appendChild(body);
+
+          // Add current group's section header + questions
           const sectionHeader = document.createElement('div');
           sectionHeader.className = 'section-header';
-          sectionHeader.setAttribute('data-section-type', 'short');
-          sectionHeader.innerHTML = '<h3>Short Questions</h3><span class="section-badge">SHORT</span>';
-          bank.appendChild(sectionHeader);
+          sectionHeader.setAttribute('data-section-type', g.type);
+          const label = g.type === 'mcq' ? 'Multiple Choice' : 'Short Questions';
+          const badge = g.type === 'mcq' ? 'MCQ' : 'SHORT';
+          sectionHeader.innerHTML = '<h3>' + label + '</h3><span class="section-badge">' + badge + '</span>';
+          body.appendChild(sectionHeader);
 
-          unit.shorts.forEach(q => {
-            bank.appendChild(parseQuestionHtml(q.html));
+          let num = 1;
+          g.questions.forEach(q => {
+            const el = parseQuestionHtml(q.html);
+            const numEl = el.querySelector('.q-num');
+            if (numEl) numEl.textContent = num++;
+            body.appendChild(el);
+          });
+
+          bank.appendChild(details);
+        } else {
+          // Subsequent group for same unit
+          const details = bank.querySelector('#' + CSS.escape(g.unitCode));
+          if (!details) return;
+          const body = details.querySelector('.unit-body');
+
+          const sectionHeader = document.createElement('div');
+          sectionHeader.className = 'section-header';
+          sectionHeader.setAttribute('data-section-type', g.type);
+          const label = g.type === 'mcq' ? 'Multiple Choice' : 'Short Questions';
+          const badge = g.type === 'mcq' ? 'MCQ' : 'SHORT';
+          sectionHeader.innerHTML = '<h3>' + label + '</h3><span class="section-badge">' + badge + '</span>';
+          body.appendChild(sectionHeader);
+
+          let num = 1;
+          g.questions.forEach(q => {
+            const el = parseQuestionHtml(q.html);
+            const numEl = el.querySelector('.q-num');
+            if (numEl) numEl.textContent = num++;
+            body.appendChild(el);
           });
         }
-
-        const divider = document.createElement('hr');
-        divider.className = 'unit-divider';
-        bank.appendChild(divider);
       });
+
+      // Re-add practical section
+      const db = typeof QUESTIONS_DATA !== 'undefined' ? QUESTIONS_DATA : null;
+      if (db && db.practicals && db.practicals.length > 0) {
+        const temp = document.createElement('div');
+        temp.innerHTML = db.practicals[0];
+        const ps = temp.querySelector('.practical-section');
+        if (ps && !bank.querySelector('.practical-section')) {
+          bank.appendChild(ps);
+        }
+      }
+
+      // Re-initialize interactive features after re-render
+      reinitFeatures();
+    }
+
+    function reinitFeatures() {
+      document.querySelectorAll('.options .opt').forEach(option => {
+        const html = option.innerHTML.trim();
+        if (html.endsWith('\u2713')) {
+          const normalized = html.replace(/\s*\u2713\s*$/, '');
+          option.innerHTML = normalized + ' <span class="checkmark">\u2713</span>';
+          option.classList.add('correct');
+        }
+      });
+      document.querySelectorAll('.answer-reveal').forEach(d => {
+        const t = document.getElementById('mcq-toggle');
+        d.open = t ? t.checked : true;
+      });
+      const activeBtn = document.querySelector('.section-controls button.active');
+      if (activeBtn) {
+        const typeMap = { 'show-mcqs': 'mcq', 'show-short': 'short', 'show-practical': 'practical' };
+        const type = typeMap[activeBtn.id];
+        if (type) {
+          if (type === 'practical') {
+            document.querySelectorAll('.unit-header, .question').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.section-header').forEach(h => {
+              h.style.display = h.getAttribute('data-section-type') === 'practical' ? '' : 'none';
+            });
+            // Keep sort-group-headers visible in practical mode
+            document.querySelectorAll('.sort-group-header').forEach(h => h.style.display = 'none');
+            const ps = document.querySelector('.practical-section');
+            if (ps) ps.style.display = '';
+          } else {
+            document.querySelectorAll('.unit-header, .question, .section-header').forEach(el => el.style.display = '');
+            document.querySelectorAll('.section-header').forEach(h => {
+              if (h.classList.contains('sort-group-header')) return;
+              h.style.display = h.getAttribute('data-section-type') === type ? '' : 'none';
+            });
+            const ps = document.querySelector('.practical-section');
+            if (ps) ps.style.display = 'none';
+            if (type === 'mcq') {
+              document.querySelectorAll('.unit-header').forEach(h => h.style.display = '');
+            }
+          }
+        }
+      }
+
+      if (window._attachTTSListeners) window._attachTTSListeners();
     }
 
     function renderPracticalSection(practicalHtml) {
@@ -197,7 +403,7 @@
       temp.innerHTML = practicalHtml;
       const practicalSection = temp.querySelector('.practical-section');
       if (practicalSection) {
-        bank.appendChild(practicalSection);
+        bank.prepend(practicalSection);
       }
     }
 
@@ -215,21 +421,45 @@
         totalQs + ' questions \u00B7 ' +
         db.units.length + ' units \u00B7 MCQs \u00B7 Short Qs \u00B7 Practicals';
 
+      document.querySelectorAll('.sort-option input[name="sort-opt"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+          if (radio.checked && allQuestions.length > 0) {
+            applySort();
+            document.getElementById('sort-dropdown').hidden = true;
+          }
+        });
+      });
+
+      document.getElementById('sort-btn').addEventListener('click', e => {
+        e.stopPropagation();
+        const dd = document.getElementById('sort-dropdown');
+        dd.hidden = !dd.hidden;
+      });
+
+      document.addEventListener('click', e => {
+        const dd = document.getElementById('sort-dropdown');
+        if (!dd.hidden && !e.target.closest('.sort-controls')) {
+          dd.hidden = true;
+        }
+      });
+
       renderUnits(db.units);
 
       if (db.practicals && db.practicals.length > 0) {
         renderPracticalSection(db.practicals[0]);
       }
 
+      _ttsInitialized = false;
       initInteractiveFeatures();
     }
 
+    let activeEl = null;
+    let isLooping = false;
+    let isAutoAdvancing = false;
+    let preferredVoice = null;
+
     function initTTS() {
       if (!('speechSynthesis' in window)) return;
-      let activeEl = null;
-      let isLooping = false;
-      let isAutoAdvancing = false;
-      let preferredVoice = null;
       const ttsToggle = document.getElementById('tts-toggle');
       const voiceSelect = document.getElementById('tts-voice');
       const rateInput = document.getElementById('tts-rate');
@@ -270,32 +500,60 @@
         }
       }
 
-      speechSynthesis.addEventListener('voiceschanged', () => {
-        preferredVoice = pickVoice();
-        populateVoices();
-      });
-      preferredVoice = pickVoice();
-      populateVoices();
-
-      if (rateInput && rateVal) {
-        rateInput.addEventListener('input', () => { rateVal.textContent = rateInput.value; });
-      }
-
-      if (settingsBtn && settingsDropdown) {
-        settingsBtn.addEventListener('click', e => {
-          e.stopPropagation();
-          settingsDropdown.toggleAttribute('hidden');
+      // One-time setup
+      if (!window._ttsSetupDone) {
+        window._ttsSetupDone = true;
+        speechSynthesis.addEventListener('voiceschanged', () => {
+          preferredVoice = pickVoice();
+          populateVoices();
         });
+        if (rateInput && rateVal) {
+          rateInput.addEventListener('input', () => { rateVal.textContent = rateInput.value; });
+        }
+        if (settingsBtn && settingsDropdown) {
+          settingsBtn.addEventListener('click', e => {
+            e.stopPropagation();
+            settingsDropdown.toggleAttribute('hidden');
+          });
+          document.addEventListener('click', e => {
+            if (!settingsDropdown.hidden && !settingsBtn.contains(e.target) && !settingsDropdown.contains(e.target)) {
+              settingsDropdown.hidden = true;
+            }
+          });
+          const doneBtn = document.getElementById('tts-dropdown-done');
+          if (doneBtn) doneBtn.addEventListener('click', () => { settingsDropdown.hidden = true; });
+        }
         document.addEventListener('click', e => {
-          if (!settingsDropdown.hidden && !settingsBtn.contains(e.target) && !settingsDropdown.contains(e.target)) {
-            settingsDropdown.hidden = true;
-          }
+          if (!e.target.closest('.question')) stopSpeaking();
         });
-        const doneBtn = document.getElementById('tts-dropdown-done');
-        if (doneBtn) {
-          doneBtn.addEventListener('click', () => { settingsDropdown.hidden = true; });
+        if (ttsToggle) {
+          ttsToggle.addEventListener('change', () => {
+            const pg = document.getElementById('tts-pill-group');
+            const sc = document.querySelector('.tts-settings');
+            if (!ttsToggle.checked) {
+              if (pg) pg.classList.remove('active');
+              stopSpeaking();
+              if (sc) sc.style.display = 'none';
+            } else {
+              if (pg) pg.classList.add('active');
+              if (sc) sc.style.display = '';
+            }
+          });
+          // Initial sync
+          const pg = document.getElementById('tts-pill-group');
+          const sc = document.querySelector('.tts-settings');
+          if (ttsToggle.checked) {
+            if (pg) pg.classList.add('active');
+            if (sc) sc.style.display = '';
+          } else {
+            if (pg) pg.classList.remove('active');
+            if (sc) sc.style.display = 'none';
+          }
         }
       }
+
+      preferredVoice = pickVoice();
+      populateVoices();
 
       function speakText(text) {
         return new Promise(resolve => {
@@ -384,6 +642,26 @@
         });
       }
 
+      function addQuestionStartBtns() {
+        const show = scrollCheck && scrollCheck.checked && ttsToggle && ttsToggle.checked;
+        document.querySelectorAll('.question').forEach(q => {
+          let btn = q.querySelector('.q-start-btn');
+          if (!btn) {
+            btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'q-start-btn';
+            btn.textContent = '\u25B6';
+            btn.setAttribute('aria-label', 'Start auto-scroll from here');
+            btn.addEventListener('click', e => {
+              e.stopPropagation();
+              startAutoScroll(q);
+            });
+            q.appendChild(btn);
+          }
+          btn.style.display = show ? '' : 'none';
+        });
+      }
+
       async function startAutoScroll(fromEl) {
         await stopSpeaking();
         if (!isTtsEnabled()) return;
@@ -424,51 +702,33 @@
         resetAllBtns();
       }
 
-      document.querySelectorAll('.question').forEach(q => {
-        q.addEventListener('mouseenter', () => startSpeaking(q));
-        q.addEventListener('mouseleave', () => { if (!isAutoAdvancing) stopSpeaking(); });
-      });
-
-      document.addEventListener('click', e => {
-        if (!e.target.closest('.question')) stopSpeaking();
-      });
-
-      if (ttsToggle) {
-        const settingsContainer = document.querySelector('.tts-settings');
-        if (settingsContainer) settingsContainer.style.display = ttsToggle.checked ? '' : 'none';
-        ttsToggle.addEventListener('change', () => {
-          if (!ttsToggle.checked) {
-            stopSpeaking();
-            if (settingsContainer) settingsContainer.style.display = 'none';
-          } else {
-            if (settingsContainer) settingsContainer.style.display = '';
-          }
-        });
-      }
-
-      function addQuestionStartBtns() {
-        const show = scrollCheck && scrollCheck.checked && ttsToggle && ttsToggle.checked;
+      function attachTTSListeners() {
         document.querySelectorAll('.question').forEach(q => {
-          let btn = q.querySelector('.q-start-btn');
-          if (!btn) {
-            btn = document.createElement('button');
-            btn.type = 'button';
-            btn.className = 'q-start-btn';
-            btn.textContent = '\u25B6';
-            btn.setAttribute('aria-label', 'Start auto-scroll from here');
-            btn.addEventListener('click', e => {
-              e.stopPropagation();
-              startAutoScroll(q);
-            });
-            q.appendChild(btn);
-          }
-          btn.style.display = show ? '' : 'none';
+          q.addEventListener('mouseenter', () => startSpeaking(q));
+          q.addEventListener('mouseleave', () => { if (!isAutoAdvancing) stopSpeaking(); });
         });
+        addQuestionStartBtns();
       }
 
-      addQuestionStartBtns();
-      if (scrollCheck) scrollCheck.addEventListener('change', addQuestionStartBtns);
-      if (ttsToggle) ttsToggle.addEventListener('change', addQuestionStartBtns);
+      // One-time listener setup
+      if (!window._ttsScrollListenerDone) {
+        window._ttsScrollListenerDone = true;
+        if (scrollCheck) {
+          scrollCheck.addEventListener('change', () => {
+            addQuestionStartBtns();
+            const row = document.getElementById('tts-repeat-row');
+            if (row) row.classList.toggle('disabled', !scrollCheck.checked);
+          });
+        }
+        if (ttsToggle) ttsToggle.addEventListener('change', addQuestionStartBtns);
+      }
+
+      attachTTSListeners();
+      window._attachTTSListeners = attachTTSListeners;
+
+      // Init repeat row state
+      const row = document.getElementById('tts-repeat-row');
+      if (row && scrollCheck) row.classList.toggle('disabled', !scrollCheck.checked);
     }
 
     function initInteractiveFeatures() {
@@ -490,29 +750,36 @@
 
       document.querySelectorAll('.answer-reveal').forEach(d => d.open = true);
 
-      const sections = { mcq: [], short: [], practical: [] };
-      document.querySelectorAll('div.section-header[data-section-type]').forEach(header => {
-        const type = header.getAttribute('data-section-type');
-        if (!sections[type]) return;
-        sections[type].push(header);
-        let current = header.nextElementSibling;
-        while (current && !current.classList.contains('section-header') && !current.classList.contains('unit-header') && !current.classList.contains('unit-divider')) {
-          sections[type].push(current);
-          current = current.nextElementSibling;
-        }
-      });
+      function rebuildSections() {
+        const secs = { mcq: [], short: [], practical: [] };
+        document.querySelectorAll('div.section-header[data-section-type]').forEach(header => {
+          const type = header.getAttribute('data-section-type');
+          if (!secs[type]) return;
+          secs[type].push(header);
+          let current = header.nextElementSibling;
+          while (current && !current.classList.contains('section-header') && !current.classList.contains('unit-header') && !current.classList.contains('unit-divider')) {
+            secs[type].push(current);
+            current = current.nextElementSibling;
+          }
+        });
+        return secs;
+      }
 
       const setMode = isRevealed => {
-        body.classList.toggle('hide-mcq-answers', !isRevealed);
+        body.classList.toggle('hide-answers', !isRevealed);
         if (mcqToggle) mcqToggle.checked = isRevealed;
+        // Toggle short answer reveals
+        document.querySelectorAll('.answer-reveal').forEach(d => d.open = isRevealed);
       };
 
       const setSection = selectedType => {
+        const sections = rebuildSections();
         if (selectedType === 'practical') {
           document.querySelectorAll('.unit-header, .question').forEach(el => el.style.display = 'none');
           document.querySelectorAll('.section-header').forEach(h => {
             h.style.display = h.getAttribute('data-section-type') === 'practical' ? '' : 'none';
           });
+          document.querySelectorAll('.sort-group-header').forEach(h => h.style.display = 'none');
           const ps = document.querySelector('.practical-section');
           if (ps) ps.style.display = '';
           if (mcqControls) mcqControls.style.display = 'none';
