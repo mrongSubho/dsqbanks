@@ -2280,7 +2280,7 @@
           "num": 82,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">82</div><div class=\"q-text\">Which Python operator is used for exponentiation?</div><div class=\"options\"><div class=\"opt\"><span class=\"opt-letter\">A.</span> ^</div>\n<div class=\"opt\"><span class=\"opt-letter\">C.</span> //</div>\n<div class=\"opt\"><span class=\"opt-letter\">D.</span> %%</div></div></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">82</div><div class=\"q-text\">Which Python operator is used for exponentiation?</div><div class=\"options\"><div class=\"opt\"><span class=\"opt-letter\">A.</span> ^</div>\n<div class=\"opt\" style=\"background:#a7f3d0;border-left:3px solid #059669;\"><span class=\"opt-letter\">B.</span> ** ✓</div>\n<div class=\"opt\"><span class=\"opt-letter\">C.</span> //</div>\n<div class=\"opt\"><span class=\"opt-letter\">D.</span> %%</div></div></div>"
         },
         {
           "num": 83,

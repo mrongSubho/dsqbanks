@@ -1288,3 +1288,67 @@ details.solution[open] summary::before {
 .diff-legend-item.diff-s { background: #2563eb; }
 .diff-legend-item.diff-k { background: #d97706; }
 .diff-legend-item.diff-c { background: #7c3aed; }
+
+/* Correction badge & tooltip */
+.correction-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #92400e;
+  background: #fef3c7;
+  border: 1px solid #fcd34d;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.15s;
+  margin-left: 5px;
+  vertical-align: middle;
+  flex-shrink: 0;
+  user-select: none;
+  line-height: 1;
+}
+
+.correction-badge:hover {
+  background: #fde68a;
+  border-color: #f59e0b;
+}
+
+.correction-tooltip {
+  display: none;
+  z-index: 1000;
+  background: #fff;
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  padding: 0.7rem 0.85rem;
+  width: 280px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  white-space: normal;
+}
+
+.correction-tooltip.open {
+  display: block;
+  position: absolute;
+  top: 2rem;
+  right: 0.75rem;
+}
+
+.corr-labeled {
+  color: #dc2626;
+  margin-bottom: 0.25rem;
+}
+
+.corr-correct {
+  color: #059669;
+  margin-bottom: 0.25rem;
+}
+
+.corr-reason {
+  color: #64748b;
+  font-style: italic;
+  font-size: 0.78rem;
+}

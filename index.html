@@ -377,7 +377,6 @@
             document.querySelectorAll('.section-header').forEach(h => {
               h.style.display = h.getAttribute('data-section-type') === 'practical' ? '' : 'none';
             });
-            // Keep sort-group-headers visible in practical mode
             document.querySelectorAll('.sort-group-header').forEach(h => h.style.display = 'none');
             const ps = document.querySelector('.practical-section');
             if (ps) ps.style.display = '';
@@ -396,7 +395,100 @@
         }
       }
 
+      attachCorrections();
       if (window._attachTTSListeners) window._attachTTSListeners();
+    }
+
+    const corrections = [
+      { q: 'Which Python operator is used for exponentiation?', labeled: 'B = `**` (missing — option was "None" in source)', correct: 'B = `**`', reason: 'The source had None for option B, so the generator dropped it. The correct answer is `**` (exponentiation).' },
+      { q: 'What is the main purpose of the Data Understanding phase?', labeled: 'C = "Deploy final solution"', correct: 'B = "Collect and explore data"', reason: 'Data Understanding is about collecting and exploring data, not deployment.' },
+      { q: 'Removing duplicate records is part of which phase?', labeled: 'D = "Modeling"', correct: 'A = "Data Preparation"', reason: 'Removing duplicates is data cleaning, a Data Preparation task, not Modeling.' },
+      { q: 'Identifying missing values happens mainly during:', labeled: 'D = "Business Understanding"', correct: 'B = "Data Understanding"', reason: 'Identifying missing values is part of exploratory data analysis in Data Understanding.' },
+      { q: 'Which phase involves transforming raw data into usable format?', labeled: 'D = "Modeling"', correct: 'B = "Data Preparation"', reason: 'Transforming raw data is Data Preparation, not Modeling.' },
+      { q: 'Which of the following is a Modeling activity?', labeled: 'C = "Data collection"', correct: 'A = "Choosing algorithms"', reason: 'Choosing algorithms is a Modeling activity; data collection belongs to Data Understanding.' },
+      { q: 'Splitting data into training and testing sets belongs to:', labeled: 'D = "Evaluation"', correct: 'A = "Data Preparation"', reason: 'Train/test splitting is part of Data Preparation, not Evaluation.' },
+      { q: 'Monitoring model performance after implementation is related to:', labeled: 'D = "Modeling"', correct: 'B = "Deployment"', reason: 'Post-deployment monitoring is a Deployment activity, not Modeling.' },
+      { q: 'Which phase focuses on identifying business risks and constraints?', labeled: 'B = "Modeling"', correct: 'A = "Business Understanding"', reason: 'Identifying business risks and constraints is part of Business Understanding.' },
+      { q: 'Which NoSQL database is a column-family database?', labeled: 'C = "MongoDB"', correct: 'B = "Cassandra"', reason: 'MongoDB is a document store; Cassandra is the column-family NoSQL database.' },
+    ];
+
+    function attachCorrections() {
+      if (!corrections.length) return;
+      document.querySelectorAll('.question .q-text').forEach(qTextEl => {
+        const text = qTextEl.textContent.trim();
+        const corr = corrections.find(c => c.q === text);
+        if (!corr) return;
+        const qEl = qTextEl.closest('.question');
+        if (!qEl || qEl.querySelector('.correction-badge')) return;
+
+        const badge = document.createElement('span');
+        badge.className = 'correction-badge';
+        badge.textContent = '\u24D8';
+        badge.setAttribute('role', 'button');
+        badge.setAttribute('tabindex', '0');
+        badge.setAttribute('aria-label', 'Correction information');
+
+        const tooltip = document.createElement('div');
+        tooltip.className = 'correction-tooltip';
+        tooltip.innerHTML =
+          '<div class="corr-labeled"><strong>Source marks:</strong> ' + escapeHtml(corr.labeled) + '</div>' +
+          '<div class="corr-correct"><strong>Correct answer:</strong> ' + escapeHtml(corr.correct) + '</div>' +
+          '<div class="corr-reason">\u2014 ' + escapeHtml(corr.reason) + '</div>';
+
+        badge.appendChild(tooltip);
+
+        badge.addEventListener('click', e => {
+          e.stopPropagation();
+          toggleTooltip(badge, tooltip, qEl);
+        });
+
+        let hoverTimer = null;
+        badge.addEventListener('mouseenter', () => {
+          if (hoverTimer) clearTimeout(hoverTimer);
+          openTooltip(badge, tooltip, qEl);
+        });
+        badge.addEventListener('mouseleave', () => {
+          if (hoverTimer) clearTimeout(hoverTimer);
+          hoverTimer = setTimeout(() => closeTooltip(tooltip), 300);
+        });
+        tooltip.addEventListener('mouseenter', () => {
+          if (hoverTimer) clearTimeout(hoverTimer);
+        });
+        tooltip.addEventListener('mouseleave', () => {
+          if (hoverTimer) clearTimeout(hoverTimer);
+          hoverTimer = setTimeout(() => closeTooltip(tooltip), 300);
+        });
+
+        qTextEl.appendChild(badge);
+      });
+
+      function openTooltip(badge, tooltip, qEl) {
+        document.querySelectorAll('.correction-tooltip.open').forEach(t => t.classList.remove('open'));
+        tooltip.classList.add('open');
+        tooltip.style.position = '';
+        tooltip.style.left = '';
+        tooltip.style.top = '';
+        tooltip.style.maxWidth = '';
+        badge._tooltipOpen = true;
+      }
+
+      function closeTooltip(tooltip) {
+        tooltip.classList.remove('open');
+      }
+
+      function toggleTooltip(badge, tooltip, qEl) {
+        if (tooltip.classList.contains('open')) {
+          closeTooltip(tooltip);
+        } else {
+          openTooltip(badge, tooltip, qEl);
+        }
+      }
+
+      document.addEventListener('click', e => {
+        if (!e.target.closest('.correction-badge')) {
+          document.querySelectorAll('.correction-tooltip.open').forEach(t => t.classList.remove('open'));
+        }
+      });
     }
 
     function renderPracticalSection(practicalHtml) {
