@@ -109,6 +109,13 @@
       </div>
     </div>
 
+    <div class="progress-bar-container" id="progress-bar-container">
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+      </div>
+      <span class="progress-label" id="progress-label">Scroll to see progress</span>
+    </div>
+
     <div class="sort-controls">
       <button class="sort-btn" id="sort-btn" type="button" title="Sort by">&#x2630;</button>
       <div class="sort-dropdown" id="sort-dropdown" hidden>
@@ -397,6 +404,7 @@
 
       attachCorrections();
       if (window._attachTTSListeners) window._attachTTSListeners();
+      setTimeout(() => { if (typeof initProgressBar !== 'undefined') initProgressBar(); }, 50);
     }
 
     const corrections = [
@@ -574,32 +582,35 @@
       function speakText(text) {
         return new Promise(resolve => {
           if (!('speechSynthesis' in window)) { resolve(); return; }
-          window.speechSynthesis.cancel();
-          window.speechSynthesis.resume();
-          // Chrome: need delay between cancel/resume and speak
-          setTimeout(() => {
-            const u = new SpeechSynthesisUtterance(text);
-            u.lang = 'en-US';
-            const voices = window.speechSynthesis.getVoices();
-            const selected = voiceSelect ? voiceSelect.value : '';
-            let voice = null;
-            if (selected) {
-              voice = voices.find(v => v.name === selected);
-            }
-            if (!voice) {
-              voice = voices.find(v => v.name === 'Google US English')
-                   || voices.find(v => v.name.includes('Google') && v.lang && v.lang.startsWith('en'))
-                   || voices.find(v => v.lang && v.lang.startsWith('en'))
-                   || voices[0];
-            }
-            if (voice) u.voice = voice;
-            if (rateInput) u.rate = parseFloat(rateInput.value);
-            let done = false;
-            const timer = setTimeout(() => { if (!done) { done = true; resolve(); } }, 8000);
-            u.onend = () => { if (!done) { done = true; clearTimeout(timer); resolve(); } };
-            u.onerror = () => { if (!done) { done = true; clearTimeout(timer); resolve(); } };
+
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'en-US';
+          const voices = window.speechSynthesis.getVoices();
+          const selected = voiceSelect ? voiceSelect.value : '';
+          let voice = null;
+          if (selected) {
+            voice = voices.find(v => v.name === selected);
+          }
+          if (!voice) {
+            voice = voices.find(v => v.name === 'Google US English')
+                 || voices.find(v => v.name.includes('Google') && v.lang && v.lang.startsWith('en'))
+                 || voices.find(v => v.lang && v.lang.startsWith('en'))
+                 || voices[0];
+          }
+          if (voice) u.voice = voice;
+          if (rateInput) u.rate = parseFloat(rateInput.value);
+          let done = false;
+          const timer = setTimeout(() => { if (!done) { done = true; resolve(); } }, 8000);
+          u.onend = () => { if (!done) { done = true; clearTimeout(timer); resolve(); } };
+          u.onerror = () => { if (!done) { done = true; clearTimeout(timer); resolve(); } };
+
+          if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.resume();
+            setTimeout(() => { window.speechSynthesis.speak(u); }, 100);
+          } else {
             window.speechSynthesis.speak(u);
-          }, 30);
+          }
         });
       }
 
@@ -630,9 +641,9 @@
         const answerText = getAnswerText(el);
         if (!qText && !answerText) return;
         for (let i = 0; i < repeats && isLooping && activeEl === el && isTtsEnabled(); i++) {
-          if (qText) await speakText(qText);
+          if (qText) await speakText('Question: ' + qText);
           if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
-          if (answerText) await speakText(answerText);
+          if (answerText) await speakText('Answer: ' + answerText);
         }
       }
 
@@ -641,10 +652,10 @@
         const answerText = getAnswerText(el);
         if (!qText && !answerText) return;
         while (isLooping && activeEl === el && isTtsEnabled()) {
-          if (qText) await speakText(qText);
+          if (qText) await speakText('Question: ' + qText);
           if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
-          if (answerText) await speakText(answerText);
-          await new Promise(r => setTimeout(r, 120));
+          if (answerText) await speakText('Answer: ' + answerText);
+          await new Promise(r => setTimeout(r, 300));
         }
       }
 
@@ -812,19 +823,10 @@
             } else {
               if (pg) pg.classList.add('active');
               if (sc) sc.style.display = '';
-              // Test speech on enable
+              // Warm up speech synth with a user gesture
               try {
-                window.speechSynthesis.cancel();
-                window.speechSynthesis.resume();
-                setTimeout(() => {
-                  const tu = new SpeechSynthesisUtterance('Text to speech enabled. Hover any question to hear it.');
-                  tu.lang = 'en-US';
-                  const voices = window.speechSynthesis.getVoices();
-                  const sv = voices.find(v => v.name === 'Google US English')
-                          || voices.find(v => v.lang && v.lang.startsWith('en'));
-                  if (sv) tu.voice = sv;
-                  window.speechSynthesis.speak(tu);
-          }, 80);
+                const tu = new SpeechSynthesisUtterance('TTS ready.');
+                speechSynthesis.speak(tu);
               } catch(e) {
                 console.error('TTS test speak failed:', e);
               }
@@ -845,17 +847,9 @@
         if (testBtn) {
           testBtn.addEventListener('click', e => {
             e.stopPropagation();
-            window.speechSynthesis.cancel();
-            window.speechSynthesis.resume();
-            setTimeout(() => {
-              const tu = new SpeechSynthesisUtterance('This is a test of the text to speech system. Hello, world.');
-              tu.lang = 'en-US';
-              const voices = window.speechSynthesis.getVoices();
-              const selected = voiceSelect ? voiceSelect.value : '';
-              const sv = selected ? voices.find(v => v.name === selected) : null;
-              if (sv) tu.voice = sv;
-              window.speechSynthesis.speak(tu);
-          }, 80);
+            if (!('speechSynthesis' in window)) return;
+            const u = new SpeechSynthesisUtterance('Testing one two three.');
+            speechSynthesis.speak(u);
           });
         }
         if (scrollCheck) {
@@ -874,6 +868,101 @@
       // Init repeat row state
       const row = document.getElementById('tts-repeat-row');
       if (row && scrollCheck) row.classList.toggle('disabled', !scrollCheck.checked);
+    }
+
+    let _progressUpdate = null;
+
+    function initProgressBar() {
+      const fill = document.getElementById('progress-fill');
+      const label = document.getElementById('progress-label');
+      if (!fill || !label) return;
+
+      if (_progressUpdate) { _progressUpdate(); return; }
+
+      _progressUpdate = function() {
+        const controls = document.querySelector('.mcq-controls');
+        const container = document.getElementById('progress-bar-container');
+        if (!controls || !container) return;
+        const isStuck = window.scrollY > controls.offsetTop - 30;
+        if (!isStuck) {
+          container.classList.remove('active');
+          fill.style.width = '0%';
+          label.textContent = 'Scroll to see progress';
+          fill.style.background = '';
+          fill.style.boxShadow = '';
+          label.style.color = '';
+          return;
+        }
+        container.classList.add('active');
+        const allQs = document.querySelectorAll('.question');
+        const viewportMid = window.scrollY + window.innerHeight / 2;
+
+        let currentQ = null;
+        let minDist = Infinity;
+
+        allQs.forEach(q => {
+          if (q.offsetParent === null) return;
+          const rect = q.getBoundingClientRect();
+          const center = rect.top + window.scrollY + rect.height / 2;
+          const dist = Math.abs(center - viewportMid);
+          if (dist < minDist) {
+            minDist = dist;
+            currentQ = q;
+          }
+        });
+
+        if (!currentQ) {
+          fill.style.width = '0%';
+          label.textContent = '\u2014';
+          return;
+        }
+
+        const unit = currentQ.closest('.unit-details');
+        if (!unit) return;
+
+        const unitQs = unit.querySelectorAll('.question');
+        const visibleQs = [];
+        unitQs.forEach(q => { if (q.offsetParent !== null) visibleQs.push(q); });
+
+        const idx = visibleQs.indexOf(currentQ);
+        if (idx === -1) return;
+
+        const total = visibleQs.length;
+        const pct = total > 0 ? Math.round(((idx + 1) / total) * 100) : 0;
+
+        const codeEl = unit.querySelector('.unit-code');
+        const code = codeEl ? codeEl.textContent.trim() : '';
+
+        const text = code + ' \u2014 Q ' + (idx + 1) + '/' + total + ' \u2014 ' + pct + '%';
+        label.textContent = text;
+        fill.style.width = pct + '%';
+
+        // Dynamic color
+        let c1, c2, glow;
+        if (pct < 25) {
+          c1 = '#8b5cf6'; c2 = '#3b82f6'; glow = 'rgba(139,92,246,0.45)';
+        } else if (pct < 50) {
+          c1 = '#3b82f6'; c2 = '#06b6d4'; glow = 'rgba(59,130,246,0.45)';
+        } else if (pct < 75) {
+          c1 = '#06b6d4'; c2 = '#10b981'; glow = 'rgba(6,182,212,0.45)';
+        } else {
+          c1 = '#10b981'; c2 = '#f59e0b'; glow = 'rgba(16,185,129,0.45)';
+        }
+        fill.style.background = 'linear-gradient(90deg, ' + c1 + ', ' + c2 + ')';
+        fill.style.boxShadow = '0 0 14px ' + glow;
+        label.style.color = c1;
+      };
+
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => { _progressUpdate(); ticking = false; });
+          ticking = true;
+        }
+      }, { passive: true });
+
+      window.addEventListener('resize', _progressUpdate);
+      setTimeout(_progressUpdate, 100);
     }
 
     function initInteractiveFeatures() {
@@ -1046,6 +1135,7 @@
 
       setSection('mcq');
       initTTS();
+      initProgressBar();
     }
 
     document.addEventListener('DOMContentLoaded', loadQuestionBank);
