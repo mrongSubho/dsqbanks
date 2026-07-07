@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Randomly generated practice test for NSDA Data Science Level 4.">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    img-src 'self' data:;
+    font-src https://fonts.gstatic.com;
+    connect-src 'none';
+    media-src 'none';
+    object-src 'none';
+    frame-src 'none';
+    frame-ancestors 'none';
+    form-action 'none';
+    base-uri 'self';
+  ">
   <title>NSDA Data Science Level 4 Practice Test</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f172a'/%3E%3Cpath d='M30 70 V45 H42 V70 Z M48 70 V30 H60 V70 Z M66 70 V55 H78 V70 Z' fill='%233b82f6' opacity='0.8'/%3E%3Ccircle cx='36' cy='45' r='6' fill='%2306b6d4'/%3E%3Ccircle cx='54' cy='30' r='6' fill='%2306b6d4'/%3E%3Ccircle cx='72' cy='55' r='6' fill='%2306b6d4'/%3E%3Cpath d='M36 45 L54 30 L72 55' stroke='%2306b6d4' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f172a'/%3E%3Cpath d='M30 70 V45 H42 V70 Z M48 70 V30 H60 V70 Z M66 70 V55 H78 V70 Z' fill='%233b82f6' opacity='0.8'/%3E%3Ccircle cx='36' cy='45' r='6' fill='%2306b6d4'/%3E%3Ccircle cx='54' cy='30' r='6' fill='%2306b6d4'/%3E%3Ccircle cx='72' cy='55' r='6' fill='%2306b6d4'/%3E%3Cpath d='M36 45 L54 30 L72 55' stroke='%2306b6d4' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="css/test-style.css">
 </head>
+
 <body class="hide-answers">
-  <a href="#paper-document" class="skip-link" style="position:absolute;top:-100px;left:0;background:#2563eb;color:#fff;padding:0.5rem 1rem;z-index:9999;border-radius:0 0 4px 0;">Skip to test content</a>
+  <a href="#paper-document" class="skip-link"
+    style="position:absolute;top:-100px;left:0;background:#2563eb;color:#fff;padding:0.5rem 1rem;z-index:9999;border-radius:0 0 4px 0;">Skip
+    to test content</a>
 
   <div class="loader-overlay" id="loader" role="status" aria-live="polite">
     <div class="spinner" aria-hidden="true"></div>
@@ -24,14 +45,14 @@
 
   <nav class="nav-bar" aria-label="Test controls">
     <div class="nav-container">
-      <a href="index.html" class="nav-logo-link" aria-label="Back to question bank">
+      <a href="/" class="nav-logo-link" aria-label="Back to question bank">
         <svg width="22" height="22" viewBox="0 0 100 100" aria-hidden="true">
-          <rect width="100" height="100" rx="20" fill="#0f172a"/>
-          <path d="M30 70 V45 H42 V70 Z M48 70 V30 H60 V70 Z M66 70 V55 H78 V70 Z" fill="#3b82f6" opacity="0.8"/>
-          <circle cx="36" cy="45" r="6" fill="#06b6d4"/>
-          <circle cx="54" cy="30" r="6" fill="#06b6d4"/>
-          <circle cx="72" cy="55" r="6" fill="#06b6d4"/>
-          <path d="M36 45 L54 30 L72 55" stroke="#06b6d4" stroke-width="4" fill="none"/>
+          <rect width="100" height="100" rx="20" fill="#0f172a" />
+          <path d="M30 70 V45 H42 V70 Z M48 70 V30 H60 V70 Z M66 70 V55 H78 V70 Z" fill="#3b82f6" opacity="0.8" />
+          <circle cx="36" cy="45" r="6" fill="#06b6d4" />
+          <circle cx="54" cy="30" r="6" fill="#06b6d4" />
+          <circle cx="72" cy="55" r="6" fill="#06b6d4" />
+          <path d="M36 45 L54 30 L72 55" stroke="#06b6d4" stroke-width="4" fill="none" />
         </svg>
         <span>Data Science Level 4</span>
       </a>
@@ -44,10 +65,12 @@
           </div>
         </label>
         <div class="generate-wrapper">
-          <button type="button" class="btn btn-primary generate-btn" id="generate-btn" aria-label="Generate new random test">
+          <button type="button" class="btn btn-primary generate-btn" id="generate-btn"
+            aria-label="Generate new random test">
             <span aria-hidden="true">&#128260;</span> Generate Test
             <span class="dots-divider" aria-hidden="true"></span>
-            <span class="dots-icon" id="dots-menu-btn" role="button" tabindex="0" aria-label="Question type options" aria-haspopup="true" aria-expanded="false">&#8942;</span>
+            <span class="dots-icon" id="dots-menu-btn" role="button" tabindex="0" aria-label="Question type options"
+              aria-haspopup="true" aria-expanded="false">&#8942;</span>
           </button>
           <div class="dots-dropdown" id="dots-dropdown" role="menu">
             <div class="dots-dropdown-title">Advance Options</div>
@@ -71,27 +94,36 @@
                 <span class="drag-handle" aria-hidden="true">&#9776;</span>
                 <span class="section-label">MCQ</span>
                 <div class="dots-section-fields">
-                  <div class="dots-field"><label>Count</label><input type="number" id="input-mcq" class="dots-input" min="0" value="80"></div>
-                  <div class="dots-field"><label>Marks</label><input type="number" id="input-mcq-marks" class="dots-input" min="0" value="80"></div>
-                  <div class="dots-field"><label>Min</label><input type="number" id="input-mcq-time" class="dots-input dots-input-sm" min="0" value="1"></div>
+                  <div class="dots-field"><label>Count</label><input type="number" id="input-mcq" class="dots-input"
+                      min="0" value="80"></div>
+                  <div class="dots-field"><label>Marks</label><input type="number" id="input-mcq-marks"
+                      class="dots-input" min="0" value="80"></div>
+                  <div class="dots-field"><label>Min</label><input type="number" id="input-mcq-time"
+                      class="dots-input dots-input-sm" min="0" value="1"></div>
                 </div>
               </div>
               <div class="dots-section-row" draggable="true" data-type="short">
                 <span class="drag-handle" aria-hidden="true">&#9776;</span>
                 <span class="section-label">Shorts</span>
                 <div class="dots-section-fields">
-                  <div class="dots-field"><label>Count</label><input type="number" id="input-short" class="dots-input" min="0" value="20"></div>
-                  <div class="dots-field"><label>Marks</label><input type="number" id="input-short-marks" class="dots-input" min="0" value="20"></div>
-                  <div class="dots-field"><label>Min</label><input type="number" id="input-short-time" class="dots-input dots-input-sm" min="0" value="5"></div>
+                  <div class="dots-field"><label>Count</label><input type="number" id="input-short" class="dots-input"
+                      min="0" value="20"></div>
+                  <div class="dots-field"><label>Marks</label><input type="number" id="input-short-marks"
+                      class="dots-input" min="0" value="20"></div>
+                  <div class="dots-field"><label>Min</label><input type="number" id="input-short-time"
+                      class="dots-input dots-input-sm" min="0" value="5"></div>
                 </div>
               </div>
               <div class="dots-section-row" draggable="true" data-type="practical">
                 <span class="drag-handle" aria-hidden="true">&#9776;</span>
                 <span class="section-label">Practical</span>
                 <div class="dots-section-fields">
-                  <div class="dots-field"><label>Count</label><input type="number" id="input-practical" class="dots-input" min="0" value="0"></div>
-                  <div class="dots-field"><label>Marks</label><input type="number" id="input-practical-marks" class="dots-input" min="0" value="0"></div>
-                  <div class="dots-field"><label>Min</label><input type="number" id="input-practical-time" class="dots-input dots-input-sm" min="0" value="0"></div>
+                  <div class="dots-field"><label>Count</label><input type="number" id="input-practical"
+                      class="dots-input" min="0" value="0"></div>
+                  <div class="dots-field"><label>Marks</label><input type="number" id="input-practical-marks"
+                      class="dots-input" min="0" value="0"></div>
+                  <div class="dots-field"><label>Min</label><input type="number" id="input-practical-time"
+                      class="dots-input dots-input-sm" min="0" value="0"></div>
                 </div>
               </div>
             </div>
@@ -139,7 +171,8 @@
       <ol>
         <li>Write your Candidate Name, Roll/ID Number, and Date in the table above before starting the test.</li>
         <li id="instr-sections-info">This practice paper contains sections as listed below.</li>
-        <li>Answer all questions. For Multiple Choice, select the correct letter. For Short Answer, write brief, concise answers.</li>
+        <li>Answer all questions. For Multiple Choice, select the correct letter. For Short Answer, write brief, concise
+          answers.</li>
         <li>This test is randomly generated to ensure equal coverage across all units and difficulty tiers.</li>
       </ol>
     </div>
@@ -637,4 +670,5 @@
     });
   </script>
 </body>
+
 </html>
