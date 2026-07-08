@@ -899,6 +899,9 @@
               // Warm up speech synth with a user gesture
               try {
                 const tu = new SpeechSynthesisUtterance('TTS ready.');
+                const sv = voiceSelect ? voiceSelect.value : '';
+                const v = speechSynthesis.getVoices().find(x => x.name === sv);
+                if (v) tu.voice = v;
                 speechSynthesis.speak(tu);
               } catch (e) {
                 console.error('TTS test speak failed:', e);
@@ -922,6 +925,9 @@
             e.stopPropagation();
             if (!('speechSynthesis' in window)) return;
             const u = new SpeechSynthesisUtterance('Testing one two three.');
+            const sv = voiceSelect ? voiceSelect.value : '';
+            const v = speechSynthesis.getVoices().find(x => x.name === sv);
+            if (v) u.voice = v;
             speechSynthesis.speak(u);
           });
         }
