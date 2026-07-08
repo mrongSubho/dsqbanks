@@ -615,35 +615,31 @@
       function speakText(text) {
         return new Promise(resolve => {
           if (!('speechSynthesis' in window)) { resolve(); return; }
-
-          const u = new SpeechSynthesisUtterance(text);
-          u.lang = 'en-US';
-          const voices = window.speechSynthesis.getVoices();
-          const selected = voiceSelect ? voiceSelect.value : '';
-          let voice = null;
-          if (selected) {
-            voice = voices.find(v => v.name === selected);
-          }
-          if (!voice) {
-            voice = voices.find(v => v.name === 'Google US English')
-              || voices.find(v => v.name.includes('Google') && v.lang && v.lang.startsWith('en'))
-              || voices.find(v => v.lang && v.lang.startsWith('en'))
-              || voices[0];
-          }
-          if (voice) u.voice = voice;
-          if (rateInput) u.rate = parseFloat(rateInput.value);
-          let done = false;
-          const timer = setTimeout(() => { if (!done) { done = true; resolve(); } }, 8000);
-          u.onend = () => { if (!done) { done = true; clearTimeout(timer); resolve(); } };
-          u.onerror = () => { if (!done) { done = true; clearTimeout(timer); resolve(); } };
-
-          if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
-            window.speechSynthesis.cancel();
-            window.speechSynthesis.resume();
-            setTimeout(() => { window.speechSynthesis.speak(u); }, 100);
-          } else {
+          window.speechSynthesis.cancel();
+          window.speechSynthesis.resume();
+          setTimeout(() => {
+            const u = new SpeechSynthesisUtterance(text);
+            u.lang = 'en-US';
+            const voices = window.speechSynthesis.getVoices();
+            const selected = voiceSelect ? voiceSelect.value : '';
+            let voice = null;
+            if (selected) {
+              voice = voices.find(v => v.name === selected);
+            }
+            if (!voice) {
+              voice = voices.find(v => v.name === 'Google US English')
+                || voices.find(v => v.name.includes('Google') && v.lang && v.lang.startsWith('en'))
+                || voices.find(v => v.lang && v.lang.startsWith('en'))
+                || voices[0];
+            }
+            if (voice) u.voice = voice;
+            if (rateInput) u.rate = parseFloat(rateInput.value);
+            let done = false;
+            const timer = setTimeout(() => { if (!done) { done = true; resolve(); } }, 8000);
+            u.onend = () => { if (!done) { done = true; clearTimeout(timer); resolve(); } };
+            u.onerror = () => { if (!done) { done = true; clearTimeout(timer); resolve(); } };
             window.speechSynthesis.speak(u);
-          }
+          }, 80);
         });
       }
 
@@ -674,9 +670,9 @@
         const answerText = getAnswerText(el);
         if (!qText && !answerText) return;
         for (let i = 0; i < repeats && isLooping && activeEl === el && isTtsEnabled(); i++) {
-          if (qText) await speakText('Question: ' + qText);
+          if (qText) await speakText(qText);
           if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
-          if (answerText) await speakText('Answer: ' + answerText);
+          if (answerText) await speakText(answerText);
         }
       }
 
@@ -685,9 +681,9 @@
         const answerText = getAnswerText(el);
         if (!qText && !answerText) return;
         while (isLooping && activeEl === el && isTtsEnabled()) {
-          if (qText) await speakText('Question: ' + qText);
+          if (qText) await speakText(qText);
           if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
-          if (answerText) await speakText('Answer: ' + answerText);
+          if (answerText) await speakText(answerText);
           await new Promise(r => setTimeout(r, 300));
         }
       }
