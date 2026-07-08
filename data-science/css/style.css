@@ -1202,9 +1202,54 @@ details.solution[open] summary::before {
   box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4) !important;
 }
 
-.footer-note {
+.disclaimer {
   text-align: center;
-  margin-top: 2rem;
+  margin: 3rem auto 2rem;
+  max-width: 680px;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.disclaimer-badge {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: #e2e8f0;
+  margin-bottom: 0.5rem;
+}
+
+.disclaimer-text {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0;
+}
+
+.disclaimer-text a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dotted #94a3b8;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.disclaimer-text a:hover {
+  color: #1d4ed8;
+  border-bottom-color: #2563eb;
+}
+
+.disclaimer-source {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  margin: 0.5rem 0 0;
 }
 
 /* Difficulty badge */
