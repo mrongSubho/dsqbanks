@@ -666,17 +666,17 @@
         const qText = getQText(el);
         const corr = corrections.find(c => c.q === qText);
         if (!corr) return null;
-        const extract = str => {
+        const strip = str => {
           const idx = str.indexOf('= ');
           if (idx === -1) return str;
           let a = str.slice(idx + 2).trim();
           if ((a.startsWith('"') && a.endsWith('"')) || (a.startsWith("'") && a.endsWith("'"))) {
             a = a.slice(1, -1);
           }
-          a = a.replace(/\s*\(.*?\)\s*$/, '');
-          return a.trim();
+          a = a.replace(/\s*\(.*?\)\s*$/, '').trim();
+          return a;
         };
-        return { source: extract(corr.labeled), correct: extract(corr.correct) };
+        return { marked: strip(corr.labeled), answer: strip(corr.correct) };
       }
 
       function nextQuestion(el) {
@@ -697,9 +697,9 @@
           if (qText) await speakText(qText);
           if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
           if (corr) {
-            await speakText('Source answer: ' + corr.source);
+            await speakText('Source Marks: ' + corr.marked);
             if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
-            await speakText('Correct answer: ' + corr.correct);
+            await speakText('Correct Answer: ' + corr.answer);
           } else if (answerText) {
             await speakText(answerText);
           }
@@ -715,9 +715,9 @@
           if (qText) await speakText(qText);
           if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
           if (corr) {
-            await speakText('Source answer: ' + corr.source);
+            await speakText('Source Marks: ' + corr.marked);
             if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
-            await speakText('Correct answer: ' + corr.correct);
+            await speakText('Correct Answer: ' + corr.answer);
           } else if (answerText) {
             await speakText(answerText);
           }
