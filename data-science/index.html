@@ -453,22 +453,6 @@
       { q: 'Which NoSQL database is a column-family database?', labeled: 'C = "MongoDB"', correct: 'B = "Cassandra"', reason: 'MongoDB is a document store; Cassandra is the column-family NoSQL database.' },
     ];
 
-    function getCorrectionAnswers(el) {
-      const qt = el?.querySelector('.q-text')?.textContent?.trim();
-      if (!qt) return null;
-      const c = corrections.find(x => x.q === qt);
-      if (!c) return null;
-      const strip = s => {
-        const i = s.indexOf('= ');
-        if (i === -1) return s;
-        let a = s.slice(i + 2).trim();
-        if ((a.startsWith('"') && a.endsWith('"')) || (a.startsWith("'") && a.endsWith("'"))) a = a.slice(1, -1);
-        a = a.replace(/\s*\(.*?\)\s*$/, '').trim();
-        return a;
-      };
-      return { marked: strip(c.labeled), answer: strip(c.correct) };
-    }
-
     function attachCorrections() {
       if (!corrections.length) return;
       document.querySelectorAll('.question .q-text').forEach(qTextEl => {
@@ -690,16 +674,20 @@
 
       async function playQuestion(el, repeats) {
         const qText = getQText(el);
-        const answerText = getAnswerText(el);
-        const corr = getCorrectionAnswers(el);
-        if (!qText && !answerText && !corr) return;
+        let answerText = getAnswerText(el);
+        const strip = s => { const i = s.indexOf('= '); if (i === -1) return s; let a = s.slice(i+2).trim(); if ((a.startsWith('"') && a.endsWith('"')) || (a.startsWith("'") && a.endsWith("'"))) a = a.slice(1,-1); a = a.replace(/\s*\(.*?\)\s*$/, '').trim(); return a; };
+        const corrEntry = corrections.find(x => x.q === qText);
+        if (corrEntry) {
+          answerText = null;
+        }
+        if (!qText && !answerText) return;
         for (let i = 0; i < repeats && isLooping && activeEl === el && isTtsEnabled(); i++) {
           if (qText) await speakText(qText);
           if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
-          if (corr) {
-            await speakText('Source Marks: ' + corr.marked);
+          if (corrEntry) {
+            await speakText('Source Marks: ' + strip(corrEntry.labeled));
             if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
-            await speakText('Correct Answer: ' + corr.answer);
+            await speakText('Correct Answer: ' + strip(corrEntry.correct));
           } else if (answerText) {
             await speakText(answerText);
           }
@@ -708,16 +696,20 @@
 
       async function playInfinite(el) {
         const qText = getQText(el);
-        const answerText = getAnswerText(el);
-        const corr = getCorrectionAnswers(el);
-        if (!qText && !answerText && !corr) return;
+        let answerText = getAnswerText(el);
+        const strip = s => { const i = s.indexOf('= '); if (i === -1) return s; let a = s.slice(i+2).trim(); if ((a.startsWith('"') && a.endsWith('"')) || (a.startsWith("'") && a.endsWith("'"))) a = a.slice(1,-1); a = a.replace(/\s*\(.*?\)\s*$/, '').trim(); return a; };
+        const corrEntry = corrections.find(x => x.q === qText);
+        if (corrEntry) {
+          answerText = null;
+        }
+        if (!qText && !answerText) return;
         while (isLooping && activeEl === el && isTtsEnabled()) {
           if (qText) await speakText(qText);
           if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
-          if (corr) {
-            await speakText('Source Marks: ' + corr.marked);
+          if (corrEntry) {
+            await speakText('Source Marks: ' + strip(corrEntry.labeled));
             if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
-            await speakText('Correct Answer: ' + corr.answer);
+            await speakText('Correct Answer: ' + strip(corrEntry.correct));
           } else if (answerText) {
             await speakText(answerText);
           }
