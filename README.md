@@ -1,20 +1,27 @@
 # NSDA Data Science Level 4 Question Bank
 
-This repository contains the full compiled question bank for NSDA Data Science Level 4.
+Independent study resource for the NSDA Data Science Level 4 exam — **974 questions** across 6 units, including MCQs, short questions, and practicals.
 
-- 994 questions across 6 units
-- Includes MCQs and short answer items
-- Full styled presentation is available in `index.html`
+**[View Live](https://nsda.me/data-science)** (once DNS propagates)
 
-## GitHub Pages
-To view the page with the exact original design, enable GitHub Pages for this repository and publish from the `main` branch using the root directory.
+## Features
 
-## Pages
-- **`index.html`** — Full styled question bank with filtering, MCQ answer toggle, and TTS hover-to-speak with auto-scroll.
-- **`test.html`** — Randomized practice test generator (80 MCQs + 20 short questions) with timer, answer key, and print layout.
+- **Filter & Sort** — Toggle between MCQ / Short Questions / Practical sections; sort by source order, difficulty, or A–Z
+- **Show Answers** — Toggle answer visibility on/off across all question types
+- **Text-to-Speech** — Hover any question to hear it read aloud; supports different voices, speed control, and auto-scroll
+- **Difficulty Tags** — Each question tagged M (Must Know), S (Standard), K (Should Know), C (Could Know)
+- **Progress Bar** — Colorful dynamic progress bar appears when the sticky controls bar activates
+- **Correction Badges** — 10 source-answer errors identified and flagged with ⓘ badges showing the correct answer
+- **Practice Test** — Randomized 80-MCQ + 20-short-question exam simulator with timer
+- **PWA** — Installable as a standalone app on mobile and desktop; works offline via service worker
+- **Disclaimer** — Unofficial student-created resource, unaffiliated with NSDA
 
-## Text-to-Speech
-`index.html` includes a built-in TTS feature (Web Speech API). Toggle it on, then hover a question to hear it read aloud. Enable **Scroll** mode in the settings (⋮) to auto-advance through questions — click the ▶ button on any question to start.
+## Build
 
-## Notes
-`README.md` is intentionally kept simple for GitHub display.
+Pure HTML/CSS/JS — no build tools needed. Open `data-science/index.html` in any browser.
+
+## Deployed at
+
+**https://nsda.me/data-science**
+
+Repo: [github.com/mrongSubho/dsqbanks](https://github.com/mrongSubho/dsqbanks)
