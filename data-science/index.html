@@ -36,6 +36,27 @@
     style="position:absolute;top:-100px;left:0;background:#2563eb;color:#fff;padding:0.5rem 1rem;z-index:9999;border-radius:0 0 4px 0;">Skip
     to main content</a>
 
+  <div class="install-prompt" id="install-prompt" hidden>
+    <div class="install-prompt-body">
+      <div class="install-prompt-icon">
+        <svg viewBox="0 0 100 100" width="40" height="40">
+          <rect width="100" height="100" rx="20" fill="#0f172a"/>
+          <path d="M30 70 V45 H42 V70 Z M48 70 V30 H60 V70 Z M66 70 V55 H78 V70 Z" fill="#3b82f6" opacity="0.8"/>
+          <circle cx="36" cy="45" r="6" fill="#06b6d4"/>
+          <circle cx="54" cy="30" r="6" fill="#06b6d4"/>
+          <circle cx="72" cy="55" r="6" fill="#06b6d4"/>
+          <path d="M36 45 L54 30 L72 55" stroke="#06b6d4" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="install-prompt-text">
+        <strong>Install App</strong>
+        <span class="install-prompt-sub" id="install-prompt-sub">Add to your home screen for quick access</span>
+      </div>
+      <button class="install-prompt-btn" id="install-prompt-btn">Install</button>
+      <button class="install-prompt-close" id="install-prompt-close" aria-label="Dismiss">&times;</button>
+    </div>
+  </div>
+
   <header>
     <div align="center">
       <h1>NSDA Data Science Level 4 Question Bank</h1>
@@ -1224,6 +1245,58 @@
     }
 
     document.addEventListener('DOMContentLoaded', loadQuestionBank);
+
+    // Install / Add-to-Homescreen prompt
+    (function() {
+      if (localStorage.getItem('installPromptDismissed')) return;
+      if (window.matchMedia('(display-mode: standalone)').matches) return;
+      if (!('serviceWorker' in navigator)) return;
+
+      const isMobile = /Mobi|Android|iPhone|iPad|iPod/.test(navigator.userAgent);
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+      const prompt = document.getElementById('install-prompt');
+      const btn = document.getElementById('install-prompt-btn');
+      const close = document.getElementById('install-prompt-close');
+      const sub = document.getElementById('install-prompt-sub');
+      if (!prompt || !btn || !close) return;
+
+      let deferredPrompt = null;
+
+      // Listen for native install prompt (Android Chrome)
+      window.addEventListener('beforeinstallprompt', e => {
+        e.preventDefault();
+        deferredPrompt = e;
+        if (sub) sub.textContent = 'Install on your device for quick access';
+        btn.textContent = 'Install';
+        prompt.hidden = false;
+      });
+
+      if (isIOS) {
+        // iOS: show instructions immediately
+        prompt.hidden = false;
+        if (sub) sub.innerHTML = 'Tap <strong>Share</strong> \u2192 <strong>Add to Home Screen</strong>';
+        btn.textContent = 'Got it';
+      } else if (!isMobile) {
+        // Desktop: Chrome shows its own install button — don't show custom prompt
+        return;
+      }
+
+      btn.addEventListener('click', () => {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then(() => { deferredPrompt = null; prompt.hidden = true; });
+        } else {
+          prompt.hidden = true;
+          localStorage.setItem('installPromptDismissed', '1');
+        }
+      });
+
+      close.addEventListener('click', () => {
+        prompt.hidden = true;
+        localStorage.setItem('installPromptDismissed', '1');
+      });
+    })();
 
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js');
