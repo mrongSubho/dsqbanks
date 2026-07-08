@@ -654,7 +654,9 @@
       function getAnswerText(el) {
         const correctOpt = el.querySelector('.options .opt.correct');
         if (correctOpt) {
-          return correctOpt.textContent.replace('✓', '').replace(/^[A-Z]\.\s*/, '').replace(/\s+/g, ' ').trim();
+          let t = correctOpt.textContent.replace('✓', '').replace(/\s+/g, ' ').trim();
+          t = t.replace(/^[A-Z]\.\s*/, '').replace(/^[A-Z]\s*=\s*/, '');
+          return t;
         }
         const answerEl = el.querySelector('.answer-reveal .answer');
         return answerEl ? answerEl.textContent.trim() : '';
@@ -665,9 +667,12 @@
         const corr = corrections.find(c => c.q === qText);
         if (!corr) return null;
         const extract = str => {
-          const m = str.match(/=\s*(.+)/);
-          if (!m) return str;
-          let a = m[1].trim().replace(/^["']|["']$/g, '');
+          const idx = str.indexOf('= ');
+          if (idx === -1) return str;
+          let a = str.slice(idx + 2).trim();
+          if ((a.startsWith('"') && a.endsWith('"')) || (a.startsWith("'") && a.endsWith("'"))) {
+            a = a.slice(1, -1);
+          }
           a = a.replace(/\s*\(.*?\)\s*$/, '');
           return a.trim();
         };
