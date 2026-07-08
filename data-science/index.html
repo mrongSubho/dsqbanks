@@ -453,12 +453,29 @@
       { q: 'Which NoSQL database is a column-family database?', labeled: 'C = "MongoDB"', correct: 'B = "Cassandra"', reason: 'MongoDB is a document store; Cassandra is the column-family NoSQL database.' },
     ];
 
+    function getCorrectionAnswers(el) {
+      const qt = el?.querySelector('.q-text')?.textContent?.trim();
+      if (!qt) return null;
+      const c = corrections.find(x => x.q === qt);
+      if (!c) return null;
+      const strip = s => {
+        const i = s.indexOf('= ');
+        if (i === -1) return s;
+        let a = s.slice(i + 2).trim();
+        if ((a.startsWith('"') && a.endsWith('"')) || (a.startsWith("'") && a.endsWith("'"))) a = a.slice(1, -1);
+        a = a.replace(/\s*\(.*?\)\s*$/, '').trim();
+        return a;
+      };
+      return { marked: strip(c.labeled), answer: strip(c.correct) };
+    }
+
     function attachCorrections() {
       if (!corrections.length) return;
       document.querySelectorAll('.question .q-text').forEach(qTextEl => {
         const text = qTextEl.textContent.trim();
         const corr = corrections.find(c => c.q === text);
         if (!corr) return;
+        const strip = s => { const i = s.indexOf('= '); if (i === -1) return s; let a = s.slice(i+2).trim(); if ((a.startsWith('"') && a.endsWith('"')) || (a.startsWith("'") && a.endsWith("'"))) a = a.slice(1,-1); a = a.replace(/\s*\(.*?\)\s*$/, '').trim(); return a; };
         const qEl = qTextEl.closest('.question');
         if (!qEl || qEl.querySelector('.correction-badge')) return;
 
@@ -472,8 +489,8 @@
         const tooltip = document.createElement('div');
         tooltip.className = 'correction-tooltip';
         tooltip.innerHTML =
-          '<div class="corr-labeled"><strong>Source marks:</strong> ' + escapeHtml(corr.labeled) + '</div>' +
-          '<div class="corr-correct"><strong>Correct answer:</strong> ' + escapeHtml(corr.correct) + '</div>' +
+          '<div class="corr-marked"><strong>Source Marks:</strong> ' + escapeHtml(strip(corr.labeled)) + '</div>' +
+          '<div class="corr-correct"><strong>Correct Answer:</strong> ' + escapeHtml(strip(corr.correct)) + '</div>' +
           '<div class="corr-reason">\u2014 ' + escapeHtml(corr.reason) + '</div>';
 
         badge.appendChild(tooltip);
@@ -660,23 +677,6 @@
         }
         const answerEl = el.querySelector('.answer-reveal .answer');
         return answerEl ? answerEl.textContent.trim() : '';
-      }
-
-      function getCorrectionAnswers(el) {
-        const qText = getQText(el);
-        const corr = corrections.find(c => c.q === qText);
-        if (!corr) return null;
-        const strip = str => {
-          const idx = str.indexOf('= ');
-          if (idx === -1) return str;
-          let a = str.slice(idx + 2).trim();
-          if ((a.startsWith('"') && a.endsWith('"')) || (a.startsWith("'") && a.endsWith("'"))) {
-            a = a.slice(1, -1);
-          }
-          a = a.replace(/\s*\(.*?\)\s*$/, '').trim();
-          return a;
-        };
-        return { marked: strip(corr.labeled), answer: strip(corr.correct) };
       }
 
       function nextQuestion(el) {
