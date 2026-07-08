@@ -660,6 +660,20 @@
         return answerEl ? answerEl.textContent.trim() : '';
       }
 
+      function getCorrectionAnswers(el) {
+        const qText = getQText(el);
+        const corr = corrections.find(c => c.q === qText);
+        if (!corr) return null;
+        const extract = str => {
+          const m = str.match(/=\s*(.+)/);
+          if (!m) return str;
+          let a = m[1].trim().replace(/^["']|["']$/g, '');
+          a = a.replace(/\s*\(.*?\)\s*$/, '');
+          return a.trim();
+        };
+        return { source: extract(corr.labeled), correct: extract(corr.correct) };
+      }
+
       function nextQuestion(el) {
         let next = el.nextElementSibling;
         while (next) {
@@ -672,22 +686,36 @@
       async function playQuestion(el, repeats) {
         const qText = getQText(el);
         const answerText = getAnswerText(el);
-        if (!qText && !answerText) return;
+        const corr = getCorrectionAnswers(el);
+        if (!qText && !answerText && !corr) return;
         for (let i = 0; i < repeats && isLooping && activeEl === el && isTtsEnabled(); i++) {
           if (qText) await speakText(qText);
           if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
-          if (answerText) await speakText(answerText);
+          if (corr) {
+            await speakText('Source answer: ' + corr.source);
+            if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
+            await speakText('Correct answer: ' + corr.correct);
+          } else if (answerText) {
+            await speakText(answerText);
+          }
         }
       }
 
       async function playInfinite(el) {
         const qText = getQText(el);
         const answerText = getAnswerText(el);
-        if (!qText && !answerText) return;
+        const corr = getCorrectionAnswers(el);
+        if (!qText && !answerText && !corr) return;
         while (isLooping && activeEl === el && isTtsEnabled()) {
           if (qText) await speakText(qText);
           if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
-          if (answerText) await speakText(answerText);
+          if (corr) {
+            await speakText('Source answer: ' + corr.source);
+            if (!isLooping || activeEl !== el || !isTtsEnabled()) break;
+            await speakText('Correct answer: ' + corr.correct);
+          } else if (answerText) {
+            await speakText(answerText);
+          }
           await new Promise(r => setTimeout(r, 300));
         }
       }
