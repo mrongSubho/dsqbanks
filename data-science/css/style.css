@@ -738,6 +738,17 @@ body.tts-auto-scrolling {
   display: none !important;
 }
 
+.hide-answers .practical-section .solution,
+.hide-answers .practical-section .solution *,
+.hide-answers .practical-section .colab-output,
+.hide-answers .practical-section .colab-output *,
+.hide-answers .practical-section .colab-code,
+.hide-answers .practical-section .colab-code *,
+.hide-answers .practical-section .output-content,
+.hide-answers .practical-section .output-content * {
+  display: none !important;
+}
+
 hr.unit-divider {
   border: none;
   height: 1px;
