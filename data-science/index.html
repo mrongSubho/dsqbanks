@@ -643,7 +643,7 @@
               if (!done) { done = true; clearTimeout(timer); resolve(); }
             };
             window.speechSynthesis.speak(u);
-          }, 80);
+          }, 150);  // 150ms for Chrome to fully reset its speech queue after cancel()
         });
       }
 
@@ -782,10 +782,25 @@
         resetAllBtns();
       }
 
+      let _hoverTimer = null;
+
       function attachTTSListeners() {
         document.querySelectorAll('.question').forEach(q => {
-          q.addEventListener('mouseenter', () => { if (isTtsEnabled()) startSpeaking(q); });
-          q.addEventListener('mouseleave', () => { if (!isAutoAdvancing && currentEl) stopSpeaking(); });
+          q.addEventListener('mouseenter', () => {
+            if (!isTtsEnabled()) return;
+            // Debounce: only start TTS if the user hovers for 300ms (prevents rapid cancel/speak cycles)
+            clearTimeout(_hoverTimer);
+            _hoverTimer = setTimeout(() => {
+              if (isTtsEnabled()) startSpeaking(q);
+            }, 300);
+          });
+          q.addEventListener('mouseleave', () => {
+            // Clear the pending debounce so we don't start speaking a card the user already left
+            clearTimeout(_hoverTimer);
+            _hoverTimer = null;
+            // Only stop if something is actually speaking (currentEl set by startSpeaking)
+            if (!isAutoAdvancing && currentEl) stopSpeaking();
+          });
         });
         addQuestionStartBtns();
       }
