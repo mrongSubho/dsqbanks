@@ -218,6 +218,20 @@
     <p class="disclaimer-source">Compiled from Data Science L4, Programming &amp; Visualization, and Statistical Methods question banks.</p>
   </footer>
 
+  <div class="unit-nav-zone" id="unitNavZone">
+    <nav class="unit-nav-strip" id="unitNavStrip" aria-label="Unit navigation">
+      <button class="unit-nav-btn unit-nav-prev" id="unitNavPrev" aria-label="Previous unit">
+        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>Prev</span>
+      </button>
+      <div class="unit-nav-dots" id="unitNavDots"></div>
+      <button class="unit-nav-btn unit-nav-next" id="unitNavNext" aria-label="Next unit">
+        <span>Next</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
+    </nav>
+  </div>
+
   <script src="questions-data.js"></script>
   <script>
     function escapeHtml(str) {
@@ -1262,6 +1276,31 @@
       if (!prompt || !btn || !close) return;
 
       let deferredPrompt = null;
+      let autoDismissTimer = null;
+
+      function hidePrompt() {
+        prompt.hidden = true;
+        localStorage.setItem('installPromptDismissed', '1');
+      }
+
+      function showPrompt() {
+        prompt.hidden = false;
+        clearTimeout(autoDismissTimer);
+        autoDismissTimer = setTimeout(hidePrompt, 8000);
+      }
+
+      // Attach button handlers before any early return
+      btn.addEventListener('click', () => {
+        clearTimeout(autoDismissTimer);
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then(() => { deferredPrompt = null; hidePrompt(); });
+        } else {
+          hidePrompt();
+        }
+      });
+
+      close.addEventListener('click', hidePrompt);
 
       // Listen for native install prompt (Android Chrome)
       window.addEventListener('beforeinstallprompt', e => {
@@ -1269,38 +1308,120 @@
         deferredPrompt = e;
         if (sub) sub.textContent = 'Install on your device for quick access';
         btn.textContent = 'Install';
-        prompt.hidden = false;
+        showPrompt();
       });
 
       if (isIOS) {
-        // iOS: show instructions immediately
-        prompt.hidden = false;
+        showPrompt();
         if (sub) sub.innerHTML = 'Tap <strong>Share</strong> \u2192 <strong>Add to Home Screen</strong>';
         btn.textContent = 'Got it';
       } else if (!isMobile) {
-        // Desktop: Chrome shows its own install button — don't show custom prompt
-        return;
+        // Desktop: let beforeinstallprompt handle it
       }
-
-      btn.addEventListener('click', () => {
-        if (deferredPrompt) {
-          deferredPrompt.prompt();
-          deferredPrompt.userChoice.then(() => { deferredPrompt = null; prompt.hidden = true; });
-        } else {
-          prompt.hidden = true;
-          localStorage.setItem('installPromptDismissed', '1');
-        }
-      });
-
-      close.addEventListener('click', () => {
-        prompt.hidden = true;
-        localStorage.setItem('installPromptDismissed', '1');
-      });
     })();
 
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js');
     }
+
+    // ─── Unit Navigation Strip ──────────────────────────────────────
+    (function initUnitNav() {
+      const dotsEl = document.getElementById('unitNavDots');
+      const prevBtn = document.getElementById('unitNavPrev');
+      const nextBtn = document.getElementById('unitNavNext');
+      if (!dotsEl) return;
+
+      let allUnits = [];
+      let currentIndex = -1;
+
+      function refreshUnits() {
+        allUnits = Array.from(document.querySelectorAll('.unit-details'));
+      }
+
+      function buildDots() {
+        refreshUnits();
+        dotsEl.innerHTML = '';
+        allUnits.forEach((unit, i) => {
+          const dot = document.createElement('span');
+          dot.className = 'unit-nav-dot';
+
+          const label = document.createElement('span');
+          label.className = 'unit-nav-dot-label';
+          label.textContent = 'U-' + (i + 1);
+          dot.appendChild(label);
+
+          dot.addEventListener('click', () => scrollToUnit(i));
+          dotsEl.appendChild(dot);
+        });
+        updateActive();
+        updateButtons();
+      }
+
+      function updateActive() {
+        const dots = dotsEl.querySelectorAll('.unit-nav-dot');
+        dots.forEach((d, i) => {
+          d.classList.toggle('active', i === currentIndex);
+        });
+      }
+
+      function updateButtons() {
+        if (!prevBtn || !nextBtn) return;
+        prevBtn.disabled = currentIndex <= 0;
+        nextBtn.disabled = currentIndex >= allUnits.length - 1;
+      }
+
+      function scrollToUnit(index) {
+        if (index < 0 || index >= allUnits.length) return;
+        const target = allUnits[index];
+        currentIndex = index;
+        updateActive();
+        updateButtons();
+        const top = target.getBoundingClientRect().top + window.scrollY - 90;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+
+      // Prev/Next
+      if (prevBtn) prevBtn.addEventListener('click', () => scrollToUnit(currentIndex - 1));
+      if (nextBtn) nextBtn.addEventListener('click', () => scrollToUnit(currentIndex + 1));
+
+      // Track current unit via IntersectionObserver
+      let observer = null;
+
+      function setupObserver() {
+        refreshUnits();
+        if (observer) observer.disconnect();
+        if (allUnits.length === 0) return;
+
+        observer = new IntersectionObserver(entries => {
+          let best = -1;
+          let bestRatio = 0;
+          entries.forEach(entry => {
+            if (entry.intersectionRatio > bestRatio) {
+              bestRatio = entry.intersectionRatio;
+              best = allUnits.indexOf(entry.target);
+            }
+          });
+          if (best >= 0 && best !== currentIndex) {
+            currentIndex = best;
+            updateActive();
+            updateButtons();
+          }
+        }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] });
+
+        allUnits.forEach(u => observer.observe(u));
+      }
+
+      // Build after units render
+      setTimeout(() => {
+        buildDots();
+        setupObserver();
+      }, 300);
+
+      // Periodic fallback
+      setInterval(() => {
+        if (allUnits.length === 0) { setupObserver(); }
+      }, 2000);
+    })();
   </script>
 </body>
 
