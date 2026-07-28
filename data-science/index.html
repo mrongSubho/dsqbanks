@@ -420,14 +420,12 @@
         }
       });
 
-      // Re-add practical section
+      // Re-add practical sets
       const db = typeof QUESTIONS_DATA !== 'undefined' ? QUESTIONS_DATA : null;
-      if (db && db.practicals && db.practicals.length > 0) {
-        const temp = document.createElement('div');
-        temp.innerHTML = db.practicals[0];
-        const ps = temp.querySelector('.practical-section');
-        if (ps && !bank.querySelector('.practical-section')) {
-          bank.appendChild(ps);
+      if (db && db.practicals && db.practicals.length > 0 && !bank.querySelector('.practical-section')) {
+        const frag = buildPracticalSets(db.practicals);
+        if (frag) {
+          while (frag.firstChild) bank.appendChild(frag.firstChild);
         }
       }
 
@@ -574,19 +572,72 @@
       });
     }
 
-    function renderPracticalSection(practicalHtml) {
-      const bank = document.getElementById('question-bank');
+    function buildPracticalSets(practicals) {
+      if (!practicals || practicals.length === 0) return null;
+
+      const frag = document.createDocumentFragment();
+
       const sectionHeader = document.createElement('div');
       sectionHeader.className = 'section-header';
       sectionHeader.setAttribute('data-section-type', 'practical');
       sectionHeader.innerHTML = '<h3>Practical</h3><span class="section-badge">PRACTICAL</span>';
-      bank.appendChild(sectionHeader);
+      frag.appendChild(sectionHeader);
 
-      const temp = document.createElement('div');
-      temp.innerHTML = practicalHtml;
-      const practicalSection = temp.querySelector('.practical-section');
-      if (practicalSection) {
-        bank.prepend(practicalSection);
+      if (practicals.length === 1) {
+        const temp = document.createElement('div');
+        temp.innerHTML = practicals[0];
+        const ps = temp.querySelector('.practical-section');
+        if (ps) frag.appendChild(ps);
+        return frag;
+      }
+
+      const tabBar = document.createElement('div');
+      tabBar.className = 'practical-tab-bar';
+      tabBar.setAttribute('data-section-type', 'practical');
+
+      const tabBody = document.createElement('div');
+      tabBody.className = 'practical-tab-body';
+      tabBody.setAttribute('data-section-type', 'practical');
+
+      practicals.forEach((html, i) => {
+        const setNum = i + 1;
+
+        const tab = document.createElement('button');
+        tab.className = 'practical-tab' + (i === 0 ? ' active' : '');
+        tab.textContent = 'Set ' + setNum;
+        tab.dataset.set = i;
+
+        const temp = document.createElement('div');
+        temp.innerHTML = html;
+        const ps = temp.querySelector('.practical-section');
+        if (ps) {
+          ps.classList.add('practical-set');
+          ps.dataset.set = i;
+          ps.style.display = i === 0 ? '' : 'none';
+          tabBody.appendChild(ps);
+        }
+
+        tab.addEventListener('click', () => {
+          tabBar.querySelectorAll('.practical-tab').forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          tabBody.querySelectorAll('.practical-set').forEach(s => {
+            s.style.display = s.dataset.set == i ? '' : 'none';
+          });
+        });
+
+        tabBar.appendChild(tab);
+      });
+
+      frag.appendChild(tabBar);
+      frag.appendChild(tabBody);
+      return frag;
+    }
+
+    function renderPracticalSets(practicals) {
+      const bank = document.getElementById('question-bank');
+      const frag = buildPracticalSets(practicals);
+      if (frag) {
+        while (frag.firstChild) bank.appendChild(frag.firstChild);
       }
     }
 
@@ -627,10 +678,6 @@
       });
 
       renderUnits(db.units);
-
-      if (db.practicals && db.practicals.length > 0) {
-        renderPracticalSection(db.practicals[0]);
-      }
 
       _ttsInitialized = false;
       initInteractiveFeatures();
@@ -1134,13 +1181,15 @@
             h.style.display = h.getAttribute('data-section-type') === 'practical' ? '' : 'none';
           });
           document.querySelectorAll('.sort-group-header').forEach(h => h.style.display = 'none');
-          const ps = document.querySelector('.practical-section');
-          if (ps) ps.style.display = '';
+          document.querySelectorAll('.practical-section, .practical-tab-bar, .practical-tab-body').forEach(el => {
+            el.style.display = '';
+          });
           if (mcqControls) mcqControls.style.display = 'none';
         } else {
           document.querySelectorAll('.unit-header, .question, .section-header, .unit-divider').forEach(el => el.style.display = '');
-          const ps = document.querySelector('.practical-section');
-          if (ps) ps.style.display = 'none';
+          document.querySelectorAll('.practical-section, .practical-tab-bar, .practical-tab-body').forEach(el => {
+            el.style.display = 'none';
+          });
           Object.entries(sections).forEach(([type, elements]) => {
             elements.forEach(el => { el.style.display = type === selectedType ? '' : 'none'; });
           });

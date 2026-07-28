@@ -771,6 +771,18 @@ hr.unit-divider {
   padding: 1rem 1.25rem;
 }
 
+.dataset-links::before {
+  content: 'Datasets';
+  display: block;
+  width: 100%;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748b;
+  margin-bottom: -0.25rem;
+}
+
 .download-link {
   display: inline-flex;
   align-items: center;
@@ -1744,6 +1756,73 @@ details.solution[open] summary::before {
 
 .unit-nav-dot.active .unit-nav-dot-label::after {
   border-top-color: #2563eb;
+}
+
+/* Practical set tabs */
+.practical-tab-bar {
+  display: flex;
+  gap: 0;
+  margin: 1rem 0 0;
+  padding: 0;
+  border-bottom: 2px solid #e2e8f0;
+  background: #f8fafc;
+  border-radius: 10px 10px 0 0;
+}
+
+.practical-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 0.65rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  position: relative;
+  text-align: center;
+}
+
+.practical-tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60%;
+  height: 2.5px;
+  background: #2563eb;
+  border-radius: 2px;
+  transition: transform 0.25s cubic-bezier(0.22,1,0.36,1);
+}
+
+.practical-tab:hover {
+  color: #1e293b;
+  background: rgba(37,99,235,0.04);
+}
+
+.practical-tab.active {
+  color: #2563eb;
+  background: #ffffff;
+}
+
+.practical-tab.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.practical-tab:not(:last-child) {
+  border-right: 1px solid #e2e8f0;
+}
+
+.practical-tab-body {
+  padding: 0.5rem 0.25rem;
+  border-left: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 0 0 10px 10px;
+  background: #ffffff;
+  margin-bottom: 0.75rem;
 }
 
 @media (max-width: 600px) {
