@@ -1179,9 +1179,13 @@
             h.style.display = h.getAttribute('data-section-type') === 'practical' ? '' : 'none';
           });
           document.querySelectorAll('.sort-group-header').forEach(h => h.style.display = 'none');
-          document.querySelectorAll('.practical-section, .practical-tab-bar, .practical-tab-body').forEach(el => {
+          document.querySelectorAll('.practical-tab-bar, .practical-tab-body').forEach(el => {
             el.style.display = '';
           });
+          // For single-set (no tabs), show the practical-section directly
+          if (!document.querySelector('.practical-tab-bar')) {
+            document.querySelectorAll('.practical-section').forEach(el => { el.style.display = ''; });
+          }
           if (mcqControls) {
             const ttsGroup = mcqControls.querySelector('.pill-group');
             const ttsSettings = mcqControls.querySelector('.tts-settings');
