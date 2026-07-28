@@ -1185,6 +1185,13 @@
           // For single-set (no tabs), show the practical-section directly
           if (!document.querySelector('.practical-tab-bar')) {
             document.querySelectorAll('.practical-section').forEach(el => { el.style.display = ''; });
+          } else {
+            // Restore the active tab's set visibility (overridden by hide path)
+            const activeTab = document.querySelector('.practical-tab.active');
+            const idx = activeTab ? parseInt(activeTab.dataset.set) : 0;
+            document.querySelectorAll('.practical-set').forEach(s => {
+              s.style.display = s.dataset.set == idx ? '' : 'none';
+            });
           }
           if (mcqControls) {
             const ttsGroup = mcqControls.querySelector('.pill-group');
