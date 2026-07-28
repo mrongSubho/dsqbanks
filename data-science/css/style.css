@@ -1131,7 +1131,7 @@ details.solution[open] summary::before {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  z-index: 1010;
+  z-index: 10000;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1632,17 +1632,14 @@ details.solution[open] summary::before {
 .unit-nav-btn {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  justify-content: center;
   background: none;
   border: 1px solid #e2e8f0;
   border-radius: 999px;
-  padding: 0.4rem 0.75rem;
-  font-size: 0.78rem;
-  font-weight: 600;
+  padding: 0.4rem;
   color: #475569;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-family: inherit;
 }
 
 .unit-nav-btn:hover {
@@ -1745,7 +1742,7 @@ details.solution[open] summary::before {
   transform: translateX(-50%) scale(1);
 }
 
-.unit-nav-dot.active .unit-nav-dot-label {
+.unit-nav-dot.active:hover .unit-nav-dot-label {
   opacity: 1;
   transform: translateX(-50%) scale(1.15);
   background: #2563eb;
@@ -1754,7 +1751,7 @@ details.solution[open] summary::before {
   box-shadow: 0 2px 10px rgba(37,99,235,0.35);
 }
 
-.unit-nav-dot.active .unit-nav-dot-label::after {
+.unit-nav-dot.active:hover .unit-nav-dot-label::after {
   border-top-color: #2563eb;
 }
 
@@ -1833,11 +1830,12 @@ details.solution[open] summary::before {
     padding: 0.4rem 0.7rem;
     gap: 0.5rem;
   }
-  .unit-nav-btn span {
-    display: none;
-  }
   .unit-nav-btn {
-    padding: 0.4rem 0.55rem;
+    padding: 0.3rem;
+  }
+  .unit-nav-btn svg {
+    width: 16px;
+    height: 16px;
   }
   .unit-nav-dot {
     width: 8px;
