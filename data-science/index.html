@@ -1193,6 +1193,10 @@
               s.style.display = s.dataset.set == idx ? '' : 'none';
             });
           }
+          // Hide non-relevant sections
+          document.querySelectorAll('.difficulty-key, .toc, .sort-controls, .diff-legend').forEach(el => {
+            el.style.display = 'none';
+          });
           if (mcqControls) {
             const ttsGroup = mcqControls.querySelector('.pill-group');
             const ttsSettings = mcqControls.querySelector('.tts-settings');
@@ -1205,6 +1209,9 @@
           document.querySelectorAll('.unit-header, .question, .section-header, .unit-divider').forEach(el => el.style.display = '');
           document.querySelectorAll('.practical-section, .practical-tab-bar, .practical-tab-body').forEach(el => {
             el.style.display = 'none';
+          });
+          document.querySelectorAll('.difficulty-key, .toc, .sort-controls, .diff-legend').forEach(el => {
+            el.style.display = '';
           });
           Object.entries(sections).forEach(([type, elements]) => {
             elements.forEach(el => { el.style.display = type === selectedType ? '' : 'none'; });
