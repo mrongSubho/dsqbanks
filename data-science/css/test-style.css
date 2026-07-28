@@ -1251,3 +1251,14 @@ body.show-answers .opt.correct .checkmark {
   line-height: 1.6;
   margin-bottom: 0.15rem;
 }
+
+.hide-answers .practical-card-body .solution,
+.hide-answers .practical-card-body .solution *,
+.hide-answers .practical-card-body .colab-output,
+.hide-answers .practical-card-body .colab-output *,
+.hide-answers .practical-card-body .colab-code,
+.hide-answers .practical-card-body .colab-code *,
+.hide-answers .practical-card-body .output-content,
+.hide-answers .practical-card-body .output-content * {
+  display: none !important;
+}
