@@ -207,6 +207,11 @@
     </svg>
   </button>
 
+  <div class="sw-update-toast" id="sw-update-toast" role="alert">
+    <span>A new version is available.</span>
+    <button class="sw-update-btn" id="sw-update-btn">Update</button>
+  </div>
+
   <footer class="disclaimer" role="contentinfo">
     <div class="disclaimer-badge">Disclaimer</div>
     <p class="disclaimer-text">
@@ -1336,6 +1341,35 @@
       setSection('mcq');
       initTTS();
       initProgressBar();
+      initSWUpdate();
+    }
+
+    function initSWUpdate() {
+      if (!('serviceWorker' in navigator)) return;
+      let waitingWorker = null;
+      navigator.serviceWorker.ready.then(reg => {
+        if (reg.waiting) {
+          waitingWorker = reg.waiting;
+          document.getElementById('sw-update-toast')?.classList.add('visible');
+        }
+        reg.addEventListener('updatefound', () => {
+          const newWorker = reg.installing;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              waitingWorker = newWorker;
+              document.getElementById('sw-update-toast')?.classList.add('visible');
+            }
+          });
+        });
+      });
+      document.getElementById('sw-update-btn')?.addEventListener('click', () => {
+        if (waitingWorker) {
+          waitingWorker.postMessage({ action: 'skipWaiting' });
+        }
+      });
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
+      });
     }
 
     document.addEventListener('DOMContentLoaded', loadQuestionBank);

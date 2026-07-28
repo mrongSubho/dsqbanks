@@ -1381,3 +1381,45 @@ body.show-answers .opt.correct .checkmark {
 .hide-answers details.practical-question .output-content * {
   display: none !important;
 }
+
+/* ── SW update toast ── */
+.sw-update-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(120px);
+  background: #0f172a;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+}
+
+.sw-update-toast.visible {
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.sw-update-btn {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.sw-update-btn:hover {
+  background: #2563eb;
+}
