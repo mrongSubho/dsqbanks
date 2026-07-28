@@ -468,7 +468,13 @@
             const qWrap = document.createElement('div');
             qWrap.innerHTML = q.html;
             const qContent = qWrap.querySelector('details.practical-question');
-            if (qContent) practicalContainer.appendChild(qContent);
+            if (qContent) {
+              const summary = qContent.querySelector('summary');
+              if (summary) {
+                summary.textContent = summary.textContent.replace(/^Question\s+\d+/i, 'Question ' + secQ);
+              }
+              practicalContainer.appendChild(qContent);
+            }
             secQ++;
           });
           sectionDiv.appendChild(practicalContainer);
