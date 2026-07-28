@@ -548,7 +548,7 @@ body.show-answers .opt.correct .checkmark {
   font-family: 'Fira Code', monospace;
   font-size: 0.88rem;
   line-height: 1.5;
-  margin: 0.75rem 0 0.75rem 2.2rem;
+  margin: 0.75rem 0;
   border: 1px solid #1f2937;
 }
 
@@ -1200,6 +1200,193 @@ body.show-answers .opt.correct .checkmark {
 
 .dots-done-btn:active {
   transform: scale(0.98);
+}
+
+/* ── Dataset links ── */
+.practical-card-body .dataset-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.practical-card-body .dataset-links::before {
+  content: 'Datasets';
+  display: block;
+  width: 100%;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748b;
+  margin-bottom: -0.25rem;
+}
+
+.practical-card-body .download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #1e293b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.practical-card-body .download-link::before {
+  content: '\21E9';
+  font-size: 1rem;
+  color: #3b82f6;
+}
+
+.practical-card-body .download-link:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.practical-card-body details.practical-question {
+  background: #ffffff;
+  border: 1px solid #eef2ff;
+  border-radius: 10px;
+  padding: 0;
+  margin: 1.1rem 0;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+}
+
+.practical-card-body details.practical-question>summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.9rem 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #0b4f7a, #1b6a9a);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 6px 6px 0 0;
+}
+
+.practical-card-body details.practical-question[open]>summary {
+  border-bottom: 1px solid #e6eef8;
+}
+
+.practical-card-body .practical-body {
+  padding: 1rem 1.25rem 1.25rem 1.25rem;
+  color: #0f1724;
+}
+
+.practical-card-body .task-desc {
+  margin: 0.45rem 0 0.9rem 0.25rem;
+  color: #0f1724;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.practical-card-body .task-desc ul {
+  margin: 0;
+  padding-left: 1.05rem;
+}
+
+.practical-card-body .task-desc li {
+  margin: 0.35rem 0;
+}
+
+.practical-card-body details.solution {
+  margin-top: 0.75rem;
+}
+
+.practical-card-body details.solution summary {
+  cursor: pointer;
+  list-style: none;
+  background: #111827;
+  color: #f8fafc;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.practical-card-body details.solution summary::before {
+  content: "\25B8";
+  margin-right: 0.5rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.practical-card-body details.solution[open] summary::before {
+  content: "\25BE";
+}
+
+.practical-card-body details.colab-output {
+  margin: 0.5rem 0;
+}
+
+.practical-card-body details.colab-output summary {
+  cursor: pointer;
+  list-style: none;
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.practical-card-body details.colab-output summary::before {
+  content: "\25B8";
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.practical-card-body details.colab-output[open] summary::before {
+  content: "\25BE";
+}
+
+.practical-card-body .output-content {
+  padding: 1rem 1.25rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin: 0.3rem 0 0.75rem 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #0f172a;
+}
+
+.practical-card-body .output-content .output-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.8rem;
+}
+
+.practical-card-body .output-content .output-image {
+  width: 100%;
+  max-height: 230px;
+  object-fit: contain;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
 }
 
 /* ── Practical question cards ── */
