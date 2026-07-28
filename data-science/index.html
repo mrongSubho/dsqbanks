@@ -1064,7 +1064,15 @@
           return;
         }
         container.classList.add('active');
-        const allQs = document.querySelectorAll('.question');
+
+        // Detect if practical section is visible
+        const practicalSection = document.querySelector('.practical-section, .practical-tab-body');
+        const isPractical = practicalSection && practicalSection.style.display !== 'none' && practicalSection.offsetParent !== null;
+
+        const allQs = isPractical
+          ? document.querySelectorAll('.practical-section .practical-question, .practical-set .practical-question')
+          : document.querySelectorAll('.question');
+
         const viewportMid = window.scrollY + window.innerHeight / 2;
 
         let currentQ = null;
@@ -1087,40 +1095,50 @@
           return;
         }
 
-        const unit = currentQ.closest('.unit-details');
-        if (!unit) return;
-
-        const unitQs = unit.querySelectorAll('.question');
-        const visibleQs = [];
-        unitQs.forEach(q => { if (q.offsetParent !== null) visibleQs.push(q); });
-
-        const idx = visibleQs.indexOf(currentQ);
-        if (idx === -1) return;
-
-        const total = visibleQs.length;
-        const pct = total > 0 ? Math.round(((idx + 1) / total) * 100) : 0;
-
-        const codeEl = unit.querySelector('.unit-code');
-        const code = codeEl ? codeEl.textContent.trim() : '';
-
-        const text = code + ' \u2014 Q ' + (idx + 1) + '/' + total + ' \u2014 ' + pct + '%';
-        label.textContent = text;
-        fill.style.width = pct + '%';
-
-        // Dynamic color
-        let c1, c2, glow;
-        if (pct < 25) {
-          c1 = '#8b5cf6'; c2 = '#3b82f6'; glow = 'rgba(139,92,246,0.45)';
-        } else if (pct < 50) {
-          c1 = '#3b82f6'; c2 = '#06b6d4'; glow = 'rgba(59,130,246,0.45)';
-        } else if (pct < 75) {
-          c1 = '#06b6d4'; c2 = '#10b981'; glow = 'rgba(6,182,212,0.45)';
+        if (isPractical) {
+          const visibleQs = [];
+          allQs.forEach(q => { if (q.offsetParent !== null) visibleQs.push(q); });
+          const idx = visibleQs.indexOf(currentQ);
+          if (idx === -1) return;
+          const total = visibleQs.length;
+          const pct = total > 0 ? Math.round(((idx + 1) / total) * 100) : 0;
+          const text = 'Practical \u2014 Q ' + (idx + 1) + '/' + total + ' \u2014 ' + pct + '%';
+          label.textContent = text;
+          fill.style.width = pct + '%';
+          setProgressColors(pct, fill, label);
         } else {
-          c1 = '#10b981'; c2 = '#f59e0b'; glow = 'rgba(16,185,129,0.45)';
+          const unit = currentQ.closest('.unit-details');
+          if (!unit) return;
+          const unitQs = unit.querySelectorAll('.question');
+          const visibleQs = [];
+          unitQs.forEach(q => { if (q.offsetParent !== null) visibleQs.push(q); });
+          const idx = visibleQs.indexOf(currentQ);
+          if (idx === -1) return;
+          const total = visibleQs.length;
+          const pct = total > 0 ? Math.round(((idx + 1) / total) * 100) : 0;
+          const codeEl = unit.querySelector('.unit-code');
+          const code = codeEl ? codeEl.textContent.trim() : '';
+          const text = code + ' \u2014 Q ' + (idx + 1) + '/' + total + ' \u2014 ' + pct + '%';
+          label.textContent = text;
+          fill.style.width = pct + '%';
+          setProgressColors(pct, fill, label);
         }
-        fill.style.background = 'linear-gradient(90deg, ' + c1 + ', ' + c2 + ')';
-        fill.style.boxShadow = '0 0 14px ' + glow;
-        label.style.color = c1;
+
+        function setProgressColors(pct, fill, label) {
+          let c1, c2, glow;
+          if (pct < 25) {
+            c1 = '#8b5cf6'; c2 = '#3b82f6'; glow = 'rgba(139,92,246,0.45)';
+          } else if (pct < 50) {
+            c1 = '#3b82f6'; c2 = '#06b6d4'; glow = 'rgba(59,130,246,0.45)';
+          } else if (pct < 75) {
+            c1 = '#06b6d4'; c2 = '#10b981'; glow = 'rgba(6,182,212,0.45)';
+          } else {
+            c1 = '#10b981'; c2 = '#f59e0b'; glow = 'rgba(16,185,129,0.45)';
+          }
+          fill.style.background = 'linear-gradient(90deg, ' + c1 + ', ' + c2 + ')';
+          fill.style.boxShadow = '0 0 14px ' + glow;
+          label.style.color = c1;
+        }
       };
 
       let ticking = false;
