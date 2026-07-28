@@ -1096,13 +1096,15 @@
         }
 
         if (isPractical) {
+          const activeTab = document.querySelector('.practical-tab.active');
+          const setLabel = activeTab ? activeTab.textContent.trim() : 'Set 1';
           const visibleQs = [];
           allQs.forEach(q => { if (q.offsetParent !== null) visibleQs.push(q); });
           const idx = visibleQs.indexOf(currentQ);
           if (idx === -1) return;
           const total = visibleQs.length;
           const pct = total > 0 ? Math.round(((idx + 1) / total) * 100) : 0;
-          const text = 'Practical \u2014 Q ' + (idx + 1) + '/' + total + ' \u2014 ' + pct + '%';
+          const text = setLabel + ' \u2014 Q ' + (idx + 1) + '/' + total + ' \u2014 ' + pct + '%';
           label.textContent = text;
           fill.style.width = pct + '%';
           setProgressColors(pct, fill, label);
