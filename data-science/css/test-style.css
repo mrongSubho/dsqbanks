@@ -1202,58 +1202,8 @@ body.show-answers .opt.correct .checkmark {
   transform: scale(0.98);
 }
 
-/* ── Dataset links ── */
-.practical-card-body .dataset-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 1rem 1.25rem;
-}
-
-.practical-card-body .dataset-links::before {
-  content: 'Datasets';
-  display: block;
-  width: 100%;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #64748b;
-  margin-bottom: -0.25rem;
-}
-
-.practical-card-body .download-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  color: #1e293b;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.15s;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-}
-
-.practical-card-body .download-link::before {
-  content: '\21E9';
-  font-size: 1rem;
-  color: #3b82f6;
-}
-
-.practical-card-body .download-link:hover {
-  background: #f1f5f9;
-  border-color: #94a3b8;
-}
-
-.practical-card-body details.practical-question {
+/* ── Practical question styles (directly in .practical-list) ── */
+.practical-list details.practical-question {
   background: #ffffff;
   border: 1px solid #eef2ff;
   border-radius: 10px;
@@ -1263,7 +1213,7 @@ body.show-answers .opt.correct .checkmark {
   overflow: hidden;
 }
 
-.practical-card-body details.practical-question>summary {
+.practical-list details.practical-question>summary {
   list-style: none;
   cursor: pointer;
   padding: 0.9rem 1.25rem;
@@ -1278,36 +1228,36 @@ body.show-answers .opt.correct .checkmark {
   border-radius: 6px 6px 0 0;
 }
 
-.practical-card-body details.practical-question[open]>summary {
+.practical-list details.practical-question[open]>summary {
   border-bottom: 1px solid #e6eef8;
 }
 
-.practical-card-body .practical-body {
+.practical-list details.practical-question .practical-body {
   padding: 1rem 1.25rem 1.25rem 1.25rem;
   color: #0f1724;
 }
 
-.practical-card-body .task-desc {
+.practical-list details.practical-question .task-desc {
   margin: 0.45rem 0 0.9rem 0.25rem;
   color: #0f1724;
   font-size: 0.98rem;
   line-height: 1.45;
 }
 
-.practical-card-body .task-desc ul {
+.practical-list details.practical-question .task-desc ul {
   margin: 0;
   padding-left: 1.05rem;
 }
 
-.practical-card-body .task-desc li {
+.practical-list details.practical-question .task-desc li {
   margin: 0.35rem 0;
 }
 
-.practical-card-body details.solution {
+.practical-list details.practical-question details.solution {
   margin-top: 0.75rem;
 }
 
-.practical-card-body details.solution summary {
+.practical-list details.practical-question details.solution summary {
   cursor: pointer;
   list-style: none;
   background: #111827;
@@ -1322,22 +1272,22 @@ body.show-answers .opt.correct .checkmark {
   gap: 0.75rem;
 }
 
-.practical-card-body details.solution summary::before {
+.practical-list details.practical-question details.solution summary::before {
   content: "\25B8";
   margin-right: 0.5rem;
   color: #cbd5e1;
   font-size: 0.95rem;
 }
 
-.practical-card-body details.solution[open] summary::before {
+.practical-list details.practical-question details.solution[open] summary::before {
   content: "\25BE";
 }
 
-.practical-card-body details.colab-output {
+.practical-list details.practical-question details.colab-output {
   margin: 0.5rem 0;
 }
 
-.practical-card-body details.colab-output summary {
+.practical-list details.practical-question details.colab-output summary {
   cursor: pointer;
   list-style: none;
   background: #1e293b;
@@ -1352,17 +1302,17 @@ body.show-answers .opt.correct .checkmark {
   gap: 0.5rem;
 }
 
-.practical-card-body details.colab-output summary::before {
+.practical-list details.practical-question details.colab-output summary::before {
   content: "\25B8";
   color: #94a3b8;
   font-size: 0.85rem;
 }
 
-.practical-card-body details.colab-output[open] summary::before {
+.practical-list details.practical-question details.colab-output[open] summary::before {
   content: "\25BE";
 }
 
-.practical-card-body .output-content {
+.practical-list details.practical-question .output-content {
   padding: 1rem 1.25rem;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
@@ -1373,14 +1323,14 @@ body.show-answers .opt.correct .checkmark {
   color: #0f172a;
 }
 
-.practical-card-body .output-content .output-images {
+.practical-list details.practical-question .output-content .output-images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.75rem;
   margin-top: 0.8rem;
 }
 
-.practical-card-body .output-content .output-image {
+.practical-list details.practical-question .output-content .output-image {
   width: 100%;
   max-height: 230px;
   object-fit: contain;
@@ -1388,27 +1338,9 @@ body.show-answers .opt.correct .checkmark {
   border-radius: 10px;
   background: #f8fafc;
 }
-
-/* ── Practical question cards ── */
-.practical-card {
-  border: 1px solid var(--slate-200);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 1.25rem;
-  background: #fff;
-}
-
-.practical-card-header {
-  background: var(--slate-800);
-  color: #fff;
-  font-family: 'Outfit', sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
   padding: 0.6rem 1rem;
-}
-
-.practical-card-body {
-  padding: 1rem 1.25rem;
 }
 
 .practical-task {
@@ -1439,13 +1371,13 @@ body.show-answers .opt.correct .checkmark {
   margin-bottom: 0.15rem;
 }
 
-.hide-answers .practical-card-body .solution,
-.hide-answers .practical-card-body .solution *,
-.hide-answers .practical-card-body .colab-output,
-.hide-answers .practical-card-body .colab-output *,
-.hide-answers .practical-card-body .colab-code,
-.hide-answers .practical-card-body .colab-code *,
-.hide-answers .practical-card-body .output-content,
-.hide-answers .practical-card-body .output-content * {
+.hide-answers details.practical-question .solution,
+.hide-answers details.practical-question .solution *,
+.hide-answers details.practical-question .colab-output,
+.hide-answers details.practical-question .colab-output *,
+.hide-answers details.practical-question .colab-code,
+.hide-answers details.practical-question .colab-code *,
+.hide-answers details.practical-question .output-content,
+.hide-answers details.practical-question .output-content * {
   display: none !important;
 }

@@ -463,26 +463,11 @@
           practicalContainer.setAttribute('aria-live', 'polite');
           practicalContainer.className = 'practical-list';
 
-          finalPracticals.forEach((q, idx) => {
-            const card = document.createElement('div');
-            card.className = 'practical-card';
-            const header = document.createElement('div');
-            header.className = 'practical-card-header';
-            header.textContent = 'Question ' + (idx + 1) + ' — Set ' + q.set;
-            card.appendChild(header);
-            const body = document.createElement('div');
-            body.className = 'practical-card-body';
-            if (q.links) {
-              const linksWrap = document.createElement('div');
-              linksWrap.innerHTML = q.links;
-              body.appendChild(linksWrap);
-            }
+          finalPracticals.forEach((q) => {
             const qWrap = document.createElement('div');
             qWrap.innerHTML = q.html;
             const qContent = qWrap.querySelector('details.practical-question');
-            if (qContent) body.appendChild(qContent);
-            card.appendChild(body);
-            practicalContainer.appendChild(card);
+            if (qContent) practicalContainer.appendChild(qContent);
             secQ++;
           });
           sectionDiv.appendChild(practicalContainer);
