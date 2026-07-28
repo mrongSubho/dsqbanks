@@ -390,9 +390,8 @@
           '<span class="section-marks">' + marksText + ' (Questions 1 &ndash; ' + cfg.count + ')</span>';
         sectionDiv.appendChild(titleDiv);
 
-        let secQ = 1;
-
         if (type === 'mcq') {
+          let secQ = 1;
           const perUnit = {};
           const base = Math.floor(cfg.count / units.length), extra = cfg.count % units.length;
           const targets = units.map((_, i) => base + (i < extra ? 1 : 0));
@@ -433,6 +432,7 @@
           sectionDiv.appendChild(mcqContainer);
 
         } else if (type === 'short') {
+          let secQ = 1;
           const perUnit = {};
           const base = Math.floor(cfg.count / units.length), extra = cfg.count % units.length;
           const targets = units.map((_, i) => base + (i < extra ? 1 : 0));
@@ -458,6 +458,7 @@
           sectionDiv.appendChild(listDiv);
 
         } else if (type === 'practical') {
+          let secQ = 1;
           const finalPracticals = shuffleArray([...db.practicals]).slice(0, cfg.count);
           const practicalContainer = document.createElement('div');
           practicalContainer.setAttribute('aria-live', 'polite');
