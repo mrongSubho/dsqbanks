@@ -1021,7 +1021,7 @@ body.show-answers .opt.correct .checkmark {
   visibility: hidden;
   transform: translateY(-6px);
   transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .dots-dropdown.open {
@@ -1123,6 +1123,79 @@ body.show-answers .opt.correct .checkmark {
   color: var(--slate-700);
   min-width: 52px;
   flex-shrink: 0;
+}
+
+.filter-icon {
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: var(--slate-400);
+  flex-shrink: 0;
+  padding: 0.2rem 0.3rem;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+  user-select: none;
+  line-height: 1;
+}
+
+.filter-icon:hover {
+  color: var(--primary);
+  background: var(--slate-100);
+}
+
+.filter-icon.active {
+  color: var(--primary);
+  background: #dbeafe;
+}
+
+.dots-section-row {
+  position: relative;
+}
+
+.section-filter-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 1rem;
+  z-index: 200;
+  background: #fff;
+  border: 1px solid var(--slate-200);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 0.6rem 0.75rem;
+  min-width: 180px;
+  margin-top: 4px;
+}
+
+.section-filter-dropdown.open {
+  display: block;
+}
+
+.section-filter-dropdown .filter-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+  font-size: 0.78rem;
+  color: var(--slate-700);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.section-filter-dropdown .filter-option:hover {
+  color: var(--slate-900);
+}
+
+.section-filter-dropdown .filter-option input[type="checkbox"] {
+  accent-color: var(--primary);
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.section-filter-dropdown .filter-option .filter-unit-code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.72rem;
+  color: var(--slate-400);
+  margin-right: 0.15rem;
 }
 
 .dots-section-fields {

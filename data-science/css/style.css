@@ -783,6 +783,72 @@ hr.unit-divider {
   margin-bottom: -0.25rem;
 }
 
+.notebook-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-top: -0.75rem;
+}
+
+.notebook-links::before {
+  content: 'Code Notebooks';
+  display: block;
+  width: 100%;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #16a34a;
+  margin-bottom: -0.25rem;
+}
+
+.notebook-info {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 0.6rem 1.25rem;
+  margin-bottom: 1.5rem;
+  margin-top: -0.75rem;
+}
+
+.notebook-info[open] {
+  padding-bottom: 1rem;
+}
+
+.notebook-info summary {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #16a34a;
+  cursor: pointer;
+}
+
+.notebook-info-body {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.notebook-info-body code {
+  background: #dcfce7;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.notebook-info-body a {
+  color: #16a34a;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 .download-link {
   display: inline-flex;
   align-items: center;

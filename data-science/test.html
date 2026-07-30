@@ -93,6 +93,8 @@
               <div class="dots-section-row" draggable="true" data-type="mcq">
                 <span class="drag-handle" aria-hidden="true">&#9776;</span>
                 <span class="section-label">MCQ</span>
+                <span class="filter-icon" tabindex="0" role="button" aria-label="Filter by unit" aria-haspopup="true">&#8230;</span>
+                <div class="section-filter-dropdown" data-type="mcq"></div>
                 <div class="dots-section-fields">
                   <div class="dots-field"><label>Count</label><input type="number" id="input-mcq" class="dots-input"
                       min="0" value="80"></div>
@@ -105,6 +107,8 @@
               <div class="dots-section-row" draggable="true" data-type="short">
                 <span class="drag-handle" aria-hidden="true">&#9776;</span>
                 <span class="section-label">Shorts</span>
+                <span class="filter-icon" tabindex="0" role="button" aria-label="Filter by unit" aria-haspopup="true">&#8230;</span>
+                <div class="section-filter-dropdown" data-type="short"></div>
                 <div class="dots-section-fields">
                   <div class="dots-field"><label>Count</label><input type="number" id="input-short" class="dots-input"
                       min="0" value="20"></div>
@@ -117,6 +121,8 @@
               <div class="dots-section-row" draggable="true" data-type="practical">
                 <span class="drag-handle" aria-hidden="true">&#9776;</span>
                 <span class="section-label">Practical</span>
+                <span class="filter-icon" tabindex="0" role="button" aria-label="Filter by set" aria-haspopup="true">&#8230;</span>
+                <div class="section-filter-dropdown" data-type="practical"></div>
                 <div class="dots-section-fields">
                   <div class="dots-field"><label>Count</label><input type="number" id="input-practical"
                       class="dots-input" min="0" value="0"></div>
@@ -153,7 +159,7 @@
     <table class="exam-meta-table" aria-label="Candidate information">
       <tr>
         <td style="width: 60%;"><strong>Candidate Name:</strong></td>
-        <td style="width: 40%;"><strong>Roll/ID Number:</strong></td>
+        <td style="width: 40%;"><strong>ID No.:</strong></td>
       </tr>
       <tr>
         <td><strong>Date:</strong></td>
@@ -267,7 +273,8 @@
           const temp = document.createElement('div');
           temp.innerHTML = html;
           const links = temp.querySelector('.dataset-links');
-          const linksHTML = links ? links.outerHTML : '';
+          const nblinks = temp.querySelector('.notebook-links');
+          const linksHTML = (links ? links.outerHTML : '') + (nblinks ? nblinks.outerHTML : '');
           temp.querySelectorAll('details.practical-question').forEach(q => {
             db.practicals.push({ html: q.outerHTML, links: linksHTML, set: setIdx + 1 });
           });
@@ -348,7 +355,6 @@
     }
 
     function generateQuestionPaper() {
-      const units = ['11167', '11168', '11169', '11170', '11171', '11172'];
       const config = getSectionConfig();
       const order = getSectionOrder();
       const container = document.getElementById('sections-container');
@@ -358,7 +364,8 @@
       document.querySelector('#paper-document').style.display = totalQ === 0 ? 'none' : '';
 
       const totalTimeVal = document.getElementById('input-total-time').value;
-      document.getElementById('exam-time').textContent = totalTimeVal;
+      const timeDisplay = /[mh]/i.test(totalTimeVal) ? totalTimeVal : totalTimeVal + 'H';
+      document.getElementById('exam-time').textContent = timeDisplay;
       document.getElementById('exam-marks').textContent = document.getElementById('input-total-marks').value;
 
       let sectionLines = '';
@@ -396,13 +403,15 @@
         sectionDiv.appendChild(titleDiv);
 
         if (type === 'mcq') {
+          const activeUnits = getActiveUnits('mcq');
+          if (activeUnits.length === 0) return;
           let secQ = 1;
           const perUnit = {};
-          const base = Math.floor(cfg.count / units.length), extra = cfg.count % units.length;
-          const targets = units.map((_, i) => base + (i < extra ? 1 : 0));
+          const base = Math.floor(cfg.count / activeUnits.length), extra = cfg.count % activeUnits.length;
+          const targets = activeUnits.map((_, i) => base + (i < extra ? 1 : 0));
           shuffleArray(targets);
-          units.forEach((unit, i) => { perUnit[unit] = selectQuestions(db.mcqsByUnit[unit] || [], targets[i]); });
-          const finalMcqs = interleave(perUnit, units);
+          activeUnits.forEach((unit, i) => { perUnit[unit] = selectQuestions(db.mcqsByUnit[unit] || [], targets[i]); });
+          const finalMcqs = interleave(perUnit, activeUnits);
 
           const mcqContainer = document.createElement('div');
           mcqContainer.setAttribute('aria-live', 'polite');
@@ -437,13 +446,15 @@
           sectionDiv.appendChild(mcqContainer);
 
         } else if (type === 'short') {
+          const activeUnits = getActiveUnits('short');
+          if (activeUnits.length === 0) return;
           let secQ = 1;
           const perUnit = {};
-          const base = Math.floor(cfg.count / units.length), extra = cfg.count % units.length;
-          const targets = units.map((_, i) => base + (i < extra ? 1 : 0));
+          const base = Math.floor(cfg.count / activeUnits.length), extra = cfg.count % activeUnits.length;
+          const targets = activeUnits.map((_, i) => base + (i < extra ? 1 : 0));
           shuffleArray(targets);
-          units.forEach((unit, i) => { perUnit[unit] = selectQuestions(db.shortsByUnit[unit] || [], targets[i]); });
-          const finalShorts = interleave(perUnit, units);
+          activeUnits.forEach((unit, i) => { perUnit[unit] = selectQuestions(db.shortsByUnit[unit] || [], targets[i]); });
+          const finalShorts = interleave(perUnit, activeUnits);
 
           const listDiv = document.createElement('div');
           listDiv.className = 'short-list';
@@ -463,8 +474,14 @@
           sectionDiv.appendChild(listDiv);
 
         } else if (type === 'practical') {
+          const activeSets = getActiveSets();
+          let practicalPool = db.practicals;
+          if (activeSets.length > 0) {
+            practicalPool = db.practicals.filter(q => activeSets.includes(q.set));
+          }
+          if (practicalPool.length === 0) return;
           let secQ = 1;
-          const finalPracticals = shuffleArray([...db.practicals]).slice(0, cfg.count);
+          const finalPracticals = shuffleArray([...practicalPool]).slice(0, cfg.count);
           const practicalContainer = document.createElement('div');
           practicalContainer.setAttribute('aria-live', 'polite');
           practicalContainer.className = 'practical-list';
@@ -565,6 +582,47 @@
       });
     }
 
+    // --- Unit/Set filter state ---
+    const UNIT_NAMES = {
+      '11167': 'Work with Business Domain and Data',
+      '11168': 'Apply Statistical Methods',
+      '11169': 'Apply Programming Skills for Data Science',
+      '11170': 'Prepare and Visualize Data',
+      '11171': 'Build, Validate and Deploy ML Model',
+      '11172': 'Work with Big Data'
+    };
+    const ALL_UNITS = ['11167', '11168', '11169', '11170', '11171', '11172'];
+    const ALL_SETS = [1, 2, 3];
+    const SET_LABELS = { 1: 'Set 1', 2: 'Set 2', 3: 'Set 3' };
+
+    const selectedFilters = {
+      mcq: new Set(ALL_UNITS),
+      short: new Set(ALL_UNITS),
+      practical: new Set(ALL_SETS)
+    };
+
+    function buildFilterDropdowns() {
+      document.querySelectorAll('.section-filter-dropdown').forEach(dd => {
+        const type = dd.dataset.type;
+        const items = type === 'practical' ? ALL_SETS : ALL_UNITS;
+        const labelMap = type === 'practical' ? SET_LABELS : UNIT_NAMES;
+        dd.innerHTML = items.map(item => {
+          const label = labelMap[item] || item;
+          const code = type === 'practical' ? '' : '<span class="filter-unit-code">' + item + '</span>';
+          const checked = selectedFilters[type].has(item) ? 'checked' : '';
+          return '<label class="filter-option"><input type="checkbox" value="' + item + '" ' + checked + '>' + code + label + '</label>';
+        }).join('');
+      });
+    }
+
+    function getActiveUnits(type) {
+      return ALL_UNITS.filter(u => selectedFilters[type] && selectedFilters[type].has(u));
+    }
+
+    function getActiveSets() {
+      return ALL_SETS.filter(s => selectedFilters.practical && selectedFilters.practical.has(s));
+    }
+
     document.addEventListener('click', e => {
       const opt = e.target.closest('.opt');
       if (!opt || document.body.classList.contains('show-answers')) return;
@@ -607,6 +665,7 @@
         e.preventDefault();
         const isOpen = dotsDropdown.classList.toggle('open');
         dotsIcon.setAttribute('aria-expanded', isOpen);
+        if (isOpen) buildFilterDropdowns();
       });
 
       dotsIcon.addEventListener('keydown', (e) => {
@@ -622,10 +681,22 @@
         if (!dotsDropdown.contains(e.target) && !dotsIcon.contains(e.target)) {
           dotsDropdown.classList.remove('open');
           dotsIcon.setAttribute('aria-expanded', 'false');
+          document.querySelectorAll('.section-filter-dropdown.open').forEach(dd => dd.classList.remove('open'));
+          document.querySelectorAll('.filter-icon.active').forEach(ic => ic.classList.remove('active'));
+          openFilterDropdown = null;
         }
       });
 
       dotsDropdown.addEventListener('click', (e) => e.stopPropagation());
+
+      // Close filter dropdown when clicking outside it
+      dotsDropdown.addEventListener('click', (e) => {
+        if (!e.target.closest('.section-filter-dropdown') && !e.target.closest('.filter-icon')) {
+          document.querySelectorAll('.section-filter-dropdown.open').forEach(dd => dd.classList.remove('open'));
+          document.querySelectorAll('.filter-icon.active').forEach(ic => ic.classList.remove('active'));
+          openFilterDropdown = null;
+        }
+      });
 
       function updateTotals() {
         const mcqMarks = parseInt(document.getElementById('input-mcq-marks').value) || 0;
@@ -650,6 +721,9 @@
         e.stopPropagation();
         dotsDropdown.classList.remove('open');
         dotsIcon.setAttribute('aria-expanded', 'false');
+        document.querySelectorAll('.section-filter-dropdown.open').forEach(dd => dd.classList.remove('open'));
+        document.querySelectorAll('.filter-icon.active').forEach(ic => ic.classList.remove('active'));
+        openFilterDropdown = null;
         generateQuestionPaper();
       });
 
@@ -686,6 +760,32 @@
       const backToTop = document.getElementById('back-to-top');
       window.addEventListener('scroll', () => { backToTop.classList.toggle('visible', window.scrollY > 300); });
       backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+      // Filter icon handler
+      const filterIcons = document.querySelectorAll('.filter-icon');
+      let openFilterDropdown = null;
+      filterIcons.forEach(icon => {
+        icon.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const row = icon.closest('.dots-section-row');
+          const dd = row.querySelector('.section-filter-dropdown');
+          if (openFilterDropdown && openFilterDropdown !== dd) openFilterDropdown.classList.remove('open');
+          dd.classList.toggle('open');
+          icon.classList.toggle('active');
+          openFilterDropdown = dd.classList.contains('open') ? dd : null;
+        });
+      });
+
+      // Checkbox change handler (delegated)
+      document.querySelector('.dots-dropdown').addEventListener('change', (e) => {
+        const cb = e.target.closest('.section-filter-dropdown input[type="checkbox"]');
+        if (!cb) return;
+        const dd = cb.closest('.section-filter-dropdown');
+        const type = dd.dataset.type;
+        const val = type === 'practical' ? parseInt(cb.value) : cb.value;
+        if (cb.checked) selectedFilters[type].add(val);
+        else selectedFilters[type].delete(val);
+      });
 
       document.querySelectorAll('.skip-link').forEach(link => {
         link.addEventListener('focus', () => { link.style.top = '0'; });
