@@ -1,4 +1,4 @@
-const CACHE = 'dsqbanks-v4';
+const CACHE = 'dsqbanks-v5';
 const URLS = [
   '/data-science/',
   '/data-science/index.html',

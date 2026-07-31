@@ -1376,13 +1376,13 @@ body.show-answers .opt.correct .checkmark {
 }
 
 .practical-list details.practical-question details.colab-output summary::before {
-  content: "\25B8";
+  content: "\25B8 Output";
   color: #94a3b8;
   font-size: 0.85rem;
 }
 
 .practical-list details.practical-question details.colab-output[open] summary::before {
-  content: "\25BE";
+  content: "\25BE Output";
 }
 
 .practical-list details.practical-question .output-content {
@@ -1442,17 +1442,6 @@ body.show-answers .opt.correct .checkmark {
   color: var(--slate-600);
   line-height: 1.6;
   margin-bottom: 0.15rem;
-}
-
-.hide-answers details.practical-question .solution,
-.hide-answers details.practical-question .solution *,
-.hide-answers details.practical-question .colab-output,
-.hide-answers details.practical-question .colab-output *,
-.hide-answers details.practical-question .colab-code,
-.hide-answers details.practical-question .colab-code *,
-.hide-answers details.practical-question .output-content,
-.hide-answers details.practical-question .output-content * {
-  display: none !important;
 }
 
 /* ── SW update toast ── */
