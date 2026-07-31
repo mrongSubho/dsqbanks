@@ -1271,7 +1271,7 @@
       const solutionDetails = Array.from(document.querySelectorAll('details.solution'));
       solutionDetails.forEach(s => s.open = true);
 
-      const addToggleToDetails = (detailsList, className) => {
+      const addToggleToDetails = (detailsList, className, defaultOpen = true) => {
         detailsList.forEach(detail => {
           const summ = detail.querySelector('summary');
           if (!summ) return;
@@ -1279,9 +1279,9 @@
           wrapper.className = className;
           const cb = document.createElement('input');
           cb.type = 'checkbox';
-          cb.checked = true;
+          cb.checked = defaultOpen;
           cb.setAttribute('aria-label', 'Toggle visibility');
-          detail.open = true;
+          detail.open = defaultOpen;
           cb.addEventListener('click', e => e.stopPropagation());
           cb.addEventListener('change', () => {
             detail.open = cb.checked;
@@ -1293,8 +1293,8 @@
         });
       };
 
-      addToggleToDetails(colabOutputs, 'output-switch');
-      addToggleToDetails(solutionDetails, 'solution-switch');
+      addToggleToDetails(colabOutputs, 'output-switch', false);
+      addToggleToDetails(solutionDetails, 'solution-switch', true);
 
       document.querySelectorAll('.colab-code').forEach(block => {
         if (block.querySelector('.copy-btn')) return;
