@@ -2438,103 +2438,103 @@ const QUESTIONS_DATA = {
           "num": 8,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">8</div><div class=\"q-text\">Which Python program should be written to check whether a given number is positive, negative, or zero using conditional statements?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">num = -5 if num &gt; 0: print(&quot;Positive&quot;) elif num &lt; 0: print(&quot;Negative&quot;) else: print(&quot;Zero&quot;)</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">8</div><div class=\"q-text\">Which Python program should be written to check whether a given number is positive, negative, or zero using conditional statements?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>num = -5\nif num &gt; 0:\n   print(&quot;Positive&quot;)\nelif num &lt; 0:\n   print(&quot;Negative&quot;)\nelse:\n   print(&quot;Zero&quot;)</code></pre></div></details></div>"
         },
         {
           "num": 9,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">9</div><div class=\"q-text\">Which Python function should be written using a lambda expression to calculate the cube of a number?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">cube = lambda x: x ** 3 print(cube(4))</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">9</div><div class=\"q-text\">Which Python function should be written using a lambda expression to calculate the cube of a number?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>cube = lambda x: x ** 3\nprint(cube(4))</code></pre></div></details></div>"
         },
         {
           "num": 10,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">10</div><div class=\"q-text\">Which Python program should be written to print numbers from 1 to 5 using a for loop?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">for i in range(1, 6): print(i)</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">10</div><div class=\"q-text\">Which Python program should be written to print numbers from 1 to 5 using a for loop?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>for i in range(1, 6):\n   print(i)</code></pre></div></details></div>"
         },
         {
           "num": 11,
           "difficulty": 3,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">11</div><div class=\"q-text\">Which Python statement should be written to create a list containing the values 10, 20, 30, and 40?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">numbers = [10, 20, 30, 40] print(numbers)</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">11</div><div class=\"q-text\">Which Python statement should be written to create a list containing the values 10, 20, 30, and 40?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>numbers = [10, 20, 30, 40]\nprint(numbers)</code></pre></div></details></div>"
         },
         {
           "num": 12,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">12</div><div class=\"q-text\">Which Python statement should be written to create a dictionary containing student name and age information?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">student = {&quot;name&quot;: &quot;John&quot;, &quot;age&quot;: 22} print(student)</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">12</div><div class=\"q-text\">Which Python statement should be written to create a dictionary containing student name and age information?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>student = {&quot;name&quot;: &quot;John&quot;, &quot;age&quot;: 22}\nprint(student)</code></pre></div></details></div>"
         },
         {
           "num": 13,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">13</div><div class=\"q-text\">Which Pandas program should be written to read a CSV file named data.csv and display the first five rows?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import pandas as pd data = pd.read_csv(&quot;data.csv&quot;) print(data.head())</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">13</div><div class=\"q-text\">Which Pandas program should be written to read a CSV file named data.csv and display the first five rows?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import pandas as pd\ndata = pd.read_csv(&quot;data.csv&quot;)\nprint(data.head())</code></pre></div></details></div>"
         },
         {
           "num": 14,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">14</div><div class=\"q-text\">Which Pandas program should be written to read a JSON file named students.json?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import pandas as pd data = pd.read_json(&quot;students.json&quot;) print(data)</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">14</div><div class=\"q-text\">Which Pandas program should be written to read a JSON file named students.json?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import pandas as pd\ndata = pd.read_json(&quot;students.json&quot;)\nprint(data)</code></pre></div></details></div>"
         },
         {
           "num": 15,
           "difficulty": 3,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">15</div><div class=\"q-text\">Which NumPy program should be written to create a one-dimensional array containing 5, 10, 15, and 20?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.array([5, 10, 15, 20]) print(arr)</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">15</div><div class=\"q-text\">Which NumPy program should be written to create a one-dimensional array containing 5, 10, 15, and 20?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.array([5, 10, 15, 20])\nprint(arr)</code></pre></div></details></div>"
         },
         {
           "num": 16,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">16</div><div class=\"q-text\">Which NumPy program should be written to sort an array containing the values 9, 3, 7, and 1?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.array([9, 3, 7, 1]) print(np.sort(arr))</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">16</div><div class=\"q-text\">Which NumPy program should be written to sort an array containing the values 9, 3, 7, and 1?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.array([9, 3, 7, 1])\nprint(np.sort(arr))</code></pre></div></details></div>"
         },
         {
           "num": 17,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">17</div><div class=\"q-text\">Which NumPy statement should be written to display the first three elements of an array using slicing?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.array([10, 20, 30, 40, 50]) print(arr[:3])</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">17</div><div class=\"q-text\">Which NumPy statement should be written to display the first three elements of an array using slicing?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.array([10, 20, 30, 40, 50])\nprint(arr[:3])</code></pre></div></details></div>"
         },
         {
           "num": 18,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">18</div><div class=\"q-text\">Which NumPy statement should be written to display array elements greater than 25 using Boolean indexing?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.array([10, 20, 30, 40, 50]) print(arr[arr &gt; 25])</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">18</div><div class=\"q-text\">Which NumPy statement should be written to display array elements greater than 25 using Boolean indexing?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.array([10, 20, 30, 40, 50])\nprint(arr[arr &gt; 25])</code></pre></div></details></div>"
         },
         {
           "num": 19,
           "difficulty": 3,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">19</div><div class=\"q-text\">Which NumPy program should be written to perform element-wise addition between two arrays?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np a = np.array([1, 2, 3]) b = np.array([4, 5, 6]) print(a + b)</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">19</div><div class=\"q-text\">Which NumPy program should be written to perform element-wise addition between two arrays?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\na = np.array([1, 2, 3])\nb = np.array([4, 5, 6])\nprint(a + b)</code></pre></div></details></div>"
         },
         {
           "num": 20,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">20</div><div class=\"q-text\">Which Python program should be written to calculate the mean of a NumPy array?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.array([10, 20, 30, 40]) print(np.mean(arr))</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">20</div><div class=\"q-text\">Which Python program should be written to calculate the mean of a NumPy array?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.array([10, 20, 30, 40])\nprint(np.mean(arr))</code></pre></div></details></div>"
         },
         {
           "num": 21,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">21</div><div class=\"q-text\">Which Python program should be written to calculate the median of a NumPy array?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.array([5, 10, 15, 20]) print(np.median(arr))</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">21</div><div class=\"q-text\">Which Python program should be written to calculate the median of a NumPy array?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.array([5, 10, 15, 20])\nprint(np.median(arr))</code></pre></div></details></div>"
         },
         {
           "num": 22,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">22</div><div class=\"q-text\">Which Python program should be written to calculate the standard deviation of a NumPy array?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.array([2, 4, 6, 8]) print(np.std(arr))</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">22</div><div class=\"q-text\">Which Python program should be written to calculate the standard deviation of a NumPy array?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.array([2, 4, 6, 8])\nprint(np.std(arr))</code></pre></div></details></div>"
         },
         {
           "num": 23,
           "difficulty": 3,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">23</div><div class=\"q-text\">Which Python program should be written to calculate the correlation coefficient between two arrays?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np x = np.array([1, 2, 3, 4]) y = np.array([2, 4, 6, 8]) print(np.corrcoef(x, y))</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">23</div><div class=\"q-text\">Which Python program should be written to calculate the correlation coefficient between two arrays?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\nx = np.array([1, 2, 3, 4])\ny = np.array([2, 4, 6, 8])\nprint(np.corrcoef(x, y))</code></pre></div></details></div>"
         },
         {
           "num": 24,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">24</div><div class=\"q-text\">Which Python program should be written to create a simple linear regression model using LinearRegression from scikit-learn?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">from sklearn.linear_model import LinearRegression import numpy as np X = np.array([[1], [2], [3], [4]]) y = np.array([2, 4, 6, 8]) model = LinearRegression() model.fit(X, y) print(model.predict([[5]]))</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">24</div><div class=\"q-text\">Which Python program should be written to create a simple linear regression model using LinearRegression from scikit-learn?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>from sklearn.linear_model import LinearRegression\nimport numpy as np\nX = np.array([[1], [2], [3], [4]])\ny = np.array([2, 4, 6, 8])\nmodel = LinearRegression()\nmodel.fit(X, y)\nprint(model.predict([[5]]))</code></pre></div></details></div>"
         },
         {
           "num": 25,
@@ -2636,145 +2636,145 @@ const QUESTIONS_DATA = {
           "num": 41,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">41</div><div class=\"q-text\">Which Python program should be written to add two integers and display the result?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">a = 10 b = 20 print(a + b)</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">41</div><div class=\"q-text\">Which Python program should be written to add two integers and display the result?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>a = 10\nb = 20\nprint(a + b)</code></pre></div></details></div>"
         },
         {
           "num": 42,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">42</div><div class=\"q-text\">Which Python program should be written to calculate the area of a rectangle using length and width variables?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">length = 5 width = 4 area = length * width print(area)</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">42</div><div class=\"q-text\">Which Python program should be written to calculate the area of a rectangle using length and width variables?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>length = 5\nwidth = 4\narea = length * width\nprint(area)</code></pre></div></details></div>"
         },
         {
           "num": 43,
           "difficulty": 3,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">43</div><div class=\"q-text\">Which Python statement should be written to create a tuple containing the values 1, 2, and 3?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">numbers = (1, 2, 3) print(numbers)</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">43</div><div class=\"q-text\">Which Python statement should be written to create a tuple containing the values 1, 2, and 3?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>numbers = (1, 2, 3)\nprint(numbers)</code></pre></div></details></div>"
         },
         {
           "num": 44,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">44</div><div class=\"q-text\">Which Python statement should be written to create a set containing values 10, 20, and 30?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">numbers = {10, 20, 30} print(numbers)</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">44</div><div class=\"q-text\">Which Python statement should be written to create a set containing values 10, 20, and 30?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>numbers = {10, 20, 30}\nprint(numbers)</code></pre></div></details></div>"
         },
         {
           "num": 45,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">45</div><div class=\"q-text\">Which Python program should be written to check whether the number 15 is greater than 10 using a comparison operator?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">print(15 &gt; 10)</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">45</div><div class=\"q-text\">Which Python program should be written to check whether the number 15 is greater than 10 using a comparison operator?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>print(15 &gt; 10)</code></pre></div></details></div>"
         },
         {
           "num": 46,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">46</div><div class=\"q-text\">Which Python program should be written to display only even numbers from 1 to 10 using a loop and conditional statement?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">for i in range(1, 11): if i % 2 == 0: print(i)</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">46</div><div class=\"q-text\">Which Python program should be written to display only even numbers from 1 to 10 using a loop and conditional statement?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>for i in range(1, 11):\n   if i % 2 == 0:\n      print(i)</code></pre></div></details></div>"
         },
         {
           "num": 47,
           "difficulty": 3,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">47</div><div class=\"q-text\">Which Python function should be written to return the square of a number using def?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">def square(x): return x * x print(square(5))</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">47</div><div class=\"q-text\">Which Python function should be written to return the square of a number using def?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>def square(x):\n   return x * x\nprint(square(5))</code></pre></div></details></div>"
         },
         {
           "num": 48,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">48</div><div class=\"q-text\">Which Python program should be written to calculate the length of a string named text?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">text = &quot;Data Science&quot; print(len(text))</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">48</div><div class=\"q-text\">Which Python program should be written to calculate the length of a string named text?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>text = &quot;Data Science&quot;\nprint(len(text))</code></pre></div></details></div>"
         },
         {
           "num": 49,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">49</div><div class=\"q-text\">Which Python statement should be written to append the value 50 to a list named numbers?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">numbers = [10, 20, 30] numbers.append(50) print(numbers)</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">49</div><div class=\"q-text\">Which Python statement should be written to append the value 50 to a list named numbers?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>numbers = [10, 20, 30]\nnumbers.append(50)\nprint(numbers)</code></pre></div></details></div>"
         },
         {
           "num": 50,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">50</div><div class=\"q-text\">Which Python statement should be written to remove the value 20 from a list?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">numbers = [10, 20, 30] numbers.remove(20) print(numbers)</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">50</div><div class=\"q-text\">Which Python statement should be written to remove the value 20 from a list?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>numbers = [10, 20, 30]\nnumbers.remove(20)\nprint(numbers)</code></pre></div></details></div>"
         },
         {
           "num": 51,
           "difficulty": 3,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">51</div><div class=\"q-text\">Which Python program should be written to sort a list in ascending order?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">numbers = [5, 2, 8, 1] numbers.sort() print(numbers)</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">51</div><div class=\"q-text\">Which Python program should be written to sort a list in ascending order?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>numbers = [5, 2, 8, 1]\nnumbers.sort()\nprint(numbers)</code></pre></div></details></div>"
         },
         {
           "num": 52,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">52</div><div class=\"q-text\">Which NumPy program should be written to create a two-dimensional array?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.array([[1, 2], [3, 4]]) print(arr)</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">52</div><div class=\"q-text\">Which NumPy program should be written to create a two-dimensional array?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.array([[1, 2], [3, 4]])\nprint(arr)</code></pre></div></details></div>"
         },
         {
           "num": 53,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">53</div><div class=\"q-text\">Which NumPy program should be written to multiply all elements of an array by 2?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.array([1, 2, 3]) print(arr * 2)</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">53</div><div class=\"q-text\">Which NumPy program should be written to multiply all elements of an array by 2?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.array([1, 2, 3])\nprint(arr * 2)</code></pre></div></details></div>"
         },
         {
           "num": 54,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">54</div><div class=\"q-text\">Which NumPy statement should be written to display elements from index 1 to 3 in an array?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.array([10, 20, 30, 40, 50]) print(arr[1:4])</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">54</div><div class=\"q-text\">Which NumPy statement should be written to display elements from index 1 to 3 in an array?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.array([10, 20, 30, 40, 50])\nprint(arr[1:4])</code></pre></div></details></div>"
         },
         {
           "num": 55,
           "difficulty": 3,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">55</div><div class=\"q-text\">Which NumPy statement should be written to display elements less than 40 using Boolean indexing?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.array([10, 20, 40, 60]) print(arr[arr &lt; 40])</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">55</div><div class=\"q-text\">Which NumPy statement should be written to display elements less than 40 using Boolean indexing?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.array([10, 20, 40, 60])\nprint(arr[arr &lt; 40])</code></pre></div></details></div>"
         },
         {
           "num": 56,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">56</div><div class=\"q-text\">Which Pandas program should be written to create a Series object containing values 1, 2, and 3?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import pandas as pd s = pd.Series([1, 2, 3]) print(s)</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">56</div><div class=\"q-text\">Which Pandas program should be written to create a Series object containing values 1, 2, and 3?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import pandas as pd\ns = pd.Series([1, 2, 3])\nprint(s)</code></pre></div></details></div>"
         },
         {
           "num": 57,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">57</div><div class=\"q-text\">Which Pandas program should be written to create a DataFrame with columns name and age?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import pandas as pd data = { &quot;name&quot;: [&quot;John&quot;, &quot;Sara&quot;], &quot;age&quot;: [22, 24] } df = pd.DataFrame(data) print(df)</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">57</div><div class=\"q-text\">Which Pandas program should be written to create a DataFrame with columns name and age?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import pandas as pd\ndata = { &quot;name&quot;: [&quot;John&quot;, &quot;Sara&quot;], &quot;age&quot;: [22, 24] }\ndf = pd.DataFrame(data)\nprint(df)</code></pre></div></details></div>"
         },
         {
           "num": 58,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">58</div><div class=\"q-text\">Which Pandas statement should be written to display column names of a DataFrame?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">print(df.columns)</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">58</div><div class=\"q-text\">Which Pandas statement should be written to display column names of a DataFrame?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>print(df.columns)</code></pre></div></details></div>"
         },
         {
           "num": 59,
           "difficulty": 3,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">59</div><div class=\"q-text\">Which Pandas statement should be written to display summary information of a DataFrame?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">print(df.info())</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">59</div><div class=\"q-text\">Which Pandas statement should be written to display summary information of a DataFrame?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>print(df.info())</code></pre></div></details></div>"
         },
         {
           "num": 60,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">60</div><div class=\"q-text\">Which Pandas statement should be written to sort a DataFrame by the age column?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">print(df.sort_values(&quot;age&quot;))</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">60</div><div class=\"q-text\">Which Pandas statement should be written to sort a DataFrame by the age column?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>print(df.sort_values(&quot;age&quot;))</code></pre></div></details></div>"
         },
         {
           "num": 61,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">61</div><div class=\"q-text\">Which Python program should be written to calculate the mode of a dataset using the statistics module?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import statistics data = [1, 2, 2, 3] print(statistics.mode(data))</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">61</div><div class=\"q-text\">Which Python program should be written to calculate the mode of a dataset using the statistics module?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import statistics\ndata = [1, 2, 2, 3]\nprint(statistics.mode(data))</code></pre></div></details></div>"
         },
         {
           "num": 62,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">62</div><div class=\"q-text\">Which Python program should be written to calculate the percentile of an array using NumPy?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.array([10, 20, 30, 40, 50]) print(np.percentile(arr, 50))</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">62</div><div class=\"q-text\">Which Python program should be written to calculate the percentile of an array using NumPy?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.array([10, 20, 30, 40, 50])\nprint(np.percentile(arr, 50))</code></pre></div></details></div>"
         },
         {
           "num": 63,
           "difficulty": 3,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">63</div><div class=\"q-text\">Which Python program should be written to calculate skewness using SciPy?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">from scipy.stats import skew data = [1, 2, 2, 3, 4] print(skew(data))</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">63</div><div class=\"q-text\">Which Python program should be written to calculate skewness using SciPy?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>from scipy.stats import skew\ndata = [1, 2, 2, 3, 4]\nprint(skew(data))</code></pre></div></details></div>"
         },
         {
           "num": 64,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">64</div><div class=\"q-text\">Which Python program should be written to calculate kurtosis using SciPy?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">from scipy.stats import kurtosis data = [1, 2, 2, 3, 4] print(kurtosis(data))</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">64</div><div class=\"q-text\">Which Python program should be written to calculate kurtosis using SciPy?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>from scipy.stats import kurtosis\ndata = [1, 2, 2, 3, 4]\nprint(kurtosis(data))</code></pre></div></details></div>"
         },
         {
           "num": 65,
@@ -2804,13 +2804,13 @@ const QUESTIONS_DATA = {
           "num": 69,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">69</div><div class=\"q-text\">Which Python program should be written to handle division by zero using exception handling?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">try: print(10 / 0) except ZeroDivisionError: print(&quot;Cannot divide by zero&quot;)</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">69</div><div class=\"q-text\">Which Python program should be written to handle division by zero using exception handling?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>try:\n   print(10 / 0)\nexcept ZeroDivisionError:\n   print(&quot;Cannot divide by zero&quot;)</code></pre></div></details></div>"
         },
         {
           "num": 70,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">70</div><div class=\"q-text\">Which Python program should be written to import the NumPy library using the alias np?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">70</div><div class=\"q-text\">Which Python program should be written to import the NumPy library using the alias np?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np</code></pre></div></details></div>"
         },
         {
           "num": 71,
@@ -2846,31 +2846,31 @@ const QUESTIONS_DATA = {
           "num": 76,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">76</div><div class=\"q-text\">Which Python program should be written to convert the string &quot;25&quot; into an integer?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">num = int(&quot;25&quot;) print(num)</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">76</div><div class=\"q-text\">Which Python program should be written to convert the string &quot;25&quot; into an integer?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>num = int(&quot;25&quot;)\nprint(num)</code></pre></div></details></div>"
         },
         {
           "num": 77,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">77</div><div class=\"q-text\">Which Python program should be written to convert the integer 50 into a string?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">text = str(50) print(text)</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">77</div><div class=\"q-text\">Which Python program should be written to convert the integer 50 into a string?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>text = str(50)\nprint(text)</code></pre></div></details></div>"
         },
         {
           "num": 78,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">78</div><div class=\"q-text\">Which Python program should be written to check whether the value 20 exists in a list using a membership operator?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">numbers = [10, 20, 30] print(20 in numbers)</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">78</div><div class=\"q-text\">Which Python program should be written to check whether the value 20 exists in a list using a membership operator?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>numbers = [10, 20, 30]\nprint(20 in numbers)</code></pre></div></details></div>"
         },
         {
           "num": 79,
           "difficulty": 3,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">79</div><div class=\"q-text\">Which Python program should be written to compare whether two variables reference the same object using an identity operator?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">a = [1, 2] b = a print(a is b)</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">79</div><div class=\"q-text\">Which Python program should be written to compare whether two variables reference the same object using an identity operator?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>a = [1, 2]\nb = a\nprint(a is b)</code></pre></div></details></div>"
         },
         {
           "num": 80,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">80</div><div class=\"q-text\">Which Python program should be written to print the keys of a dictionary?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">student = {&quot;name&quot;: &quot;John&quot;, &quot;age&quot;: 22} print(student.keys())</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">80</div><div class=\"q-text\">Which Python program should be written to print the keys of a dictionary?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>student = {&quot;name&quot;: &quot;John&quot;, &quot;age&quot;: 22}\nprint(student.keys())</code></pre></div></details></div>"
         },
         {
           "num": 81,
@@ -2906,73 +2906,73 @@ const QUESTIONS_DATA = {
           "num": 86,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">86</div><div class=\"q-text\">Which Python program should be written to swap the values of two variables?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">a = 10 b = 20 a, b = b, a print(a) print(b)</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">86</div><div class=\"q-text\">Which Python program should be written to swap the values of two variables?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>a = 10\nb = 20\na, b = b, a\nprint(a)\nprint(b)</code></pre></div></details></div>"
         },
         {
           "num": 87,
           "difficulty": 3,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">87</div><div class=\"q-text\">Which Python program should be written to count the number of items in a list named numbers?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">numbers = [10, 20, 30, 40] print(len(numbers))</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">87</div><div class=\"q-text\">Which Python program should be written to count the number of items in a list named numbers?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>numbers = [10, 20, 30, 40]\nprint(len(numbers))</code></pre></div></details></div>"
         },
         {
           "num": 88,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">88</div><div class=\"q-text\">Which Python program should be written to display each character of a string using a loop?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">text = &quot;Python&quot; for char in text: print(char)</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">88</div><div class=\"q-text\">Which Python program should be written to display each character of a string using a loop?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>text = &quot;Python&quot;\nfor char in text:\n   print(char)</code></pre></div></details></div>"
         },
         {
           "num": 89,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">89</div><div class=\"q-text\">Which Python function should be written to calculate the sum of two numbers using return?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">def add(a, b): return a + b print(add(5, 3))</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">89</div><div class=\"q-text\">Which Python function should be written to calculate the sum of two numbers using return?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>def add(a, b):\n   return a + b\nprint(add(5, 3))</code></pre></div></details></div>"
         },
         {
           "num": 90,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">90</div><div class=\"q-text\">Which Python lambda expression should be written to multiply two numbers?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">multiply = lambda a, b: a * b print(multiply(4, 5))</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">90</div><div class=\"q-text\">Which Python lambda expression should be written to multiply two numbers?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>multiply = lambda a, b: a * b\nprint(multiply(4, 5))</code></pre></div></details></div>"
         },
         {
           "num": 91,
           "difficulty": 3,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">91</div><div class=\"q-text\">Which NumPy program should be written to create an array filled with zeros having 5 elements?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.zeros(5) print(arr)</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">91</div><div class=\"q-text\">Which NumPy program should be written to create an array filled with zeros having 5 elements?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.zeros(5)\nprint(arr)</code></pre></div></details></div>"
         },
         {
           "num": 92,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">92</div><div class=\"q-text\">Which NumPy program should be written to create an array containing values from 1 to 10?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.arange(1, 11) print(arr)</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">92</div><div class=\"q-text\">Which NumPy program should be written to create an array containing values from 1 to 10?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.arange(1, 11)\nprint(arr)</code></pre></div></details></div>"
         },
         {
           "num": 93,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">93</div><div class=\"q-text\">Which NumPy statement should be written to find the maximum value in an array?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.array([5, 10, 15, 20]) print(np.max(arr))</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">93</div><div class=\"q-text\">Which NumPy statement should be written to find the maximum value in an array?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.array([5, 10, 15, 20])\nprint(np.max(arr))</code></pre></div></details></div>"
         },
         {
           "num": 94,
           "difficulty": 2,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">94</div><div class=\"q-text\">Which NumPy statement should be written to find the minimum value in an array?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import numpy as np arr = np.array([5, 10, 15, 20]) print(np.min(arr))</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">94</div><div class=\"q-text\">Which NumPy statement should be written to find the minimum value in an array?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import numpy as np\narr = np.array([5, 10, 15, 20])\nprint(np.min(arr))</code></pre></div></details></div>"
         },
         {
           "num": 95,
           "difficulty": 3,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">95</div><div class=\"q-text\">Which Pandas program should be written to read an Excel file named students.xlsx?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">import pandas as pd data = pd.read_excel(&quot;students.xlsx&quot;) print(data)</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">95</div><div class=\"q-text\">Which Pandas program should be written to read an Excel file named students.xlsx?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>import pandas as pd\ndata = pd.read_excel(&quot;students.xlsx&quot;)\nprint(data)</code></pre></div></details></div>"
         },
         {
           "num": 96,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">96</div><div class=\"q-text\">Which Pandas statement should be written to display the first three rows of a DataFrame named df?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">print(df.head(3))</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">96</div><div class=\"q-text\">Which Pandas statement should be written to display the first three rows of a DataFrame named df?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>print(df.head(3))</code></pre></div></details></div>"
         },
         {
           "num": 97,
           "difficulty": 1,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">97</div><div class=\"q-text\">Which Pandas statement should be written to display the last two rows of a DataFrame named df?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">print(df.tail(2))</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">97</div><div class=\"q-text\">Which Pandas statement should be written to display the last two rows of a DataFrame named df?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>print(df.tail(2))</code></pre></div></details></div>"
         },
         {
           "num": 98,
@@ -2990,7 +2990,7 @@ const QUESTIONS_DATA = {
           "num": 100,
           "difficulty": 4,
           "source": "Programming & Visualization",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">100</div><div class=\"q-text\">Which Python program should be written to check whether a file exists using exception handling?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">try: file = open(&quot;data.txt&quot;, &quot;r&quot;) print(&quot;File opened successfully&quot;) except FileNotFoundError: print(&quot;File not found&quot;)</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">100</div><div class=\"q-text\">Which Python program should be written to check whether a file exists using exception handling?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><pre><code>try:\n   file = open(&quot;data.txt&quot;, &quot;r&quot;)\n   print(&quot;File opened successfully&quot;)\nexcept FileNotFoundError:\n   print(&quot;File not found&quot;)</code></pre></div></details></div>"
         }
       ]
     },
@@ -4672,7 +4672,7 @@ const QUESTIONS_DATA = {
           "num": 2,
           "difficulty": 2,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">2</div><div class=\"q-text\">Name the THREE main types of machine learning.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">1. Supervised Learning \u2014 the model learns from labelled data that includes correct answers. 2. Unsupervised Learning \u2014 the model finds patterns in data that has no labels. 3. Reinforcement Learning \u2014 the model learns by receiving rewards for correct actions.</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">2</div><div class=\"q-text\">Name the THREE main types of machine learning.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><ol><li>Supervised Learning \u2014 the model learns from labelled data that includes correct answers.</li><li>Unsupervised Learning \u2014 the model finds patterns in data that has no labels.</li><li>Reinforcement Learning \u2014 the model learns by receiving rewards for correct actions.</li></ol></div></details></div>"
         },
         {
           "num": 3,
@@ -4696,13 +4696,13 @@ const QUESTIONS_DATA = {
           "num": 6,
           "difficulty": 2,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">6</div><div class=\"q-text\">Name THREE common machine learning algorithms and write one sentence about each.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">1. Linear Regression \u2014 predicts a continuous number such as house price based on input features. 2. Decision Tree \u2014 makes predictions by asking a series of yes/no questions about the data. 3. K-Means \u2014 groups similar data points together into clusters without using labels.</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">6</div><div class=\"q-text\">Name THREE common machine learning algorithms and write one sentence about each.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><ol><li>Linear Regression \u2014 predicts a continuous number such as house price based on input features.</li><li>Decision Tree \u2014 makes predictions by asking a series of yes/no questions about the data.</li><li>K-Means \u2014 groups similar data points together into clusters without using labels.</li></ol></div></details></div>"
         },
         {
           "num": 7,
           "difficulty": 3,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">7</div><div class=\"q-text\">What is &#x27;data pre-processing&#x27;? Name TWO things it includes.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Data pre-processing is the process of cleaning and preparing raw data before using it to train a model. Two things it includes: 1. Handling missing values \u2014 filling empty cells with a calculated value or removing those rows. 2. Encoding \u2014 converting text categories into numbers that the model can understand.</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">7</div><div class=\"q-text\">What is &#x27;data pre-processing&#x27;? Name TWO things it includes.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Data pre-processing is the process of cleaning and preparing raw data before using it to train a model. Two things it includes:</p><ol><li>Handling missing values \u2014 filling empty cells with a calculated value or removing those rows.</li><li>Encoding \u2014 converting text categories into numbers that the model can understand.</li></ol></div></details></div>"
         },
         {
           "num": 8,
@@ -4750,7 +4750,7 @@ const QUESTIONS_DATA = {
           "num": 15,
           "difficulty": 3,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">15</div><div class=\"q-text\">Explain how a &#x27;Decision Tree&#x27; makes a decision. Use a simple example.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">A Decision Tree makes decisions by asking a series of yes/no questions about the input features. Example \u2014 deciding whether to approve a loan: 1. Is the applicant&#x27;s income above 30,000 BDT? \u2192 If No: Reject 2. If Yes \u2192 Is their credit score above 600? \u2192 If No: Reject 3. If Yes \u2192 Approve the loan. The tree follows branches based on answers until it reaches a final decision.</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">15</div><div class=\"q-text\">Explain how a &#x27;Decision Tree&#x27; makes a decision. Use a simple example.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>A Decision Tree makes decisions by asking a series of yes/no questions about the input features. Example \u2014 deciding whether to approve a loan:</p><ol><li>Is the applicant&#x27;s income above 30,000 BDT? \u2192 If No: Reject</li><li>If Yes \u2192 Is their credit score above 600? \u2192 If No: Reject</li><li>If Yes \u2192 Approve the loan. The tree follows branches based on answers until it reaches a final decision.</li></ol></div></details></div>"
         },
         {
           "num": 16,
@@ -4768,7 +4768,7 @@ const QUESTIONS_DATA = {
           "num": 18,
           "difficulty": 2,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">18</div><div class=\"q-text\">What is &#x27;ensemble learning&#x27;? Name TWO ensemble methods.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Ensemble learning combines predictions from multiple models to produce a better result than any single model alone. Two ensemble methods: 1. Bagging \u2014 trains many models independently on random data samples (e.g., Random Forest). 2. Boosting \u2014 trains models one after another, each focusing on the mistakes of the previous one (e.g., XGBoost).</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">18</div><div class=\"q-text\">What is &#x27;ensemble learning&#x27;? Name TWO ensemble methods.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Ensemble learning combines predictions from multiple models to produce a better result than any single model alone. Two ensemble methods:</p><ol><li>Bagging \u2014 trains many models independently on random data samples (e.g., Random Forest).</li><li>Boosting \u2014 trains models one after another, each focusing on the mistakes of the previous one (e.g., XGBoost).</li></ol></div></details></div>"
         },
         {
           "num": 19,
@@ -4780,7 +4780,7 @@ const QUESTIONS_DATA = {
           "num": 20,
           "difficulty": 4,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">20</div><div class=\"q-text\">What is a &#x27;Confusion Matrix&#x27;? Name its four cells.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">A Confusion Matrix is a table that shows how many predictions a model got right and wrong. Four cells: 1. True Positive (TP) \u2014 predicted Yes, actual Yes (correct) 2. True Negative (TN) \u2014 predicted No, actual No (correct) 3. False Positive (FP) \u2014 predicted Yes, actual No (wrong) 4. False Negative (FN) \u2014 predicted No, actual Yes (wrong)</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">20</div><div class=\"q-text\">What is a &#x27;Confusion Matrix&#x27;? Name its four cells.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>A Confusion Matrix is a table that shows how many predictions a model got right and wrong. Four cells:</p><ol><li>True Positive (TP) \u2014 predicted Yes, actual Yes (correct)</li><li>True Negative (TN) \u2014 predicted No, actual No (correct)</li><li>False Positive (FP) \u2014 predicted Yes, actual No (wrong)</li><li>False Negative (FN) \u2014 predicted No, actual Yes (wrong)</li></ol></div></details></div>"
         },
         {
           "num": 21,
@@ -4798,7 +4798,7 @@ const QUESTIONS_DATA = {
           "num": 23,
           "difficulty": 3,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">23</div><div class=\"q-text\">Describe how K-Fold Cross-Validation works using K=3 as an example.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Step 1: Divide the data into 3 equal parts (Fold 1, Fold 2, Fold 3). Step 2: Round 1 \u2014 Train on Fold 2 and 3, test on Fold 1. Record the score. Step 3: Round 2 \u2014 Train on Fold 1 and 3, test on Fold 2. Record the score. Step 4: Round 3 \u2014 Train on Fold 1 and 2, test on Fold 3. Record the score. Step 5: Average the 3 scores. This is the final performance estimate.</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">23</div><div class=\"q-text\">Describe how K-Fold Cross-Validation works using K=3 as an example.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><ol><li>Step 1: Divide the data into 3 equal parts (Fold 1, Fold 2, Fold 3).</li><li>Step 2: Round 1 \u2014 Train on Fold 2 and 3, test on Fold 1. Record the score.</li><li>Step 3: Round 2 \u2014 Train on Fold 1 and 3, test on Fold 2. Record the score.</li><li>Step 4: Round 3 \u2014 Train on Fold 1 and 2, test on Fold 3. Record the score.</li><li>Step 5: Average the 3 scores. This is the final performance estimate.</li></ol></div></details></div>"
         },
         {
           "num": 24,
@@ -4822,7 +4822,7 @@ const QUESTIONS_DATA = {
           "num": 27,
           "difficulty": 3,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">27</div><div class=\"q-text\">What is a &#x27;GAN&#x27;? Name its two parts and explain what each does.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">A GAN (Generative Adversarial Network) is a model that generates realistic synthetic data. Two parts: 1. Generator \u2014 creates fake data (e.g., a fake image) trying to make it look real. 2. Discriminator \u2014 looks at data and tries to tell if it is real or fake. They compete \u2014 the generator improves to fool the discriminator, resulting in increasingly realistic output.</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">27</div><div class=\"q-text\">What is a &#x27;GAN&#x27;? Name its two parts and explain what each does.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>A GAN (Generative Adversarial Network) is a model that generates realistic synthetic data. Two parts:</p><ol><li>Generator \u2014 creates fake data (e.g., a fake image) trying to make it look real.</li><li>Discriminator \u2014 looks at data and tries to tell if it is real or fake. They compete \u2014 the generator improves to fool the discriminator, resulting in increasingly realistic output.</li></ol></div></details></div>"
         },
         {
           "num": 28,
@@ -4906,7 +4906,7 @@ const QUESTIONS_DATA = {
           "num": 41,
           "difficulty": 1,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">41</div><div class=\"q-text\">What is &#x27;data splitting&#x27;? Name the two parts it creates.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Data splitting divides the full dataset into separate parts before training so the model can be tested on data it has never seen. Two parts: 1. Training set \u2014 used to teach the model (usually 70-80% of data). 2. Test set \u2014 used to evaluate the model after training (usually 20-30% of data).</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">41</div><div class=\"q-text\">What is &#x27;data splitting&#x27;? Name the two parts it creates.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Data splitting divides the full dataset into separate parts before training so the model can be tested on data it has never seen. Two parts:</p><ol><li>Training set \u2014 used to teach the model (usually 70-80% of data).</li><li>Test set \u2014 used to evaluate the model after training (usually 20-30% of data).</li></ol></div></details></div>"
         },
         {
           "num": 42,
@@ -4918,13 +4918,13 @@ const QUESTIONS_DATA = {
           "num": 43,
           "difficulty": 3,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">43</div><div class=\"q-text\">Give TWO examples of real problems that use classification algorithms.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">1. Email spam detection \u2014 classifying each email as &#x27;Spam&#x27; or &#x27;Not Spam&#x27; based on its content and sender. 2. Disease diagnosis \u2014 classifying whether a patient has a disease (&#x27;Yes&#x27; or &#x27;No&#x27;) based on symptoms and test results.</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">43</div><div class=\"q-text\">Give TWO examples of real problems that use classification algorithms.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><ol><li>Email spam detection \u2014 classifying each email as &#x27;Spam&#x27; or &#x27;Not Spam&#x27; based on its content and sender.</li><li>Disease diagnosis \u2014 classifying whether a patient has a disease (&#x27;Yes&#x27; or &#x27;No&#x27;) based on symptoms and test results.</li></ol></div></details></div>"
         },
         {
           "num": 44,
           "difficulty": 4,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">44</div><div class=\"q-text\">Give TWO examples of real problems that use regression algorithms.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">1. House price prediction \u2014 predicting the selling price of a house based on its size, location, and number of rooms. 2. Sales forecasting \u2014 predicting next month&#x27;s total sales amount for a business based on past sales patterns.</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">44</div><div class=\"q-text\">Give TWO examples of real problems that use regression algorithms.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><ol><li>House price prediction \u2014 predicting the selling price of a house based on its size, location, and number of rooms.</li><li>Sales forecasting \u2014 predicting next month&#x27;s total sales amount for a business based on past sales patterns.</li></ol></div></details></div>"
         },
         {
           "num": 45,
@@ -4978,13 +4978,13 @@ const QUESTIONS_DATA = {
           "num": 53,
           "difficulty": 1,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">53</div><div class=\"q-text\">What is &#x27;regularization&#x27;? Name TWO types.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Regularization adds a penalty to the model during training to prevent it from overfitting \u2014 becoming too complex and memorising noise in the training data. Two types: 1. L1 (Lasso) \u2014 adds the absolute value of weights to the loss. Can reduce some weights to exactly zero, acting as feature selection. 2. L2 (Ridge) \u2014 adds squared weights to the loss. Shrinks all weights smaller but keeps them all \u2014 reduces complexity without removing features.</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">53</div><div class=\"q-text\">What is &#x27;regularization&#x27;? Name TWO types.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Regularization adds a penalty to the model during training to prevent it from overfitting \u2014 becoming too complex and memorising noise in the training data. Two types:</p><ol><li>L1 (Lasso) \u2014 adds the absolute value of weights to the loss. Can reduce some weights to exactly zero, acting as feature selection.</li><li>L2 (Ridge) \u2014 adds squared weights to the loss. Shrinks all weights smaller but keeps them all \u2014 reduces complexity without removing features.</li></ol></div></details></div>"
         },
         {
           "num": 54,
           "difficulty": 2,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">54</div><div class=\"q-text\">What is &#x27;overfitting&#x27;? Give TWO ways to reduce it.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Overfitting occurs when a model learns the training data too well \u2014 including its noise \u2014 and performs poorly on new, unseen data. The model has memorised examples rather than learning general patterns. Two ways to reduce it: 1. Use more training data \u2014 more examples make it harder to memorise patterns. 2. Apply regularization (L1 or L2) \u2014 penalises overly complex models during training.</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">54</div><div class=\"q-text\">What is &#x27;overfitting&#x27;? Give TWO ways to reduce it.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Overfitting occurs when a model learns the training data too well \u2014 including its noise \u2014 and performs poorly on new, unseen data. The model has memorised examples rather than learning general patterns. Two ways to reduce it:</p><ol><li>Use more training data \u2014 more examples make it harder to memorise patterns.</li><li>Apply regularization (L1 or L2) \u2014 penalises overly complex models during training.</li></ol></div></details></div>"
         },
         {
           "num": 55,
@@ -5014,7 +5014,7 @@ const QUESTIONS_DATA = {
           "num": 59,
           "difficulty": 3,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">59</div><div class=\"q-text\">What is the &#x27;Adam optimizer&#x27;? Why is it popular in deep learning?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Adam (Adaptive Moment Estimation) is an optimizer that automatically adapts the learning rate for each individual parameter during neural network training. It is popular because: 1. It combines the benefits of two other optimizers (Momentum and RMSProp). 2. It trains faster and more stably than plain gradient descent. 3. It works well across many types of neural networks with minimal tuning. Adam is the default choice for most deep learning tasks.</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">59</div><div class=\"q-text\">What is the &#x27;Adam optimizer&#x27;? Why is it popular in deep learning?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Adam (Adaptive Moment Estimation) is an optimizer that automatically adapts the learning rate for each individual parameter during neural network training. It is popular because:</p><ol><li>It combines the benefits of two other optimizers (Momentum and RMSProp).</li><li>It trains faster and more stably than plain gradient descent.</li><li>It works well across many types of neural networks with minimal tuning. Adam is the default choice for most deep learning tasks.</li></ol></div></details></div>"
         },
         {
           "num": 60,
@@ -5032,7 +5032,7 @@ const QUESTIONS_DATA = {
           "num": 62,
           "difficulty": 2,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">62</div><div class=\"q-text\">What does &#x27;GridSearchCV&#x27; do? How does it find the best hyperparameters?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">GridSearchCV automatically tests every combination of a predefined set of hyperparameters and uses cross-validation to evaluate each combination. How it works: 1. You provide a grid of values \u2014 e.g., max_depth = [3, 5, 10] and n_estimators = [50, 100, 200]. 2. GridSearchCV trains and evaluates the model for all 9 combinations. 3. It uses K-Fold cross-validation to score each combination fairly. 4. It returns the combination with the highest average cross-validation score. Result: the best hyperparameters for your model without any guesswork.</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">62</div><div class=\"q-text\">What does &#x27;GridSearchCV&#x27; do? How does it find the best hyperparameters?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>GridSearchCV automatically tests every combination of a predefined set of hyperparameters and uses cross-validation to evaluate each combination. How it works:</p><ol><li>You provide a grid of values \u2014 e.g., max_depth = [3, 5, 10] and n_estimators = [50, 100, 200].</li><li>GridSearchCV trains and evaluates the model for all 9 combinations.</li><li>It uses K-Fold cross-validation to score each combination fairly.</li><li>It returns the combination with the highest average cross-validation score. Result: the best hyperparameters for your model without any guesswork.</li></ol></div></details></div>"
         },
         {
           "num": 63,
@@ -5068,7 +5068,7 @@ const QUESTIONS_DATA = {
           "num": 68,
           "difficulty": 4,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">68</div><div class=\"q-text\">What is a scikit-learn &#x27;Pipeline&#x27;? What are its benefits?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">A scikit-learn Pipeline chains a sequence of data processing and modelling steps into a single object. Benefits: 1. Prevents data leakage \u2014 the pipeline ensures scaling and encoding are fitted on training data only, then applied to test data. 2. Cleaner code \u2014 one object replaces many separate steps. 3. Easy deployment \u2014 the entire pipeline (including pre-processing) can be saved with pickle and applied to new data in one step. 4. Works with GridSearchCV \u2014 hyperparameters for any step can be tuned automatically.</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">68</div><div class=\"q-text\">What is a scikit-learn &#x27;Pipeline&#x27;? What are its benefits?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>A scikit-learn Pipeline chains a sequence of data processing and modelling steps into a single object. Benefits:</p><ol><li>Prevents data leakage \u2014 the pipeline ensures scaling and encoding are fitted on training data only, then applied to test data.</li><li>Cleaner code \u2014 one object replaces many separate steps.</li><li>Easy deployment \u2014 the entire pipeline (including pre-processing) can be saved with pickle and applied to new data in one step.</li><li>Works with GridSearchCV \u2014 hyperparameters for any step can be tuned automatically.</li></ol></div></details></div>"
         },
         {
           "num": 69,
@@ -5098,7 +5098,7 @@ const QUESTIONS_DATA = {
           "num": 73,
           "difficulty": 1,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">73</div><div class=\"q-text\">What is the &#x27;Elbow Method&#x27;? Describe how to use it.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">The Elbow Method is used to choose the best number of clusters (K) for K-Means clustering. How to use it: 1. Run K-Means for values of K from 1 to 10 (or more). 2. For each K, calculate the WCSS (Within-Cluster Sum of Squares) \u2014 a measure of how spread out points are within each cluster. 3. Plot WCSS against K. As K increases, WCSS decreases. 4. Find the &#x27;elbow&#x27; \u2014 the point where WCSS stops decreasing sharply and begins to flatten. This bend in the curve is the optimal K. Example: If WCSS drops steeply from K=1 to K=4, then flattens, K=4 is the best choice.</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">73</div><div class=\"q-text\">What is the &#x27;Elbow Method&#x27;? Describe how to use it.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>The Elbow Method is used to choose the best number of clusters (K) for K-Means clustering. How to use it:</p><ol><li>Run K-Means for values of K from 1 to 10 (or more).</li><li>For each K, calculate the WCSS (Within-Cluster Sum of Squares) \u2014 a measure of how spread out points are within each cluster.</li><li>Plot WCSS against K. As K increases, WCSS decreases.</li><li>Find the &#x27;elbow&#x27; \u2014 the point where WCSS stops decreasing sharply and begins to flatten. This bend in the curve is the optimal K. Example: If WCSS drops steeply from K=1 to K=4, then flattens, K=4 is the best choice.</li></ol></div></details></div>"
         },
         {
           "num": 74,
@@ -5110,7 +5110,7 @@ const QUESTIONS_DATA = {
           "num": 75,
           "difficulty": 3,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">75</div><div class=\"q-text\">What is an &#x27;end-to-end ML pipeline&#x27;? List all the main stages.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">An end-to-end ML pipeline is the complete automated workflow from raw data to deployed predictions. Main stages: 1. Data Collection \u2014 gathering raw data from sources (databases, APIs, files). 2. Data Pre-processing \u2014 cleaning, encoding, scaling, and handling missing values. 3. Feature Engineering \u2014 creating useful new features from existing data. 4. Model Training \u2014 fitting the algorithm on the training data. 5. Model Evaluation \u2014 measuring performance on validation/test data using metrics. 6. Model Saving \u2014 serialising the trained model to a file (pickle/joblib). 7. Deployment \u2014 making the model available for real-world predictions (Streamlit, Gradio, etc.). 8. Monitoring \u2014 tracking model performance over time in production.</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">75</div><div class=\"q-text\">What is an &#x27;end-to-end ML pipeline&#x27;? List all the main stages.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>An end-to-end ML pipeline is the complete automated workflow from raw data to deployed predictions. Main stages:</p><ol><li>Data Collection \u2014 gathering raw data from sources (databases, APIs, files).</li><li>Data Pre-processing \u2014 cleaning, encoding, scaling, and handling missing values.</li><li>Feature Engineering \u2014 creating useful new features from existing data.</li><li>Model Training \u2014 fitting the algorithm on the training data.</li><li>Model Evaluation \u2014 measuring performance on validation/test data using metrics.</li><li>Model Saving \u2014 serialising the trained model to a file (pickle/joblib).</li><li>Deployment \u2014 making the model available for real-world predictions (Streamlit, Gradio, etc.).</li><li>Monitoring \u2014 tracking model performance over time in production.</li></ol></div></details></div>"
         }
       ]
     },
@@ -5576,7 +5576,7 @@ const QUESTIONS_DATA = {
           "num": 1,
           "difficulty": 1,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">1</div><div class=\"q-text\">What is machine learning? Name the three main types.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Machine learning is a way of teaching computers to learn from data and make decisions or predictions without being given exact rules. Three types: 1. Supervised Learning \u2014 learns from labelled data with correct answers. 2. Unsupervised Learning \u2014 finds patterns in data with no labels. 3. Reinforcement Learning \u2014 learns by receiving rewards for correct actions.</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">1</div><div class=\"q-text\">What is machine learning? Name the three main types.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Machine learning is a way of teaching computers to learn from data and make decisions or predictions without being given exact rules. Three types:</p><ol><li>Supervised Learning \u2014 learns from labelled data with correct answers.</li><li>Unsupervised Learning \u2014 finds patterns in data with no labels.</li><li>Reinforcement Learning \u2014 learns by receiving rewards for correct actions.</li></ol></div></details></div>"
         },
         {
           "num": 2,
@@ -5588,7 +5588,7 @@ const QUESTIONS_DATA = {
           "num": 3,
           "difficulty": 3,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">3</div><div class=\"q-text\">What is &#x27;supervised learning&#x27;? Give two real-life examples.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Supervised learning trains a model using labelled data \u2014 examples where the correct answer is already known. Two real-life examples: 1. Spam detection \u2014 the model learns from emails labelled &#x27;Spam&#x27; or &#x27;Not Spam&#x27; and classifies new emails. 2. Loan approval \u2014 the model learns from past loan records labelled &#x27;Approved&#x27; or &#x27;Rejected&#x27; and decides on new applications.</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">3</div><div class=\"q-text\">What is &#x27;supervised learning&#x27;? Give two real-life examples.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Supervised learning trains a model using labelled data \u2014 examples where the correct answer is already known. Two real-life examples:</p><ol><li>Spam detection \u2014 the model learns from emails labelled &#x27;Spam&#x27; or &#x27;Not Spam&#x27; and classifies new emails.</li><li>Loan approval \u2014 the model learns from past loan records labelled &#x27;Approved&#x27; or &#x27;Rejected&#x27; and decides on new applications.</li></ol></div></details></div>"
         },
         {
           "num": 4,
@@ -5600,13 +5600,13 @@ const QUESTIONS_DATA = {
           "num": 5,
           "difficulty": 1,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">5</div><div class=\"q-text\">What is &#x27;overfitting&#x27;? How can it be reduced?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Overfitting happens when a model learns the training data too well \u2014 including noise \u2014 and performs poorly on new data. Two ways to reduce it: 1. Use more training data so the model sees a wider variety of examples. 2. Simplify the model (e.g., limit the depth of a Decision Tree) so it cannot memorise the training data.</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">5</div><div class=\"q-text\">What is &#x27;overfitting&#x27;? How can it be reduced?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Overfitting happens when a model learns the training data too well \u2014 including noise \u2014 and performs poorly on new data. Two ways to reduce it:</p><ol><li>Use more training data so the model sees a wider variety of examples.</li><li>Simplify the model (e.g., limit the depth of a Decision Tree) so it cannot memorise the training data.</li></ol></div></details></div>"
         },
         {
           "num": 6,
           "difficulty": 2,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">6</div><div class=\"q-text\">What is &#x27;K-Means clustering&#x27;? Describe how it works in simple steps.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">K-Means clustering is an unsupervised algorithm that divides data into K groups of similar items. How it works: 1. Choose K (the number of clusters). 2. Randomly place K centre points in the data. 3. Assign each data point to the nearest centre. 4. Move each centre to the average of its assigned points. 5. Repeat steps 3\u20134 until the centres stop moving. Result: K groups of similar data points.</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">6</div><div class=\"q-text\">What is &#x27;K-Means clustering&#x27;? Describe how it works in simple steps.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>K-Means clustering is an unsupervised algorithm that divides data into K groups of similar items. How it works:</p><ol><li>Choose K (the number of clusters).</li><li>Randomly place K centre points in the data.</li><li>Assign each data point to the nearest centre.</li><li>Move each centre to the average of its assigned points.</li><li>Repeat steps 3\u20134 until the centres stop moving. Result: K groups of similar data points.</li></ol></div></details></div>"
         },
         {
           "num": 7,
@@ -5624,7 +5624,7 @@ const QUESTIONS_DATA = {
           "num": 9,
           "difficulty": 1,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">9</div><div class=\"q-text\">Name THREE pre-processing steps used to prepare data before training a model.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">1. Handling missing values \u2014 replacing empty cells with the column mean or removing affected rows. 2. Encoding \u2014 converting text categories (e.g., &#x27;Male&#x27;, &#x27;Female&#x27;) into numbers (0, 1) that the model can process. 3. Normalization or Standardization \u2014 scaling all feature values to the same range so no single feature dominates the model.</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">9</div><div class=\"q-text\">Name THREE pre-processing steps used to prepare data before training a model.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><ol><li>Handling missing values \u2014 replacing empty cells with the column mean or removing affected rows.</li><li>Encoding \u2014 converting text categories (e.g., &#x27;Male&#x27;, &#x27;Female&#x27;) into numbers (0, 1) that the model can process.</li><li>Normalization or Standardization \u2014 scaling all feature values to the same range so no single feature dominates the model.</li></ol></div></details></div>"
         },
         {
           "num": 10,
@@ -5648,7 +5648,7 @@ const QUESTIONS_DATA = {
           "num": 13,
           "difficulty": 1,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">13</div><div class=\"q-text\">What is the &#x27;Confusion Matrix&#x27;? Name its four parts.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">A Confusion Matrix is a table that shows how many predictions a model got right and wrong. Four parts: 1. True Positive (TP) \u2014 correctly predicted Yes. 2. True Negative (TN) \u2014 correctly predicted No. 3. False Positive (FP) \u2014 predicted Yes but actually No (false alarm). 4. False Negative (FN) \u2014 predicted No but actually Yes (missed case).</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">13</div><div class=\"q-text\">What is the &#x27;Confusion Matrix&#x27;? Name its four parts.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>A Confusion Matrix is a table that shows how many predictions a model got right and wrong. Four parts:</p><ol><li>True Positive (TP) \u2014 correctly predicted Yes.</li><li>True Negative (TN) \u2014 correctly predicted No.</li><li>False Positive (FP) \u2014 predicted Yes but actually No (false alarm).</li><li>False Negative (FN) \u2014 predicted No but actually Yes (missed case).</li></ol></div></details></div>"
         },
         {
           "num": 14,
@@ -5660,7 +5660,7 @@ const QUESTIONS_DATA = {
           "num": 15,
           "difficulty": 3,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">15</div><div class=\"q-text\">What is &#x27;ensemble learning&#x27;? Name TWO ensemble methods and briefly describe each.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Ensemble learning combines predictions from multiple models to produce better results than any single model. Two methods: 1. Bagging \u2014 trains many models on different random data samples and combines their predictions (e.g., Random Forest). 2. Boosting \u2014 trains models one after another, each fixing the errors of the previous one (e.g., XGBoost).</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">15</div><div class=\"q-text\">What is &#x27;ensemble learning&#x27;? Name TWO ensemble methods and briefly describe each.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Ensemble learning combines predictions from multiple models to produce better results than any single model. Two methods:</p><ol><li>Bagging \u2014 trains many models on different random data samples and combines their predictions (e.g., Random Forest).</li><li>Boosting \u2014 trains models one after another, each fixing the errors of the previous one (e.g., XGBoost).</li></ol></div></details></div>"
         },
         {
           "num": 16,
@@ -5672,7 +5672,7 @@ const QUESTIONS_DATA = {
           "num": 17,
           "difficulty": 1,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">17</div><div class=\"q-text\">What is &#x27;feature selection&#x27;? Name TWO benefits of using it.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Feature selection means choosing only the most important and useful input columns to train the model on, and removing the rest. Two benefits: 1. Faster training \u2014 fewer features means less computation. 2. Better accuracy \u2014 removing useless or noisy features helps the model focus on what matters.</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">17</div><div class=\"q-text\">What is &#x27;feature selection&#x27;? Name TWO benefits of using it.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Feature selection means choosing only the most important and useful input columns to train the model on, and removing the rest. Two benefits:</p><ol><li>Faster training \u2014 fewer features means less computation.</li><li>Better accuracy \u2014 removing useless or noisy features helps the model focus on what matters.</li></ol></div></details></div>"
         },
         {
           "num": 18,
@@ -5690,7 +5690,7 @@ const QUESTIONS_DATA = {
           "num": 20,
           "difficulty": 4,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">20</div><div class=\"q-text\">Give TWO examples of how machine learning is used in real life.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">1. Recommendation systems \u2014 streaming services like YouTube use ML to suggest videos based on what you have watched before. 2. Fraud detection \u2014 banks use ML to analyse each credit card transaction in real time and flag unusual patterns that might indicate fraud.</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">20</div><div class=\"q-text\">Give TWO examples of how machine learning is used in real life.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><ol><li>Recommendation systems \u2014 streaming services like YouTube use ML to suggest videos based on what you have watched before.</li><li>Fraud detection \u2014 banks use ML to analyse each credit card transaction in real time and flag unusual patterns that might indicate fraud.</li></ol></div></details></div>"
         },
         {
           "num": 21,
@@ -5702,13 +5702,13 @@ const QUESTIONS_DATA = {
           "num": 22,
           "difficulty": 2,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">22</div><div class=\"q-text\">Explain the &#x27;3 Vs&#x27; of big data. Give one example for each V.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">1. Volume \u2014 the enormous amount of data. Example: Facebook stores over 100 petabytes of photos and videos uploaded by billions of users. 2. Velocity \u2014 the high speed at which data is generated. Example: A payment gateway processes thousands of transactions per second and must check each one for fraud instantly. 3. Variety \u2014 the many different types and formats of data. Example: A hospital stores patient data as typed notes, lab result numbers, X-ray images, and audio recordings of consultations.</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">22</div><div class=\"q-text\">Explain the &#x27;3 Vs&#x27; of big data. Give one example for each V.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><ol><li>Volume \u2014 the enormous amount of data. Example: Facebook stores over 100 petabytes of photos and videos uploaded by billions of users.</li><li>Velocity \u2014 the high speed at which data is generated. Example: A payment gateway processes thousands of transactions per second and must check each one for fraud instantly.</li><li>Variety \u2014 the many different types and formats of data. Example: A hospital stores patient data as typed notes, lab result numbers, X-ray images, and audio recordings of consultations.</li></ol></div></details></div>"
         },
         {
           "num": 23,
           "difficulty": 3,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">23</div><div class=\"q-text\">What is &#x27;Apache Hadoop&#x27;? Name its TWO most important parts.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Apache Hadoop is an open-source framework for storing and processing very large datasets across many computers working together. Two important parts: 1. HDFS (Hadoop Distributed File System) \u2014 stores large files by splitting them into blocks and distributing them across many machines. 2. MapReduce \u2014 processes the stored data in parallel across many machines using Map and Reduce steps.</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">23</div><div class=\"q-text\">What is &#x27;Apache Hadoop&#x27;? Name its TWO most important parts.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Apache Hadoop is an open-source framework for storing and processing very large datasets across many computers working together. Two important parts:</p><ol><li>HDFS (Hadoop Distributed File System) \u2014 stores large files by splitting them into blocks and distributing them across many machines.</li><li>MapReduce \u2014 processes the stored data in parallel across many machines using Map and Reduce steps.</li></ol></div></details></div>"
         },
         {
           "num": 24,
@@ -5726,7 +5726,7 @@ const QUESTIONS_DATA = {
           "num": 26,
           "difficulty": 2,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">26</div><div class=\"q-text\">What is &#x27;cloud computing&#x27;? Give TWO benefits of using it for big data.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Cloud computing means using computing resources (storage, servers, software) over the internet provided by companies like AWS, Google, and Microsoft \u2014 instead of owning physical hardware. Two benefits: 1. Scalability \u2014 companies can get more storage or processing power instantly without buying new servers. 2. Cost saving \u2014 companies pay only for what they use, avoiding large upfront hardware investment.</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">26</div><div class=\"q-text\">What is &#x27;cloud computing&#x27;? Give TWO benefits of using it for big data.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Cloud computing means using computing resources (storage, servers, software) over the internet provided by companies like AWS, Google, and Microsoft \u2014 instead of owning physical hardware. Two benefits:</p><ol><li>Scalability \u2014 companies can get more storage or processing power instantly without buying new servers.</li><li>Cost saving \u2014 companies pay only for what they use, avoiding large upfront hardware investment.</li></ol></div></details></div>"
         },
         {
           "num": 27,
@@ -5756,7 +5756,7 @@ const QUESTIONS_DATA = {
           "num": 31,
           "difficulty": 3,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">31</div><div class=\"q-text\">What is &#x27;MLlib&#x27; in Apache Spark? Name TWO tasks it can perform.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">MLlib is the machine learning library built into Apache Spark. It provides ready-made ML algorithms that can run across a cluster of many machines on very large datasets. Two tasks: 1. Classification \u2014 predicting a category (e.g., spam/not spam) on millions of records. 2. Clustering \u2014 grouping data into segments (e.g., grouping millions of customers by behaviour).</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">31</div><div class=\"q-text\">What is &#x27;MLlib&#x27; in Apache Spark? Name TWO tasks it can perform.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>MLlib is the machine learning library built into Apache Spark. It provides ready-made ML algorithms that can run across a cluster of many machines on very large datasets. Two tasks:</p><ol><li>Classification \u2014 predicting a category (e.g., spam/not spam) on millions of records.</li><li>Clustering \u2014 grouping data into segments (e.g., grouping millions of customers by behaviour).</li></ol></div></details></div>"
         },
         {
           "num": 32,
@@ -5774,7 +5774,7 @@ const QUESTIONS_DATA = {
           "num": 34,
           "difficulty": 2,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">34</div><div class=\"q-text\">Name THREE cloud services used for big data and ML, and state their provider.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">1. Amazon Redshift \u2014 provided by AWS. A cloud data warehouse for large-scale SQL analytics. 2. GCP BigQuery \u2014 provided by Google Cloud. A serverless SQL analytics service for massive datasets. 3. Amazon SageMaker \u2014 provided by AWS. A managed platform for building, training, and deploying ML models.</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">34</div><div class=\"q-text\">Name THREE cloud services used for big data and ML, and state their provider.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><ol><li>Amazon Redshift \u2014 provided by AWS. A cloud data warehouse for large-scale SQL analytics.</li><li>GCP BigQuery \u2014 provided by Google Cloud. A serverless SQL analytics service for massive datasets.</li><li>Amazon SageMaker \u2014 provided by AWS. A managed platform for building, training, and deploying ML models.</li></ol></div></details></div>"
         },
         {
           "num": 35,
@@ -5804,7 +5804,7 @@ const QUESTIONS_DATA = {
           "num": 39,
           "difficulty": 3,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">39</div><div class=\"q-text\">What is &#x27;data splitting&#x27;? Name the two sets created and state the purpose of each.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Data splitting divides the dataset into separate parts before training. Two sets: 1. Training set \u2014 used to teach the model. The model studies these examples and learns patterns. 2. Test set \u2014 kept separate and only used after training to measure how well the model performs on completely new, unseen data.</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">39</div><div class=\"q-text\">What is &#x27;data splitting&#x27;? Name the two sets created and state the purpose of each.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Data splitting divides the dataset into separate parts before training. Two sets:</p><ol><li>Training set \u2014 used to teach the model. The model studies these examples and learns patterns.</li><li>Test set \u2014 kept separate and only used after training to measure how well the model performs on completely new, unseen data.</li></ol></div></details></div>"
         },
         {
           "num": 40,
@@ -5834,13 +5834,13 @@ const QUESTIONS_DATA = {
           "num": 44,
           "difficulty": 4,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">44</div><div class=\"q-text\">Give TWO examples of real-world big data use cases.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">1. Social media analytics \u2014 platforms like Facebook analyse billions of posts, likes, and comments to personalise news feeds and detect fake news in real time. 2. Healthcare \u2014 hospitals process millions of patient records, medical images, and sensor readings to predict disease risk, speed up diagnosis, and personalise treatment plans.</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">44</div><div class=\"q-text\">Give TWO examples of real-world big data use cases.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><ol><li>Social media analytics \u2014 platforms like Facebook analyse billions of posts, likes, and comments to personalise news feeds and detect fake news in real time.</li><li>Healthcare \u2014 hospitals process millions of patient records, medical images, and sensor readings to predict disease risk, speed up diagnosis, and personalise treatment plans.</li></ol></div></details></div>"
         },
         {
           "num": 45,
           "difficulty": 1,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">45</div><div class=\"q-text\">What is &#x27;MapReduce&#x27; in Hadoop? Explain the two steps.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">MapReduce is the processing method in Hadoop. It processes large datasets in parallel across many machines. Two steps: 1. Map \u2014 each machine processes its portion of the data and produces key-value pairs. Example: reading text and outputting (word, 1) for every word found. 2. Reduce \u2014 results with the same key are collected and combined. Example: all (hello, 1) pairs are summed to give (hello, 2500).</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">45</div><div class=\"q-text\">What is &#x27;MapReduce&#x27; in Hadoop? Explain the two steps.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>MapReduce is the processing method in Hadoop. It processes large datasets in parallel across many machines. Two steps:</p><ol><li>Map \u2014 each machine processes its portion of the data and produces key-value pairs. Example: reading text and outputting (word, 1) for every word found.</li><li>Reduce \u2014 results with the same key are collected and combined. Example: all (hello, 1) pairs are summed to give (hello, 2500).</li></ol></div></details></div>"
         },
         {
           "num": 46,
@@ -5864,31 +5864,31 @@ const QUESTIONS_DATA = {
           "num": 49,
           "difficulty": 1,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">49</div><div class=\"q-text\">What is an &#x27;Artificial Neural Network (ANN)&#x27;? Describe its THREE layers.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">An ANN is a computing model inspired by the human brain, made of connected nodes (neurons) organised in layers. Three layers: 1. Input layer \u2014 receives the raw input data (features). 2. Hidden layer(s) \u2014 processes the inputs using mathematical operations to detect patterns. 3. Output layer \u2014 produces the final prediction or result (e.g., a class label or number).</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">49</div><div class=\"q-text\">What is an &#x27;Artificial Neural Network (ANN)&#x27;? Describe its THREE layers.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>An ANN is a computing model inspired by the human brain, made of connected nodes (neurons) organised in layers. Three layers:</p><ol><li>Input layer \u2014 receives the raw input data (features).</li><li>Hidden layer(s) \u2014 processes the inputs using mathematical operations to detect patterns.</li><li>Output layer \u2014 produces the final prediction or result (e.g., a class label or number).</li></ol></div></details></div>"
         },
         {
           "num": 50,
           "difficulty": 2,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">50</div><div class=\"q-text\">What is the purpose of &#x27;model evaluation&#x27;? Name TWO evaluation metrics.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Model evaluation measures how well a trained model performs \u2014 it tells us if the model is good enough to use in real life. Two metrics: 1. Accuracy \u2014 the percentage of all predictions that are correct. 2. Precision and Recall \u2014 measure how well the model handles positive cases, important when false alarms or missed cases are costly.</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">50</div><div class=\"q-text\">What is the purpose of &#x27;model evaluation&#x27;? Name TWO evaluation metrics.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Model evaluation measures how well a trained model performs \u2014 it tells us if the model is good enough to use in real life. Two metrics:</p><ol><li>Accuracy \u2014 the percentage of all predictions that are correct.</li><li>Precision and Recall \u2014 measure how well the model handles positive cases, important when false alarms or missed cases are costly.</li></ol></div></details></div>"
         },
         {
           "num": 51,
           "difficulty": 3,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">51</div><div class=\"q-text\">What is &#x27;big data&#x27;? Explain why Excel cannot handle it.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Big data refers to datasets so large, fast-moving, or complex that traditional tools like Excel cannot store or process them effectively. Why Excel fails: 1. Row limit \u2014 Excel handles a maximum of ~1 million rows. Big data often involves billions of records. 2. Single machine \u2014 Excel runs on one CPU. Big data requires parallel processing across many machines. 3. Processing speed \u2014 processing billions of rows sequentially in Excel would take days; distributed systems do it in minutes. 4. Variety \u2014 Excel handles only structured tables; big data includes images, videos, audio, and sensor streams that Excel cannot process.</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">51</div><div class=\"q-text\">What is &#x27;big data&#x27;? Explain why Excel cannot handle it.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Big data refers to datasets so large, fast-moving, or complex that traditional tools like Excel cannot store or process them effectively. Why Excel fails:</p><ol><li>Row limit \u2014 Excel handles a maximum of ~1 million rows. Big data often involves billions of records.</li><li>Single machine \u2014 Excel runs on one CPU. Big data requires parallel processing across many machines.</li><li>Processing speed \u2014 processing billions of rows sequentially in Excel would take days; distributed systems do it in minutes.</li><li>Variety \u2014 Excel handles only structured tables; big data includes images, videos, audio, and sensor streams that Excel cannot process.</li></ol></div></details></div>"
         },
         {
           "num": 52,
           "difficulty": 4,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">52</div><div class=\"q-text\">Explain the &#x27;3 Vs&#x27; of big data. Give a real example of each.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">1. Volume \u2014 enormous amount of data. Example: Ride-sharing apps like Uber process GPS coordinates from millions of active trips every second, generating petabytes of location data daily. 2. Velocity \u2014 high speed of data generation. Example: A stock exchange processes millions of trade orders per second, each requiring real-time fraud checks and price updates. 3. Variety \u2014 many different data types and formats. Example: A hospital stores data as typed clinical notes, numerical lab results, MRI scan images, ECG waveforms, and audio recordings \u2014 all in one system.</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">52</div><div class=\"q-text\">Explain the &#x27;3 Vs&#x27; of big data. Give a real example of each.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><ol><li>Volume \u2014 enormous amount of data. Example: Ride-sharing apps like Uber process GPS coordinates from millions of active trips every second, generating petabytes of location data daily.</li><li>Velocity \u2014 high speed of data generation. Example: A stock exchange processes millions of trade orders per second, each requiring real-time fraud checks and price updates.</li><li>Variety \u2014 many different data types and formats. Example: A hospital stores data as typed clinical notes, numerical lab results, MRI scan images, ECG waveforms, and audio recordings \u2014 all in one system.</li></ol></div></details></div>"
         },
         {
           "num": 53,
           "difficulty": 1,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">53</div><div class=\"q-text\">What is &#x27;Apache Hadoop&#x27;? Describe its FOUR main components.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Apache Hadoop is an open-source framework for storing and processing very large datasets across many computers working together. Four components: 1. HDFS (Hadoop Distributed File System) \u2014 stores large files by splitting them into blocks distributed across many machines. 2. YARN (Yet Another Resource Negotiator) \u2014 manages CPU and memory resources and schedules processing jobs. 3. MapReduce \u2014 processes data in two phases: Map (parallel processing on each machine) and Reduce (combining results). 4. Hadoop Common \u2014 shared libraries and utilities that all other components depend on to function.</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">53</div><div class=\"q-text\">What is &#x27;Apache Hadoop&#x27;? Describe its FOUR main components.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Apache Hadoop is an open-source framework for storing and processing very large datasets across many computers working together. Four components:</p><ol><li>HDFS (Hadoop Distributed File System) \u2014 stores large files by splitting them into blocks distributed across many machines.</li><li>YARN (Yet Another Resource Negotiator) \u2014 manages CPU and memory resources and schedules processing jobs.</li><li>MapReduce \u2014 processes data in two phases: Map (parallel processing on each machine) and Reduce (combining results).</li><li>Hadoop Common \u2014 shared libraries and utilities that all other components depend on to function.</li></ol></div></details></div>"
         },
         {
           "num": 54,
@@ -5906,13 +5906,13 @@ const QUESTIONS_DATA = {
           "num": 56,
           "difficulty": 4,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">56</div><div class=\"q-text\">What is &#x27;YARN&#x27;? Describe its TWO main responsibilities.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">YARN (Yet Another Resource Negotiator) is the resource management layer of Hadoop. Two responsibilities: 1. Resource Management \u2014 YARN tracks the available CPU and memory on every machine in the cluster. When a processing job is submitted, YARN decides how much CPU and memory to allocate to it and on which machines. 2. Job Scheduling \u2014 YARN schedules tasks from multiple applications efficiently across the cluster, ensuring no single machine is overloaded and that cluster resources are used as effectively as possible.</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">56</div><div class=\"q-text\">What is &#x27;YARN&#x27;? Describe its TWO main responsibilities.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>YARN (Yet Another Resource Negotiator) is the resource management layer of Hadoop. Two responsibilities:</p><ol><li>Resource Management \u2014 YARN tracks the available CPU and memory on every machine in the cluster. When a processing job is submitted, YARN decides how much CPU and memory to allocate to it and on which machines.</li><li>Job Scheduling \u2014 YARN schedules tasks from multiple applications efficiently across the cluster, ensuring no single machine is overloaded and that cluster resources are used as effectively as possible.</li></ol></div></details></div>"
         },
         {
           "num": 57,
           "difficulty": 1,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">57</div><div class=\"q-text\">What is &#x27;ETL&#x27;? Describe each step with an example.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">ETL stands for Extract, Transform, Load \u2014 a standard process for moving data from source systems into a data warehouse. 1. Extract: Collect raw data from various sources. Example: Pull sales records from the MySQL database, customer data from the CRM API, and inventory files from an FTP server. 2. Transform: Clean, reformat, and standardise the data. Example: Convert all dates to the same format, fill missing values, encode categories, and remove duplicate records. 3. Load: Store the cleaned data in the destination system. Example: Load the transformed data into Amazon Redshift where the analytics team can run SQL reports.</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">57</div><div class=\"q-text\">What is &#x27;ETL&#x27;? Describe each step with an example.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>ETL stands for Extract, Transform, Load \u2014 a standard process for moving data from source systems into a data warehouse.</p><ol><li>Extract: Collect raw data from various sources. Example: Pull sales records from the MySQL database, customer data from the CRM API, and inventory files from an FTP server.</li><li>Transform: Clean, reformat, and standardise the data. Example: Convert all dates to the same format, fill missing values, encode categories, and remove duplicate records.</li><li>Load: Store the cleaned data in the destination system. Example: Load the transformed data into Amazon Redshift where the analytics team can run SQL reports.</li></ol></div></details></div>"
         },
         {
           "num": 58,
@@ -5936,31 +5936,31 @@ const QUESTIONS_DATA = {
           "num": 61,
           "difficulty": 1,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">61</div><div class=\"q-text\">What is &#x27;Apache Spark&#x27;? Name its FIVE components.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Apache Spark is a fast, open-source big data processing engine that works primarily in memory (RAM), making it much faster than Hadoop MapReduce. Five components: 1. Spark Core \u2014 the foundational engine managing task scheduling, memory, and distributed computing. 2. Spark SQL \u2014 runs SQL queries on large structured datasets within Spark. 3. Spark Streaming \u2014 processes live real-time data streams as they arrive. 4. MLlib \u2014 a library of scalable machine learning algorithms for big data. 5. GraphX \u2014 processes graph-structured data (networks of nodes and edges) like social networks.</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">61</div><div class=\"q-text\">What is &#x27;Apache Spark&#x27;? Name its FIVE components.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Apache Spark is a fast, open-source big data processing engine that works primarily in memory (RAM), making it much faster than Hadoop MapReduce. Five components:</p><ol><li>Spark Core \u2014 the foundational engine managing task scheduling, memory, and distributed computing.</li><li>Spark SQL \u2014 runs SQL queries on large structured datasets within Spark.</li><li>Spark Streaming \u2014 processes live real-time data streams as they arrive.</li><li>MLlib \u2014 a library of scalable machine learning algorithms for big data.</li><li>GraphX \u2014 processes graph-structured data (networks of nodes and edges) like social networks.</li></ol></div></details></div>"
         },
         {
           "num": 62,
           "difficulty": 2,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">62</div><div class=\"q-text\">What is &#x27;Spark MLlib&#x27;? Give TWO examples of tasks it can perform.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Spark MLlib (Machine Learning Library) is the machine learning component of Apache Spark. It provides a set of distributed, scalable ML algorithms designed to run across an entire Spark cluster on very large datasets. Two tasks: 1. Classification \u2014 predicting a category label (e.g., spam/not spam) on hundreds of millions of records. MLlib can train Logistic Regression or Random Forest across the whole cluster in parallel. 2. Clustering \u2014 grouping large unlabelled datasets into segments (e.g., grouping millions of customers by purchase behaviour using K-Means), which would be impossible on a single machine.</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">62</div><div class=\"q-text\">What is &#x27;Spark MLlib&#x27;? Give TWO examples of tasks it can perform.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Spark MLlib (Machine Learning Library) is the machine learning component of Apache Spark. It provides a set of distributed, scalable ML algorithms designed to run across an entire Spark cluster on very large datasets. Two tasks:</p><ol><li>Classification \u2014 predicting a category label (e.g., spam/not spam) on hundreds of millions of records. MLlib can train Logistic Regression or Random Forest across the whole cluster in parallel.</li><li>Clustering \u2014 grouping large unlabelled datasets into segments (e.g., grouping millions of customers by purchase behaviour using K-Means), which would be impossible on a single machine.</li></ol></div></details></div>"
         },
         {
           "num": 63,
           "difficulty": 3,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">63</div><div class=\"q-text\">What is &#x27;cloud computing&#x27;? Give TWO benefits for big data processing.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Cloud computing means accessing computing resources (servers, storage, software) over the internet from providers like AWS, Google Cloud, and Microsoft Azure, instead of owning physical hardware. Two benefits for big data: 1. Scalability \u2014 need to process 10 TB today and 100 TB next month? Add more cloud resources instantly without buying new servers. Scale down when processing is done and stop paying. 2. Cost efficiency \u2014 pay only for what you use (pay-as-you-go). No large upfront investment in hardware, maintenance, or IT staff to manage physical servers.</div></details></div>"
+          "html": "<div class=\"question diff-3\" data-difficulty=\"3\"><div class=\"difficulty-badge\" style=\"background:#d97706;\">K</div><div class=\"q-num\">63</div><div class=\"q-text\">What is &#x27;cloud computing&#x27;? Give TWO benefits for big data processing.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Cloud computing means accessing computing resources (servers, storage, software) over the internet from providers like AWS, Google Cloud, and Microsoft Azure, instead of owning physical hardware. Two benefits for big data:</p><ol><li>Scalability \u2014 need to process 10 TB today and 100 TB next month? Add more cloud resources instantly without buying new servers. Scale down when processing is done and stop paying.</li><li>Cost efficiency \u2014 pay only for what you use (pay-as-you-go). No large upfront investment in hardware, maintenance, or IT staff to manage physical servers.</li></ol></div></details></div>"
         },
         {
           "num": 64,
           "difficulty": 4,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">64</div><div class=\"q-text\">What is &#x27;Amazon SageMaker&#x27;? Describe THREE features that make it useful.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Amazon SageMaker is AWS&#x27;s fully managed cloud platform for building, training, and deploying machine learning models. Three features: 1. Managed training \u2014 automatically provisions the computing resources (CPU/GPU) needed for training. No server setup required \u2014 the team just submits training code. 2. Built-in algorithms \u2014 includes ready-to-use ML algorithms optimised for large datasets, saving development time. 3. One-click deployment \u2014 after training, deploys the model as a real-time prediction API endpoint with minimal code. Automatically scales the endpoint up or down based on demand.</div></details></div>"
+          "html": "<div class=\"question diff-4\" data-difficulty=\"4\"><div class=\"difficulty-badge\" style=\"background:#7c3aed;\">C</div><div class=\"q-num\">64</div><div class=\"q-text\">What is &#x27;Amazon SageMaker&#x27;? Describe THREE features that make it useful.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Amazon SageMaker is AWS&#x27;s fully managed cloud platform for building, training, and deploying machine learning models. Three features:</p><ol><li>Managed training \u2014 automatically provisions the computing resources (CPU/GPU) needed for training. No server setup required \u2014 the team just submits training code.</li><li>Built-in algorithms \u2014 includes ready-to-use ML algorithms optimised for large datasets, saving development time.</li><li>One-click deployment \u2014 after training, deploys the model as a real-time prediction API endpoint with minimal code. Automatically scales the endpoint up or down based on demand.</li></ol></div></details></div>"
         },
         {
           "num": 65,
           "difficulty": 1,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">65</div><div class=\"q-text\">What is &#x27;GCP BigQuery&#x27;? When would a company choose it?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">GCP BigQuery is Google Cloud Platform&#x27;s serverless, fully managed data warehouse service for running very fast SQL queries on massive datasets. Serverless means: the user writes SQL queries and BigQuery automatically manages all the underlying computing infrastructure. When to choose it: A company would choose BigQuery when it needs to: 1. Analyse billions of rows of historical data using familiar SQL without managing any servers. 2. Run complex aggregations (e.g., total sales by product by region over 5 years) across terabytes of data in seconds. 3. Avoid the cost and complexity of setting up and managing a traditional data warehouse cluster.</div></details></div>"
+          "html": "<div class=\"question diff-1\" data-difficulty=\"1\"><div class=\"difficulty-badge\" style=\"background:#059669;\">M</div><div class=\"q-num\">65</div><div class=\"q-text\">What is &#x27;GCP BigQuery&#x27;? When would a company choose it?</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>GCP BigQuery is Google Cloud Platform&#x27;s serverless, fully managed data warehouse service for running very fast SQL queries on massive datasets. Serverless means: the user writes SQL queries and BigQuery automatically manages all the underlying computing infrastructure. When to choose it: A company would choose BigQuery when it needs to:</p><ol><li>Analyse billions of rows of historical data using familiar SQL without managing any servers.</li><li>Run complex aggregations (e.g., total sales by product by region over 5 years) across terabytes of data in seconds.</li><li>Avoid the cost and complexity of setting up and managing a traditional data warehouse cluster.</li></ol></div></details></div>"
         },
         {
           "num": 66,
@@ -5990,7 +5990,7 @@ const QUESTIONS_DATA = {
           "num": 70,
           "difficulty": 2,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">70</div><div class=\"q-text\">Explain &#x27;Business Intelligence (BI)&#x27; and name TWO BI tools.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">Business Intelligence (BI) refers to the use of data analysis tools and processes to help organisations make better decisions by converting raw data into meaningful dashboards, reports, and visualisations. BI sits at the final layer of the big data ecosystem \u2014 it transforms processed data into actionable insights for managers and decision-makers who may not know programming. Two BI tools: 1. Microsoft Power BI \u2014 connects to databases and data warehouses, creates interactive dashboards and charts, widely used in business reporting. 2. Tableau \u2014 a visual analytics platform for creating rich interactive dashboards; popular in enterprises for exploring and presenting data insights.</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">70</div><div class=\"q-text\">Explain &#x27;Business Intelligence (BI)&#x27; and name TWO BI tools.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>Business Intelligence (BI) refers to the use of data analysis tools and processes to help organisations make better decisions by converting raw data into meaningful dashboards, reports, and visualisations. BI sits at the final layer of the big data ecosystem \u2014 it transforms processed data into actionable insights for managers and decision-makers who may not know programming. Two BI tools:</p><ol><li>Microsoft Power BI \u2014 connects to databases and data warehouses, creates interactive dashboards and charts, widely used in business reporting.</li><li>Tableau \u2014 a visual analytics platform for creating rich interactive dashboards; popular in enterprises for exploring and presenting data insights.</li></ol></div></details></div>"
         },
         {
           "num": 71,
@@ -6014,7 +6014,7 @@ const QUESTIONS_DATA = {
           "num": 74,
           "difficulty": 2,
           "source": "Data Science L4",
-          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">74</div><div class=\"q-text\">What is a &#x27;data pipeline&#x27;? Describe its main stages.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\">A data pipeline is an automated sequence of steps that collects data from source systems, processes and transforms it, and delivers it to a destination system for analysis or use. Main stages: 1. Ingestion \u2014 collecting raw data from sources (databases, APIs, streaming services, files). 2. Transformation \u2014 cleaning, filtering, joining, and reformatting the data to make it useful. 3. Storage \u2014 saving the processed data in a destination (data warehouse, data lake, or database). 4. Serving \u2014 making the data available for consumption by BI tools, ML models, or applications. Data pipelines are often scheduled to run automatically (e.g., every hour or nightly).</div></details></div>"
+          "html": "<div class=\"question diff-2\" data-difficulty=\"2\"><div class=\"difficulty-badge\" style=\"background:#2563eb;\">S</div><div class=\"q-num\">74</div><div class=\"q-text\">What is a &#x27;data pipeline&#x27;? Describe its main stages.</div><details class=\"answer-reveal\"><summary></summary><div class=\"answer\" style=\"border-left:3px solid #059669;background:#a7f3d0;\"><p>A data pipeline is an automated sequence of steps that collects data from source systems, processes and transforms it, and delivers it to a destination system for analysis or use. Main stages:</p><ol><li>Ingestion \u2014 collecting raw data from sources (databases, APIs, streaming services, files).</li><li>Transformation \u2014 cleaning, filtering, joining, and reformatting the data to make it useful.</li><li>Storage \u2014 saving the processed data in a destination (data warehouse, data lake, or database).</li><li>Serving \u2014 making the data available for consumption by BI tools, ML models, or applications. Data pipelines are often scheduled to run automatically (e.g., every hour or nightly).</li></ol></div></details></div>"
         },
         {
           "num": 75,
