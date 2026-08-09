@@ -1944,6 +1944,10 @@ details.solution[open] summary::before {
   pointer-events: auto;
 }
 
+.sw-update-toast.visible ~ .unit-nav-zone {
+  display: none;
+}
+
 .sw-update-btn {
   background: #3b82f6;
   color: #fff;
