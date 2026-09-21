@@ -43,6 +43,49 @@
   var FLAT_END = 1.62;
   var TOTAL = 1.78;
 
+  // Layout-critical rules, injected at runtime so the component can never
+  // break the page even if the cached stylesheet is older than this script
+  // (the service worker serves style.css cache-first). Mirrors the rules in
+  // css/style.css; allowed by the page CSP (style-src 'unsafe-inline').
+  var CRITICAL_CSS = [
+    '.switch.stubborn{position:relative}',
+    '.switch.stubborn input{display:block;position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}',
+    '.switch.stubborn input:focus-visible+.switch-track{outline:2px solid #2563eb;outline-offset:2px}',
+    '.switch.stubborn::after{content:"";position:absolute;left:50%;top:50%;width:max(100%,44px);height:max(100%,44px);transform:translate(-50%,-50%);pointer-events:none}',
+    '.pill-group.stubborn-host{overflow:visible}',
+    '.stubborn-actor{position:absolute;left:50%;bottom:20px;width:188px;height:60px;transform:translateX(-50%);overflow:visible;pointer-events:none;z-index:3;color:#334155}',
+    '.stubborn-worker{fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}',
+    '.stubborn-cape{fill:#2563eb;stroke:none}',
+    '.stubborn-limb{fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}',
+    '.stubborn-face-bg{fill:#f8fafc;stroke:none}',
+    '.stubborn-feature{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}',
+    '.stubborn-eyes{stroke-width:1.7}',
+    '.stubborn-brows{stroke-width:1.3}',
+    '.stubborn-palm{fill:#f8fafc;stroke:currentColor;stroke-width:1.5}',
+    '.stubborn-marks{fill:none;stroke:currentColor;stroke-width:1.3;stroke-linecap:round}',
+    '.stubborn-ground{fill:none;stroke:#94a3b8;stroke-width:.8;opacity:0}',
+    '.stubborn-ground.is-visible{opacity:.6}',
+    '.stubborn-bubble{position:absolute;left:50%;bottom:calc(100% + 46px);transform:translateX(-50%) translateY(2px);background:#fff;border:1px solid #e2e8f0;color:#475569;font-size:.68rem;font-weight:700;padding:.15rem .5rem;border-radius:999px;white-space:nowrap;box-shadow:0 4px 12px rgba(2,6,23,.1);opacity:0;transition:opacity .15s ease,transform .15s ease;pointer-events:none;z-index:4}',
+    '.stubborn-bubble.is-visible{opacity:1;transform:translateX(-50%) translateY(0)}',
+    '.stubborn-live{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}',
+    '.switch.stubborn.is-straining .switch-knob{animation:stubborn-strain .12s linear infinite}',
+    '@keyframes stubborn-strain{0%{transform:translateX(0)}50%{transform:translateX(-1px)}100%{transform:translateX(1px)}}',
+    '@media(max-width:600px){.stubborn-actor{width:150px;height:48px;bottom:22px}.stubborn-bubble{bottom:calc(100% + 36px)}}',
+    '@media(prefers-reduced-motion:reduce){.stubborn-actor,.stubborn-bubble{display:none!important}.switch.stubborn.is-straining .switch-knob{animation:none}}'
+  ].join('\n');
+
+  var cssInjected = false;
+  function injectCriticalCSS() {
+    if (cssInjected) return;
+    cssInjected = true;
+    if (document.getElementById('stubborn-critical-css')) return;
+    var s = document.createElement('style');
+    s.id = 'stubborn-critical-css';
+    s.setAttribute('data-stubborn-critical', '');
+    s.textContent = CRITICAL_CSS;
+    (document.head || document.documentElement).appendChild(s);
+  }
+
   function clamp(x) { return Math.min(1, Math.max(0, x)); }
   function lerp(a, b, t) { return a + (b - a) * t; }
   function phase(t, a, b) { return clamp((t - a) / (b - a)); }
@@ -122,6 +165,9 @@
     live.className = 'stubborn-live sr-only';
     live.setAttribute('role', 'status');
     live.setAttribute('aria-live', 'polite');
+    // Inline hiding as well: this node must never affect layout, even if
+    // every stylesheet on the page is stale or blocked.
+    live.style.cssText = 'position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;';
     live.textContent = describe(legend, input.checked);
     label.appendChild(live);
 
@@ -309,6 +355,7 @@
   var instances = [];
 
   function init() {
+    injectCriticalCSS();
     var jobs = [
       ['mcq-toggle', 'Show answers'],
       ['tts-toggle', 'Text to speech']
