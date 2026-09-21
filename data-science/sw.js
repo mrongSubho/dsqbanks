@@ -1,4 +1,4 @@
-const CACHE = 'dsqbanks-v7';
+const CACHE = 'dsqbanks-v8';
 const URLS = [
   '/data-science/',
   '/data-science/index.html',
@@ -6,6 +6,7 @@ const URLS = [
   '/data-science/css/style.css',
   '/data-science/css/test-style.css',
   '/data-science/questions-data.js',
+  '/data-science/stubborn-toggle.js',
   '/data-science/favicon.svg',
   '/data-science/images/icon-192.png',
   '/data-science/images/icon-512.png',
