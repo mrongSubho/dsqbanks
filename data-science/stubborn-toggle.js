@@ -173,6 +173,7 @@
 
     var reduce = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
     var busy = false;
+    var heading = null; // in-flight target; null when idle
     var suppress = false;
     var raf = 0;
     var sceneTime = -1;
@@ -237,7 +238,7 @@
     }
 
     function commit(target) {
-      if (input.checked === target) return;
+      if (input.checked === target) { live.textContent = describe(legend, target); return; }
       suppress = true;
       input.checked = target;
       try {
@@ -296,6 +297,7 @@
 
     function finish(target) {
       busy = false;
+      heading = null;
       input.setAttribute('aria-busy', 'false');
       cancelAnimationFrame(raf);
       hideActor();
@@ -305,17 +307,23 @@
     function play(target) {
       var mirror = target === false; // mirror the pose for the OFF direction
       busy = true;
+      heading = target;
       input.setAttribute('aria-busy', 'true');
       var committed = false;
       var start = null;
       function tick(now) {
         if (!start) start = now;
         var t = (now - start) / 1000;
-        if (t >= SNAP && !committed) {
-          committed = true;
-          commit(target); // real action succeeds here; payoff follows
+        try {
+          if (t >= SNAP && !committed) {
+            committed = true;
+            commit(target); // real action succeeds here; payoff follows
+          }
+          render(Math.min(t, TOTAL), target, mirror);
+        } catch (err) {
+          // Never brick the control: land the state, let finish() reset busy.
+          if (!committed) { committed = true; try { commit(target); } catch (ignored) { /* state already set */ } }
         }
-        render(Math.min(t, TOTAL), target, mirror);
         if (t < TOTAL) raf = requestAnimationFrame(tick);
         else finish(target);
       }
@@ -323,11 +331,20 @@
     }
 
     function onClick(e) {
-      if (busy) { e.preventDefault(); return; }
-      var target = !input.checked;
       e.preventDefault(); // hold the state until the snap lands it
       try { input.focus({ preventScroll: true }); } catch (err) { input.focus(); }
-      if (reduce.matches) { commit(target); return; }
+      // Latest click wins: interrupt a running gag and head the other way.
+      var target = busy ? !heading : !input.checked;
+      if (reduce.matches) {
+        cancelAnimationFrame(raf);
+        busy = false;
+        heading = null;
+        input.setAttribute('aria-busy', 'false');
+        hideActor();
+        commit(target);
+        return;
+      }
+      if (busy) cancelAnimationFrame(raf);
       play(target);
     }
 
