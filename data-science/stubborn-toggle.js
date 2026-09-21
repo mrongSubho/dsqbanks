@@ -174,6 +174,23 @@
     var reduce = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
     var busy = false;
     var heading = null; // in-flight target; null when idle
+    // Browsers flip a label-wrapped checkbox BEFORE dispatching the
+    // synthetic click (legacy-pre-activation), so input.checked already
+    // shows the user's intent when our handler runs. Tell label-driven
+    // clicks apart from direct ones: the real event passes through the
+    // label first, while the synthetic one targets the input itself.
+    var labelForwarded = false;
+    label.addEventListener('click', function (e) {
+      if (e.target !== input) labelForwarded = true;
+    }, true);
+    // Keyboard arrives pre-flipped too: Space toggles on keydown, silently,
+    // before the keyup click. Snapshot the pre-state on relevant keydowns
+    // (Enter clicks without any pre-flip; the snapshot still reads old).
+    var keySnapshot = null;
+    input.addEventListener('keydown', function (e) {
+      if (e.key !== ' ' && e.key !== 'Spacebar' && e.key !== 'Enter') return;
+      keySnapshot = { checked: input.checked, time: Date.now() };
+    }, true);
     var suppress = false;
     var raf = 0;
     var sceneTime = -1;
@@ -331,10 +348,21 @@
     }
 
     function onClick(e) {
-      e.preventDefault(); // hold the state until the snap lands it
+      var viaLabel = labelForwarded;
+      labelForwarded = false;
+      // intent: label clicks and keyboard Space arrive pre-flipped, so the
+      // checked value already shows where the user wants to go. Anything
+      // else (direct hit, assistive tech, .click()) wants the opposite.
+      var intent;
+      if (viaLabel) intent = input.checked;
+      else if (keySnapshot && (Date.now() - keySnapshot.time < 1000)) intent = !keySnapshot.checked;
+      else intent = !input.checked;
+      keySnapshot = null;
+      e.preventDefault(); // hold the pill until the snap lands it
+      input.checked = !intent; // undo any pre-activation flip (no-op otherwise)
       try { input.focus({ preventScroll: true }); } catch (err) { input.focus(); }
       // Latest click wins: interrupt a running gag and head the other way.
-      var target = busy ? !heading : !input.checked;
+      var target = busy ? !heading : intent;
       if (reduce.matches) {
         cancelAnimationFrame(raf);
         busy = false;
