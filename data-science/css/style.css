@@ -2208,68 +2208,6 @@ details.viva-section[open]>summary {
   border: 0;
 }
 
-/* ─── Tab buddy (smiley riding the active tab) ─────────────────────
-   Pure decoration: absolute overlay, no pointer events, hidden from
-   assistive tech. Motion is gated in JS behind prefers-reduced-motion. */
-.has-buddy {
-  position: relative;
-}
-
-.tab-buddy {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 30px;
-  height: 30px;
-  pointer-events: none;
-  z-index: 5;
-  overflow: visible;
-  will-change: transform;
-}
-
-.tab-buddy-face {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.tb-face {
-  fill: #fcd34d;
-  stroke: #b45309;
-  stroke-width: 2.5;
-}
-
-.tb-cheek {
-  fill: #f472b6;
-  opacity: 0.45;
-  stroke: none;
-}
-
-.tb-eyes {
-  transform-box: fill-box;
-  transform-origin: center;
-}
-
-.tb-feature {
-  fill: none;
-  stroke: #334155;
-  stroke-width: 2.6;
-  stroke-linecap: round;
-}
-
-.tb-mouth {
-  fill: none;
-  stroke: #334155;
-  stroke-width: 2.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.tb-mouth.tb-open {
-  fill: #7c2d12;
-}
-
 @media (max-width: 600px) {
   .stubborn-actor {
     width: 150px;
