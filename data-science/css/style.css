@@ -2208,6 +2208,44 @@ details.viva-section[open]>summary {
   border: 0;
 }
 
+/* ─── Tab face (smiley inside the active tab) ──────────────────────
+   Injected by tab-face.js. Hidden until its button is .active, then it
+   pops in. Pure CSS; no motion when reduced motion is preferred. */
+.tab-face {
+  display: none;
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.22em;
+  margin-right: 0.45em;
+}
+
+.tab-face svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.section-controls button.active > .tab-face,
+.practical-tab.active > .tab-face {
+  display: inline-block;
+  animation: tabface-pop 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: 50% 60%;
+}
+
+@keyframes tabface-pop {
+  0% { transform: scale(0) rotate(-30deg); }
+  60% { transform: scale(1.25) rotate(8deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-controls button.active > .tab-face,
+  .practical-tab.active > .tab-face {
+    animation: none;
+  }
+}
+
 @media (max-width: 600px) {
   .stubborn-actor {
     width: 150px;
